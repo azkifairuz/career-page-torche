@@ -8,15 +8,15 @@ import Login from './component/login';
 import Home from './component/home';
 function App() {
   return (
-    <div>
+    <div className='bg-{#E9ECEF}'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Navbar/>}>
-            <Route index element={<Home/>}></Route>
+            <Route path='home' index element={<Home/>}></Route>
             <Route path='joblist' element={<Joblist/>}></Route>
             <Route path='About' element={<About/>}></Route>
-            <Route path='login' element={<Login/>}></Route>
           </Route>
+          <Route path='login' element={<Login/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
