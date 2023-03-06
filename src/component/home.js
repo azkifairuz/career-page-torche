@@ -1,8 +1,8 @@
-function Login() {
+function Home() {
     return(
         <div className="text-center">
-            <h1>Login</h1>
+            <h1>Home</h1>
         </div>
     )
 }
-export default Login
+export default Home
