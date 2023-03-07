@@ -25,7 +25,7 @@ function Navbar() {
                     </li>
                 </ul>
             </nav>
-            <Outlet/>
+            <Outlet/>       
         </>
     )
 }

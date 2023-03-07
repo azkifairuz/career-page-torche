@@ -1,7 +1,7 @@
 
 import './App.css';
 import { BrowserRouter,Routes, Route } from "react-router-dom";
-import Navbar from './component/navbar';
+import Layout from './component/Layout';
 import About from './component/about';
 import Joblist from './component/joblist';
 import Login from './component/login';
@@ -11,7 +11,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Navbar/>}>
+          <Route path='/' element={<Layout />}>
             <Route index element={<Home/>}></Route>
             <Route path='joblist' element={<Joblist/>}></Route>
             <Route path='About' element={<About/>}></Route>
