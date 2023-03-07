@@ -1,16 +1,15 @@
 
 import './App.css';
 import { BrowserRouter,Routes, Route } from "react-router-dom";
-import About from './component/About';
+import About from './pages/about';
 import Joblist from './component/Joblist';
 import Login from './component/Login';
-import Home from './component/Home';
+import Home from './pages/home';
 import LandingPage from './pages/LandingPage';
 import AdminPage from './pages/AdminPage';
 import Layout from './component/Layout';
 function App() {
   return (
-    <div className='bg-{#E9ECEF} m-6'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layout />}>
@@ -24,7 +23,6 @@ function App() {
           <Route path='login' element={<Login/>}></Route>
         </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 
