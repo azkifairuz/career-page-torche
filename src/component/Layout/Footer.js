@@ -17,8 +17,8 @@ export default function Footer() {
 
         <div className="flex lg:flex-row lg:px-10 flex-col xl:flex-1 text-[14px] gap-10">
           <div className="mt-5 w-2/12">
-            <p className="font-bold text-white font-rajdhani  ">Link</p>
-            <ul className="flex flex-col font-cairo text-white font-normal space-y-3 mt-3">
+            <p className="font-bold text-white font-rajdhani">Link</p>
+            <ul className="flex flex-col font-cairo text-white font-normal space-y-3 mt-4">
               <Link to="/">Beranda</Link>
               <Link to="/about-us">Tentang Kami</Link>
               <Link to="/services">Layanan</Link>
@@ -27,7 +27,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="text-white mt-5 flex-1">
-            <p className="font-bold mb-3 text-[14px] font-rajdhani ">
+            <p className="font-bold mb-4 text-[14px] font-rajdhani ">
               Kontak Kami
             </p>
             <p className="mb-3 font-cairo font-semibold">
