@@ -1,12 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&display=swap');
+
 @Layer base {
     .py-navbar-item{
         @apply py-4
     }
     .px-navbar-item{
         @apply px-5
+    }
+    .font-rajdhani {
+        font-family: 'Rajdhani', sans-serif;
+    }
+    .font-cairo {
+        font-family: 'Cairo', sans-serif;
     }
 }
 body {
