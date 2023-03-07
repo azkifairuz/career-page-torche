@@ -8,10 +8,6 @@ import Home from './component/Home';
 import LandingPage from './pages/LandingPage';
 import AdminPage from './pages/AdminPage';
 import Layout from './component/Layout';
-import About from './component/about';
-import Joblist from './component/joblist';
-import Login from './component/login';
-import Home from './component/home';
 function App() {
   return (
     <div className='bg-{#E9ECEF} m-6'>
