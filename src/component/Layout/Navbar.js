@@ -49,7 +49,7 @@ export default function Navbar() {
               return (
                 <li
                   key={index}
-                  className="lg:mx-3 lg:my-0 my-3 hover:text-[#0362cb] transition duration-200 font-light"
+                  className="lg:mx-3 lg:my-0 my-3 hover:text-[#0362cb] transition duration-200 "
                 >
                   <Link to={data.href}>{data.title}</Link>
                 </li>
@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="lg:flex hidden justify-center">
           <Link
             to="/login"
-            className="bg-[#5885E9] rounded-full p-3 px-[20px] text-[16px] font-cairo font-bold"
+            className="bg-[#5885E9] rounded-full py-2 px-[20px] text-[16px] font-cairo font-bold"
           >
             Login
           </Link>
