@@ -2,12 +2,12 @@
 import './App.css';
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 import About from './pages/about';
-import Joblist from './component/Joblist';
-import Login from './component/Login';
+import Joblist from './components/Joblist';
+import Login from './components/Login';
 import Home from './pages/home';
 import LandingPage from './pages/LandingPage';
 import AdminPage from './pages/AdminPage';
-import Layout from './component/Layout';
+import Layout from './components/Layout';
 function App() {
   return (
       <BrowserRouter>
