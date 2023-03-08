@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import About from "./pages/about";
@@ -8,14 +8,18 @@ import Joblist from "./components/Joblist";
 import Login from "./components/Login";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
-import Admin from "./pages/admin";
 import Layout from "./components/Layout";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/admin/dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Custom404 from "./components/Custom404";
+import Admin from "./pages/admin";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({
+    id: "test-1",
+    name: "test",
+    roles: ["admin"],
+  });
 
   const handleLogin = () =>
     setUser({
@@ -37,20 +41,23 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="dashboard" element={<Dashboard />} />
           </Route>
+          <Route
+            path="admin"
+            element={
+              <ProtectedRoute
+                redirectPath="/home"
+                isAllowed={!!user && user.roles.includes("admin")}
+              >
+                <Admin />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="dashboard" />} />
+            <Route path="dashboard" element={<Dashboard />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<Custom404 />} />
         </Route>
-        <Route
-          path="admin"
-          element={
-            <ProtectedRoute
-              redirectPath="/home"
-              isAllowed={!!user && user.roles.includes("admin")}
-            >
-              <Admin />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="login" element={<Login />} />
-        <Route path="*" element={<Custom404 />} />
       </Routes>
     </BrowserRouter>
   );

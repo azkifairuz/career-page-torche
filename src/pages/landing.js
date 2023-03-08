@@ -1,5 +1,5 @@
 
-function LandingPage(props) {
+function Landing(props) {
     return(
         <div className="mt-20">
             landing
@@ -7,4 +7,4 @@ function LandingPage(props) {
     )
 }
 
-export default LandingPage;
+export default Landing;
