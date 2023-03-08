@@ -27,7 +27,7 @@ function Joblist() {
 
     function CardJob(props) {
         return(
-        <div className="w-full h-32 min-w-0 flex flex-col justify-evenly  m-auto p-2 border border-slate-500  text-black rounded-lg shadow shadow-slate-400 bg-slate-20 ">
+        <div className="w-full h-32 min-w-0  flex flex-col justify-evenly  m-auto p-2 border border-slate-500  text-black rounded-lg shadow shadow-slate-400 bg-slate-20 ">
             <h1>{props.jobTitle}</h1>
             <p>{props.company}</p>
             <div className="flex justify-between">
@@ -38,12 +38,14 @@ function Joblist() {
         )
     }
         return(
-            <div className="w-10/12 grid md:grid-cols-2 grid-flow-row justify-items-stretch gap-5 m-auto">
-            {
-                lokers.map((loker)=> 
+            <div className="min-h-screen mt-10">
+                <div className="w-10/12 grid md:grid-cols-2 grid-flow-row justify-items-stretch gap-5 m-auto">
+                {
+                    lokers.map((loker)=> 
                     <CardJob  jobTitle={loker.JobTitle} company={loker.CompanyName} deskripsi={loker.Deskripsi}/>,
-                )
-            }
+                    )
+                }
+                </div>
             </div>
         )
     
