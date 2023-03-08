@@ -10,7 +10,7 @@ function Login() {
             return navigate("/admin")
         } 
         
-        return navigate("/home")
+        return navigate("/user")
     }
     
     return(

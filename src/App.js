@@ -13,6 +13,7 @@ import Dashboard from "./pages/admin/dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
+import User from "./pages/user";
 
 function App() {
   const [user, setUser] = useState({
@@ -54,6 +55,12 @@ function App() {
           >
             <Route index element={<Navigate to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
+          </Route>
+          <Route
+            path="user"
+            element={<User/>}
+          >
+            
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="*" element={<Custom404 />} />
