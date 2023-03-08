@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Avatar from "../../assets/index.png";
-import * as Icon from "react-bootstrap-icons";
 function UserDashboard(params) {
+    const navigate = useNavigate()
     return(
         <div className="min-h-screen text-center m-5 min-w-min ">
             <div className="flex justify-center text-white  flex-col items-center rounded-lg shadow-md shadow-[#0b122a] md:w-1/2 m-auto space-y-10 p-5 bg-[#0b122a]">
@@ -25,7 +25,7 @@ function UserDashboard(params) {
                 <div className="w-full flex justify-center">
                     <button
                         className="bg-white text-[#0b122a] text-center md:text-xl font-bold  py-2.5 px-5  rounded-md w-full "
-                        onClick={useNavigate("a")}
+                        onClick={navigate("/completeprofile")}
                     >
                         Kelola Profile
                     </button>
