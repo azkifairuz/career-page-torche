@@ -25,7 +25,7 @@ function UserDashboard(params) {
                 <div className="w-full flex justify-center">
                     <button
                         className="bg-white text-[#0b122a] text-center md:text-xl font-bold  py-2.5 px-5  rounded-md w-full "
-                        onClick={navigate("/completeprofile")}
+                        onClick={() => navigate("/completeprofile")}
                     >
                         Kelola Profile
                     </button>
