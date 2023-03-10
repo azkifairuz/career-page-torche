@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 function Experience(props) {
   const workType = [
     "Full-Time(Penuh Waktu)",
@@ -11,6 +13,9 @@ function Experience(props) {
       return <option value={w}>{w}</option>;
     });
   }
+
+  const navigate = useNavigate()
+
   return (
     <>
       <div className="w-11/12 lg:w-[800px] bg-[#f8f9fa] border shadow-lg shadow-[#f8f9fa] p-5 m-10 rounded-lg">
@@ -71,7 +76,7 @@ function Experience(props) {
             />
           </div>
 
-          <div className="w-full flex space-x-3">
+         <div className="w-full flex space-x-3">
             <button
               onClick={props.back}
               className="border border-blue-500 w-1/2 text-blue-500 rounded-md p-2"
@@ -79,10 +84,10 @@ function Experience(props) {
               Back
             </button>
             <button
-              onClick={props.next}
+              onClick={()=> navigate("/user")}
               className=" bg-blue-500 w-1/2 text-white rounded-md p-2"
             >
-              Next
+              Submit
             </button>
           </div>
         </form>
