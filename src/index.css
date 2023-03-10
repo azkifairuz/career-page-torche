@@ -11,12 +11,6 @@
     .px-navbar-item{
         @apply px-5
     }
-    .font-rajdhani {
-        font-family: 'Rajdhani', sans-serif;
-    }
-    .font-cairo {
-        font-family: 'Cairo', sans-serif;
-    }
 }
 
 body {
