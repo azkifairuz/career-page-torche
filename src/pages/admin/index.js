@@ -1,11 +1,13 @@
-import Sidebar from "../../components/Admin/Sidebar";
-import Dashboard from "../../components/Admin/Dashboard";
-import { Outlet, Route, Routes, useLocation } from "react-router-dom";
+import Sidebar from "../../components/admin/Sidebar";
+import { Outlet } from "react-router-dom";
 
 function Admin(props) {
   const { user } = props;
   return (
-      <Outlet/>
+    <div className="flex">
+      <Sidebar />
+      <Outlet />
+    </div>
   );
 }
 

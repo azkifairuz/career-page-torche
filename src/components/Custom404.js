@@ -17,7 +17,7 @@ export default function Custom404() {
           secara tidak sengaja, coba periksa URL di browser web Anda.
         </p>
         <Link to="/">
-          <button className="px-4 py-2 mt-4 text-white bg-[#444444] rounded-md">
+          <button className="px-4 py-2 mt-4 text-white bg-primary rounded-md">
             Kembali ke halaman beranda
           </button>
         </Link>
