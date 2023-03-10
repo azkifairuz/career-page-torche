@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Biodata from "./BiodataForm";
-import Education from "./EducationForm";
+import Biodata from "./Biodata/Form";
+import Education from "./Education/Form";
+import Experience from "./work expereience/Form";
 
 function CompleteProfil() {
   const [page,setPage] =useState(1)
@@ -11,21 +12,29 @@ function CompleteProfil() {
     return setPage(page-1)
 }
 
+function viewPager(){
   if (page === 1) {
     return (
-      <div className="min-h-screen m-auto">
         <Biodata next={nextPage}/>
-        
-      </div>
     )
   }
   if (page === 2) {
     return (
-      <div className="min-h-screen m-auto">
         <Education back={backPage}  next={nextPage}/>
-      </div>
     )
   }
+  if (page === 3) {
+    return (
+        <Experience back={backPage}  next={nextPage}/>
+    )
+  }
+}
+  return(
+    <div className="min-h-screen m-auto">
+        {viewPager()}
+    </div>
+  )
+
 }
 
 export default CompleteProfil;
