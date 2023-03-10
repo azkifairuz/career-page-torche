@@ -43,30 +43,25 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="dashboard" element={<Dashboard />} />
           </Route>
-          <Route
-            path="admin"
-            element={
-              <ProtectedRoute
-                redirectPath="/home"
-                isAllowed={!!user && user.roles.includes("admin")}
-              >
-                <Admin />
-              </ProtectedRoute>
-            }
-          >
-            <Route index element={<Navigate to="dashboard" />} />
-            <Route path="dashboard" element={<Dashboard />} />
-          </Route>
-          <Route
-            path="user"
-            element={<User/>}
-          >
-            
-          </Route>
-          <Route path="completeprofile" element={<CompleteProfil/>}></Route>
+          <Route path="user" element={<User />}></Route>
+          <Route path="completeprofile" element={<CompleteProfil />}></Route>
           <Route path="login" element={<Login />} />
-          <Route path="*" element={<Custom404 />} />
         </Route>
+        <Route
+          path="admin"
+          element={
+            <ProtectedRoute
+              redirectPath="/home"
+              isAllowed={!!user && user.roles.includes("admin")}
+            >
+              <Admin />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Navigate to="dashboard" />} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Route>
+        <Route path="*" element={<Custom404 />} />
       </Routes>
     </BrowserRouter>
   );
