@@ -15,12 +15,11 @@ export default function Navbar() {
     { href: "/joblist", title: "Job List" },
     { href: "/about", title: "About" },
     { href: "/user", title: "Profile" },
-    
   ];
 
   return (
     <>
-      <nav className="sticky z-50 top-0 w-full font-rajdhani px-7 py-1 font-medium bg-[#0b122a] text-white flex items-center justify-between">
+      <nav className="sticky z-50 top-0 w-full font-rajdhani px-7 py-1 font-medium bg-primary text-white flex items-center justify-between">
         <div>
           <Link to="/" className="cursor-pointer">
             <img className="w-[128px] h-[72px]" src={Logo} alt="Logo" />
@@ -98,7 +97,7 @@ export default function Navbar() {
       <ul
         className={`${
           isNavbarOpen ? "block" : "hidden"
-        } lg:hidden absolute w-full text-white bg-[#0b122a] flex flex-col mt-0 bg-red p-3 z-50 min-h-[calc(100%-70px)]`}
+        } lg:hidden absolute w-full text-white bg-primary flex flex-col mt-0 bg-red p-3 z-50 min-h-[calc(100%-70px)]`}
       >
         {navbarData.map((data, index) => {
           return (
