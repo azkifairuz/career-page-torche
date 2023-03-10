@@ -41,8 +41,9 @@ function Biodata(props) {
                   type="radio"
                   className="block  rounded-md border-2 focus:ring-primary  border-primary "
                   value="Laki-Laki"
+                  
                 />
-                <p>Laki-Laki</p>
+                <label id="L">Laki-Laki</label>
               </div>
               <div className="flex space-x-2 items-center">
                 <input
@@ -50,7 +51,7 @@ function Biodata(props) {
                   className="block  rounded-md border-2 focus:ring-primary  border-primary "
                   value="Perempuan"
                 />
-                <p>Perempuan</p>
+                <label id="p">Perempuan</label>
               </div>
             </div>
           </div>

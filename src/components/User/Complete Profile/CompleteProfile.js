@@ -30,7 +30,7 @@ function viewPager(){
   }
 }
   return(
-    <div className="min-h-screen m-auto">
+    <div className="min-h-screen w-full md:w-10/12 flex items-center justify-center m-auto">
         {viewPager()}
     </div>
   )
