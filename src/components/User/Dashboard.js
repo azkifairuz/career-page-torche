@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Avatar from "../../assets/index.png";
-import {TbPointFilled} from "react-icons/tb";
+
 function UserDashboard(params) {
     const navigate = useNavigate();
     return (
