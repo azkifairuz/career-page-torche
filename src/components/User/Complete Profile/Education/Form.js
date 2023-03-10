@@ -18,7 +18,7 @@ function Education(props) {
   }
   return (
     <>
-      <div className="w-11/12 lg:w-[800px] bg-[#f8f9fa] border shadow-lg shadow-[#f8f9fa] p-5 m-10 rounded-lg">
+      <div className=" lg:w-[800px] bg-[#f8f9fa] border shadow-lg shadow-[#f8f9fa] p-5 m-10 rounded-lg">
         <form className=" flex space-y-8 flex-col w-full  mb-5">
           <h1 className="text-2xl font-bold">Pendidikan</h1>
           <div>
@@ -30,16 +30,16 @@ function Education(props) {
               {getEducation()}
             </select>
           </div>
-          <div className="flex justify-center w-full space-x-4">
-            <div className=" w-1/2">
-              <label>Sekolah/Universitas</label>
+          <div className="flex flex-col md:flex-row justify-center w-full gap-4">
+            <div className=" md:w-1/2">
+              <label className="md:text-md" >Sekolah/Universitas</label>
               <input
               placeholder="Sekolah/Universitas" 
               className="block mt-2 p-2.5 w-full text-sm rounded-md border-2 focus:ring-primary  border-primary " />
             </div>
 
-            <div className="w-1/2">
-              <label>Jurusan/Program Studi</label>
+            <div className=" md:w-1/2">
+              <label  className=" md:text-md">Jurusan/Program Studi</label>
               <input
                 type="text"
                 placeholder="Jurusan/Program Studi" 
