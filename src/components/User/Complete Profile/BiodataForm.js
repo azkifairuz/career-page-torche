@@ -63,7 +63,7 @@ function Biodata(props) {
             />
           </div>
           <button
-          onClick={props.click}  
+          onClick={props.next}  
           className=" bg-blue-500 text-white rounded-md p-2">
             Next
           </button>
