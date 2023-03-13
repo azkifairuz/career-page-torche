@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Avatar from "../../assets/index.png";
 import * as Icon from "react-bootstrap-icons"
-function UserDashboard(params) {
+import EduPreview from "./Complete Profile/Biodata/preview";
+function UserDashboard() {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen text-center m-5 min-w-min ">
@@ -54,33 +55,7 @@ function UserDashboard(params) {
                         ratione.
                     </div>
                 </div>
-                <div className="DataDiri  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
-                    <div className="w-full bg-primary rounded-t-md items-center flex justify-between text-white p-5">
-                        <h2>Data Diri</h2>
-                    </div>
-                    <div className="w-full flex flex-col space-y-5 justify-start rounded-b-md p-5 ">
-                        <div className="text-left">
-                            <h1 className="font-bold ">Nama Lengkap</h1>
-                            <p>John Kebab</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Nama Panggilan</h1>
-                            <p>John</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Jenis Kelamin</h1>
-                            <p>Laki-Laki</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Nomor Telepon</h1>
-                            <p>Laki-Laki</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Lokasi Saat Ini</h1>
-                            <p>Laki-Laki</p>
-                        </div>
-                    </div>
-                </div>
+                <EduPreview/>
                 <div className="Pendidikan  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
                     <div className="w-full bg-primary rounded-t-md items-center flex justify-between text-white p-5">
                         <h2>Pendidikan</h2>
@@ -134,7 +109,7 @@ function UserDashboard(params) {
                         </div>
                     </div>
                     <button
-                    onClick={()=> navigate("/addExperience")}
+                    onClick={()=> navigate("/addExper")}
                      className="w-full flex justify-center items-center text-center gap-2 p-4 text-blue-500 border-t-2"
                      >
                         <Icon.PlusCircleFill size={20} />
