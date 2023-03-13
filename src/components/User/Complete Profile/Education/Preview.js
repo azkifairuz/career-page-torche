@@ -45,7 +45,7 @@ function EduPreview(props) {
                   <p>{data["nama-instansi"]}</p>
                   <p>{data["jurusan"]}</p>
                   <p>
-                    {data["tahun-masuk"]}-{data["tahun-keluar"]}
+                    {data["tahun-masuk"]}- {data["tahun-keluar"]}
                   </p>
                 </div>
 
