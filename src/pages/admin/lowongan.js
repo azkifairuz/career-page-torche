@@ -1,8 +1,15 @@
 import React from "react";
 import { Plus } from "react-bootstrap-icons";
+import TabButton from "../../components/admin/TabButton";
 import Table from "../../components/admin/Table";
 
 export default function Lowongan() {
+  const [maxRow, setMaxRow] = React.useState(10);
+  const maxData = 100;
+  const handleSelect = (e) => {
+    e.preventDefault();
+    setMaxRow(e.target.value);
+  };
   return (
     <main className="flex-1 p-8 font-cairo flex flex-col gap-4">
       <header className="flex justify-between items-center   ">
@@ -18,9 +25,11 @@ export default function Lowongan() {
         placeholder="Semua kota"
         className="border-2 rounded-xl p-2 px-4 w-2/5 "
       ></input>
-      <div className="shadow-md w-full">
-        <section className="bg-blue-800 rounded-t-xl text-white px-4">
-          <div className="border-1 p-4 border-white">asdad</div>
+      <div className="shadow-md w-full rounded-xl">
+        <section className="bg-blue-800 text-white px-4 flex  rounded-t-xl">
+          <TabButton title="Semua lowongan" count={48} active={true} />
+          <TabButton title="Lowongan aktif" count={0} />
+          <TabButton title="Lowongan tutup" count={48} />
         </section>
         <section className="p-4">
           <input
@@ -29,6 +38,29 @@ export default function Lowongan() {
           />
         </section>
         <Table />
+        <section className="border-t-2 border-t-slate-200 text-black p-4 gap-4 flex justify-end items-center">
+          <div className="flex items-center">
+            <p>Rows per page: </p>
+            <select className="p-2" onChange={handleSelect}>
+              <option selected>10</option>
+              <option>20</option>
+              <option>30</option>
+              <option>40</option>
+              <option>50</option>
+            </select>
+          </div>
+          <p>
+            {1} - {maxRow} of {maxData}
+          </p>
+          <div>
+            <button className="p-2 px-4 rounded-lg bg-blue-800 text-white">
+              Prev
+            </button>
+            <button className="p-2 px-4 rounded-lg bg-blue-800 text-white">
+              Next
+            </button>
+          </div>
+        </section>
       </div>
     </main>
   );
