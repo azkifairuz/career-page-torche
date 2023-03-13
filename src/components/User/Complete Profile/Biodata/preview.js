@@ -1,4 +1,4 @@
-function EduPreview() {
+function BiodataPreview() {
     return (
         <>
         <div className="DataDiri  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
@@ -32,4 +32,4 @@ function EduPreview() {
     )
 }
 
-export default EduPreview
+export default BiodataPreview

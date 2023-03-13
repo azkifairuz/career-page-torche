@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Avatar from "../../assets/index.png";
-import * as Icon from "react-bootstrap-icons"
-import EduPreview from "./Complete Profile/Biodata/preview";
+import EduPreview from "./Complete Profile/Education/Preview";
+import BiodataPreview from "./Complete Profile/Biodata/Preview";
+import ExperiencePreview from "./Complete Profile/work expereience/Preview";
 function UserDashboard() {
     const navigate = useNavigate();
     return (
@@ -55,68 +56,9 @@ function UserDashboard() {
                         ratione.
                     </div>
                 </div>
-                <EduPreview/>
-                <div className="Pendidikan  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
-                    <div className="w-full bg-primary rounded-t-md items-center flex justify-between text-white p-5">
-                        <h2>Pendidikan</h2>
-                    </div>
-
-                    <div className="w-full flex flex-col space-y-4 rounded-b-md p-5 ">
-                        <div className="text-left flex flex-col ">
-                            <h1 className="font-bold ">Jenjang Pendidikan</h1>
-                            <p>nama instansi</p>
-                            <p>jurusan</p>
-                        </div>
-
-                        <div className="text-left">
-                            <h1 className="font-bold ">Pengalaman organisasi/pengembangan diri</h1>
-                            <p>nama organisasi/pengembangan diri</p>
-                            <p>deskrpisi</p>
-                        </div>
-                    </div>
-                    <button
-                    onClick={()=> navigate("/addEducation")}
-                     className="w-full flex justify-center items-center text-center gap-2 p-4 text-blue-500 border-t-2"
-                     >
-                        <Icon.PlusCircleFill size={20} />
-                        Tambah
-                    </button>
-                </div>
-
-                <div className="PengalamanKerja  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
-                    <div className="w-full bg-primary rounded-t-md items-center flex justify-between text-white p-5">
-                        <h2>Pengalaman Kerja</h2>
-                    </div>
-
-                    <div className="w-full flex flex-col space-y-4 rounded-b-md p-5 ">
-                        <div className="text-left flex flex-col ">
-                            <h1 className="font-bold ">Job Title</h1>
-                            <div className="flex items-center">
-                                <p>Torche Education</p>
-                                <p>-</p>
-                                <p>Intern</p>
-                            </div>
-                            <div className="flex items-center">
-                                <p>Start </p>
-                                <p>-</p>
-                                <p>Unitl</p>
-                            </div>
-                        </div>
-
-                        <div className="text-left">
-                            <h1 className="font-bold ">Kemampuan (Skill)</h1>
-                            <p>skill anda</p>
-                        </div>
-                    </div>
-                    <button
-                    onClick={()=> navigate("/addExper")}
-                     className="w-full flex justify-center items-center text-center gap-2 p-4 text-blue-500 border-t-2"
-                     >
-                        <Icon.PlusCircleFill size={20} />
-                        Tambah
-                    </button>
-
-                </div>
+                <BiodataPreview/>
+                <EduPreview navigate={()=> navigate("/addEducation") } />
+               <ExperiencePreview navigate ={()=> navigate("/addExperience")}/>
             </div>
             
         </div>
