@@ -15,6 +15,7 @@ import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
 import User from "./pages/user";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
+import Lowongan from "./pages/admin/lowongan";
 
 function App() {
   const [user, setUser] = useState({
@@ -60,6 +61,7 @@ function App() {
         >
           <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="lowongan" element={<Lowongan />} />
         </Route>
         <Route path="*" element={<Custom404 />} />
       </Routes>
