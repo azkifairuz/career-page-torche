@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Avatar from "../../assets/index.png";
-
+import * as Icon from "react-bootstrap-icons"
 function UserDashboard(params) {
     const navigate = useNavigate();
     return (
@@ -99,7 +99,13 @@ function UserDashboard(params) {
                             <p>deskrpisi</p>
                         </div>
                     </div>
-                    
+                    <button
+                    onClick={()=> navigate("/addEducation")}
+                     className="w-full flex justify-center items-center text-center gap-2 p-4 text-blue-500 border-t-2"
+                     >
+                        <Icon.PlusCircleFill size={20} />
+                        Tambah
+                    </button>
                 </div>
 
                 <div className="PengalamanKerja  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">

@@ -17,7 +17,7 @@ function Experience(props) {
   const navigate = useNavigate()
 
   return (
-    <>
+    <div className="min-h-screen w-full md:w-10/12 mt-5 flex flex-col items-center justify-center m-auto">
       <div className="w-11/12 lg:w-[800px] bg-[#f8f9fa] border shadow-lg shadow-[#f8f9fa] p-5 m-10 rounded-lg">
         <form className=" flex space-y-8 flex-col w-full  mb-5">
           <h1 className="text-2xl font-bold">Pengalaman kerja</h1>
@@ -93,7 +93,7 @@ function Experience(props) {
         </form>
       </div>
       ;
-    </>
+    </div>
   );
 }
 
