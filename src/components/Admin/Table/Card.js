@@ -1,9 +1,10 @@
-import { ThreeDots, ThreeDotsVertical } from "react-bootstrap-icons";
+import { ThreeDotsVertical } from "react-bootstrap-icons";
+import DataByStatus from "./DataByStatus";
 
 export default function Card() {
   return (
-    <tr className="hover:bg-slate-100">
-      <td className="p-4 pl-6 rounded-l-xl border-0">
+    <tr className="hover:bg-slate-100 border-spacing-0 ">
+      <td className="p-4 pl-6 rounded-l-xl border-0 ">
         <h1 className="font-rajdhani font-semibold text-md">
           Account Executive
         </h1>
@@ -15,16 +16,23 @@ export default function Card() {
         </span>
       </td>
 
-      <td>
-        <h1 className="font-semibold font-rajdhani text-xl text-center">88</h1>
-        <p className="text-xs text-center">Pelamar</p>
+      <td className="w-fit">
+        <div className="flex gap-1 items-center justify-center">
+          <DataByStatus count={0} status="Belum diproses" />
+          <DataByStatus count={0} status="Diproses" />
+          <DataByStatus count={0} status="Diterima" />
+          <DataByStatus count={0} status="Ditolak" />
+        </div>
       </td>
 
       <td align="center" className="rounded-r-xl border-0 px-6">
-        <button className="text-blue-500 font-semibold text-sm">Lihat</button>
+        <select className="text-blue-500 font-semibold text-sm cursor-pointer">
+          <option value="Aktif">Aktif</option>
+          <option value="Tidak Aktif" selected>Tidak Aktif</option>
+        </select>
       </td>
 
-      <td align="center">
+      <td align="center" className="pr-4">
         <div className="relative inline-block text-left">
           <button
             type="button"
