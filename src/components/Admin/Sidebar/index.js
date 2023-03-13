@@ -1,11 +1,11 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../../assets/logos/Torche_Logo-01_White.png";
 import Item from "./Item";
 import * as Icon from "react-bootstrap-icons";
 
 export default function Sidebar() {
   return (
-    <aside className="flex flex-col w-1/4 text-white bg-primary sticky top-0 left-0 h-screen p-8 px-6">
+    <aside className="flex flex-col w-[20vw] text-white bg-primary sticky top-0 left-0 h-screen py-8 px-6">
       <header>
         <img src={Logo} alt="Logo" className="h-20 -ml-2" />
       </header>
