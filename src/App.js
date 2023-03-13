@@ -15,8 +15,11 @@ import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
 import User from "./pages/user";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
+import Education from "./components/User/Complete Profile/Education/Form";
+import Experience from "./components/User/Complete Profile/work expereience/Form";
 import Lowongan from "./pages/admin/lowongan";
 import Pelamar from "./pages/admin/pelamar";
+
 
 function App() {
   const [user, setUser] = useState({
@@ -45,8 +48,30 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="dashboard" element={<Dashboard />} />
           </Route>
-          <Route path="user" element={<User />}></Route>
-          <Route path="completeprofile" element={<CompleteProfil />}></Route>
+
+          <Route
+            path="admin"
+            element={
+              <ProtectedRoute
+                redirectPath="/home"
+                isAllowed={!!user && user.roles.includes("admin")}
+              >
+                <Admin />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="dashboard" />} />
+            <Route path="dashboard" element={<Dashboard />} />
+          </Route>
+          <Route
+            path="user"
+            element={<User/>}
+          >
+            
+          </Route>
+          <Route path="completeprofile" element={<CompleteProfil/>}></Route>
+          <Route path="addEducation" element={<Education/>}></Route>
+          <Route path="addExperience" element={<Experience/>}></Route>
           <Route path="login" element={<Login />} />
         </Route>
         <Route

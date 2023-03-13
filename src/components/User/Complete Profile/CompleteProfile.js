@@ -49,7 +49,7 @@ function CompleteProfil() {
         <div className="items-center w-1/2 ">
           <div className="flex justify-between items-center relative">
             <div
-              className="absolute  bg-blue-500 top-1/2 left-0 h-1  -translate-y-1/2 -z-10 rounded-md ease-linear   "
+              className="absolute  bg-blue-500 top-1/2 left-0 h-1  -translate-y-1/2 -z-10 rounded-md"
               style={{ width: width + "%" }}
             ></div>
             <div className="absolute  bg-slate-200 top-1/2 left-0 h-1 -translate-y-1/2 -z-20 rounded-md w-full  "></div>
@@ -74,11 +74,11 @@ function CompleteProfil() {
   }
 
   return (
-    <div className="min-h-screen w-full md:w-10/12 mt-10 flex flex-col items-center justify-center m-auto">
-      <h1 className="text-2xl font-bold" >Complete Profil</h1>
+    <>
+      <h1 className="text-2xl md:text-4xl font-bold text-center mt-5 -mb-10" >Complete Profil</h1>
       {viewPager()}
       {ProgressBar()}
-    </div>
+    </>
   );
 }
 

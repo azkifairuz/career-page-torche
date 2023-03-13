@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Avatar from "../../assets/index.png";
-
-function UserDashboard(params) {
+import EduPreview from "./Complete Profile/Education/Preview";
+import BiodataPreview from "./Complete Profile/Biodata/Preview";
+import ExperiencePreview from "./Complete Profile/work expereience/Preview";
+function UserDashboard() {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen text-center m-5 min-w-min ">
@@ -54,82 +56,9 @@ function UserDashboard(params) {
                         ratione.
                     </div>
                 </div>
-                <div className="DataDiri  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
-                    <div className="w-full bg-primary rounded-t-md items-center flex justify-between text-white p-5">
-                        <h2>Data Diri</h2>
-                    </div>
-                    <div className="w-full flex flex-col space-y-5 justify-start rounded-b-md p-5 ">
-                        <div className="text-left">
-                            <h1 className="font-bold ">Nama Lengkap</h1>
-                            <p>John Kebab</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Nama Panggilan</h1>
-                            <p>John</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Jenis Kelamin</h1>
-                            <p>Laki-Laki</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Nomor Telepon</h1>
-                            <p>Laki-Laki</p>
-                        </div>
-                        <div className="text-left">
-                            <h1 className="font-bold ">Lokasi Saat Ini</h1>
-                            <p>Laki-Laki</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="Pendidikan  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
-                    <div className="w-full bg-primary rounded-t-md items-center flex justify-between text-white p-5">
-                        <h2>Pendidikan</h2>
-                    </div>
-
-                    <div className="w-full flex flex-col space-y-4 rounded-b-md p-5 ">
-                        <div className="text-left flex flex-col ">
-                            <h1 className="font-bold ">Jenjang Pendidikan</h1>
-                            <p>nama instansi</p>
-                            <p>jurusan</p>
-                        </div>
-
-                        <div className="text-left">
-                            <h1 className="font-bold ">Pengalaman organisasi/pengembangan diri</h1>
-                            <p>nama organisasi/pengembangan diri</p>
-                            <p>deskrpisi</p>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div className="PengalamanKerja  h-fit  rounded-md  shadow-lg flex flex-col md:w-1/2 items-center  ">
-                    <div className="w-full bg-primary rounded-t-md items-center flex justify-between text-white p-5">
-                        <h2>Pengalaman Kerja</h2>
-                    </div>
-
-                    <div className="w-full flex flex-col space-y-4 rounded-b-md p-5 ">
-                        <div className="text-left flex flex-col ">
-                            <h1 className="font-bold ">Job Title</h1>
-                            <div className="flex items-center">
-                                <p>Torche Education</p>
-                                <p>-</p>
-                                <p>Intern</p>
-                            </div>
-                            <div className="flex items-center">
-                                <p>Start </p>
-                                <p>-</p>
-                                <p>Unitl</p>
-                            </div>
-                        </div>
-
-                        <div className="text-left">
-                            <h1 className="font-bold ">Kemampuan (Skill)</h1>
-                            <p>skill anda</p>
-                        </div>
-                    </div>
-                    
-
-                </div>
+                <BiodataPreview/>
+                <EduPreview navigate={()=> navigate("/addEducation") } />
+               <ExperiencePreview navigate ={()=> navigate("/addExperience")}/>
             </div>
             
         </div>
