@@ -1,7 +1,8 @@
 import React from "react";
 import { Plus } from "react-bootstrap-icons";
 import TabButton from "../../components/admin/TabButton";
-import Table from "../../components/admin/Table";
+import Table from "../../components/admin/LowonganTable";
+import Pagination from "../../components/Pagination";
 
 export default function Lowongan() {
   const maxData = 100;
@@ -32,7 +33,8 @@ export default function Lowongan() {
             className="border-2 rounded-lg w-full py-2 px-4"
           />
         </section>
-        <Table maxData={maxData} />
+        <Table />
+        <Pagination maxData={maxData} />
       </div>
     </main>
   );
