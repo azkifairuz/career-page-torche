@@ -2,8 +2,8 @@ import LowonganCard from "../../components/admin/LowonganCard";
 
 function Dashboard() {
   return (
-    <div className="w-full p-8  bg-[#fcfdfd] font-cairo flex flex-col gap-4">
-      <section className="flex w-full gap-4">
+    <div className="box-border flex-1 p-8 bg-[#fcfdfd] font-cairo flex flex-col gap-4">
+      <section className="flex gap-4">
         <div className="rounded-xl bg-[#e6f2fc] p-6 w-1/4">
           <h1 className="text-2xl mb-4 font-bold">
             Selamat <br />
@@ -30,7 +30,7 @@ function Dashboard() {
           </span>
         </div>
       </section>
-      <section className="flex w-full gap-4">
+      <section className="flex gap-4">
         <div className="bg-white shadow rounded-xl p-4 w-1/2">
           <h1 className="px-4 font-rajdhani font-semibold">
             Lowongan belum diproses terbanyak
