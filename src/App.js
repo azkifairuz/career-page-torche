@@ -16,6 +16,7 @@ import Admin from "./pages/admin";
 import User from "./pages/user";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
 import Lowongan from "./pages/admin/lowongan";
+import Pelamar from "./pages/admin/pelamar";
 
 function App() {
   const [user, setUser] = useState({
@@ -62,6 +63,7 @@ function App() {
           <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="lowongan" element={<Lowongan />} />
+          <Route path="pelamar" element={<Pelamar />} />
         </Route>
         <Route path="*" element={<Custom404 />} />
       </Routes>
