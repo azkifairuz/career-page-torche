@@ -4,12 +4,7 @@ import TabButton from "../../components/admin/TabButton";
 import Table from "../../components/admin/Table";
 
 export default function Lowongan() {
-  const [maxRow, setMaxRow] = React.useState(10);
   const maxData = 100;
-  const handleSelect = (e) => {
-    e.preventDefault();
-    setMaxRow(e.target.value);
-  };
   return (
     <main className="flex-1 p-8 font-cairo flex flex-col gap-4">
       <header className="flex justify-between items-center   ">
@@ -37,30 +32,7 @@ export default function Lowongan() {
             className="border-2 rounded-lg w-full py-2 px-4"
           />
         </section>
-        <Table />
-        <section className="border-t-2 border-t-slate-200 text-black p-4 gap-4 flex justify-end items-center">
-          <div className="flex items-center">
-            <p>Rows per page: </p>
-            <select className="p-2" onChange={handleSelect}>
-              <option selected>10</option>
-              <option>20</option>
-              <option>30</option>
-              <option>40</option>
-              <option>50</option>
-            </select>
-          </div>
-          <p>
-            {1} - {maxRow} of {maxData}
-          </p>
-          <div>
-            <button className="p-2 px-4 rounded-lg bg-blue-800 text-white">
-              Prev
-            </button>
-            <button className="p-2 px-4 rounded-lg bg-blue-800 text-white">
-              Next
-            </button>
-          </div>
-        </section>
+        <Table maxData={maxData} />
       </div>
     </main>
   );
