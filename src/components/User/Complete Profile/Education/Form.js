@@ -39,7 +39,7 @@ function Education(props) {
         onClick={() => navigate("/addEducation")}
         className=" bg-blue-500 w-full text-white rounded-md p-2"
       >
-        Next
+        ADD
       </button>
     );
   }

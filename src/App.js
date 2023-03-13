@@ -16,6 +16,7 @@ import Admin from "./pages/admin";
 import User from "./pages/user";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
 import Education from "./components/User/Complete Profile/Education/Form";
+import Experience from "./components/User/Complete Profile/work expereience/Form";
 
 function App() {
   const [user, setUser] = useState({
@@ -66,6 +67,7 @@ function App() {
           </Route>
           <Route path="completeprofile" element={<CompleteProfil/>}></Route>
           <Route path="addEducation" element={<Education/>}></Route>
+          <Route path="addExperience" element={<Experience/>}></Route>
           <Route path="login" element={<Login />} />
           <Route path="*" element={<Custom404 />} />
         </Route>

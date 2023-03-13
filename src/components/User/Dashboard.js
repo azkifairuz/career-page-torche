@@ -133,7 +133,13 @@ function UserDashboard(params) {
                             <p>skill anda</p>
                         </div>
                     </div>
-                    
+                    <button
+                    onClick={()=> navigate("/addExperience")}
+                     className="w-full flex justify-center items-center text-center gap-2 p-4 text-blue-500 border-t-2"
+                     >
+                        <Icon.PlusCircleFill size={20} />
+                        Tambah
+                    </button>
 
                 </div>
             </div>
