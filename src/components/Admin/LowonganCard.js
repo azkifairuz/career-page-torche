@@ -12,7 +12,7 @@ export default function LowonganCard() {
           <p className=" text-xs">PT. Torche Education</p>
         </span>
         <span className="flex gap-1 items-center">
-          <Icon.Calendar size={10}/>
+          <Icon.Calendar size={10} />
           <p className=" text-xs">Dibuat pada 10 Maret 2023</p>
         </span>
       </td>
@@ -23,7 +23,9 @@ export default function LowonganCard() {
       </td>
 
       <td align="right" className="rounded-r-xl border-0 px-6">
-        <button className="text-blue-500 font-semibold text-sm">Lihat</button>
+        <button className="text-blue-500 font-semibold text-sm cursor-pointer">
+          Lihat
+        </button>
       </td>
     </tr>
   );
