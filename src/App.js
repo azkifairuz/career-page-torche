@@ -16,6 +16,7 @@ import Admin from "./pages/admin";
 import User from "./pages/user";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
 import Lowongan from "./pages/admin/lowongan";
+import Create from "./pages/admin/lowongan/create";
 import Pelamar from "./pages/admin/pelamar";
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="lowongan" element={<Lowongan />} />
           <Route path="pelamar" element={<Pelamar />} />
+          <Route path="lowongan/create" element={<Create />} />
         </Route>
         <Route path="*" element={<Custom404 />} />
       </Routes>
