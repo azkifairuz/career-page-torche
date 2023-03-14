@@ -1,5 +1,30 @@
+import Card from "../../../components/User/Application Tracking/Card"
+
 export default function Belum(params) {
+    const datas = [
+        {
+            "status":"Belum Terkirim",
+            "tanggal":"02 februari 2023",
+            "perusahaan":"Torche",
+            "posisi":"Front End",
+            "isClosed":"Lowobgan Masih Di Buka"
+        },
+        {
+            "status":"Belum Terkirim",
+            "tanggal":"02 februari 2023",
+            "perusahaan":"Torche",
+            "posisi":"Front End",
+            "isClosed":"Lowobgan Masih Di Buka"
+        },
+
+    ]
     return(
-        <h1>Belum</h1>
+        <div className=" flex  h-screen w-screen ">
+            <div className="w-fit h-fit mx-auto my-10  grid md:grid-cols-2 grid-flow-row gap-2">
+            {datas.map((data)=>{
+                return <Card status={data.status} posisi={data.posisi} tanggal={data.tanggal} perusahaan={data.perusahaan} isClosed={data.isClosed} />
+            })}
+            </div>
+        </div>
     )
 }
