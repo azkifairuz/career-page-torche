@@ -19,6 +19,7 @@ import Education from "./components/User/Complete Profile/Education/Form";
 import Experience from "./components/User/Complete Profile/work expereience/Form";
 import Lowongan from "./pages/admin/lowongan";
 import Pelamar from "./pages/admin/pelamar";
+import ApplicationTracking from "./components/User/Application Tracking";
 
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
           <Route path="completeprofile" element={<CompleteProfil/>}></Route>
           <Route path="addEducation" element={<Education/>}></Route>
           <Route path="addExperience" element={<Experience/>}></Route>
+          <Route path="tracking" element={<ApplicationTracking/>}></Route>
           <Route path="login" element={<Login />} />
         </Route>
         <Route

@@ -1,4 +1,10 @@
+import Card from "./Card"
+
 function ApplicationTracking() {
-    return <h1>apply trcak</h1>
+    return (
+        <div className=" min-h-screen p-10">
+            <Card/>
+        </div>
+    )
 }
 export default ApplicationTracking
