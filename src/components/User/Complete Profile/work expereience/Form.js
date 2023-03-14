@@ -36,7 +36,7 @@ function Experience(props) {
     }
     return (
       <button
-        onClick={() => navigate("/addEducation")}
+        onClick={() => navigate("/user")}
         className=" bg-blue-500 w-full text-white rounded-md p-2"
       >
         ADD

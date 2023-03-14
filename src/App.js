@@ -14,11 +14,20 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
 import User from "./pages/user";
+import Track from "./pages/user/application track";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
 import Education from "./components/User/Complete Profile/Education/Form";
 import Experience from "./components/User/Complete Profile/work expereience/Form";
 import Lowongan from "./pages/admin/lowongan";
 import Pelamar from "./pages/admin/pelamar";
+import ApplicationTracking from "./components/User/Application Tracking";
+import Semua from "./pages/user/application track/semua";
+import Dilihat from "./pages/user/application track/dilihat";
+import Diproses from "./pages/user/application track/diproses";
+import Diterima from "./pages/user/application track/diterima";
+import Ditolak from "./pages/user/application track/ditolak";
+import Terkirim from "./pages/user/application track/terkirim";
+import Belum from "./pages/user/application track/belum";
 
 
 function App() {
@@ -72,6 +81,7 @@ function App() {
           <Route path="completeprofile" element={<CompleteProfil/>}></Route>
           <Route path="addEducation" element={<Education/>}></Route>
           <Route path="addExperience" element={<Experience/>}></Route>
+          <Route path="tracking" element={<ApplicationTracking/>}></Route>
           <Route path="login" element={<Login />} />
         </Route>
         <Route
@@ -89,6 +99,16 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="lowongan" element={<Lowongan />} />
           <Route path="pelamar" element={<Pelamar />} />
+        </Route>
+        <Route path="track" element={<Track/>}>
+          <Route index element={<Navigate to="semua"/>}/>
+          <Route path="semua" element={<Semua/>}/>
+          <Route path="dilihat" element={<Dilihat/>}/>
+          <Route path="diproses" element={<Diproses/>}/>
+          <Route path="diterima" element={<Diterima/>}/>
+          <Route path="ditolak" element={<Ditolak/>}/>
+          <Route path="terkirim" element={<Terkirim/>}/>
+          <Route path="belum" element={<Belum/>}/>
         </Route>
         <Route path="*" element={<Custom404 />} />
       </Routes>
