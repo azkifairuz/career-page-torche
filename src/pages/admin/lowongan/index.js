@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { Plus } from "react-bootstrap-icons";
-import TabButton from "../../components/admin/TabButton";
-import Table from "../../components/admin/LowonganTable";
-import Pagination from "../../components/Pagination";
+
+import TabButton from "../../../components/admin/TabButton";
+import Table from "../../../components/admin/LowonganTable";
+import Pagination from "../../../components/Pagination";
 
 export default function Lowongan() {
   const maxData = 100;
@@ -12,10 +15,10 @@ export default function Lowongan() {
         <h1 className="font-bold font-rajdhani text-2xl">
           Atur lowongan Anda di sini!
         </h1>
-        <button className="bg-orange-500 flex font-semibold items-center gap-2 shadow text-white text-sm px-2 pr-4 py-2 rounded-xl">
+        <Link to='create' className="bg-orange-500 flex font-semibold items-center gap-2 shadow text-white text-sm px-2 pr-4 py-2 rounded-xl">
           <Plus size={20} />
           <p>Buat lowongan</p>
-        </button>
+        </Link>
       </header>
       <input
         placeholder="Semua kota"
