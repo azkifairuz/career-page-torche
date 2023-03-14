@@ -14,6 +14,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
 import User from "./pages/user";
+import Track from "./pages/user/tracking";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
 import Education from "./components/User/Complete Profile/Education/Form";
 import Experience from "./components/User/Complete Profile/work expereience/Form";
@@ -91,6 +92,9 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="lowongan" element={<Lowongan />} />
           <Route path="pelamar" element={<Pelamar />} />
+        </Route>
+        <Route path="track" element={<Track/>}>
+          
         </Route>
         <Route path="*" element={<Custom404 />} />
       </Routes>

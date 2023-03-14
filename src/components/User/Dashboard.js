@@ -24,7 +24,7 @@ function UserDashboard() {
                 </div>
                 <div
                     className="w-1/2 m-auto text-black cursor-pointer"
-                    onClick={()=> navigate("/tracking")}
+                    onClick={()=> navigate("/track")}
                 >
                     <div className="p-5 text-center  bg-white shadow rounded-lg ">
                     <p>0</p>
