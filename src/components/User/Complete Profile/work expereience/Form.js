@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
-
+import { useLocation, useNavigate } from "react-router-dom";
 function Experience(props) {
+  const location = useLocation()
   const workType = [
     "Full-Time(Penuh Waktu)",
     "Part-Time(Paruh Waktu)",
@@ -15,9 +15,36 @@ function Experience(props) {
   }
 
   const navigate = useNavigate()
-
+  function cekLocation() {
+    if (location.pathname === "/completeprofile") {
+      return (
+        <>
+          <button
+            onClick={props.back}
+            className="border border-blue-500 w-1/2 text-blue-500 rounded-md p-2"
+          >
+            Back
+          </button>
+          <button
+            onClick={props.next}
+            className=" bg-blue-500 w-1/2 text-white rounded-md p-2"
+          >
+            Submit
+          </button>
+        </>
+      );
+    }
+    return (
+      <button
+        onClick={() => navigate("/user")}
+        className=" bg-blue-500 w-full text-white rounded-md p-2"
+      >
+        ADD
+      </button>
+    );
+  }
   return (
-    <>
+    <div className="min-h-screen w-full md:w-10/12 mt-5 flex flex-col items-center justify-center m-auto">
       <div className="w-11/12 lg:w-[800px] bg-[#f8f9fa] border shadow-lg shadow-[#f8f9fa] p-5 m-10 rounded-lg">
         <form className=" flex space-y-8 flex-col w-full  mb-5">
           <h1 className="text-2xl font-bold">Pengalaman kerja</h1>
@@ -77,23 +104,12 @@ function Experience(props) {
           </div>
 
          <div className="w-full flex space-x-3">
-            <button
-              onClick={props.back}
-              className="border border-blue-500 w-1/2 text-blue-500 rounded-md p-2"
-            >
-              Back
-            </button>
-            <button
-              onClick={()=> navigate("/user")}
-              className=" bg-blue-500 w-1/2 text-white rounded-md p-2"
-            >
-              Submit
-            </button>
+            {cekLocation()}
           </div>
         </form>
       </div>
       ;
-    </>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 function Biodata(props) {
   return (
-    <>
+    <div className="min-h-screen w-full md:w-10/12 mt-5 flex flex-col items-center justify-center m-auto">
       <div className="lg:w-[800px] bg-[#f8f9fa] border shadow-lg shadow-[#f8f9fa] p-5 m-10 rounded-lg">
         <form className=" flex space-y-8 flex-col w-full mb-5">
           <h1 className="text-2xl font-bold">Data Diri</h1>
@@ -71,7 +71,7 @@ function Biodata(props) {
         </form>
       </div>
       ;
-    </>
+    </div>
   );
 }
 
