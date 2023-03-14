@@ -39,7 +39,7 @@ function EduPreview(props) {
         <div className="w-full flex flex-col space-y-4 rounded-b-md p-5 ">
           {data.map((data) => {
             return (
-              <div className="border-b-2 border-black">
+              <div className="border-b-2 pb-2 border-black">
                 <div className="text-left flex flex-col  ">
                   <h1 className="font-bold ">{data["jenjang-pendidikan"]}</h1>
                   <p>{data["nama-instansi"]}</p>

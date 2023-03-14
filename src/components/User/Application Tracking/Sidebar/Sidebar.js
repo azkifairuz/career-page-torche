@@ -22,7 +22,6 @@ export default function Sidebar(params) {
             <Item title="Diterima kerja" href="/track/diterima" />
             <Item title="Ditolak" href="/track/ditolak" />
             <Item title="Belum Terkirim" href="/track/belum" />
-            
         </ul>
       </main>
     </aside>
