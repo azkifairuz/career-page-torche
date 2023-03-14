@@ -1,4 +1,3 @@
-import Logo from "../../../../assets/logos/Torche_Logo-01_White.png";
 import * as Icon from "react-bootstrap-icons";
 import Item from "./item";
 export default function Sidebar(params) {
@@ -12,31 +11,31 @@ export default function Sidebar(params) {
         <ul className="flex flex-col gap-2 mt-14">
         <Item
             title="Semua"
-            href="semua"
+            href="/track/semua"
           />
         <Item
             title="Terkirim"
-            href="terkirim"
+            href="/track/terkirim"
           />
         <Item
             title="Dilihat HRD"
-            href="dilihat"
+            href="/track/dilihat"
           />
         <Item
             title="Diproses"
-            href="diproses"
+            href="/track/diproses"
           />
         <Item
             title="Diterima kerja"
-            href="diterima kerja"
+            href="/track/diterima"
           />
         <Item
             title="Ditolak"
-            href="ditolak"
+            href="/track/ditolak"
           />
         <Item
             title="Belum Terkirim"
-            href="belum"
+            href="/track/belum"
           />
         </ul>
       </main>
