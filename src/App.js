@@ -17,6 +17,9 @@ import User from "./pages/user";
 import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
 import Education from "./components/User/Complete Profile/Education/Form";
 import Experience from "./components/User/Complete Profile/work expereience/Form";
+import Lowongan from "./pages/admin/lowongan";
+import Pelamar from "./pages/admin/pelamar";
+
 
 function App() {
   const [user, setUser] = useState({
@@ -45,6 +48,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="dashboard" element={<Dashboard />} />
           </Route>
+
           <Route
             path="admin"
             element={
@@ -69,8 +73,24 @@ function App() {
           <Route path="addEducation" element={<Education/>}></Route>
           <Route path="addExperience" element={<Experience/>}></Route>
           <Route path="login" element={<Login />} />
-          <Route path="*" element={<Custom404 />} />
         </Route>
+        <Route
+          path="admin"
+          element={
+            <ProtectedRoute
+              redirectPath="/home"
+              isAllowed={!!user && user.roles.includes("admin")}
+            >
+              <Admin />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Navigate to="dashboard" />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="lowongan" element={<Lowongan />} />
+          <Route path="pelamar" element={<Pelamar />} />
+        </Route>
+        <Route path="*" element={<Custom404 />} />
       </Routes>
     </BrowserRouter>
   );
