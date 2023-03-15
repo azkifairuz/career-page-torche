@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import About from "./pages/about";
-import Joblist from "./components/Joblist";
+import Joblist from "./pages/Joblist";
 import Login from "./components/Login";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
@@ -15,7 +15,7 @@ import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
 import User from "./pages/user";
 import Track from "./pages/user/application track";
-import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
+import CompleteProfil from "./pages/user/complete profile/CompleteProfile";
 import Education from "./components/User/Complete Profile/Education/Form";
 import Experience from "./components/User/Complete Profile/work expereience/Form";
 import Lowongan from "./pages/admin/lowongan";
