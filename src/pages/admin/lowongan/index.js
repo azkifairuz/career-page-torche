@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import { Plus } from "react-bootstrap-icons";
 
-import TabButton from "../../../components/admin/TabButton";
-import Table from "../../../components/admin/LowonganTable";
+import TabButton from "../../../components/Admin/TabButton";
+import Table from "../../../components/Admin/LowonganTable";
 import Pagination from "../../../components/Pagination";
 
 export default function Lowongan() {
