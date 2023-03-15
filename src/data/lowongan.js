@@ -17,7 +17,6 @@ export const lowongan = [
     id: 1,
     nama: "Account Executive",
     perusahaan: "PT. Torche Education",
-    dibuat: "10 Maret 2023",
     jumlahPelamar: {
       belumDiproses: 0,
       diproses: 0,
@@ -26,5 +25,6 @@ export const lowongan = [
       total: 0,
     },
     status: "Aktif",
+    createdAt: "10 Maret 2023",
   }
 ];

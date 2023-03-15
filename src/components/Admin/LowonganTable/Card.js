@@ -1,18 +1,19 @@
 import { ThreeDotsVertical } from "react-bootstrap-icons";
 import DataByStatus from "./DataByStatus";
 
-export default function Card() {
+export default function Card(props) {
+  const { nama, perusahaan, createdAt, jumlahPelamar, status } = props;
   return (
     <tr className="hover:bg-slate-100 border-spacing-0 ">
       <td className="p-4 pl-6 rounded-l-xl border-0 ">
         <h1 className="font-rajdhani font-semibold text-md">
-          Account Executive
+          {nama}
         </h1>
         <span className="flex gap-1 items-center">
-          <p className=" text-xs">PT. Torche Education</p>
+          <p className=" text-xs">{perusahaan}</p>
         </span>
         <span className="flex gap-1 items-center">
-          <p className=" text-xs">Dibuat pada 10 Maret 2023</p>
+          <p className=" text-xs">{createdAt}</p>
         </span>
       </td>
 
