@@ -1,5 +1,5 @@
-import Table from "../../components/Admin/PelamarTable";
-import TabButton from "../../components/Admin/TabButton";
+import Table from "../../components/admin/PelamarTable";
+import TabButton from "../../components/admin/TabButton";
 import Pagination from "../../components/Pagination";
 
 export default function Pelamar() {

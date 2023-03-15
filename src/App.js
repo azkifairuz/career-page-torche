@@ -9,7 +9,8 @@ import Login from "./components/Login";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
 import Layout from "./components/Layout";
-import Dashboard from "./pages/admin/dashboard";
+import AdminDashboard from "./pages/admin/dashboard";
+import UserDashboard from "./components/User/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
@@ -55,7 +56,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route element={<ProtectedRoute isAllowed={!!user} />}>
             <Route path="home" element={<Home />} />
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="dashboard" element={<UserDashboard />} />
           </Route>
           <Route path="user" element={<User />}></Route>
           <Route path="completeprofile" element={<CompleteProfil />}></Route>
@@ -76,7 +77,7 @@ function App() {
           }
         >
           <Route index element={<Navigate to="dashboard" />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="lowongan" element={<Lowongan />} />
           <Route path="pelamar" element={<Pelamar />} />
           <Route path="lowongan/create" element={<Create />} />
