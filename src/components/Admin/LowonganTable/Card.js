@@ -2,7 +2,7 @@ import { ThreeDotsVertical } from "react-bootstrap-icons";
 import DataByStatus from "./DataByStatus";
 
 export default function Card(props) {
-  const { nama, perusahaan, createdAt, jumlahPelamar, status } = props;
+  const { nama, perusahaan, dibuatPada, jumlahPelamar, status } = props;
   return (
     <tr className="hover:bg-slate-100 border-spacing-0 ">
       <td className="p-4 pl-6 rounded-l-xl border-0 ">
@@ -13,23 +13,23 @@ export default function Card(props) {
           <p className=" text-xs">{perusahaan}</p>
         </span>
         <span className="flex gap-1 items-center">
-          <p className=" text-xs">{createdAt}</p>
+          <p className=" text-xs">{dibuatPada}</p>
         </span>
       </td>
 
       <td className="w-fit">
         <div className="flex gap-1 items-center justify-center">
-          <DataByStatus count={0} status="Belum diproses" />
-          <DataByStatus count={0} status="Diproses" />
-          <DataByStatus count={0} status="Diterima" />
-          <DataByStatus count={0} status="Ditolak" />
+          <DataByStatus count={jumlahPelamar.belumDiproses} status="Belum diproses" />
+          <DataByStatus count={jumlahPelamar.diproses} status="Diproses" />
+          <DataByStatus count={jumlahPelamar.diterima} status="Diterima" />
+          <DataByStatus count={jumlahPelamar.ditolak} status="Ditolak" />
         </div>
       </td>
 
       <td align="center" className="rounded-r-xl border-0 px-6">
         <select className="text-blue-500 font-semibold text-sm cursor-pointer">
-          <option value="Aktif">Aktif</option>
-          <option value="Tidak Aktif" selected>Tidak Aktif</option>
+          <option value="Aktif" selected={status === "Aktif"}>Aktif</option>
+          <option value="Tidak Aktif" selected={status === "Tutup"}>Tutup</option>
         </select>
       </td>
 
