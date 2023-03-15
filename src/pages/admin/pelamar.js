@@ -1,5 +1,5 @@
-import Table from "../../components/Admin/PelamarTable";
-import TabButton from "../../components/Admin/TabButton";
+import Table from "../../components/admin/PelamarTable";
+import TabButton from "../../components/admin/TabButton";
 import Pagination from "../../components/Pagination";
 
 export default function Pelamar() {
@@ -22,6 +22,21 @@ export default function Pelamar() {
       <div className="shadow-md w-full rounded-xl">
         <section className="bg-blue-800 text-white px-4 flex  rounded-t-xl">
           <TabButton title="Semua" active={true} />
+        </section>
+        <section className=" text-black px-4 flex">
+          <button className="flex items-center gap-2 p-3 px-4 border-b-2 border-transparent border-b-blue-600">
+            <h1 className="font-semibold font-rajdhani ">Belum diproses</h1>
+            <p className="text-xs rounded bg-blue-200 font-bold p-2 py-1 text-blue-800">
+              88
+            </p>
+          </button>
+
+          <button className="flex items-center gap-2 p-3 px-4 border-b-2 border-transparent">
+            <h1 className="font-semibold font-rajdhani ">Diproses</h1>
+            <p className="text-xs rounded bg-blue-200 font-bold p-2 py-1 text-blue-800">
+              88
+            </p>
+          </button>
         </section>
         <section className="p-4">
           <input
