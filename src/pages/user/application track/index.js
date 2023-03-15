@@ -1,10 +1,10 @@
 import { Outlet } from "react-router";
-import ApplicationTracking from "../../../components/User/Application Tracking";
+import Sidebar from "../../../components/User/Application Tracking/Sidebar/Sidebar";
 
-function tracking(params) {
+function tracking() {
     return(
         <div className="flex gap-2">
-        <ApplicationTracking/>
+            <Sidebar/>
             <Outlet/>
         </div>
     )

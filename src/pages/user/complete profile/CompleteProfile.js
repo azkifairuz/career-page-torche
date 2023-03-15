@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Biodata from "./Biodata/Form";
-import Education from "./Education/Form";
-import Experience from "./work expereience/Form";
-import Custom404 from "../../Custom404";
+import Biodata from "../../../components/User/Complete Profile/Biodata/Form";
+import Education from "../../../components/User/Complete Profile/Education/Form";
+import Experience from "../../../components/User/Complete Profile/work expereience/Form";
+import Custom404 from "../../../components/Custom404";
 import * as Icon from "react-bootstrap-icons";
 // import ProgressBar from "./ProgressBar";
-import Circle from "./Circle";
+import Circle from "../../../components/User/Complete Profile/Circle";
 function CompleteProfil() {
   const [page, setPage] = useState(1);
   const [active, setActive] = useState(0);

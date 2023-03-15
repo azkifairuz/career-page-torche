@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import About from "./pages/about";
-import Joblist from "./components/Joblist";
+import Joblist from "./pages/Joblist";
 import Login from "./components/Login";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
@@ -16,13 +16,10 @@ import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
 import User from "./pages/user";
 import Track from "./pages/user/application track";
-import CompleteProfil from "./components/User/Complete Profile/CompleteProfile";
-import Education from "./components/User/Complete Profile/Education/Form";
-import Experience from "./components/User/Complete Profile/work expereience/Form";
+import CompleteProfil from "./pages/user/complete profile/CompleteProfile";
 import Lowongan from "./pages/admin/lowongan";
 import Create from "./pages/admin/lowongan/create";
 import Pelamar from "./pages/admin/pelamar";
-import ApplicationTracking from "./components/User/Application Tracking";
 import Semua from "./pages/user/application track/semua";
 import Dilihat from "./pages/user/application track/dilihat";
 import Diproses from "./pages/user/application track/diproses";
@@ -30,6 +27,8 @@ import Diterima from "./pages/user/application track/diterima";
 import Ditolak from "./pages/user/application track/ditolak";
 import Terkirim from "./pages/user/application track/terkirim";
 import Belum from "./pages/user/application track/belum";
+import EducationPages from "./pages/user/complete profile/education";
+import ExpereiencePages from "./pages/user/complete profile/experience";
 
 function App() {
   const [user, setUser] = useState({
@@ -58,11 +57,12 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="dashboard" element={<UserDashboard />} />
           </Route>
+
+          <Route path="completeprofile" element={<CompleteProfil/>}></Route>
+          <Route path="addEducation" element={<EducationPages/>}></Route>
+          <Route path="addExperience" element={<ExpereiencePages/>}></Route>
           <Route path="user" element={<User />}></Route>
-          <Route path="completeprofile" element={<CompleteProfil />}></Route>
-          <Route path="addEducation" element={<Education />}></Route>
-          <Route path="addExperience" element={<Experience />}></Route>
-          <Route path="tracking" element={<ApplicationTracking />}></Route>
+
           <Route path="login" element={<Login />} />
         </Route>
         <Route
