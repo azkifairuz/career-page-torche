@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import About from "./pages/about";
 import Joblist from "./pages/Joblist";
-import Login from "./components/Login";
+import Login from "./pages/login";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
 import Layout from "./components/Layout";
