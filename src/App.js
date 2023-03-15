@@ -16,8 +16,6 @@ import Admin from "./pages/admin";
 import User from "./pages/user";
 import Track from "./pages/user/application track";
 import CompleteProfil from "./pages/user/complete profile/CompleteProfile";
-import Education from "./components/User/Complete Profile/Education/Form";
-import Experience from "./components/User/Complete Profile/work expereience/Form";
 import Lowongan from "./pages/admin/lowongan";
 import Pelamar from "./pages/admin/pelamar";
 import ApplicationTracking from "./components/User/Application Tracking";
@@ -28,6 +26,8 @@ import Diterima from "./pages/user/application track/diterima";
 import Ditolak from "./pages/user/application track/ditolak";
 import Terkirim from "./pages/user/application track/terkirim";
 import Belum from "./pages/user/application track/belum";
+import EducationPages from "./pages/user/complete profile/education";
+import ExpereiencePages from "./pages/user/complete profile/experience";
 
 
 function App() {
@@ -79,8 +79,8 @@ function App() {
             
           </Route>
           <Route path="completeprofile" element={<CompleteProfil/>}></Route>
-          <Route path="addEducation" element={<Education/>}></Route>
-          <Route path="addExperience" element={<Experience/>}></Route>
+          <Route path="addEducation" element={<EducationPages/>}></Route>
+          <Route path="addExperience" element={<ExpereiencePages/>}></Route>
           <Route path="tracking" element={<ApplicationTracking/>}></Route>
           <Route path="login" element={<Login />} />
         </Route>
