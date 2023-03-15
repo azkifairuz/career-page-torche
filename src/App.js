@@ -18,7 +18,6 @@ import Track from "./pages/user/application track";
 import CompleteProfil from "./pages/user/complete profile/CompleteProfile";
 import Lowongan from "./pages/admin/lowongan";
 import Pelamar from "./pages/admin/pelamar";
-import ApplicationTracking from "./components/User/Application Tracking";
 import Semua from "./pages/user/application track/semua";
 import Dilihat from "./pages/user/application track/dilihat";
 import Diproses from "./pages/user/application track/diproses";
@@ -81,7 +80,6 @@ function App() {
           <Route path="completeprofile" element={<CompleteProfil/>}></Route>
           <Route path="addEducation" element={<EducationPages/>}></Route>
           <Route path="addExperience" element={<ExpereiencePages/>}></Route>
-          <Route path="tracking" element={<ApplicationTracking/>}></Route>
           <Route path="login" element={<Login />} />
         </Route>
         <Route
