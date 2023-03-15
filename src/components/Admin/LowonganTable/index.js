@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import { lowongan } from "data/lowongan";
+import { lowongan } from "../../../data/lowongan";
 
 export default function Table(props) {
   const { filterStatus } = props;
