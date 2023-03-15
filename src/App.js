@@ -29,7 +29,6 @@ import Terkirim from "./pages/user/application track/terkirim";
 import Belum from "./pages/user/application track/belum";
 import EducationPages from "./pages/user/complete profile/education";
 import ExpereiencePages from "./pages/user/complete profile/experience";
-import LowonganTerpilih from "components/lowongan terpilih";
 
 function App() {
   const [user, setUser] = useState({
@@ -63,7 +62,7 @@ function App() {
           <Route path="addEducation" element={<EducationPages/>}></Route>
           <Route path="addExperience" element={<ExpereiencePages/>}></Route>
           <Route path="user" element={<User />}></Route>
-          <Route path="debug" element={<LowonganTerpilih />}></Route>
+          {/* <Route path="debug" element={<LowonganTerpilih />}></Route> */}
 
           <Route path="login" element={<Login />} />
         </Route>
