@@ -29,7 +29,7 @@ export default function SearchBar(params) {
           type="search"
           id="default-search"
           class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 "
-          placeholder="Search Mockups, Logos..."
+          placeholder="Cari Loker"
           required
         />
         <button
