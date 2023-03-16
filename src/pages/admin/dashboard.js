@@ -1,4 +1,6 @@
-import LowonganCard from "../../components/admin/VacancyCard";
+import { vacancies } from "data/vacancy";
+
+import VacancyCard from "../../components/admin/VacancyCard";
 
 function Dashboard() {
   return (
@@ -16,16 +18,14 @@ function Dashboard() {
         <div className="rounded-xl bg-white shadow py-6 px-8 flex-1 flex items-center">
           <span>
             <h1 className="text-6xl mb-2 font-bold">0</h1>
-            <p className="font-semibold text-sm text-gray-500">
-              Lamaran baru
-            </p>
+            <p className="font-semibold text-sm text-gray-500">Lamaran baru</p>
           </span>
         </div>
         <div className="rounded-xl bg-white shadow py-6 px-8 flex-1 flex items-center">
           <span>
             <h1 className="text-6xl mb-2 font-bold">0</h1>
             <p className="font-semibold text-sm text-gray-500">
-              Lamaran belum <br/> diproses
+              Lamaran belum <br /> diproses
             </p>
           </span>
         </div>
@@ -46,14 +46,28 @@ function Dashboard() {
               <th className=" border-0 font-semibold">Jumlah</th>
               <th className="rounded-r-xl border-0 font-semibold">{""}</th>
             </tr>
-            <LowonganCard />
-            <LowonganCard />
-            <LowonganCard />
+            {/* sort vacancy according to belum diproses sum */}
+            {vacancies
+              .sort((a, b) => {
+                return (
+                  b.applicantsCount.belumDiproses -
+                  a.applicantsCount.belumDiproses
+                );
+              })
+              .slice(0, 3)
+              .map((vacancy) => (
+                <VacancyCard
+                  key={vacancy.id}
+                  vacancy={vacancy}
+                  total={vacancy.applicantsCount.belumDiproses}
+                  status="Belum diproses"
+                />
+              ))}
           </table>
         </div>
         <div className="bg-white shadow rounded-xl p-4 w-1/2">
           <h1 className="px-4 font-rajdhani font-semibold">
-            Lowongan belum diproses terbanyak
+            Lowongan sedang diproses terbanyak
           </h1>
           <table className="w-full border-separate border-spacing-y-4">
             <tr className="bg-green-200 rounded-xl font-rajdhani ">
@@ -66,9 +80,19 @@ function Dashboard() {
               <th className=" border-0 font-semibold">Jumlah</th>
               <th className="rounded-r-xl border-0 font-semibold">{""}</th>
             </tr>
-            <LowonganCard />
-            <LowonganCard />
-            <LowonganCard />
+            {vacancies
+              .sort((a, b) => {
+                return b.applicantsCount.diproses - a.applicantsCount.diproses;
+              })
+              .slice(0, 3)
+              .map((vacancy) => (
+                <VacancyCard
+                  key={vacancy.id}
+                  vacancy={vacancy}
+                  total={vacancy.applicantsCount.diproses}
+                  status="Sedang diproses"
+                />
+              ))}
           </table>
         </div>
       </section>
