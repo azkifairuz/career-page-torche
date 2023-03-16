@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Plus } from "react-bootstrap-icons";
 
 import TabButton from "../../../components/admin/TabButton";
-import Table from "../../../components/admin/LowonganTable";
+import Table from "../../../components/admin/TableVacancy";
 import Pagination from "../../../components/Pagination";
 
 export default function Lowongan() {

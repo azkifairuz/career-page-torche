@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import { lowongan } from "../../../data/lowongan";
+import { vacancies } from "data/vacancy";
 
 export default function Table(props) {
   const { filterStatus } = props;
@@ -15,14 +15,14 @@ export default function Table(props) {
           <th className="text-sm">Ganti Status</th>
           <th className="text-sm pr-4">Aksi</th>
         </tr>
-        {lowongan.map((item, index) => (
+        {vacancies.map((item, index) => (
           <Card key={index} {...item} />
         ))}
       </table>
     );
   }
 
-  const filteredLowongan = lowongan.filter(
+  const filteredVacancies = vacancies.filter(
     (item) => item.status.toLowerCase() === filterStatus
   );
 
@@ -36,7 +36,7 @@ export default function Table(props) {
         <th className="text-sm">Ganti Status</th>
         <th className="text-sm pr-4">Aksi</th>
       </tr>
-      {filteredLowongan.map((item, index) => (
+      {filteredVacancies.map((item, index) => (
         <Card key={index} {...item} />
       ))}
     </table>

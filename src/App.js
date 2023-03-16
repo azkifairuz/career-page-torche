@@ -17,9 +17,9 @@ import Admin from "./pages/admin";
 import User from "./pages/user";
 import Track from "./pages/user/application track";
 import CompleteProfil from "./pages/user/complete profile/CompleteProfile";
-import Lowongan from "./pages/admin/lowongan";
-import Create from "./pages/admin/lowongan/create";
-import Pelamar from "./pages/admin/pelamar";
+import Lowongan from "./pages/admin/vacancy";
+import Create from "./pages/admin/vacancy/create";
+import Pelamar from "./pages/admin/applicants";
 import Semua from "./pages/user/application track/semua";
 import Dilihat from "./pages/user/application track/dilihat";
 import Diproses from "./pages/user/application track/diproses";
@@ -79,9 +79,9 @@ function App() {
         >
           <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="lowongan" element={<Lowongan />} />
-          <Route path="pelamar" element={<Pelamar />} />
-          <Route path="lowongan/create" element={<Create />} />
+          <Route path="vacancy" element={<Lowongan />} />
+          <Route path="applicants" element={<Pelamar />} />
+          <Route path="vacancy/create" element={<Create />} />
         </Route>
         <Route path="track" element={<Track />}>
           <Route index element={<Navigate to="semua" />} />
