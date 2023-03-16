@@ -19,17 +19,17 @@ export default function Sidebar() {
           <Item
             icon={<Icon.BriefcaseFill size={20} />}
             title="Lowongan"
-            href="lowongan"
+            href="vacancy"
           />
           <Item
             icon={<Icon.PeopleFill size={20} />}
             title="Pelamar"
-            href="pelamar"
+            href="applicants"
           />
           <Item
             icon={<Icon.GearFill size={20} />}
             title="Pengaturan"
-            href="pengaturan"
+            href="settings"
           />
         </ul>
         <p>
