@@ -1,4 +1,4 @@
-import LowonganCard from "../../components/admin/LowonganCard";
+import LowonganCard from "../../components/admin/VacancyCard";
 
 function Dashboard() {
   return (
