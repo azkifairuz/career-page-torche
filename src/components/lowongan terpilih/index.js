@@ -8,7 +8,7 @@ export default function LowonganTerpilih(params) {
             <h1 className="font-rajdhani text-2xl">Lowongan Terpilih</h1>
             <h1 className="font-rajdhani cursor-pointer  text-blue-500 text-xl">Lihat Semua</h1>
             </div>
-            <div className="w-screen grid grid-flow-col h-fit p-4 ">
+            <div className=" grid grid-cols-4 w-fit mx-auto h-fit p-4 ">
                 {
                     lokers.map((loker,index)=>{
                         return <LokerCard ker={index} jobTitle={loker.JobTitle} jobType={loker.JobType} jobPlace={loker.JobPlace} />

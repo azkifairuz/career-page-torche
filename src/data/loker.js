@@ -31,13 +31,5 @@ export const lokers = [
     JobType: "Full-Time",
     JobPlace: "WFO",
   },
-  {
-    id: 5,
-    JobTitle: "web dev5",
-    CompanyName: "PT PT an",
-    Deskripsi: "lorem ipsum doler",
-    JobType: "Full-Time",
-    JobPlace: "WFO",
-  },
 
 ];
