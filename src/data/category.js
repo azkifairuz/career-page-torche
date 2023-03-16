@@ -1,5 +1,5 @@
 import * as Icon  from "react-bootstrap-icons"
-export const category = [
+export const categories = [
     {
         icon: <Icon.Cash/>,
         Category: "Finance",
