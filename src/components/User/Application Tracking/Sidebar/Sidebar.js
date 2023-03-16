@@ -2,7 +2,7 @@
 import * as Icon from "react-bootstrap-icons";
 import { useNavigate } from "react-router";
 import Item from "./item";
-export default function Sidebar(params) {
+export default function Sidebar() {
  
     const navigate = useNavigate()
 
