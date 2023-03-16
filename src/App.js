@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import About from "./pages/about";
 import Joblist from "./pages/Joblist";
-import Login from "./components/Login";
+import Login from "./pages/login";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
 import Layout from "./components/Layout";
@@ -62,6 +62,7 @@ function App() {
           <Route path="addEducation" element={<EducationPages/>}></Route>
           <Route path="addExperience" element={<ExpereiencePages/>}></Route>
           <Route path="user" element={<User />}></Route>
+          {/* <Route path="debug" element={<LowonganTerpilih />}></Route> */}
 
           <Route path="login" element={<Login />} />
         </Route>

@@ -1,8 +1,9 @@
+import LowonganTerpilih from "components/lowongan terpilih";
 
 function Landing(props) {
     return(
-        <div className="mt-20">
-            landing
+        <div className="mt-10">
+            <LowonganTerpilih/>
         </div>
     )
 }

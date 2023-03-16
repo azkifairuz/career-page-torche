@@ -1,29 +1,8 @@
 import { useNavigate } from "react-router-dom";
-
+import {lokers} from "../data/loker"
 function Joblist() {
     const navigate = useNavigate()
-    const lokers = [
-        {
-        'JobTitle':'web dev1',
-        'CompanyName':'PT PT an',
-        'Deskripsi':'lorem ipsum doler'
-        },
-        {
-            'JobTitle':'web dev2',
-            'CompanyName':'PT PT an',
-            'Deskripsi':'lorem ipsum doler'
-        },
-        {
-            'JobTitle':'web dev3',
-            'CompanyName':'PT PT an',
-            'Deskripsi':'lorem ipsum doler'
-        },
-        {
-            'JobTitle':'web dev4',
-            'CompanyName':'PT PT an',
-            'Deskripsi':'lorem ipsum doler'
-        },
-    ]
+    
 
     function CardJob(props) {
         return(
@@ -41,8 +20,8 @@ function Joblist() {
             <div className="min-h-screen mt-10">
                 <div className="w-10/12 grid md:grid-cols-2 grid-flow-row justify-items-stretch gap-5 m-auto">
                 {
-                    lokers.map((loker)=> 
-                    <CardJob  jobTitle={loker.JobTitle} company={loker.CompanyName} deskripsi={loker.Deskripsi}/>,
+                    lokers.map((loker,index)=> 
+                    <CardJob key={index}  jobTitle={loker.JobTitle} company={loker.CompanyName} deskripsi={loker.Deskripsi}/>,
                     )
                 }
                 </div>
