@@ -7,17 +7,21 @@ export default function Table(props) {
   if (filterStatus === "all") {
     return (
       <table className="w-full ">
-        <tr className="bg-slate-200 shadow-md border-spacing-0">
-          <th className="py-3 pl-6 text-sm" align="left">
-            Lowongan
-          </th>
-          <th className="text-sm">Jumlah Pelamar per Status</th>
-          <th className="text-sm">Ganti Status</th>
-          <th className="text-sm pr-4">Aksi</th>
-        </tr>
-        {vacancies.map((item, index) => (
-          <Card key={index} {...item} />
-        ))}
+        <thead>
+          <tr className="bg-slate-200 shadow-md border-spacing-0">
+            <th className="py-3 pl-6 text-sm" align="left">
+              Lowongan
+            </th>
+            <th className="text-sm">Jumlah Pelamar per Status</th>
+            <th className="text-sm">Ganti Status</th>
+            <th className="text-sm pr-4">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {vacancies.map((item, index) => (
+            <Card key={index} {...item} />
+          ))}
+        </tbody>
       </table>
     );
   }
@@ -28,17 +32,21 @@ export default function Table(props) {
 
   return (
     <table className="w-full ">
-      <tr className="bg-slate-200 shadow-md border-spacing-0">
-        <th className="py-3 pl-6 text-sm" align="left">
-          Lowongan
-        </th>
-        <th className="text-sm">Jumlah Pelamar per Status</th>
-        <th className="text-sm">Ganti Status</th>
-        <th className="text-sm pr-4">Aksi</th>
-      </tr>
-      {filteredVacancies.map((item, index) => (
-        <Card key={index} {...item} />
-      ))}
+      <thead>
+        <tr className="bg-slate-200 shadow-md border-spacing-0">
+          <th className="py-3 pl-6 text-sm" align="left">
+            Lowongan
+          </th>
+          <th className="text-sm">Jumlah Pelamar per Status</th>
+          <th className="text-sm">Ganti Status</th>
+          <th className="text-sm pr-4">Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        {filteredVacancies.map((item, index) => (
+          <Card key={index} {...item} />
+        ))}
+      </tbody>
     </table>
   );
 }
