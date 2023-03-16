@@ -2,34 +2,39 @@ import { ThreeDotsVertical } from "react-bootstrap-icons";
 import DataByStatus from "./DataByStatus";
 
 export default function Card(props) {
-  const { nama, perusahaan, dibuatPada, jumlahPelamar, status } = props;
+  const { name, company, createdAt, applicantsCount, status } = props;
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  };
+  
   return (
     <tr className="hover:bg-slate-100 border-spacing-0 ">
       <td className="p-4 pl-6 rounded-l-xl border-0 ">
         <h1 className="font-rajdhani font-semibold text-md">
-          {nama}
+          {name}
         </h1>
         <span className="flex gap-1 items-center">
-          <p className=" text-xs">{perusahaan}</p>
+          <p className=" text-xs">{company}</p>
         </span>
         <span className="flex gap-1 items-center">
-          <p className=" text-xs">{dibuatPada}</p>
+          <p className=" text-xs">{createdAt}</p>
         </span>
       </td>
 
       <td className="w-fit">
         <div className="flex gap-1 items-center justify-center">
-          <DataByStatus count={jumlahPelamar.belumDiproses} status="Belum diproses" />
-          <DataByStatus count={jumlahPelamar.diproses} status="Diproses" />
-          <DataByStatus count={jumlahPelamar.diterima} status="Diterima" />
-          <DataByStatus count={jumlahPelamar.ditolak} status="Ditolak" />
+          <DataByStatus count={applicantsCount.belumDiproses} status="Belum diproses" />
+          <DataByStatus count={applicantsCount.diproses} status="Diproses" />
+          <DataByStatus count={applicantsCount.diterima} status="Diterima" />
+          <DataByStatus count={applicantsCount.ditolak} status="Ditolak" />
         </div>
       </td>
 
       <td align="center" className="rounded-r-xl border-0 px-6">
-        <select className="text-blue-500 font-semibold text-sm cursor-pointer">
-          <option value="Aktif" selected={status === "Aktif"}>Aktif</option>
-          <option value="Tidak Aktif" selected={status === "Tutup"}>Tutup</option>
+        <select value={status} className="text-blue-500 font-semibold text-sm cursor-pointer" onChange={handleChange}>
+          <option value="Aktif" >Aktif</option>
+          <option value="Tutup">Tutup</option>
         </select>
       </td>
 
