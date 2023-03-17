@@ -1,4 +1,4 @@
-import Card from "../../../components/User/Application Tracking/Card"
+import Card from "components/User/Application Tracking/Card"
 
 export default function Ditolak(params) {
     const datas = [

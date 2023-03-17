@@ -1,4 +1,4 @@
-import Education from "../../../../components/User/Complete Profile/Education/Form";
+import Education from "components/User/Complete Profile/Education/Form";
 
 export default function EducationPages(params) {
     return (
