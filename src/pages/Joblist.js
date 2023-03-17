@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import {lokers} from "../data/loker"
+import {lokers} from "data/loker"
 function Joblist() {
     const navigate = useNavigate()
     
