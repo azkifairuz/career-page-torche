@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import Sidebar from "../../../components/User/Application Tracking/Sidebar/Sidebar";
+import Sidebar from "components/User/Application Tracking/Sidebar/Sidebar";
 
 function tracking() {
     return(

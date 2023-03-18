@@ -1,6 +1,7 @@
-import Card from "./Card"
+import Card from "./Card";
 
-export default function Table() {
+export default function Table(props) {
+  const { data } = props;
   return (
     <table className="w-full ">
       <tr className="bg-slate-200 shadow-md border-spacing-0">
@@ -15,7 +16,9 @@ export default function Table() {
         <th className="text-sm">Melamar pada</th>
         <th className="text-sm">Status</th>
       </tr>
-      <Card />
+      {data.map((item, index) => (
+        <Card key={index} {...item} />
+      ))}
     </table>
-  )
+  );
 }
