@@ -29,13 +29,15 @@ import Terkirim from "./pages/user/application track/terkirim";
 import Belum from "./pages/user/application track/belum";
 import EducationPages from "./pages/user/complete profile/education";
 import ExpereiencePages from "./pages/user/complete profile/experience";
+import JobApplication from "pages/jobApplication";
 
 function App() {
   const [user, setUser] = useState({
     id: "test-1",
     name: "test",
-    roles: ["admin"],
-  });
+    roles: ["admin","user"],
+  }
+  );
 
   const handleLogin = () =>
     setUser({
@@ -53,7 +55,11 @@ function App() {
           <Route index element={<Landing />} />
           <Route path="joblist" element={<Joblist />} />
           <Route path="about" element={<About />} />
-          <Route element={<ProtectedRoute isAllowed={!!user} />}>
+          <Route path="user" element={<ProtectedRoute 
+            redirectPath="/login"
+            isAllowed={!!user && user.roles.includes("user")}>
+              <User/>
+          </ProtectedRoute>}>
             <Route path="home" element={<Home />} />
             <Route path="dashboard" element={<UserDashboard />} />
           </Route>
@@ -61,10 +67,9 @@ function App() {
           <Route path="completeprofile" element={<CompleteProfil/>}></Route>
           <Route path="addEducation" element={<EducationPages/>}></Route>
           <Route path="addExperience" element={<ExpereiencePages/>}></Route>
-          <Route path="user" element={<User />}></Route>
-          {/* <Route path="debug" element={<LowonganTerpilih />}></Route> */}
-
+          {/* <Route path="user" element={<User />}></Route> */}
           <Route path="login" element={<Login />} />
+          <Route path="jobapplication" element={<JobApplication />} />
         </Route>
         <Route
           path="admin"

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Biodata from "../../../components/User/Complete Profile/Biodata/Form";
-import Education from "../../../components/User/Complete Profile/Education/Form";
-import Experience from "../../../components/User/Complete Profile/work expereience/Form";
-import Custom404 from "../../../components/Custom404";
+import Biodata from "components/User/Complete Profile/Biodata/Form";
+import Education from "components/User/Complete Profile/Education/Form";
+import Experience from "components/User/Complete Profile/work expereience/Form";
+import Custom404 from "components/Custom404";
 import * as Icon from "react-bootstrap-icons";
 // import ProgressBar from "./ProgressBar";
-import Circle from "../../../components/User/Complete Profile/Circle";
+import Circle from "components/User/Complete Profile/Circle";
 function CompleteProfil() {
   const [page, setPage] = useState(1);
   const [active, setActive] = useState(0);
@@ -41,8 +41,7 @@ function CompleteProfil() {
           done={active <= i ? " " : <Icon.Check />}
         />
       );
-      console.log(`ini active ${active}`);
-      console.log(`ini i ${i}`);
+
     }
     return (
       <div className="box-border mb-20 -mt-10 flex justify-center items-center w-[100vw]">

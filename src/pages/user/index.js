@@ -1,4 +1,4 @@
-import UserDashboard from "../../components/User/Dashboard";
+import UserDashboard from "components/User/Dashboard";
 
 function User() {
 
