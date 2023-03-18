@@ -21,7 +21,7 @@ export default function Card(props) {
       <td className="text-sm">{appliedAt}</td>
 
       <td align="center" className="rounded-r-xl border-0 px-6">
-        <select className="text-blue-500 font-semibold text-sm cursor-pointer" value={status}>
+        <select className="text-blue-500 font-semibold text-sm cursor-pointer" value={status} onChange={() => (console.log("test  "))}>
           <option value={"Belum diproses"}>
             Belum diproses
           </option>

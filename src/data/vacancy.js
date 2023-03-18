@@ -15,7 +15,7 @@ export const vacancies = [
   },
   {
     id: 1,
-    name: "Account Executive",
+    name: "Python Engineer",
     company: "PT. Torche Education",
     applicantsCount: {
       belumDiproses: 0,

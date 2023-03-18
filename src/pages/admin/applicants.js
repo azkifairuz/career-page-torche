@@ -7,16 +7,16 @@ import Pagination from "components/Pagination";
 import { vacancies } from "data/vacancy";
 import { applicants } from "data/applicants";
 
-export default function Vacancy() {
+export default function Applicants() {
   const [applicantsArr, setApplicantsArr] = useState(applicants[0].data);
   const [vacancySelected, setVacancySelected] = useState(vacancies[0]);
   const maxData = 100;
 
   const handleSelectChange = (e) => {
     e.preventDefault();
-    setVacancySelected(vacancies.find((item) => item.title === e.target.value));
+    setVacancySelected(vacancies.find((item) => item.name === e.target.value));
     setApplicantsArr(
-      applicants.find((item) => item.title === e.target.value).data
+      applicants.find((item) => item.name === e.target.value).data
     );
   };
 
@@ -29,12 +29,12 @@ export default function Vacancy() {
       </header>
 
       <select
-        className="border-2 rounded-xl p-2 px-4 w-2/5 "
-        value={vacancySelected.title}
+        className="text-black border-2 rounded-xl p-2 px-4 w-2/5 "
+        value={vacancySelected.name}
         onChange={handleSelectChange}
       >
-        {vacancies.map((item) => (
-          <option value={item.title}>{item.title}</option>
+        {vacancies.map((item, index) => (
+          <option value={item.name} key={index}>{item.name}</option>
         ))}
       </select>
 
