@@ -10,7 +10,6 @@ import Home from "./pages/home";
 import Landing from "./pages/landing";
 import Layout from "./components/Layout";
 import AdminDashboard from "./pages/admin/dashboard";
-import UserDashboard from "./components/User/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Custom404 from "./components/Custom404";
 import Admin from "./pages/admin";
@@ -30,6 +29,7 @@ import Belum from "./pages/user/application track/belum";
 import EducationPages from "./pages/user/complete profile/education";
 import ExpereiencePages from "./pages/user/complete profile/experience";
 import JobApplication from "pages/jobApplication";
+import UserDashboard from "pages/user/dashboard";
 
 function App() {
   const [user, setUser] = useState({
@@ -52,14 +52,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Landing />} />
+        <Route index element={<Navigate to="landing" />} />
+          <Route path="landing"  element={<Landing />} />
           <Route path="joblist" element={<Joblist />} />
           <Route path="about" element={<About />} />
-
-         
-
-          
-          {/* <Route path="user" element={<User />}></Route> */}
           <Route path="login" element={<Login />} />
           
         </Route>
