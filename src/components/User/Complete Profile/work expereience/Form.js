@@ -16,7 +16,7 @@ function Experience(props) {
 
   const navigate = useNavigate()
   function cekLocation() {
-    if (location.pathname === "/completeprofile") {
+    if (location.pathname === "/user/completeprofile") {
       return (
         <>
           <button
@@ -26,7 +26,7 @@ function Experience(props) {
             Back
           </button>
           <button
-            onClick={props.next}
+            onClick={()=>navigate("/user/dashboard")}
             className=" bg-blue-500 w-1/2 text-white rounded-md p-2"
           >
             Submit
@@ -36,7 +36,7 @@ function Experience(props) {
     }
     return (
       <button
-        onClick={() => navigate("/user")}
+        onClick={() => navigate("/dashboard")}
         className=" bg-blue-500 w-full text-white rounded-md p-2"
       >
         ADD

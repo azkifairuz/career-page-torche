@@ -11,10 +11,9 @@ export default function Navbar() {
   };
 
   const navbarData = [
-    { href: "/", title: "Home" },
-    { href: "/joblist", title: "Job List" },
-    { href: "/about", title: "About" },
-    { href: "/user", title: "Profile" },
+    { href: "home", title: "Home" },
+    { href: "joblist", title: "Job List" },
+    { href: "dashboard", title: "Profile" },
   ];
 
   return (
