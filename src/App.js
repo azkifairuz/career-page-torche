@@ -55,21 +55,13 @@ function App() {
           <Route index element={<Landing />} />
           <Route path="joblist" element={<Joblist />} />
           <Route path="about" element={<About />} />
-          <Route path="user" element={<ProtectedRoute 
-            redirectPath="/login"
-            isAllowed={!!user && user.roles.includes("user")}>
-              <User/>
-          </ProtectedRoute>}>
-            <Route path="home" element={<Home />} />
-            <Route path="dashboard" element={<UserDashboard />} />
-          </Route>
 
-          <Route path="completeprofile" element={<CompleteProfil/>}></Route>
-          <Route path="addEducation" element={<EducationPages/>}></Route>
-          <Route path="addExperience" element={<ExpereiencePages/>}></Route>
+         
+
+          
           {/* <Route path="user" element={<User />}></Route> */}
           <Route path="login" element={<Login />} />
-          <Route path="jobapplication" element={<JobApplication />} />
+          
         </Route>
         <Route
           path="admin"
@@ -98,6 +90,21 @@ function App() {
           <Route path="terkirim" element={<Terkirim />} />
           <Route path="belum" element={<Belum />} />
         </Route>
+        <Route path="user" element={<ProtectedRoute 
+            redirectPath="/login"
+            isAllowed={!!user && user.roles.includes("user")}>
+              <User/>
+          </ProtectedRoute>}>
+          <Route index element={<Navigate to="home" />} />
+            <Route path="home" element={<Home />} />
+            <Route path="dashboard" element={<UserDashboard />}/>
+            <Route path="completeprofile" element={<CompleteProfil/>}></Route>
+            <Route path="addEducation" element={<EducationPages/>}></Route>
+            <Route path="addExperience" element={<ExpereiencePages/>}></Route>
+            
+            <Route path="jobapplication" element={<JobApplication />} />
+            <Route path="joblist" element={<Joblist />} />
+          </Route>
         <Route path="*" element={<Custom404 />} />
       </Routes>
     </BrowserRouter>

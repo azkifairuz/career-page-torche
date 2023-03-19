@@ -11,9 +11,9 @@ export default function Navbar() {
   };
 
   const navbarData = [
-    { href: "/", title: "Home" },
-    { href: "/joblist", title: "Job List" },
-    { href: "/about", title: "About" },
+    { href: "home", title: "Home" },
+    { href: "joblist", title: "Job List" },
+    { href: "dashboard", title: "Profile" },
   ];
 
   return (
@@ -59,10 +59,10 @@ export default function Navbar() {
         </div>
         <div className="lg:flex hidden justify-center">
           <Link
-            to="/login"
+            to="/landing"
             className="bg-[#5885E9] rounded-full py-2 px-[20px] text-[16px] font-cairo font-bold"
           >
-            Login
+            Logout
           </Link>
         </div>
       </nav>

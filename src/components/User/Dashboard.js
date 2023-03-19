@@ -35,7 +35,7 @@ function UserDashboard() {
                 <div className="w-full flex justify-center">
                 <button
                     className="bg-white text-[#0b122a] text-center md:text-xl font-bold  py-2.5 px-5  rounded-md w-full "
-                    onClick={() => navigate("/completeprofile")}
+                    onClick={() => navigate("/user/completeprofile")}
                 >
                     Kelola Profile
                 </button>
@@ -57,8 +57,8 @@ function UserDashboard() {
                     </div>
                 </div>
                 <BiodataPreview/>
-                <EduPreview navigate={()=> navigate("/addEducation") } />
-               <ExperiencePreview navigate ={()=> navigate("/addExperience")}/>
+                <EduPreview navigate={()=> navigate("/user/addEducation") } />
+               <ExperiencePreview navigate ={()=> navigate("/user/addExperience")}/>
             </div>
             
         </div>

@@ -16,7 +16,7 @@ function Education(props) {
   ];
 
   function cekLocation() {
-    if (location.pathname === "/completeprofile") {
+    if (location.pathname === "/user/completeprofile") {
       return (
         <>
           <button
