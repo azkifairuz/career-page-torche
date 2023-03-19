@@ -1,6 +1,6 @@
 import * as Icon from "react-bootstrap-icons"
 export default function LokerCard(props) {
-    const {jobTitle,jobType,jobPlace} = props
+    const {jobTitle,jobType,jobPlace,click} = props
     return(
         <div className="border flex flex-col justify-between  shadow rounded-lg p-4 min-w-[200px]  md:w-[20vw] h-52 m-2 ">
             <div className="flex flex-col gap-3">
@@ -14,7 +14,7 @@ export default function LokerCard(props) {
                     <p className="font-cairo">{jobType}</p>
                 </div>
             </div>
-            <button className="w-full py-2 px-4 bg-blue-500 text-white">Lihat</button>
+            <button onClick={click} className="w-full py-2 px-4 bg-blue-500 text-white">Lihat</button>
         </div>
     )
 }
