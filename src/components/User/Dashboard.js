@@ -3,7 +3,7 @@ import Avatar from "../../assets/index.png";
 import EduPreview from "./Complete Profile/Education/Preview";
 import BiodataPreview from "./Complete Profile/Biodata/Preview";
 import ExperiencePreview from "./Complete Profile/work expereience/Preview";
-function UserDashboard() {
+function Dashboard() {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen text-center m-5 min-w-min ">
@@ -65,4 +65,4 @@ function UserDashboard() {
     );
 }
 
-export default UserDashboard;
+export default Dashboard;
