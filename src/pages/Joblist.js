@@ -11,7 +11,7 @@ function Joblist() {
             <p>{props.company}</p>
             <div className="flex justify-between">
                 <h1>{props.deskripsi}</h1>
-                <button onClick={()=>navigate('/jobapplication')} className="bg-blue-500 rounded-md text-white w-20 p-2  ">Lihat</button>
+                <button onClick={()=>navigate('/user/jobapplication')} className="bg-blue-500 rounded-md text-white w-20 p-2  ">Lihat</button>
             </div>
         </div>
         )

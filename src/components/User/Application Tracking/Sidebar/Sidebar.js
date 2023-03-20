@@ -24,7 +24,7 @@ export default function Sidebar() {
             <Item title="Belum Terkirim" href="/track/belum" />
         </ul>
       </main>
-      <header onClick={()=>navigate("../user")} className="cursor-pointer flex gap-2 items-center">
+      <header onClick={()=>navigate("../user/dashboard")} className="cursor-pointer flex gap-2 items-center">
         <Icon.ChevronLeft size={20} className="" />
         <h1 className="text-2xl font-rajdhani font-bold">Back To Profil</h1>
       </header>
