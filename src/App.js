@@ -30,14 +30,14 @@ import Belum from "./pages/user/application track/belum";
 import EducationPages from "./pages/user/complete profile/education";
 import ExpereiencePages from "./pages/user/complete profile/experience";
 import JobApplication from "pages/jobApplication";
+import { AuthProvider } from "context";
 
 function App() {
   const [user, setUser] = useState({
     id: "test-1",
     name: "test",
-    roles: ["admin","user"],
-  }
-  );
+    roles: ["admin", "user"],
+  });
 
   const handleLogin = () =>
     setUser({
@@ -49,58 +49,66 @@ function App() {
   const handleLogout = () => setUser(null);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Landing />} />
-          <Route path="joblist" element={<Joblist />} />
-          <Route path="about" element={<About />} />
-          <Route path="user" element={<ProtectedRoute 
-            redirectPath="/login"
-            isAllowed={!!user && user.roles.includes("user")}>
-              <User/>
-          </ProtectedRoute>}>
-            <Route path="home" element={<Home />} />
-            <Route path="dashboard" element={<UserDashboard />} />
-          </Route>
-
-          <Route path="completeprofile" element={<CompleteProfil/>}></Route>
-          <Route path="addEducation" element={<EducationPages/>}></Route>
-          <Route path="addExperience" element={<ExpereiencePages/>}></Route>
-          {/* <Route path="user" element={<User />}></Route> */}
-          <Route path="login" element={<Login />} />
-          <Route path="jobapplication" element={<JobApplication />} />
-        </Route>
-        <Route
-          path="admin"
-          element={
-            <ProtectedRoute
-              redirectPath="/home"
-              isAllowed={!!user && user.roles.includes("admin")}
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Landing />} />
+            <Route path="joblist" element={<Joblist />} />
+            <Route path="about" element={<About />} />
+            <Route
+              path="user"
+              element={
+                <ProtectedRoute
+                  redirectPath="/login"
+                  isAllowed={!!user && user.roles.includes("user")}
+                >
+                  <User />
+                </ProtectedRoute>
+              }
             >
-              <Admin />
-            </ProtectedRoute>
-          }
-        >
-          <Route index element={<Navigate to="dashboard" />} />
-          <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="vacancy" element={<Lowongan />} />
-          <Route path="applicants" element={<Pelamar />} />
-          <Route path="vacancy/create" element={<Create />} />
-        </Route>
-        <Route path="track" element={<Track />}>
-          <Route index element={<Navigate to="semua" />} />
-          <Route path="semua" element={<Semua />} />
-          <Route path="dilihat" element={<Dilihat />} />
-          <Route path="diproses" element={<Diproses />} />
-          <Route path="diterima" element={<Diterima />} />
-          <Route path="ditolak" element={<Ditolak />} />
-          <Route path="terkirim" element={<Terkirim />} />
-          <Route path="belum" element={<Belum />} />
-        </Route>
-        <Route path="*" element={<Custom404 />} />
-      </Routes>
-    </BrowserRouter>
+              <Route path="home" element={<Home />} />
+              <Route path="dashboard" element={<UserDashboard />} />
+            </Route>
+
+            <Route path="completeprofile" element={<CompleteProfil />}></Route>
+            <Route path="addEducation" element={<EducationPages />}></Route>
+            <Route path="addExperience" element={<ExpereiencePages />}></Route>
+            {/* <Route path="user" element={<User />}></Route> */}
+            <Route path="login" element={<Login />} />
+            <Route path="jobapplication" element={<JobApplication />} />
+          </Route>
+          <Route
+            path="admin"
+            element={
+              <ProtectedRoute
+                redirectPath="/home"
+                isAllowed={!!user && user.roles.includes("admin")}
+              >
+                <Admin />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="dashboard" />} />
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="vacancy" element={<Lowongan />} />
+            <Route path="applicants" element={<Pelamar />} />
+            <Route path="vacancy/create" element={<Create />} />
+          </Route>
+          <Route path="track" element={<Track />}>
+            <Route index element={<Navigate to="semua" />} />
+            <Route path="semua" element={<Semua />} />
+            <Route path="dilihat" element={<Dilihat />} />
+            <Route path="diproses" element={<Diproses />} />
+            <Route path="diterima" element={<Diterima />} />
+            <Route path="ditolak" element={<Ditolak />} />
+            <Route path="terkirim" element={<Terkirim />} />
+            <Route path="belum" element={<Belum />} />
+          </Route>
+          <Route path="*" element={<Custom404 />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
