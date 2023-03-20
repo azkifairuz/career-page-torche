@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
-import Logo from "../../../assets/logos/Torche_Logo-01_White.png";
-import Item from "./Item";
 import * as Icon from "react-bootstrap-icons";
 
-export default function Sidebar() {
+import Logo from "assets/logos/Torche_Logo-01_White.png";
+import Item from "./Item";
+
+import { useAuthState, useAuthDispatch, logout } from "context";
+import { Link, Navigate } from "react-router-dom";
+
+export default function Sidebar(props) {
+  const dispatch = useAuthDispatch();
+
+  const handleLogout = () => {
+    logout(dispatch);
+    console.log("logout");
+  };
+
   return (
     <aside className="flex flex-col w-[20vw] text-white bg-primary sticky top-0 left-0 h-screen py-8 px-6">
       <header>
@@ -32,10 +42,9 @@ export default function Sidebar() {
             href="settings"
           />
         </ul>
-        <p>
-          {/* copyright torche education */}
-          <Link to="/logout">Logout</Link>  
-        </p>
+        <button onClick={handleLogout}>
+          <Link to="/login">Keluar</Link>
+        </button>
       </main>
     </aside>
   );
