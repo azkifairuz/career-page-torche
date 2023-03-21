@@ -52,12 +52,12 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="login" element={<Login />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Navigate to="landing" />} />
             <Route path="landing" element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
             <Route path="about" element={<About />} />
-            <Route path="login" element={<Login />} />
           </Route>
           <Route
             path="admin"
