@@ -18,8 +18,8 @@ function Dashboard() {
                     ></img>
                     </div>
                     <div className="text-center">
-                    <h1 className="text-2xl">John Kebab</h1>
-                    <h1>johnkebab@yuhuu.com</h1>
+                    <h1 className="text-2xl">John Doe</h1>
+                    <h1>johndoe@yuhuu.com</h1>
                     </div>
                 </div>
                 <div
