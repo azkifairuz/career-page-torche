@@ -11,6 +11,27 @@
     .px-navbar-item{
         @apply px-5
     }
+    .cairo-xs{
+      @apply text-[10px]
+      @apply leading-[18px]
+    }
+    .cairo-s{
+      @apply text-[12px]
+      @apply leading-[22px]
+    }
+    .cairo-m{
+      @apply text-[14px]
+      @apply leading-[24px]
+    }
+    .cairo-l{
+      @apply text-[16px]
+      @apply leading-[26px]
+    }
+    .cairo-xl{
+      @apply text-[18px]
+      @apply leading-[28px]
+    }
+    
 }
 
 * {
