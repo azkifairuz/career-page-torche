@@ -7,7 +7,9 @@ function Dashboard() {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen text-center m-5 min-w-min ">
-            <div className="flex justify-center text-white  flex-col items-center rounded-lg shadow-md shadow-[#0b122a] md:w-1/2 m-auto space-y-10 p-5 bg-[#0b122a]">
+            
+
+            {/* <div className="flex justify-center text-white  flex-col items-center rounded-lg shadow-md shadow-[#0b122a] md:w-1/2 m-auto space-y-10 p-5 bg-[#0b122a]">
                 <div className="flex space-x-10 items-center justify-around w-full">
                 <div className="items-center flex flex-col space-x-4">
                     <div>
@@ -60,7 +62,7 @@ function Dashboard() {
                 <EduPreview navigate={()=> navigate("/user/addEducation") } />
                <ExperiencePreview navigate ={()=> navigate("/user/addExperience")}/>
             </div>
-            
+             */}
         </div>
     );
 }

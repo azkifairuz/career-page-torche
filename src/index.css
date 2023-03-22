@@ -9,86 +9,89 @@
         @apply py-4
     }
     .px-navbar-item{
-        @apply px-5
-    }
-    .cairo-xs-regular{
-      @apply text-[10px]
-      @apply leading-[18px]
-    }
-    .cairo-xs-bold{
-      @apply text-[10px]
-      @apply leading-[18px]
-      @apply font-bold
-    }
-    .cairo-s-regular{
-      @apply text-[12px]
-      @apply leading-[22px]
-    }
-    .cairo-s-bold{
-      @apply text-[12px]
-      @apply leading-[22px]
-      @apply font-bold
-    }
-    .cairo-m-regular{
-      @apply text-[14px]
-      @apply leading-[24px]
-    }
-    .cairo-m-bold{
-      @apply text-[14px]
-      @apply leading-[24px]
-      @apply font-bold
-    }
-    .cairo-l-regular{
-      @apply text-[16px]
-      @apply leading-[26px]
-    }
-    .cairo-l-bold{
-      @apply text-[16px]
-      @apply leading-[26px]
-      @apply font-bold
-    }
-    .cairo-xl-regular{
-      @apply text-[18px]
-      @apply leading-[28px]
-    }
-    .cairo-xl-bold{
-      @apply text-[18px]
-      @apply leading-[28px]
-      @apply font-bold
-    }
-    .heading-s-medium{
-      @apply text-[22px]
-      @apply leading-[30px]
-    }
-    .heading-s-bold{
-      @apply text-[22px]
-      @apply leading-[30px]
-      @apply font-bold
-    }
-    .heading-m-bold{
-      @apply text-[28px]
-      @apply leading-[36px]
-      @apply font-bold
-    }
-    .heading-m-medium{
-      @apply text-[28px]
-      @apply leading-[36px]
-    }
-    .heading-l-bold{
-      @apply text-[34px]
-      @apply leading-[42px]
-      @apply font-bold
-    }
-    .dispay-bold{
-      @apply text-[46px]
-      @apply leading-[52px]
-      @apply font-bold
-    }
-    .heading-l-medium{
-      @apply text-[34px]
-      @apply leading-[42px]
-    }
-    
+        @apply px-5    
+}
+}
+.cairo-xs-regular{
+  font-size:10px;
+  line-height:18px;
+  
+}
+.cairo-xs-bold{
+  font-size:10px;
+  line-height:18px;
+  @apply font-bold
+}
+.cairo-s-regular{
+  font-size:12px;
+  line-height:22px;
+}
+.cairo-s-bold{
+  font-size:12px;
+  line-height:22px;
+  @apply font-bold
+}
+.cairo-m-regular{
+  font-size:14px;
+  line-height:24px;
+  
+}
+.cairo-m-bold{
+  font-size:14px;
+  line-height:24px;
+  @apply font-bold
+}
+.cairo-l-regular{
+  font-size:16px;
+  line-height:26px;
+
+}
+.cairo-l-bold{
+  font-size:16px;
+  line-height:26px;
+  @apply font-bold
+}
+.cairo-xl-regular{
+  font-size:18px;
+  line-height:28px;
+}
+.cairo-xl-bold{
+  font-size:18px;
+  line-height:28px;
+  @apply font-bold
+}
+.heading-s-medium{
+  font-size:22px;
+  line-height:30px;
+}
+.heading-s-bold{
+  font-size:22px;
+  line-height:30px;
+  @apply font-bold
+}
+.heading-m-bold{
+  font-size:28px;
+  line-height:36px;
+  @apply font-bold
+}
+.heading-m-medium{
+  font-size:28px;
+  line-height:36px;
+}
+
+.dispay-bold{
+  font-size:46px;
+  line-height:52px;
+  @apply font-bold
+}
+.heading-l-medium{
+  font-size:34px;
+  line-height:42px;
+}
+.heading-l-bold{
+  font-size:34px;
+  line-height:42px;
+  @apply font-bold
 }
 
 * {
