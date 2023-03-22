@@ -11,12 +11,12 @@ export default function Header(props) {
                         
                     </img>
                 </div>
-                <div className="rounded-full absolute right-0 z-10 top-0 w-fit bg-white p-[9px]">
+                <div className="rounded-full absolute text-primaryBlue-main right-0 z-10 top-0 w-fit bg-white p-[9px]">
                     <Icon.CameraFill size={20}/>
                 </div>              
             </div>
-            <h1 className="font-rajdhani text-center capitalize heading-l-bold">{name}</h1>
-            <p className="font-rajdhani heading-s-medium text-center capitalize">{profesi}</p>
+            <h1 className="font-rajdhani text-center text-black capitalize heading-l-bold">{name}</h1>
+            <p className="font-rajdhani heading-s-medium text-black text-center capitalize">{profesi}</p>
         </div>
     )
 }
