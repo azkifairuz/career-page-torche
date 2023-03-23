@@ -15,41 +15,46 @@
 .text-xs-regular{
   font-size:10px;
   line-height:18px;
-  
+  @apply font-cairo;
 }
 .text-xs-bold{
   font-size:10px;
   line-height:18px;
-  @apply font-bold
+  @apply font-bold;
+  @apply font-cairo;
 }
 .text-s-regular{
   font-size:12px;
   line-height:22px;
+  @apply font-cairo;
 }
 .text-s-bold{
   font-size:12px;
   line-height:22px;
-  @apply font-bold
+  @apply font-bold;
+  @apply font-cairo;
 }
 .text-m-regular{
   font-size:14px;
   line-height:24px;
-  
+  @apply font-cairo;
 }
 .text-m-bold{
   font-size:14px;
   line-height:24px;
-  @apply font-bold
+  @apply font-bold;
+  @apply font-cairo;
 }
 .text-l-regular{
   font-size:16px;
   line-height:26px;
-
+  @apply font-cairo;
 }
 .text-l-bold{
   font-size:16px;
   line-height:26px;
-  @apply font-bold
+  @apply font-bold;
+  @apply font-cairo;
 }
 .text-xl-regular{
   font-size:18px;
@@ -58,7 +63,8 @@
 .text-xl-bold{
   font-size:18px;
   line-height:28px;
-  @apply font-bold
+  @apply font-bold;
+  @apply font-cairo;
 }
 .heading-s-medium{
   font-size:22px;
@@ -67,12 +73,12 @@
 .heading-s-bold{
   font-size:22px;
   line-height:30px;
-  @apply font-bold
+  @apply font-bold;
 }
 .heading-m-bold{
   font-size:28px;
   line-height:36px;
-  @apply font-bold
+  @apply font-bold;
 }
 .heading-m-medium{
   font-size:28px;
@@ -82,7 +88,7 @@
 .dispay-bold{
   font-size:46px;
   line-height:52px;
-  @apply font-bold
+  @apply font-bold;
 }
 .heading-l-medium{
   font-size:34px;
@@ -91,7 +97,15 @@
 .heading-l-bold{
   font-size:34px;
   line-height:42px;
-  @apply font-bold
+  @apply font-bold;
+}
+
+.text-xs-regular, .text-xs-bold, .text-s-regular, .text-s-bold, .text-m-regular, .text-m-bold, .text-l-regular, .text-l-bold, .text-xl-regular, .text-xl-bold, .heading-s-medium, .heading-s-bold, .heading-m-bold, .heading-m-medium, .heading-l-medium, .heading-l-bold, .dispay-bold{
+  @apply font-cairo;
+}
+
+.heading-s-medium, .heading-s-bold, .heading-m-bold, .heading-m-medium, .heading-l-medium, .heading-l-bold, .dispay-bold{
+  @apply font-rajdhani;
 }
 
 * {
