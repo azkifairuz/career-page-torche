@@ -5,15 +5,16 @@ import BiodataPreview from "./Complete Profile/Biodata/Preview";
 import ExperiencePreview from "./Complete Profile/work expereience/Preview";
 import Sidebar from "./sidebar";
 import BasicInformation from "./Basic Information";
+import Contact from "./Contact";
 function Dashboard() {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen text-center m-5 min-w-min ">
-            <div>
+            <div className="flex flex-col md:flex-row gap-4">
                 <Sidebar/>
                 <div>
                     <BasicInformation/>
-                    <kontak
+                    <Contact/>
                 </div>
             </div>
             
