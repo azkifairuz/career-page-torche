@@ -1,6 +1,6 @@
 import { vacancies } from "data/vacancy";
 
-import VacancyCard from "../../components/admin/VacancyCard";
+import VacancyCard from "components/admin/VacancyCard";
 
 function Dashboard() {
   return (
