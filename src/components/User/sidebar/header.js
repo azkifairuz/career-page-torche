@@ -4,7 +4,7 @@ import * as Icon from "react-bootstrap-icons"
 export default function Header(props) {
     const {image,name,profesi} = props
     return(
-        <div className="flex flex-col justify-center items-center gap-2 p-10 w-full shadow-lg
+        <div className="flex flex-col justify-center items-center gap-2 p-10 w-full shadow-card
          rounded-md ">
             <div className="relative w-fit">
                 <div className="w-[160px] h-[160px] bg-center bg-cover">

@@ -2,7 +2,7 @@ import React from "react";
 export default function BasicInformation(params) {
     return(
         <div>
-            <div className="p-4 shadow-lg  rounded-lg">
+            <div className="p-4 shadow-card  rounded-lg">
                 <header className="border-b-2 border-primaryBlue-main p-2">
                     <h1 className="font-rajdhani text-start heading-l-medium ">Basic Information</h1>
                 </header>
