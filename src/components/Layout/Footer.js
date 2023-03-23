@@ -4,21 +4,21 @@ import * as Icon from "react-bootstrap-icons";
 
 export default function Footer() {
   return (
-    <footer className="xl:px-20 py-10 lg:px-10 px-5 bg-[#0b122a]">
+    <footer className="xl:px-20 py-10 lg:px-10 px-5 bg-neutral-1000">
       <div className="flex flex-col justify-between gap-3 xl:flex-row">
         <div className="xl:w-6/12">
           <img src={Logo} alt="Logo" className="h-[100px]"></img>
-          <p className="font-cairo font-normal text-white text-[13px]">
+          <p className="font-cairo font-normal text-white text-[14px] leading-7">
             Torche Education adalah perusahaan startup teknologi pendidikan yang
             berbasis di Indonesia, dengan fokus pada teknik kimia, teknik
             bioproses, dan mata pelajaran teknik proses lainnya.
           </p>
         </div>
 
-        <div className="flex lg:flex-row lg:px-10 flex-col xl:flex-1 text-[14px] gap-10">
-          <div className="mt-5 w-2/12">
-            <p className="font-bold text-white font-rajdhani">Link</p>
-            <ul className="flex flex-col font-cairo text-white font-normal space-y-3 mt-4">
+        <div className="flex lg:flex-row lg:px-10 flex-col xl:flex-1 text-[14px] gap-4">
+          <div className="full">
+            <p className="font-bold text-white heading-s-bold font-rajdhani mt-4">Link</p>
+            <ul className="flex flex-col font-cairo text-white  space-y-3 ">
               <Link to="/">Beranda</Link>
               <Link to="/about-us">Tentang Kami</Link>
               <Link to="/services">Layanan</Link>
@@ -26,22 +26,22 @@ export default function Footer() {
               <Link to="/careers">Karir</Link>
             </ul>
           </div>
-          <div className="text-white mt-5 flex-1">
-            <p className="font-bold mb-4 text-[14px] font-rajdhani ">
+          <div className="text-white flex-1">
+            <p className="font-bold  heading-s-bold font-rajdhani ">
               Kontak Kami
             </p>
-            <p className="mb-3 font-cairo font-semibold">
+            <p className="mb-3 font-cairo text-l-bold ">
               PT. Obor Pengetahuan Indonesia untuk Masyarakat
             </p>
-            <p className="font-normal mb-3">
+            <p className="font-normal cairo mb-3">
               Jl. Kelapa Lilin Utara XIV Blok DG 8 No. 27 Kab. Tangerang, Banten
               15810 Indonesia
             </p>
-            <p className="mb-3 font-cairo font-semibold">
+            <p className="mb-3 font-cairo text-l-bold">
               Whatsapp Business:{" "}
               <span className="font-normal">+62 851 5521 6117</span>
             </p>
-            <p className="mb-3 font-cairo font-semibold">
+            <p className="mb-3 font-cairo text-l-bold">
               Email: <span className="font-normal">admin@torche.app</span>
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function Footer() {
 
       <div className="flex lg:justify-between lg:flex-row flex-col-reverse mt-8 gap-5 text-white">
         <div>
-          <p className="font-cairo font-semibold">Copyright Torche 2022</p>
+          <p className="font-cairo font-bold text-[14px] leading-[34px]">Copyright Torche 2022</p>
         </div>
         <div className="flex gap-8 items-center flex-wrap w-[70%] sm:w-[60%] xl:w-auto">
           <a

@@ -3,12 +3,21 @@ import Avatar from "../../assets/index.png";
 import EduPreview from "./Complete Profile/Education/Preview";
 import BiodataPreview from "./Complete Profile/Biodata/Preview";
 import ExperiencePreview from "./Complete Profile/work expereience/Preview";
+import Sidebar from "./sidebar";
+import BasicInformation from "./Basic Information";
+import Contact from "./Contact";
 function Dashboard() {
     const navigate = useNavigate();
     return (
-        <div className="min-h-screen text-center m-5 min-w-min ">
+        <div className="min-h-screen text-center bg-neutral-100 py-2 px-6 my-5 min-w-min ">
+            <div className="flex flex-col md:flex-row gap-6">
+                <Sidebar/>
+                <div className="flex flex-col w-full gap-6">
+                    <BasicInformation/>
+                    <Contact/>
+                </div>
+            </div>
             
-
             {/* <div className="flex justify-center text-white  flex-col items-center rounded-lg shadow-md shadow-[#0b122a] md:w-1/2 m-auto space-y-10 p-5 bg-[#0b122a]">
                 <div className="flex space-x-10 items-center justify-around w-full">
                 <div className="items-center flex flex-col space-x-4">

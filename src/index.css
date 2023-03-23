@@ -12,50 +12,50 @@
         @apply px-5    
 }
 }
-.cairo-xs-regular{
+.text-xs-regular{
   font-size:10px;
   line-height:18px;
   
 }
-.cairo-xs-bold{
+.text-xs-bold{
   font-size:10px;
   line-height:18px;
   @apply font-bold
 }
-.cairo-s-regular{
+.text-s-regular{
   font-size:12px;
   line-height:22px;
 }
-.cairo-s-bold{
+.text-s-bold{
   font-size:12px;
   line-height:22px;
   @apply font-bold
 }
-.cairo-m-regular{
+.text-m-regular{
   font-size:14px;
   line-height:24px;
   
 }
-.cairo-m-bold{
+.text-m-bold{
   font-size:14px;
   line-height:24px;
   @apply font-bold
 }
-.cairo-l-regular{
+.text-l-regular{
   font-size:16px;
   line-height:26px;
 
 }
-.cairo-l-bold{
+.text-l-bold{
   font-size:16px;
   line-height:26px;
   @apply font-bold
 }
-.cairo-xl-regular{
+.text-xl-regular{
   font-size:18px;
   line-height:28px;
 }
-.cairo-xl-bold{
+.text-xl-bold{
   font-size:18px;
   line-height:28px;
   @apply font-bold
