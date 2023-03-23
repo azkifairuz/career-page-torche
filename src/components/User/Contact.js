@@ -27,6 +27,7 @@ export default function Contact(params) {
                         <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Alamat</label>
                         <textarea type="text" className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-2 rounded-md outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  ></textarea>
                     </div>
+                    <button className="bg-primaryBlue-main text-white font-cairo cairo-l-regular py-2 px-4 rounded-lg border">Save Settings</button>
                 </form>
             </div>
         </div>
