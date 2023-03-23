@@ -1,6 +1,9 @@
-import InputField from "components/atoms/InputField";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+import InputField from "components/atom/InputField";
+
+import Google from "assets/icons/Google.svg";
 import logoBlack from "assets/logos/Torche_Logo_Black.png";
 import logoWhite from "assets/logos/Torche_Logo-01_White.png";
 
@@ -52,20 +55,23 @@ function Login() {
           <button
             onClick={isAdmin}
             name="loginbutton"
-            class="w-full bg-primaryBlue-main text-white focus:outline-none px-[14px] py-[16px] rounded-[8px]"
+            className="w-full bg-primaryBlue-main text-white focus:outline-none px-[14px] py-[16px] rounded-[8px]"
           >
             Masuk
           </button>
         </form>
-        <p className="text-neutral-100 text-[14px]">atau masuk dengan </p>
+        <p className="text-neutral-1000 text-[14px]">atau masuk dengan </p>
         <button
           onClick={isAdmin}
           name="loginbutton"
-          class="w-full bg-white border  shadow-[0_0_3px_0_rgba(0, 0, 0, 0.084)] px-[14px] py-[16px] shadow-[0_2px_3px_0_rgba(0, 0, 0, 0.168)] text-gray-500 rounded-[10px] focus:outline-none"
+          className="flex gap-[15px] p-[15px] justify-center w-full bg-white border shadow-[0_0_3px_0_rgba(0, 0, 0, 0.084)] shadow-[0_2px_3px_0_rgba(0, 0, 0, 0.168)] rounded-[10px] focus:outline-none"
         >
-          Continue with Google
+          <>
+            <img src={Google} alt="Google" />
+            <p>Continue with Google</p>
+          </>
         </button>
-        <p className="text-neutral-100 text-[14px]">
+        <p className="text-neutral-1000 text-[14px]">
           tidak punya akun?{" "}
           <Link to="/signup" className="font-bold text-primaryBlue-main">
             Buat Akun
