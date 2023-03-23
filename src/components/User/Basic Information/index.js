@@ -8,32 +8,32 @@ export default function BasicInformation(params) {
                 </header>
                 <form className="flex flex-col gap-4 mt-2">
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800  cairo-xl-regular">Nama</label>
-                        <input type="text" className="py-2 px-4 outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800  text-xl-regular">Nama</label>
+                        <input type="text" className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Title</label>
-                        <input type="text" className="py-2 px-4 outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Title</label>
+                        <input type="text" className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Bahasa</label>
-                        <input type="text" className="py-2 px-4 outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Bahasa</label>
+                        <input type="text" className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Umu/Jenis Kelamin</label>
-                        <input type="text" className="py-2 px-4 outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Umur/Jenis Kelamin</label>
+                        <input type="text" className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Gaj Sekarang (IDR)</label>
-                        <input type="text" className="py-2 px-4 outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Gaj Sekarang (IDR)</label>
+                        <input type="text" className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Gaji Yang Diharapkan(IDR)</label>
-                        <input type="text" className="py-2 px-4 outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Gaji Yang Diharapkan(IDR)</label>
+                        <input type="text" className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Deskripsi</label>
-                        <textarea type="text" className="py-2 px-4 h-[167px] resize-none outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  ></textarea>
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Deskripsi</label>
+                        <textarea type="text" className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  ></textarea>
                     </div>
                 </form>
             </div>

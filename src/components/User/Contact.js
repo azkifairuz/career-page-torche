@@ -8,26 +8,26 @@ export default function Contact(params) {
                 </header>
                 <form className="flex mt-2  flex-col gap-4">
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Phone</label>
-                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-2 rounded-md outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Phone</label>
+                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo  self-start text-neutral-800 cairo-xl-regular">Alamat Email</label>
-                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-2 rounded-md  outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo  self-start text-neutral-800 text-xl-regular">Alamat Email</label>
+                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md  outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo  self-start text-neutral-800 cairo-xl-regular">Negara</label>
-                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-2 rounded-md outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo  self-start text-neutral-800 text-xl-regular">Negara</label>
+                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Kota</label>
-                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-2 rounded-md outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  />
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Kota</label>
+                        <input type="text" className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <label className="font-cairo self-start text-neutral-800 cairo-xl-regular">Alamat</label>
-                        <textarea type="text" className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-2 rounded-md outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  ></textarea>
+                        <label className="font-cairo self-start text-neutral-800 text-xl-regular">Alamat</label>
+                        <textarea type="text" className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"  ></textarea>
                     </div>
-                    <button className="bg-primaryBlue-main text-white font-cairo cairo-l-regular py-2 px-4 rounded-lg border">Save Settings</button>
+                    <button className="bg-primaryBlue-main text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">Save Settings</button>
                 </form>
             </div>
         </div>
