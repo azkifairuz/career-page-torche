@@ -27,10 +27,15 @@ export default function VacancyCard(props) {
         <h1 className="font-semibold font-rajdhani text-xl text-center">{total}</h1>
         <p className="text-xs text-center">Pelamar</p>
       </td>
+    
+      <td>
+        <h1 className="font-semibold font-rajdhani text-xl text-center">12/12/2021</h1>
+        <p className="text-xs text-center">End Date</p>
+      </td>
 
       <td align="right" className="rounded-r-xl border-0 px-6">
         <button className="text-blue-500 font-semibold text-sm cursor-pointer">
-          Lihat
+          Lihat Detail
         </button>
       </td>
     </tr>
