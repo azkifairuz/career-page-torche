@@ -2,9 +2,9 @@ import React from "react";
 export default function Contact(params) {
     return(
         <div>
-            <div>
-                <header className="border-b border-primaryBlue-main p-2">
-                    <h1 className="font-rajdhani heading-l-medium">Kontak</h1>
+            <div className="p-4 shadow-card rounded-lg">
+                <header className="border-b-2 border-primaryBlue-main p-2">
+                    <h1 className="font-rajdhani text-start heading-l-medium">Kontak</h1>
                 </header>
                 <form className="flex mt-2  flex-col gap-4">
                     <div className="flex flex-col gap-1">

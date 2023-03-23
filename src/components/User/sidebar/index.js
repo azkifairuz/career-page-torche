@@ -12,7 +12,7 @@ export default function Sidebar(props) {
     console.log("logout");
   };
   return (
-    <aside className="flex flex-col  lg:w-[397px] lg:gap-2 px-6 py-2 text-white justify-center items-center bg-neutral-100 ">
+    <aside className="flex flex-col  lg:w-[397px] lg:gap-2  text-white justify-center items-center bg-neutral-100 ">
       <header className="w-full">
         <Header image={sample} profesi="Web Developer" name="John Doe" />
       </header>
