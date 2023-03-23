@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/logos/Torche_Logo-01_White.png";
+import Logo from "../assets/logos/Torche_Logo-01_White.webp";
 
 export default function Custom404() {
   return (

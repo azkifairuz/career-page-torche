@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logos/Torche_Logo-01_White.png";
+import Logo from "../../assets/logos/Torche_Logo-01_White.webp";
 import * as Icon from "react-bootstrap-icons";
 
 export default function Footer() {

@@ -1,6 +1,6 @@
 import * as Icon from "react-bootstrap-icons";
 
-import Logo from "assets/logos/Torche_Logo-01_White.png";
+import Logo from "assets/logos/Torche_Logo-01_White.webp";
 import Item from "./Item";
 
 import { useAuthState, useAuthDispatch, logout } from "context";

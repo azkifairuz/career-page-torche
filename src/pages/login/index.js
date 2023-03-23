@@ -5,7 +5,7 @@ import InputField from "components/atom/InputField";
 
 import Google from "assets/icons/Google.svg";
 import logoBlack from "assets/logos/Torche_Logo_Black.png";
-import logoWhite from "assets/logos/Torche_Logo-01_White.png";
+import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
 
 function Login() {
   const navigate = useNavigate();
