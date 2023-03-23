@@ -21,7 +21,7 @@ export default function Sidebar(props) {
           <Item
             icon={<Icon.Person size={20} />}
             title="Profile"
-            href="dashboard"
+            href="profil"
           />
           <Item
             icon={

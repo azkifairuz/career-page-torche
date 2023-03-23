@@ -34,6 +34,7 @@ import Signup from "pages/signup";
 import { AuthProvider } from "context";
 import Item from "components/User/sidebar/items";
 import Sidebar from "components/User/sidebar";
+import Profil from "pages/user/dashboard/profil";
 
 function App() {
   const [user, setUser] = useState({
@@ -104,7 +105,10 @@ function App() {
           >
             <Route index element={<Navigate to="home" />} />
             <Route path="home" element={<Home />} />
-            <Route path="dashboard" element={<UserDashboard />} />
+            <Route path="dashboard" element={<UserDashboard />} >
+              <Route index element={<Navigate to="profil" />} />
+              <Route path="profil" element={<Profil/>}></Route>
+            </Route>
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
             <Route path="addEducation" element={<EducationPages />}></Route>
             <Route path="addExperience" element={<ExpereiencePages />}></Route>
