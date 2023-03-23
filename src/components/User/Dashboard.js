@@ -12,7 +12,7 @@ function Dashboard() {
         <div className="min-h-screen text-center bg-neutral-100 py-2 px-6 my-5 min-w-min ">
             <div className="flex flex-col md:flex-row gap-6">
                 <Sidebar/>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col w-full gap-6">
                     <BasicInformation/>
                     <Contact/>
                 </div>
