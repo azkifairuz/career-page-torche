@@ -68,6 +68,8 @@ function Signup() {
     e.preventDefault();
     if (password !== confirmPassword) {
       alert("Password tidak sama");
+    } else {
+      alert("Selamat datang");
     }
   };
 
