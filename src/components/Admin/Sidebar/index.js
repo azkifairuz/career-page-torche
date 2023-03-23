@@ -15,7 +15,7 @@ export default function Sidebar(props) {
   };
 
   return (
-    <aside className="flex flex-col w-[20vw] text-white bg-primary sticky top-0 left-0 h-screen py-8 px-6">
+    <aside className="flex flex-col w-[20vw] text-black border-r-2 sticky top-0 left-0 h-screen py-8 px-6">
       <header>
         <img src={Logo} alt="Logo" className="h-20 -ml-2" />
       </header>
