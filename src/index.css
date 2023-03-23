@@ -100,7 +100,7 @@
   @apply font-bold;
 }
 
-.text-xs-regular, .text-xs-bold, .text-s-regular, .text-s-bold, .text-m-regular, .text-m-bold, .text-l-regular, .text-l-bold, .text-xl-regular, .text-xl-bold, .heading-s-medium, .heading-s-bold, .heading-m-bold, .heading-m-medium, .heading-l-medium, .heading-l-bold, .dispay-bold{
+.text-xs-regular, .text-xs-bold, .text-s-regular, .text-s-bold, .text-m-regular, .text-m-bold, .text-l-regular, .text-l-bold, .text-xl-regular, .text-xl-bold {
   @apply font-cairo;
 }
 
