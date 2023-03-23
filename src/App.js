@@ -30,6 +30,7 @@ import EducationPages from "./pages/user/complete profile/education";
 import ExpereiencePages from "./pages/user/complete profile/experience";
 import JobApplication from "pages/jobApplication";
 import UserDashboard from "pages/user/dashboard";
+import Signup from "pages/signup";
 import { AuthProvider } from "context";
 import Item from "components/User/sidebar/items";
 import Sidebar from "components/User/sidebar";
@@ -55,6 +56,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Navigate to="landing" />} />
             <Route path="landing" element={<Landing />} />

@@ -67,7 +67,7 @@ function Login() {
         </button>
         <p className="text-neutral-100 text-[14px]">
           tidak punya akun?{" "}
-          <Link to="/register" className="font-bold text-primaryBlue-main">
+          <Link to="/signup" className="font-bold text-primaryBlue-main">
             Buat Akun
           </Link>
         </p>

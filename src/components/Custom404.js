@@ -4,7 +4,7 @@ import Logo from "../assets/logos/Torche_Logo-01_White.png";
 export default function Custom404() {
   return (
     <main>
-      <header className="bg-primary flex items-center justify-center h-fit">
+      <header className="bg-primaryNavy-main flex items-center justify-center h-fit">
         <Link to="/">
           <img className="h-20" src={Logo} alt="Torche" />
         </Link>
@@ -17,7 +17,7 @@ export default function Custom404() {
           secara tidak sengaja, coba periksa URL di browser web Anda.
         </p>
         <Link to="/">
-          <button className="px-4 py-2 mt-4 text-white bg-primary rounded-md">
+          <button className="px-4 py-2 mt-4 text-white bg-primaryNavy-main rounded-md">
             Kembali ke halaman beranda
           </button>
         </Link>
