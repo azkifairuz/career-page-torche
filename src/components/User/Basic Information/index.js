@@ -34,7 +34,7 @@ export default function BasicInformation(params) {
                     </div>
                     <div className="flex flex-col">
                         <label className="font-cairo  cairo-xl-regular">Deskripsi</label>
-                        <textarea type="text" className="py-2 px-4 outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  ></textarea>
+                        <textarea type="text" className="py-2 px-4 h-[167px] resize-none outline-2 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 focus:ring-primaryBlue-main"  ></textarea>
                     </div>
                 </form>
             </div>
