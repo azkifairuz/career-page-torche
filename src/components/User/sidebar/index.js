@@ -12,7 +12,7 @@ export default function Sidebar(props) {
     console.log("logout");
   };
   return (
-    <aside className="flex flex-col  lg:w-[397px] lg:gap-2  text-white justify-center items-center bg-neutral-100 ">
+    <aside className="flex flex-col lg:w-1/2 lg:max-w-[397px] lg:gap-2  text-white justify-center items-center bg-neutral-100 ">
       <header className="w-full">
         <Header image={sample} profesi="Web Developer" name="John Doe" />
       </header>
@@ -21,7 +21,7 @@ export default function Sidebar(props) {
           <Item
             icon={<Icon.Person size={20} />}
             title="Profile"
-            href="dashboard"
+            href="profil"
           />
           <Item
             icon={

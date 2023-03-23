@@ -9,8 +9,8 @@ import Contact from "./Contact";
 function Dashboard() {
     const navigate = useNavigate();
     return (
-        <div className="min-h-screen text-center bg-neutral-100 py-2 px-6 my-5 min-w-min ">
-            <div className="flex flex-col md:flex-row gap-6">
+        <div >
+            <div className="flex flex-col w-full lg:px-[100px] lg:mx-auto md:flex-row gap-6">
                 <Sidebar/>
                 <div className="flex flex-col w-full gap-6">
                     <BasicInformation/>
