@@ -1,7 +1,7 @@
 import BasicInformation from "components/User/Basic Information";
 import Contact from "components/User/Contact";
 
-export default function profil(params) {
+export default function Profil(params) {
     return(
         <>
         <BasicInformation/>
