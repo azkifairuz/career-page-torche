@@ -12,12 +12,12 @@ export default function Sidebar(props) {
     console.log("logout");
   };
   return (
-    <aside className="flex flex-col w-[20vw] lg:w-[397px] lg:gap-2  text-white justify-center items-center bg-neutral-100   top-0 left-0 h-screen py-8 px-6">
-      <header>
+    <aside className="flex flex-col  lg:w-[397px] lg:gap-2 px-6 py-2 text-white justify-center items-center bg-neutral-100 ">
+      <header className="w-full">
         <Header image={sample} profesi="Web Developer" name="John Doe" />
       </header>
-      <main className="flex flex-col justify-between w-full h-full">
-        <ul className="flex flex-col gap-2  ">
+      <main className="flex flex-col mt-5 justify-between w-full h-full">
+        <ul className="flex flex-col justify-center gap-2  ">
           <Item
             icon={<Icon.Person size={20} />}
             title="Profile"
@@ -45,7 +45,7 @@ export default function Sidebar(props) {
           />
           <Item
             icon={<Icon.Briefcase size={20} />}
-            title="Resume"
+            title="Lamaran"
             href="vacancy"
           />
           <Item

@@ -9,7 +9,7 @@ import Contact from "./Contact";
 function Dashboard() {
     const navigate = useNavigate();
     return (
-        <div className="min-h-screen text-center m-5 min-w-min ">
+        <div className="min-h-screen text-center my-5 min-w-min ">
             <div className="flex flex-col md:flex-row gap-4">
                 <Sidebar/>
                 <div>
