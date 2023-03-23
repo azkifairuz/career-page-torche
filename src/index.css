@@ -15,46 +15,38 @@
 .text-xs-regular{
   font-size:10px;
   line-height:18px;
-  @apply font-cairo;
 }
 .text-xs-bold{
   font-size:10px;
   line-height:18px;
   @apply font-bold;
-  @apply font-cairo;
 }
 .text-s-regular{
   font-size:12px;
   line-height:22px;
-  @apply font-cairo;
 }
 .text-s-bold{
   font-size:12px;
   line-height:22px;
   @apply font-bold;
-  @apply font-cairo;
 }
 .text-m-regular{
   font-size:14px;
   line-height:24px;
-  @apply font-cairo;
 }
 .text-m-bold{
   font-size:14px;
   line-height:24px;
   @apply font-bold;
-  @apply font-cairo;
 }
 .text-l-regular{
   font-size:16px;
   line-height:26px;
-  @apply font-cairo;
 }
 .text-l-bold{
   font-size:16px;
   line-height:26px;
   @apply font-bold;
-  @apply font-cairo;
 }
 .text-xl-regular{
   font-size:18px;
@@ -64,7 +56,6 @@
   font-size:18px;
   line-height:28px;
   @apply font-bold;
-  @apply font-cairo;
 }
 .heading-s-medium{
   font-size:22px;
