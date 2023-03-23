@@ -32,6 +32,8 @@ import JobApplication from "pages/jobApplication";
 import UserDashboard from "pages/user/dashboard";
 import Signup from "pages/signup";
 import { AuthProvider } from "context";
+import Item from "components/User/sidebar/items";
+import Sidebar from "components/User/sidebar";
 
 function App() {
   const [user, setUser] = useState({
@@ -60,6 +62,7 @@ function App() {
             <Route path="landing" element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
             <Route path="about" element={<About />} />
+            <Route path="debug" element={<Sidebar />} />
           </Route>
           <Route
             path="admin"

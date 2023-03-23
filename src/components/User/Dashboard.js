@@ -7,7 +7,9 @@ function Dashboard() {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen text-center m-5 min-w-min ">
-            <div className="flex justify-center text-white  flex-col items-center rounded-lg shadow-md shadow-[#0b122a] md:w-1/2 m-auto space-y-10 p-5 bg-[#0b122a]">
+            
+
+            {/* <div className="flex justify-center text-white  flex-col items-center rounded-lg shadow-md shadow-[#0b122a] md:w-1/2 m-auto space-y-10 p-5 bg-[#0b122a]">
                 <div className="flex space-x-10 items-center justify-around w-full">
                 <div className="items-center flex flex-col space-x-4">
                     <div>
@@ -18,8 +20,8 @@ function Dashboard() {
                     ></img>
                     </div>
                     <div className="text-center">
-                    <h1 className="text-2xl">John Kebab</h1>
-                    <h1>johnkebab@yuhuu.com</h1>
+                    <h1 className="text-2xl">John Doe</h1>
+                    <h1>johndoe@yuhuu.com</h1>
                     </div>
                 </div>
                 <div
@@ -60,7 +62,7 @@ function Dashboard() {
                 <EduPreview navigate={()=> navigate("/user/addEducation") } />
                <ExperiencePreview navigate ={()=> navigate("/user/addExperience")}/>
             </div>
-            
+             */}
         </div>
     );
 }
