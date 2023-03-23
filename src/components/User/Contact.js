@@ -1,5 +1,4 @@
 import React from "react";
-import { Textarea } from "react-bootstrap-icons";
 export default function Contact(params) {
     return(
         <div>
