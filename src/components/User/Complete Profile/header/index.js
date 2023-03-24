@@ -4,6 +4,7 @@ import Header from "components/User/sidebar/header";
 import * as Icon from "react-bootstrap-icons";
 
 import Item from "./item";
+import OptionBar from "./option bar";
 import ProgressCard from "./progress/card";
 export default function HeaderSection() {
   const information = [
@@ -32,6 +33,9 @@ export default function HeaderSection() {
         })}
       </div>
       <div>{<ProgressCard percent="50" />}</div>
+      <div className="mt-6">
+            <OptionBar/>
+      </div>
     </div>
   );
 }

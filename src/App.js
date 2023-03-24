@@ -65,7 +65,7 @@ function App() {
             <Route path="landing" element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
             <Route path="about" element={<About />} />
-            <Route path="debug" element={<Preview />} />
+            <Route path="debug" element={<CompleteProfil />} />
           </Route>
           <Route
             path="admin"
