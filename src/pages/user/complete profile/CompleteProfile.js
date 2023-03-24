@@ -7,11 +7,12 @@ import * as Icon from "react-bootstrap-icons";
 // import ProgressBar from "./ProgressBar";
 import Circle from "components/User/Complete Profile/Circle";
 import HeaderSection from "components/User/Complete Profile/header";
-function CompleteProfil() {
+import CompleteProfil from "components/User/Complete Profile";
+function Completeprofil() {
 
     return(
       <div>
-        <HeaderSection/>
+        <CompleteProfil/>
       </div>
     )
   // const [page, setPage] = useState(1);
@@ -88,4 +89,4 @@ function CompleteProfil() {
   // );
 }
 
-export default CompleteProfil;
+export default Completeprofil;

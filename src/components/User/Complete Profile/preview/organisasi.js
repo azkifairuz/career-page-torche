@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Organisasi(params) {
     const navigate = useNavigate()
     return(
-        <div className="max-w-[314px] w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
+        <div className="w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
             <div className="flex justify-between">
                 <h1 className="heading-s-bold font-rajdhani">Organisasi</h1>
                 <div 
