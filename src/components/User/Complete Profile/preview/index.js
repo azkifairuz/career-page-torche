@@ -1,6 +1,7 @@
 import Pengalaman from "./experience";
 import Organisasi from "./organisasi";
 import Pendidikan from "./pendidikan";
+import Penghargaan from "./penghargaan";
 import Skill from "./skill";
 import Tentang from "./tentang";
 
@@ -12,6 +13,7 @@ export default function Preview(params) {
             <Pendidikan/>
             <Organisasi/>
             <Skill/>
+            <Penghargaan/>
         </div>
     )
 }
