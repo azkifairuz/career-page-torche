@@ -14,7 +14,13 @@ export default function Sidebar(props) {
   return (
     <aside className="flex flex-col lg:w-1/2 lg:max-w-[397px] lg:gap-2  text-white justify-center items-center bg-neutral-100 ">
       <header className="w-full">
-        <Header image={sample} profesi="Web Developer" name="John Doe" />
+        <Header
+          image={sample}
+          classname="flex flex-col justify-center items-center gap-2 p-10 w-full lg:shadow-none shadow-card
+         rounded-md "
+          profesi="Web Developer"
+          name="John Doe"
+        />
       </header>
       <main className="flex flex-col mt-5 justify-between w-full h-full">
         <ul className="flex flex-col justify-center gap-2  ">
@@ -75,7 +81,6 @@ export default function Sidebar(props) {
             href="settings"
           />
         </ul>
-        
       </main>
     </aside>
   );

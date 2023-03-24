@@ -15,7 +15,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex lg:flex-row lg:px-10 flex-col xl:flex-1 text-[14px] gap-4">
+        <div className="flex lg:flex-row lg:px-10 flex-col xl:flex-1 text-[14px] gap-5 lg:gap-44">
           <div className="full">
             <p className="font-bold text-white heading-s-bold font-rajdhani mt-4">Link</p>
             <ul className="flex flex-col font-cairo text-white  space-y-3 ">
