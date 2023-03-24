@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Pengalaman(params) {
     const navigate = useNavigate()
     return(
-        <div className="max-w-[314px]  flex flex-col gap-4 shadow-card rounded-lg p-6">
+        <div className="max-w-[314px] w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
             <div className="flex justify-between">
                 <h1 className="heading-s-bold font-rajdhani">Pengalaman Kerja</h1>
                 <div 
@@ -16,7 +16,7 @@ export default function Pengalaman(params) {
             </div>
             <div>
                 <div>
-                    <h1 className="font-cairo text-neutral-1000 leading-7 text-[28px]">UI/UX Designer</h1>
+                    <h1 className="font-cairo text-neutral-1000 leading-7 text-[18px]">UI/UX Designer</h1>
                     <h2 className="font-cairo text-[14px] leading-6 text-neutral-700">Agustus 2022 - Agustus 2023(1 tahun)</h2>
                     <ul className="p-4 list-disc text-m-regular font-cairo text-neutral-1000">
                         <li>Merancang dan memberikan antarmuka pengguna untuk aplikasi seluler dan web, termasuk wireframe, mockup, dan prototipe.</li>
