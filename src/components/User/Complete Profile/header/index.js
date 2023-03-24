@@ -3,6 +3,7 @@ import sample from "assets/index.png";
 import * as Icon from "react-bootstrap-icons";
 import Header from "../sidebar/header";
 import Item from "./item";
+import ProgressCard from "./progress/card";
 export default function HeaderSection() {
     const information=[
         {Title:"Phone", Desc:"+62 1234 5721 63"},
@@ -23,6 +24,9 @@ export default function HeaderSection() {
                         <Item title={info.Title} desc={info.Desc} />
                     )
                 })}
+            </div>
+            <div>
+                {<ProgressCard/>}
             </div>
         </div>
     )

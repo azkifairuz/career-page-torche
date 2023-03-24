@@ -49,7 +49,7 @@ function CompleteProfil() {
           <div className="flex justify-between items-center relative">
             <div
               className="absolute  bg-blue-500 top-1/2 left-0 h-1  -translate-y-1/2 -z-10 rounded-md"
-              style={{ width: width + "%" }}
+
             ></div>
             <div className="absolute  bg-slate-200 top-1/2 left-0 h-1 -translate-y-1/2 -z-20 rounded-md w-full  "></div>
             {progress}
