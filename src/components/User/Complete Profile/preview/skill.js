@@ -1,4 +1,4 @@
-import { PencilFill, PlusCircle } from "react-bootstrap-icons";
+import { PlusCircle } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
 
 export default function Skill(params) {

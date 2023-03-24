@@ -1,4 +1,4 @@
-import { PencilFill, PlusCircle } from "react-bootstrap-icons";
+import { PlusCircle } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
 
 export default function Portfolio(params) {
@@ -14,7 +14,7 @@ export default function Portfolio(params) {
                     <p className="font-cairo text-s-regular">Tambah</p>
                 </div>
             </div>           
-            <div>
+            <div className="flex flex-col gap-8">
                 <div>
                     <h1 className="mb-2 text-l-bold font-cairo text-neutral-1000">Link Portfolio</h1>
                     <p className="text-l-regular font-cairo text-primaryBlue-main">https:..wwww/gada.com</p>

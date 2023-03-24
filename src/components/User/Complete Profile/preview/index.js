@@ -2,6 +2,8 @@ import Pengalaman from "./experience";
 import Organisasi from "./organisasi";
 import Pendidikan from "./pendidikan";
 import Penghargaan from "./penghargaan";
+import Portfolio from "./portofolio";
+import Resume from "./resume";
 import Skill from "./skill";
 import Tentang from "./tentang";
 
@@ -14,6 +16,8 @@ export default function Preview(params) {
             <Organisasi/>
             <Skill/>
             <Penghargaan/>
+            <Portfolio/>
+            <Resume/>
         </div>
     )
 }
