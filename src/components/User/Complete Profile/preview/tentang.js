@@ -9,8 +9,8 @@ export default function Tentang(params) {
                 <h1 className="heading-s-bold font-rajdhani">Tentang</h1>
                 <div 
                 onClick={()=>navigate("/editTentang")}
-                className="flex  gap-2 py-1 px-2 text-white w-fit bg-primaryBlue-main rounded">
-                    <PencilFill/>
+                className="flex items-center  gap-2 py-1 px-2 text-white w-fit bg-primaryBlue-main rounded">
+                    <PencilFill size={12}/>
                     <p className="font-cairo text-s-regular">Edit</p>
                 </div>
             </div>

@@ -9,8 +9,8 @@ export default function Penghargaan(params) {
                 <h1 className="heading-s-bold font-rajdhani">Penghargaan</h1>
                 <div 
                 onClick={()=>navigate("/tambahPenghargaan")}
-                className="flex  gap-2 py-1 px-2 text-white w-fit bg-primaryBlue-main rounded">
-                    <PlusCircle/>
+                className="flex items-center gap-2 py-1 px-2 text-white w-fit bg-primaryBlue-main rounded">
+                    <PlusCircle size={12}/>
                     <p className="font-cairo text-s-regular">Tambah</p>
                 </div>
             </div>
