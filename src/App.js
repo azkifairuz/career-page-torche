@@ -36,6 +36,7 @@ import Item from "components/User/sidebar/items";
 import Sidebar from "components/User/sidebar";
 import Profil from "pages/user/dashboard/profil";
 import HeaderSection from "components/User/Complete Profile/header";
+import Preview from "components/User/Complete Profile/preview";
 
 function App() {
   const [user, setUser] = useState({
@@ -64,7 +65,7 @@ function App() {
             <Route path="landing" element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
             <Route path="about" element={<About />} />
-            <Route path="debug" element={<HeaderSection />} />
+            <Route path="debug" element={<Preview />} />
           </Route>
           <Route
             path="admin"
