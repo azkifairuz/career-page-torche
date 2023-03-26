@@ -1,7 +1,6 @@
 import sample from "assets/index.png";
 import Header from "components/User/sidebar/header";
 import Item from "./item";
-import OptionBar from "./option bar";
 import ProgressCard from "./progress/card";
 export default function HeaderSection() {
   const information = [
@@ -13,7 +12,7 @@ export default function HeaderSection() {
     { Title: "Nationality", Desc: "indonesia" },
   ];
   return (
-    <div className={`p-6   lg:h-[400px] lg:justify-between lg:px-24 lg:flex lg:bg-[url('assets/images/hero.png')] lg:text-white`}>
+    <div className={`px-6 pt-2 lg:h-[400px] lg:justify-between lg:px-24 lg:py-10 lg:flex lg:bg-[url('assets/images/hero.png')] lg:text-white`}>
       <div className="flex flex-col lg:flex-row lg:gap-6">
       <div className="">
         {
@@ -38,9 +37,7 @@ export default function HeaderSection() {
       </div>
     
       <div>{<ProgressCard percent="50" />}</div>
-      <div className="mt-6 lg:hidden">
-            <OptionBar/>
-      </div>
+
     </div>
   );
 }
