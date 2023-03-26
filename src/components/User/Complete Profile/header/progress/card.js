@@ -10,18 +10,18 @@ export default function ProgressCard(props) {
     { href: "/organisasi", title: "Organisasi" },
   ];
   return (
-    <div className="shadow-card rounded-2xl lg:w-[397px] p-9 text-start"> 
-      <div className="flex gap-2 mb-3">
+    <div className="shadow-card rounded-2xl z-50 bg-white lg:w-[397px] p-9 text-start"> 
+      <div className="flex gap-2 mb-3 text-black ">
         <h1 className="font-cairo text-l-regular">Profile</h1>
         <span className="font-cairo text-l-bold">{percent}%</span>
       </div>
       <div>
-        <div className="flex justify-between items-center relative">
+        <div className="flex justify-between z-20 items-center relative text-black">
           <div className="absolute w-1/2  bg-primaryBlue-main top-1/2 left-0 h-1  -translate-y-1/2 -z-10 rounded-md"></div>
           <div className="absolute  bg-neutral-300 top-1/2 left-0 h-1 -translate-y-1/2 -z-20 rounded-md w-full  "></div>
         </div>
       </div>
-      <div className="text-start mt-3 -ml-5">
+      <div className="text-start lg:pl-2 mt-3 gap-2 z-20 -ml-5">
         {itemData.map((item)=>{
           return <Item href={item.href} title={item.title} />
         })}

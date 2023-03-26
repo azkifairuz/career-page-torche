@@ -1,8 +1,5 @@
 import sample from "assets/index.png";
 import Header from "components/User/sidebar/header";
-
-import * as Icon from "react-bootstrap-icons";
-import hero from "assets/images/hero.png"
 import Item from "./item";
 import OptionBar from "./option bar";
 import ProgressCard from "./progress/card";
@@ -16,23 +13,32 @@ export default function HeaderSection() {
     { Title: "Nationality", Desc: "indonesia" },
   ];
   return (
-    <div className={`p-6 lg:h-[480px] bg-[url('assets/images/hero.png')] lg:text-white`}>
-      <div>
+    <div className={`p-6   lg:h-[400px] lg:justify-between lg:px-24 lg:flex lg:bg-[url('assets/images/hero.png')] lg:text-white`}>
+      <div className="flex flex-col lg:flex-row lg:gap-6">
+      <div className="">
         {
           <Header
-            classname="flex flex-col justify-center items-center gap-2 p-10 w-full "
+            classname="flex flex-col justify-center items-center  w-full "
             image={sample}
           />
         }
-        <h1></h1>
+         
       </div>
-      <div className="grid grid-cols-2 items-center gap-2">
-        {information.map((info) => {
-          return <Item title={info.Title} desc={info.Desc} />;
-        })}
+      <div className="lg:w-[417px]">
+        <div>
+            <h1 className="font-rajdhani text-center  text-black capitalize heading-l-bold lg:text-white lg:text-start">John Kebab</h1>
+            <p className="font-rajdhani heading-s-medium  text-black  text-center capitalize lg:text-white lg:text-start">Web Developer</p>
+        </div>
+          <div className="grid grid-cols-2 items-center gap-2 lg:items-start ">
+          {information.map((info) => {
+            return <Item title={info.Title} desc={info.Desc} />;
+          })}
+        </div>
       </div>
+      </div>
+    
       <div>{<ProgressCard percent="50" />}</div>
-      <div className="mt-6">
+      <div className="mt-6 lg:hidden">
             <OptionBar/>
       </div>
     </div>

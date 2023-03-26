@@ -6,10 +6,10 @@ export default function Item(props) {
   return (
     <Link
       to={href}
-      className="flex items-center w-full  gap-5  text-[#494949]  p-4"
+      className="flex items-center w-full  text-[#494949]  p-4 lg:p-2"
     >
       {icon}
-      <span className="text-m-regular font-cairo text-primaryBlue-hover">{title}</span>
+      <span className="text-m-regular font-cairo text-primaryBlue-hover cursor-pointer">{title}</span>
     </Link>
   );
 }
