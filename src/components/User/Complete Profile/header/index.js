@@ -2,7 +2,7 @@ import sample from "assets/index.png";
 import Header from "components/User/sidebar/header";
 
 import * as Icon from "react-bootstrap-icons";
-
+import hero from "assets/images/hero.png"
 import Item from "./item";
 import OptionBar from "./option bar";
 import ProgressCard from "./progress/card";
@@ -16,16 +16,15 @@ export default function HeaderSection() {
     { Title: "Nationality", Desc: "indonesia" },
   ];
   return (
-    <div className="p-6">
+    <div className={`p-6 lg:h-[480px] bg-[url('assets/images/hero.png')] lg:text-white`}>
       <div>
         {
           <Header
             classname="flex flex-col justify-center items-center gap-2 p-10 w-full "
             image={sample}
-            name="John Doe"
-            profesi="web developer"
           />
         }
+        <h1></h1>
       </div>
       <div className="grid grid-cols-2 items-center gap-2">
         {information.map((info) => {

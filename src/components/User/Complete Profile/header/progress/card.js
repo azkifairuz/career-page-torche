@@ -10,7 +10,7 @@ export default function ProgressCard(props) {
     { href: "/organisasi", title: "Organisasi" },
   ];
   return (
-    <div className="shadow-card rounded-2xl p-9 text-start"> 
+    <div className="shadow-card rounded-2xl lg:w-[397px] p-9 text-start"> 
       <div className="flex gap-2 mb-3">
         <h1 className="font-cairo text-l-regular">Profile</h1>
         <span className="font-cairo text-l-bold">{percent}%</span>
