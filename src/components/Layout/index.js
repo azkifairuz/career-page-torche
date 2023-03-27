@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 export default function Layout() {
   return (
-    <div className="relative min-h-screen flex flex-col w-screen">
+    <div className="box-border relative min-h-screen flex flex-col">
       <Navbar />
       <Outlet />
       <Footer />
