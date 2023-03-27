@@ -37,6 +37,7 @@ import Sidebar from "components/User/sidebar";
 import Profil from "pages/user/dashboard/profil";
 import HeaderSection from "components/User/Complete Profile/header";
 import Preview from "components/User/Complete Profile/preview";
+import FAQ from "pages/FAQ";
 
 function App() {
   const [user, setUser] = useState({
@@ -64,6 +65,8 @@ function App() {
             <Route index element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
             <Route path="about" element={<About />} />
+            <Route path="FAQ" element={<FAQ />} />
+            <Route path="debug" element={<CompleteProfil />} />
           </Route>
           <Route
             path="admin"
