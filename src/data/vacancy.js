@@ -4,6 +4,7 @@ export const vacancies = [
     name: "Account Executive",
     company: "PT. Torche Education",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
     applicantsCount: {
       belumDiproses: 100,
       diproses: 7,
@@ -11,7 +12,7 @@ export const vacancies = [
       ditolak: 124,
       total: 239,
     },
-    status: "Tutup",
+    status: "Aktif",
   },
   {
     id: 1,
@@ -26,12 +27,14 @@ export const vacancies = [
     },
     status: "Aktif",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
   },
   {
     id: 1,
     name: "Account Executive",
     company: "PT. Torche Education",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
     applicantsCount: {
       belumDiproses: 0,
       diproses: 0,
@@ -54,12 +57,14 @@ export const vacancies = [
     },
     status: "Aktif",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
   },
   {
     id: 1,
     name: "Account Executive",
     company: "PT. Torche Education",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
     applicantsCount: {
       belumDiproses: 0,
       diproses: 0,
@@ -82,6 +87,7 @@ export const vacancies = [
     },
     status: "Aktif",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
   },
   
   {
@@ -89,6 +95,7 @@ export const vacancies = [
     name: "Account Executive",
     company: "PT. Torche Education",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
     applicantsCount: {
       belumDiproses: 0,
       diproses: 0,
@@ -111,6 +118,7 @@ export const vacancies = [
     },
     status: "Aktif",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
   },
   {
     id: 1,
@@ -125,6 +133,7 @@ export const vacancies = [
     },
     status: "Aktif",
     createdAt: "10 Maret 2023",
+    endDate: "20 Maret 2023",
   },
 
 ];
