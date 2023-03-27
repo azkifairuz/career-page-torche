@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import Biodata from "components/User/Complete Profile/Biodata/Form";
-import Education from "components/User/Complete Profile/Education/Form";
-import Experience from "components/User/Complete Profile/work expereience/Form";
+
 import Custom404 from "components/Custom404";
 import * as Icon from "react-bootstrap-icons";
 // import ProgressBar from "./ProgressBar";
