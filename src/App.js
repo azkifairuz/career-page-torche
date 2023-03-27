@@ -61,11 +61,9 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="/" element={<Layout />}>
-            <Route index element={<Navigate to="landing" />} />
-            <Route path="landing" element={<Landing />} />
+            <Route index element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
             <Route path="about" element={<About />} />
-            <Route path="debug" element={<CompleteProfil />} />
           </Route>
           <Route
             path="admin"
@@ -107,9 +105,9 @@ function App() {
           >
             <Route index element={<Navigate to="home" />} />
             <Route path="home" element={<Home />} />
-            <Route path="dashboard" element={<UserDashboard />} >
+            <Route path="dashboard" element={<UserDashboard />}>
               <Route index element={<Navigate to="profil" />} />
-              <Route path="profil" element={<Profil/>}></Route>
+              <Route path="profil" element={<Profil />}></Route>
             </Route>
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
             <Route path="addEducation" element={<EducationPages />}></Route>
