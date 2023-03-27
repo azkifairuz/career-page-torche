@@ -11,7 +11,7 @@ function Landing(props) {
                 <button className="py-[14px] w-fit font-semibold px-8 bg-primaryBlue-main hover:bg-primaryBlue-hover border border-primaryBlue-main rounded-lg text-l-regular text-white">Cari Kerja Disini</button>
             </header>
             <section className=" px-4">
-            <h1 className="heading-m-bold">Posisi yang sedang dibuka</h1>
+            <h1 className="heading-m-bold w-[170px]">Posisi yang sedang dibuka</h1>
             <Category/>
 
             </section>
