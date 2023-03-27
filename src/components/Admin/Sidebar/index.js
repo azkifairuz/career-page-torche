@@ -1,9 +1,9 @@
 import * as Icon from "react-bootstrap-icons";
 
-import Logo from "assets/logos/Torche_Logo-01_White.webp";
+import Logo from "assets/icons/TorcheDarkBg.svg";
 import Item from "./Item";
 
-import { useAuthState, useAuthDispatch, logout } from "context";
+import { useAuthDispatch, logout } from "context";
 import { Link, Navigate } from "react-router-dom";
 
 export default function Sidebar(props) {
@@ -15,11 +15,19 @@ export default function Sidebar(props) {
   };
 
   return (
-    <aside className="flex flex-col w-[20vw] text-black border-r-2 sticky top-0 left-0 h-screen py-8 px-6">
-      <header>
-        <img src={Logo} alt="Logo" className="h-20 -ml-2" />
-      </header>
-      <main className="flex flex-col justify-between h-full">
+    <aside className="box-border flex flex-col text-black border-r-2 sticky top-0 left-0 h-screen pt-[152px] px-[80px]">
+      <main className="flex flex-col">
+        <div className="flex gap-[12px] p-[12px] items-center bg-neutral-200 rounded-[12px]">
+          <img src={Logo} alt="Torche Logo" className="w-[44px]" />
+          <section className="flex flex-col gap-[4px]">
+            <h2 className="heading-s-bold">
+              Torche Education
+            </h2>
+            <p className="heading-s-medium">
+              Admin
+            </p>
+          </section>
+        </div>
         <ul className="flex flex-col gap-2 mt-14">
           <Item
             icon={<Icon.Grid size={20} />}
