@@ -24,7 +24,7 @@ export default function Navbar() {
           <Link to="/" className="cursor-pointer">
             <img className="w-[128px] h-[72px]" src={Logo} alt="Logo" />
           </Link>
-          <ul className="hidden lg:flex items-center">
+          <ul className="hidden md:flex items-center">
             {navbarData.map((data, index) => {
               return (
                 <li
@@ -39,7 +39,7 @@ export default function Navbar() {
         </section>
         <button
           onClick={handleNavbarOpen}
-          className={`${isNavbarOpen && "hidden"} lg:hidden hamburger`}
+          className={`${isNavbarOpen && "hidden"} md:hidden hamburger`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ export default function Navbar() {
             />
           </svg>
         </button>
-        <section className="hidden lg:flex gap-[4px] justify-center">
+        <section className="hidden md:flex gap-[4px] justify-center">
           <Link
             to="/signup"
             className="bg-primaryBlue-surface text-neutral-1000 text-[16px] font-rajdhani font-semibold rounded-[8px] p-[8px] px-[16px]"
