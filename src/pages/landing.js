@@ -1,5 +1,8 @@
 import Benefit from "components/benefit";
 import Category from "components/category";
+import Empati from "assets/icons/love.svg";
+import Kesopanan from "assets/icons/kesopanan.svg";
+import Kepo from "assets/icons/rasa-ingin-tahu.svg";
 import LowonganTerpilih from "components/lowongan terpilih";
 import SearchBar from "components/searchBar";
 function Landing(props) {
@@ -26,29 +29,29 @@ function Landing(props) {
                     
                 </div>
             </section>
-            <section>
-                <h1 className="heading-m-bold">Nilai Yang Kami Pegang</h1>
-                <div className="flex p-6 gap-6 overflow-x-auto">
+            <section className="px-4">
+                <h1 className="heading-m-bold">Nilai-Nilai Yang Kami Pegang</h1>
+                <div className="flex py-6 gap-6 overflow-x-auto">
                     <div className="w-[242px]  p-8 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-md border  ">
-                        <img src={Benefit} alt='icon'>
+                        <img src={Empati} alt='icon'>
                             
                         </img>
                         <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
-                        <div className="text-m-regular text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
+                        <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
                     <div className="w-[242px] p-8 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-md border  ">
-                        <img src={Benefit} alt='icon'>
+                        <img src={Kesopanan} alt='icon'>
                             
                         </img>
                         <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
-                        <div className="text-m-regular text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
+                        <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
                     <div className="w-[242px] p-8 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-md border  ">
-                        <img src={Benefit} alt='icon'>
+                        <img src={Kepo} alt='icon'>
                             
                         </img>
                         <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
-                        <div className="text-m-regular text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
+                        <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
                 </div>
             </section>
