@@ -76,7 +76,7 @@
   line-height:36px;
 }
 
-.dispay-bold{
+.heading-xxl-bold {
   font-size:46px;
   line-height:52px;
   @apply font-bold;
@@ -95,7 +95,7 @@
   @apply font-cairo;
 }
 
-.heading-s-medium, .heading-s-bold, .heading-m-bold, .heading-m-medium, .heading-l-medium, .heading-l-bold, .dispay-bold{
+.heading-s-medium, .heading-s-bold, .heading-m-bold, .heading-m-medium, .heading-l-medium, .heading-l-bold, .heading-xxl-bold{
   @apply font-rajdhani;
 }
 
