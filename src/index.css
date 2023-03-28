@@ -90,6 +90,11 @@
   line-height:42px;
   @apply font-bold;
 }
+.display-bold{
+  font-size:46px;
+  line-height:52px;
+  @apply font-bold;
+}
 
 .text-xs-regular, .text-xs-bold, .text-s-regular, .text-s-bold, .text-m-regular, .text-m-bold, .text-l-regular, .text-l-bold, .text-xl-regular, .text-xl-bold {
   @apply font-cairo;
