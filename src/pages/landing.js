@@ -13,7 +13,7 @@ function Landing(props) {
             <header className="h-[500px] bg-[url('assets/images/LandingBanner.png')] lg:bg-top bg-no-repeat bg-cover bg-center py-20 md:py-0 md:flex md:justify-center   text-white px-4 ">
                 <div className="flex flex-col gap-8 md:self-center">
                     <h1 className="heading-l-bold font-rajdhani md:display-bold ">Career at TORCHE Education</h1>
-                    <p className="text-l-regular ">Torche Education terbuka untuk berbagai posisi magang bagi mahasiswa dan freshgraduates untuk merasakan lingkungan kerja di perusahaan startup.</p>
+                    <p className="text-l-regular md:-mt-4 ">Torche Education terbuka untuk berbagai posisi magang bagi mahasiswa dan freshgraduates untuk merasakan lingkungan kerja di perusahaan startup.</p>
                     <button className="py-[14px] w-fit font-semibold text-l-regular  px-8 bg-primaryBlue-main hover:bg-primaryBlue-hover border border-primaryBlue-main rounded-lg text-l-regular text-white">Cari Kerja Disini</button>
                 </div>
                 <div className="hidden md:block md:-mr-10 md:self-end">
