@@ -4,120 +4,119 @@ import * as Icon from "react-bootstrap-icons";
 
 export default function Footer() {
   return (
-    <footer className="xl:px-20 py-10 lg:px-10 px-5 bg-neutral-1000">
-      <div className="flex flex-col justify-between gap-3 xl:flex-row">
-        <div className="xl:w-6/12">
-          <img src={Logo} alt="Logo" className="h-[100px]"></img>
-          <p className="font-cairo font-normal text-white text-[14px] leading-7">
+    <footer className="text-white bg-neutral-1000 px-[25px] md:px-[50px] lg:px-[120px]">
+      <section className="pt-[40px] pb-[16px] md:py-[40px] lg:py-[70px] flex flex-col lg:flex-row text-m-regular lg:justify-between gap-[16px] md:gap-[32px]">
+        <div className="flex flex-col w-full lg:w-5/12 gap-[8px]">
+          <img src={Logo} alt="Logo" className="h-[89px] w-[142px]"></img>
+          <p>
             Torche Education adalah perusahaan startup teknologi pendidikan yang
             berbasis di Indonesia, dengan fokus pada teknik kimia, teknik
             bioproses, dan mata pelajaran teknik proses lainnya.
           </p>
         </div>
 
-        <div className="flex lg:flex-row lg:px-10 flex-col xl:flex-1 text-[14px] gap-5 lg:gap-44">
-          <div className="full">
-            <p className="font-bold text-white heading-s-bold font-rajdhani mt-4">Link</p>
-            <ul className="flex flex-col font-cairo text-white  space-y-3 ">
-              <Link to="/">Beranda</Link>
-              <Link to="/about-us">Tentang Kami</Link>
-              <Link to="/services">Layanan</Link>
-              <Link to="/courses">Kursus</Link>
-              <Link to="/careers">Karir</Link>
-            </ul>
-          </div>
-          <div className="text-white flex-1">
-            <p className="font-bold  heading-s-bold font-rajdhani ">
-              Kontak Kami
-            </p>
-            <p className="mb-3 font-cairo text-l-bold ">
+        <div className="flex flex-col md:flex-row md:justify-between lg:pt-6 lg:w-5/12 gap-[16px] lg:gap-[48px]">
+          <section className="flex flex-col gap-[8px]">
+            <h2 className="heading-s-bold">Link</h2>
+            <Link to="/">Beranda</Link>
+            <Link to="/about-us">Tentang Kami</Link>
+            <Link to="/services">Layanan</Link>
+            <Link to="/courses">Kursus</Link>
+            <Link to="/careers">Karir</Link>
+          </section>
+
+          <section className="flex flex-col gap-[8px]">
+            <p className="heading-s-bold">Kontak Kami</p>
+            <p className="text-m-bold">
               PT. Obor Pengetahuan Indonesia untuk Masyarakat
             </p>
-            <p className="font-normal cairo mb-3">
+            <p>
               Jl. Kelapa Lilin Utara XIV Blok DG 8 No. 27 Kab. Tangerang, Banten
               15810 Indonesia
             </p>
-            <p className="mb-3 font-cairo text-l-bold">
-              Whatsapp Business:{" "}
-              <span className="font-normal">+62 851 5521 6117</span>
+            <p>
+              <span className="text-m-bold">Whatsapp Business:</span> +62 851
+              5521 6117
             </p>
-            <p className="mb-3 font-cairo text-l-bold">
+            <p>
               Email: <span className="font-normal">admin@torche.app</span>
             </p>
-          </div>
+          </section>
         </div>
-      </div>
+      </section>
 
-      <div className="flex lg:justify-between lg:flex-row flex-col-reverse mt-8 gap-5 text-white">
+      <section className="flex flex-col-reverse md:flex-row py-[16px] md:py-[30px] gap-[16px] justify-between md:items-center">
         <div>
-          <p className="font-cairo font-bold text-[14px] leading-[34px]">Copyright Torche 2022</p>
+          <p className="font-cairo font-bold text-m-bold">
+            Copyright Torche 2022
+          </p>
         </div>
-        <div className="flex gap-8 items-center flex-wrap w-[70%] sm:w-[60%] xl:w-auto">
+        <div className="flex items-center flex-wrap w-2/3 md:w-fit gap-[10px]">
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://twitter.com/TorcheEdu"
           >
-            <Icon.Twitter size={20} />
+            <Icon.Twitter size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://www.facebook.com/torche.edu"
           >
-            <Icon.Facebook size={20} />
+            <Icon.Facebook size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://www.instagram.com/torche.app/"
           >
-            <Icon.Instagram size={20} />
+            <Icon.Instagram size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://www.youtube.com/channel/UCQnYuE3KU3CzcAjVhuCQtNw"
           >
-            <Icon.Youtube size={20} />
+            <Icon.Youtube size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://www.linkedin.com/company/torche-education/"
           >
-            <Icon.Linkedin size={20} />
+            <Icon.Linkedin size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://vt.tiktok.com/ZSeu2n4ca/"
           >
-            <Icon.Tiktok size={20} />
+            <Icon.Tiktok size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://discord.com/invite/2fYBrcK785"
           >
-            <Icon.Discord size={20} />
+            <Icon.Discord size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://wa.me/+6285155216117"
           >
-            <Icon.Whatsapp size={20} />
+            <Icon.Whatsapp size={16} />
           </a>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer flex justify-center items-center w-[32px] h-[32px]"
             target="blank"
             href="https://page.line.me/229wiguf"
           >
-            <Icon.Line size={20} />
+            <Icon.Line size={16} />
           </a>
         </div>
-      </div>
+      </section>
     </footer>
   );
 }
