@@ -3,19 +3,25 @@ import Category from "components/category";
 import Empati from "assets/icons/love.svg";
 import Kesopanan from "assets/icons/kesopanan.svg";
 import Kepo from "assets/icons/rasa-ingin-tahu.svg";
+import girl from "assets/images/girl.png"
 import LowonganTerpilih from "components/lowongan terpilih";
 import SearchBar from "components/searchBar";
 import Feedback from "components/feedback";
 function Landing(props) {
     return(
-        <div className="flex w-screen flex-col pb-16 h-fit gap-20">
-            <header className="h-[500px] bg-[url('assets/images/LandingBanner.png')] lg:bg-top bg-no-repeat bg-cover bg-center py-20  text-white px-4 flex flex-col gap-8">
-                <h1 className="heading-l-bold font-rajdhani ">Career at TORCHE Education</h1>
-                <p className="text-l-regular ">Torche Education terbuka untuk berbagai posisi magang bagi mahasiswa dan freshgraduates untuk merasakan lingkungan kerja di perusahaan startup.</p>
-                <button className="py-[14px] w-fit font-semibold text-l-regular  px-8 bg-primaryBlue-main hover:bg-primaryBlue-hover border border-primaryBlue-main rounded-lg text-l-regular text-white">Cari Kerja Disini</button>
+        <div className="flex w-screen flex-col overflow-hidden pb-16 h-fit gap-20">
+            <header className="h-[500px] bg-[url('assets/images/LandingBanner.png')] lg:bg-top bg-no-repeat bg-cover bg-center py-20 md:py-0 md:flex md:justify-center   text-white px-4 ">
+                <div className="flex flex-col gap-8 md:self-center">
+                    <h1 className="heading-l-bold font-rajdhani md:display-bold ">Career at TORCHE Education</h1>
+                    <p className="text-l-regular ">Torche Education terbuka untuk berbagai posisi magang bagi mahasiswa dan freshgraduates untuk merasakan lingkungan kerja di perusahaan startup.</p>
+                    <button className="py-[14px] w-fit font-semibold text-l-regular  px-8 bg-primaryBlue-main hover:bg-primaryBlue-hover border border-primaryBlue-main rounded-lg text-l-regular text-white">Cari Kerja Disini</button>
+                </div>
+                <div className="hidden md:block md:-mr-10 md:self-end">
+                    <img alt="img" src={girl } className="md:w-[550px]"></img>
+                </div>
             </header>
-            <section className="px-4">
-            <h1 className="heading-m-bold w-[170px]">Posisi yang sedang dibuka</h1>
+            <section className="px-4 md:text-center">
+            <h1 className=" heading-m-bold w-[170px] md:text-[34px] md:leading-[42px] md:w-full md:text-center ">Posisi yang sedang dibuka</h1>
             <Category/>
 
             </section>
