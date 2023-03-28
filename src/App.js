@@ -26,17 +26,12 @@ import Diterima from "./pages/user/application track/diterima";
 import Ditolak from "./pages/user/application track/ditolak";
 import Terkirim from "./pages/user/application track/terkirim";
 import Belum from "./pages/user/application track/belum";
-import EducationPages from "./pages/user/complete profile/education";
-import ExpereiencePages from "./pages/user/complete profile/experience";
 import JobApplication from "pages/jobApplication";
 import UserDashboard from "pages/user/dashboard";
 import Signup from "pages/signup";
 import { AuthProvider } from "context";
-import Item from "components/User/sidebar/items";
-import Sidebar from "components/User/sidebar";
 import Profil from "pages/user/dashboard/profil";
-import HeaderSection from "components/User/Complete Profile/header";
-import Preview from "components/User/Complete Profile/preview";
+
 import FAQ from "pages/FAQ";
 
 function App() {
@@ -113,9 +108,6 @@ function App() {
               <Route path="profil" element={<Profil />}></Route>
             </Route>
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
-            <Route path="addEducation" element={<EducationPages />}></Route>
-            <Route path="addExperience" element={<ExpereiencePages />}></Route>
-
             <Route path="jobapplication" element={<JobApplication />} />
             <Route path="joblist" element={<Joblist />} />
           </Route>

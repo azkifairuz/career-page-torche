@@ -1,8 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Avatar from "../../assets/index.png";
-import EduPreview from "./Complete Profile/Education/Preview";
-import BiodataPreview from "./Complete Profile/Biodata/Preview";
-import ExperiencePreview from "./Complete Profile/work expereience/Preview";
 import Sidebar from "./sidebar";
 import BasicInformation from "./Basic Information";
 import Contact from "./Contact";
