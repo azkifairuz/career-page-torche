@@ -32,21 +32,21 @@ function Landing(props) {
             <section className="px-4">
                 <h1 className="heading-m-bold">Nilai-Nilai Yang Kami Pegang</h1>
                 <div className="flex py-6 gap-6 overflow-x-auto">
-                    <div className="w-[242px]  p-8 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-md border  ">
+                    <div className="w-[242px]  p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Empati} alt='icon'>
                             
                         </img>
                         <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
                         <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
-                    <div className="w-[242px] p-8 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-md border  ">
+                    <div className="w-[242px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Kesopanan} alt='icon'>
                             
                         </img>
                         <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
                         <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
-                    <div className="w-[242px] p-8 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-md border  ">
+                    <div className="w-[242px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Kepo} alt='icon'>
                             
                         </img>

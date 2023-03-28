@@ -3,7 +3,7 @@ export default function CategoryCard(props) {
     const {icon,Category,jumlah} = props
     return(
 
-        <div className="w-[242px] py-8 px-4 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-md border  ">
+        <div className="w-[242px] py-8 px-4 shadow-card flex-shrink-0 flex flex-col items-center gap-4 rounded-[10px] border  ">
             <img src={icon} alt='icon'>
                 
             </img>
