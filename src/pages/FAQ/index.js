@@ -1,5 +1,9 @@
 import Accordion from "./Accordion";
 import Card from "./Card";
+import ScreeningCv from "assets/icons/screening-cv.svg";
+import ScreeningTest from "assets/icons/screening-test.svg";
+import Interview from "assets/icons/interview.svg";
+import Offering from "assets/icons/offering.svg";
 
 export default function FAQ() {
   return (
@@ -15,7 +19,7 @@ export default function FAQ() {
           <section className="flex flex-wrap lg:flex-nowrap gap-[24px] ">
             <Card
               title="Screening CV"
-              src="assets/icons/ScreeningCV.svg"
+              src={ScreeningCv}
               step="1"
             />
             <Card
