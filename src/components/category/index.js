@@ -6,7 +6,7 @@ export default function Category() {
         <div className=" flex py-4  overflow-x-scroll w-full gap-4 ">
             {
                 categories.map((category,index)=>{
-                    return <CategoryCard  ker={index} Category={category.Category} icon={category.icon} jumlah={category.Jumlah} />
+                    return <CategoryCard  key={index} Category={category.Category} icon={category.icon} jumlah={category.Jumlah} />
                 })
             }
 
