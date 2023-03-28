@@ -5,6 +5,7 @@ import Kesopanan from "assets/icons/kesopanan.svg";
 import Kepo from "assets/icons/rasa-ingin-tahu.svg";
 import LowonganTerpilih from "components/lowongan terpilih";
 import SearchBar from "components/searchBar";
+import Feedback from "components/feedback";
 function Landing(props) {
     return(
         <div className="flex w-screen flex-col pb-16 h-fit gap-20">
@@ -13,7 +14,7 @@ function Landing(props) {
                 <p className="text-l-regular ">Torche Education terbuka untuk berbagai posisi magang bagi mahasiswa dan freshgraduates untuk merasakan lingkungan kerja di perusahaan startup.</p>
                 <button className="py-[14px] w-fit font-semibold text-l-regular  px-8 bg-primaryBlue-main hover:bg-primaryBlue-hover border border-primaryBlue-main rounded-lg text-l-regular text-white">Cari Kerja Disini</button>
             </header>
-            <section className=" px-4">
+            <section className="px-4">
             <h1 className="heading-m-bold w-[170px]">Posisi yang sedang dibuka</h1>
             <Category/>
 
@@ -53,6 +54,12 @@ function Landing(props) {
                         <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
                         <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
+                </div>
+            </section>
+            <section className="px-4">
+                <h1 className="heading-m-bold">Apa Kata mereka</h1>
+                <div className="flex px-1 w-full py-5 gap-6 overflow-x-auto">
+                    <Feedback/>
                 </div>
             </section>
         </div>
