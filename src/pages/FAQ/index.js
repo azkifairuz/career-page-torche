@@ -1,3 +1,4 @@
+import Accordion from "./Accordion";
 import Card from "./Card";
 
 export default function FAQ() {
@@ -6,12 +7,12 @@ export default function FAQ() {
       <header className="bg-primaryNavy-hover text-white flex items-center justify-center p-[120px]">
         <h1 className="display-bold">FAQ</h1>
       </header>
-      <main className="px-[100px] py-[80px]">
+      <main className="px-[16px] md:px[32px] lg:px-[100px] py-[80px]">
         <div className="flex flex-col gap-[40px]">
           <h1 className="heading-l-bold w-fit md:self-center">
             Hiring Process
           </h1>
-          <section className="flex flex-wrap gap-[24px]">
+          <section className="flex flex-wrap lg:flex-nowrap gap-[24px] ">
             <Card
               title="Screening CV"
               src="assets/icons/ScreeningCV.svg"
@@ -22,18 +23,14 @@ export default function FAQ() {
               src="assets/icons/ScreeningTest.svg"
               step="2"
             />
-            <Card
-              title="Interview"
-              src="assets/icons/Interview.svg"
-              step="3"
-            />
-            <Card
-              title="Offering"
-              src="assets/icons/Offering.svg"
-              step="4"
-            />
-
-
+            <Card title="Interview" src="assets/icons/Interview.svg" step="3" />
+            <Card title="Offering" src="assets/icons/Offering.svg" step="4" />
+          </section>
+          <section className="flex flex-col gap-[40px]">
+            <h1 className="heading-l-bold w-fit md:self-center">
+              Frequently Asked Questions
+            </h1>
+            <Accordion />
           </section>
         </div>
       </main>
