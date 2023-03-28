@@ -25,10 +25,10 @@ function Landing(props) {
             <Category/>
 
             </section>
-            <section>
-                <div className="w-full  bg-cover bg-center h-[240px] bg-no-repeat bg-[url('assets/images/LandingImage.png')]"></div>
-                <div className="px-4 mt-4">
-                    <h1 className="heading-m-bold text-primaryBlue-main">Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
+            <section className=" md:px-4 ">
+                <div className="w-full  bg-cover bg-center h-[240px] bg-no-repeat bg-[url('assets/images/LandingImage.png')] md:h-[360px]  "></div>
+                <div className="md:px-0 mt-4 flex flex-col gap-4">
+                    <h1 className="heading-m-bold text-primaryBlue-main md:text-[34px] md:leading-[42px]">Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
                     <p className="text-l-regular text-neutral-1000">Di dalam Torche Education, kami membantu kamu untuk mengembangkan kemampuan dan belajar dari pengalaman nyata. Berikut adalah beberapa keuntungan yang dapat kamu nikmati apabila mengikuti kerja magang dari Torche:</p>
                     <ul>
                         {<Benefit/>}
@@ -36,29 +36,29 @@ function Landing(props) {
                     
                 </div>
             </section>
-            <section className="px-4">
+            <section className="px-4 mt-24 md:">
                 <h1 className="heading-m-bold">Nilai-Nilai Yang Kami Pegang</h1>
-                <div className="flex py-6 gap-6 overflow-x-auto">
-                    <div className="w-[242px]  p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
+                <div className="flex py-6 justify-center gap-6 overflow-x-auto">
+                    <div className="w-[242px] md:w-[214px] md:h-[280px] h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Empati} alt='icon'>
                             
                         </img>
                         <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
                         <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
-                    <div className="w-[242px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
+                    <div className="w-[242px] md:w-[214px] md:h-[280px] h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Kesopanan} alt='icon'>
                             
                         </img>
-                        <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
-                        <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
+                        <div className="heading-s-medium text-center font-bold font-rajdhani">Kesopanan</div>
+                        <div className="text-m-regular text-center text-neutral-900 font-cairo">Memiliki moral baik dan saling menghargai</div>
                     </div>
-                    <div className="w-[242px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
+                    <div className="w-[242px] md:w-[214px] md:h-[280px] h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Kepo} alt='icon'>
                             
                         </img>
-                        <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
-                        <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
+                        <div className="heading-s-medium text-center font-bold font-rajdhani">Memiliki Rasa Ingin Tahu</div>
+                        <div className="text-m-regular text-center text-neutral-900 font-cairo">Memiliki rasa ingin tahu, dan semangat belajar yang tinggi</div>
                     </div>
                 </div>
             </section>
