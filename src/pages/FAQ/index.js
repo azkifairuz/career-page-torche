@@ -27,8 +27,8 @@ export default function FAQ() {
 
   return (
     <section className="flex-1">
-      <header className="bg-primaryNavy-hover text-white flex items-center justify-center p-[120px]">
-        <h1 className="display-bold">FAQ</h1>
+      <header className="bg-primaryNavy-hover box-border flex items-center justify-center p-[120px]">
+        <h1 className="heading-xxl-bold text-neutral-100">FAQ</h1>
       </header>
       <main className="flex flex-col px-[16px] md:px[32px] lg:px-[100px] py-[80px] gap-[80px]">
         <div className="flex flex-col gap-[40px]">
