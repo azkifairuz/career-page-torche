@@ -63,8 +63,8 @@ function Landing(props) {
                     </div>
                 </div>
             </section>
-            <section className="px-4">
-                <h1 className="heading-m-bold">Apa Kata mereka</h1>
+            <section className="px-4  md:mx-auto">
+                <h1 className="heading-m-bold md:text-center">Apa Kata mereka</h1>
                 <div className="flex px-1 w-full py-5 gap-6 overflow-x-auto">
                     <Feedback/>
                 </div>
