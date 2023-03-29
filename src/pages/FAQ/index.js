@@ -4,6 +4,7 @@ import ScreeningCv from "assets/icons/screening-cv.svg";
 import ScreeningTest from "assets/icons/screening-test.svg";
 import Interview from "assets/icons/interview.svg";
 import Offering from "assets/icons/offering.svg";
+import Background from "assets/images/bg.webp";
 
 export default function FAQ() {
   const cardData = [
@@ -27,7 +28,7 @@ export default function FAQ() {
 
   return (
     <section className="flex-1">
-      <header className="bg-primaryNavy-hover box-border flex items-center justify-center p-[120px]">
+      <header className="box-border bg-[url('assets/images/bg.webp')] bg-cover bg-[center_bottom_30%] flex items-center justify-center p-[120px]">
         <h1 className="heading-xxl-bold text-neutral-100">FAQ</h1>
       </header>
       <main className="flex flex-col px-[16px] md:px[32px] lg:px-[100px] py-[80px] gap-[80px]">
