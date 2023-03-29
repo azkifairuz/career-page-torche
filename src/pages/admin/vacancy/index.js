@@ -7,7 +7,7 @@ import TabButton from "components/admin/TabButton";
 import Table from "components/admin/TableVacancy";
 import Pagination from "components/Pagination";
 
-export default function Lowongan() {
+export default function Vacancy() {
   const [filterStatus, setFilterStatus] = useState("all");
   const maxData = 100;
   return (
