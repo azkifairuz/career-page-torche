@@ -64,12 +64,12 @@
 .heading-s-bold{
   font-size:22px;
   line-height:30px;
-  @apply font-bold;
+  @apply font-bold !important;
 }
 .heading-m-bold{
   font-size:28px;
   line-height:36px;
-  @apply font-bold;
+  @apply font-bold !important;
 }
 .heading-m-medium{
   font-size:28px;
@@ -79,7 +79,7 @@
 .heading-xxl-bold {
   font-size:46px;
   line-height:52px;
-  @apply font-bold;
+  @apply font-bold !important;
 }
 .heading-l-medium{
   font-size:34px;
@@ -88,12 +88,12 @@
 .heading-l-bold{
   font-size:34px;
   line-height:42px;
-  @apply font-bold;
+  @apply font-bold !important;
 }
 .display-bold{
   font-size:46px;
   line-height:52px;
-  @apply font-bold;
+  @apply font-bold !important;
 }
 
 .text-xs-regular, .text-xs-bold, .text-s-regular, .text-s-bold, .text-m-regular, .text-m-bold, .text-l-regular, .text-l-bold, .text-xl-regular, .text-xl-bold {
@@ -102,6 +102,7 @@
 
 .heading-s-medium, .heading-s-bold, .heading-m-bold, .heading-m-medium, .heading-l-medium, .heading-l-bold, .heading-xxl-bold{
   @apply font-rajdhani;
+  @apply font-medium;
 }
 
 * {
