@@ -26,12 +26,12 @@ function Landing(props) {
             </div>
 
             </section>
-            <section className=" md:px-4 ">
-                <div className="w-full  bg-cover bg-center h-[240px] bg-no-repeat bg-[url('assets/images/LandingImage.png')] md:h-[360px]  "></div>
-                <div className="md:px-0 mt-4 flex flex-col gap-4">
-                    <h1 className="heading-m-bold text-primaryBlue-main md:text-[34px] md:leading-[42px]">Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
-                    <p className="text-l-regular text-neutral-1000">Di dalam Torche Education, kami membantu kamu untuk mengembangkan kemampuan dan belajar dari pengalaman nyata. Berikut adalah beberapa keuntungan yang dapat kamu nikmati apabila mengikuti kerja magang dari Torche:</p>
-                    <ul>
+            <section className=" md:px-4 lg:flex lg:gap-10 lg:mx-auto ">
+                <div className="w-full  bg-cover bg-center h-[240px] lg:h-[360px] lg:w-[608px] flex-shrink-0 bg-no-repeat bg-[url('assets/images/LandingImage.png')] md:h-[360px]  "></div>
+                <div className="md:px-0 mt-4 flex flex-col gap-4  lg:px-4">
+                    <h1 className="heading-m-bold text-primaryBlue-main md:text-[34px]  lg:w-[512px] md:leading-[42px]">Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
+                    <p className="text-l-regular text-neutral-1000 lg:w-[514px] lg:mt-8">Di dalam Torche Education, kami membantu kamu untuk mengembangkan kemampuan dan belajar dari pengalaman nyata. Berikut adalah beberapa keuntungan yang dapat kamu nikmati apabila mengikuti kerja magang dari Torche:</p>
+                    <ul className="lg:text-m-bold">
                         {<Benefit/>}
                     </ul>
                     
@@ -40,7 +40,7 @@ function Landing(props) {
             <section className="px-4 mt-24 md:">
                 <h1 className="heading-m-bold">Nilai-Nilai Yang Kami Pegang</h1>
                 <div className="flex py-6 justify-center gap-6 overflow-x-auto">
-                    <div className="w-[242px] md:w-[214px] md:h-[280px] h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
+                    <div className="w-[242px] md:w-[214px] md:h-[280px]  h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Empati} alt='icon'>
                             
                         </img>
