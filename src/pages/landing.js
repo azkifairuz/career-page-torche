@@ -37,28 +37,28 @@ function Landing(props) {
                     
                 </div>
             </section>
-            <section className="px-4 mt-24 md:">
+            <section className="px-4 mt-24 md:mx-auto md:text-center">
                 <h1 className="heading-m-bold">Nilai-Nilai Yang Kami Pegang</h1>
                 <div className="flex py-6 justify-center gap-6 overflow-x-auto">
-                    <div className="w-[242px] md:w-[214px] md:h-[280px]  h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
+                    <div className="w-[242px] lg:w-[397px] md:w-[214px]  p-8 border border-primaryBlue-border flex-shrink-0 flex flex-col items-center gap-1 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Empati} alt='icon'>
                             
                         </img>
-                        <div className="heading-s-medium text-center font-bold font-rajdhani">Empati</div>
+                        <div className="heading-s-medium text-center font-bold heading-s-bold font-rajdhani mt-4">Empati</div>
                         <div className="text-m-regular text-center text-neutral-900 font-cairo">Memahami dan berbagi rasa dengan sesama</div>
                     </div>
-                    <div className="w-[242px] md:w-[214px] md:h-[280px] h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
+                    <div className="w-[242px] lg:w-[397px]  md:w-[214px]  border border-primaryBlue-border p-8  flex-shrink-0 flex flex-col items-center gap-1 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Kesopanan} alt='icon'>
                             
                         </img>
-                        <div className="heading-s-medium text-center font-bold font-rajdhani">Kesopanan</div>
+                        <div className="heading-s-medium text-center font-bold heading-s-bold font-rajdhani mt-4">Kesopanan</div>
                         <div className="text-m-regular text-center text-neutral-900 font-cairo">Memiliki moral baik dan saling menghargai</div>
                     </div>
-                    <div className="w-[242px] md:w-[214px] md:h-[280px] h-[248px] p-8  flex-shrink-0 flex flex-col items-center gap-4 rounded-[20px] bg-primaryBlue-surface ">
+                    <div className="w-[242px] lg:w-[397px] md:w-[214px]  p-8 border border-primaryBlue-border flex-shrink-0 flex flex-col items-center gap-1 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Kepo} alt='icon'>
                             
                         </img>
-                        <div className="heading-s-medium text-center font-bold font-rajdhani">Memiliki Rasa Ingin Tahu</div>
+                        <div className="heading-s-medium text-center font-bold heading-s-bold font-rajdhani mt-4">Memiliki Rasa Ingin Tahu</div>
                         <div className="text-m-regular text-center text-neutral-900 font-cairo">Memiliki rasa ingin tahu, dan semangat belajar yang tinggi</div>
                     </div>
                 </div>
