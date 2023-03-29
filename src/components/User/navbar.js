@@ -61,7 +61,7 @@ export default function Navbar() {
         </div>
         <div className="md:flex hidden justify-center">
           <Link
-            to="/landing"
+            to="/"
             className="bg-[#5885E9] rounded-full py-2 px-[20px] text-[16px] font-cairo font-bold"
           >
             Logout
