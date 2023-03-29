@@ -40,7 +40,7 @@ export default function Navbar() {
           </section>
           <button
             onClick={handleNavbarOpen}
-            className={`${isNavbarOpen && "hidden"} lg:hidden hamburger`}
+            className={`${isNavbarOpen && "hidden"} md:hidden hamburger`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export default function Navbar() {
             onClick={handleNavbarOpen}
             className={`${
               isNavbarOpen ? "block" : "hidden"
-            } lg:hidden text-white`}
+            } md:hidden text-white`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ export default function Navbar() {
               />
             </svg>
           </button>
-          <section className="hidden lg:flex gap-[4px] justify-center">
+          <section className="hidden md:flex gap-[4px] justify-center">
             <Link
               to="/signup"
               className="bg-primaryBlue-surface text-neutral-1000 text-[16px] font-rajdhani font-semibold rounded-[8px] p-[8px] px-[16px]"
@@ -97,7 +97,7 @@ export default function Navbar() {
       <ul
         className={`${
           isNavbarOpen ? "block" : "hidden"
-        } lg:hidden w-full fixed text-l-regular text-neutral-100 bg-primaryNavy-main top-[74px] flex flex-col z-50 font-rajdhani font-semibold`}
+        } md:hidden w-full fixed text-l-regular text-neutral-100 bg-primaryNavy-main top-[74px] flex flex-col z-50 font-rajdhani font-semibold`}
       >
         {navbarData.map((data, index) => {
           return (
