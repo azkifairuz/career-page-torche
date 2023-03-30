@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import TimerIcon from "assets/icons/timer.svg";
 
 export default function Card(props) {
-  const { title, description, place, type, category, src } = props;
+  const { title, place, type, category, src } = props;
   const navigate = useNavigate();
   return (
     <div className="rounded-[8px] bg-neutral-100 shadow-[0_1px_16px_rgba(0,0,0,0.2)] cursor-pointer hover:bg-neutral-1000 hover:bg-opacity-5" onClick={() => navigate("/user/jobapplication")}>
