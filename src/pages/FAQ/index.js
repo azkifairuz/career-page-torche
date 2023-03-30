@@ -11,23 +11,27 @@ export default function FAQ() {
     {
       title: "Screening CV",
       src: ScreeningCv,
+      desc: "Admin akan memilah CV para pelamar dan memilih untuk menolak atau melanjutkan kandidat ke tahap selanjutnya",
     },
     {
       title: "Screening Test",
       src: ScreeningTest,
+      desc: "Kandidat akan diberikan waktu untuk mengisi kuesioner yang terkait dengan preferensi dunia kerja serta Test skill berdasarkan posisi yang dipilih",
     },
     {
       title: "Interview",
       src: Interview,
+      desc: "Kandidat dapat memilih jadwal interview berdasarkan kesediaan waktu dari head/manager di torche",
     },
     {
       title: "Offering",
       src: Offering,
+      desc: "Kandidat akan menerima offering letter melalui email dan meng-upload offering letter yg sudah di TTD ke website career page",
     },
   ];
 
   return (
-    <section className="flex-1">
+    <section className="flex-1 transition-all duration-400 ease-in">
       <header className="box-border bg-[url('assets/images/bg.webp')] bg-cover bg-[center_bottom_30%] flex items-center justify-center p-[120px]">
         <h1 className="heading-xxl-bold text-neutral-100">FAQ</h1>
       </header>
