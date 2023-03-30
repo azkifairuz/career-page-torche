@@ -47,7 +47,7 @@ export default function JobApplication() {
         </ul>
       </section>
       <section className="p-4 mt-8">
-        <h1 className="heading-s-bold">Description</h1>
+        <h1 className="heading-s-bold">Job Summary</h1>
         <ul className="list-disc text-l-regular px-5 py-2 flex flex-col gap-2">
             <li>Published On: 27th January 2023</li>
             <li>Job Nature: Internship</li>
@@ -55,7 +55,9 @@ export default function JobApplication() {
             <li>Location: Remote (Online), Indonesia</li>
             <li>Deadline Submission: 31th January 2023</li>
         </ul>
+        <p className="text-danger-main text-l-regular">Torche Education tidak pernah memungut biaya apapun selama proses rekrutmen, dan semua proses rekrutmen dilakukan secara daring (online)</p>
       </section>
+      
     </div>
   );
 }
