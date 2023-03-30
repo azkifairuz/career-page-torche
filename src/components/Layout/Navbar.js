@@ -31,7 +31,7 @@ export default function Navbar() {
                   <Link
                     to={data.href}
                     key={index}
-                    className="px-[16px] py-[8px] rounded-[8px] hover:text-neutral-100 hover:bg-primaryBlue-hover transition duration-200 text-l-regular font-semibold font-rajdhani cursor-pointer"
+                    className="px-[16px] py-[8px] rounded-[8px] hover:bg-primaryBlue-hover active:bg-primaryBlue-pressed transition-all duration-200 ease-in text-l-regular font-semibold font-rajdhani cursor-pointer"
                   >
                     {data.title}
                   </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
             </Link>
             <Link
               to="/login"
-              className="text-neutral-100 text-[16px] font-rajdhani font-semibold rounded-[8px] p-[8px] px-[16px]"
+              className="text-neutral-100 text-[16px] hover:bg-primaryBlue-hover active:bg-primaryBlue-pressed font-rajdhani font-semibold rounded-[8px] p-[8px] px-[16px]"
             >
               Login
             </Link>
@@ -102,13 +102,14 @@ export default function Navbar() {
       >
         {navbarData.map((data, index) => {
           return (
-            <li
+            <Link
+              to={data.href}
               key={index}
-              className=" p-[12px] px-[16px] transition duration-200"
+              className=" p-[12px] px-[16px] transition-all duration-200 hover:bg-primaryBlue-hover active:bg-primaryBlue-pressed"
               onClick={handleNavbarOpen}
             >
-              <Link to={data.href}>{data.title}</Link>
-            </li>
+              {data.title}
+            </Link>
           );
         })}
         <li
@@ -118,7 +119,7 @@ export default function Navbar() {
           <Link to="/signup">Register</Link>
         </li>
         <li
-          className="relative p-[12px] px-[16px] transition duration-200 "
+          className="relative p-[12px] px-[16px] transition duration-200 hover:bg-primaryBlue-hover active:bg-primaryBlue-pressed"
           onClick={handleNavbarOpen}
         >
           <Link to="/login">Login</Link>
