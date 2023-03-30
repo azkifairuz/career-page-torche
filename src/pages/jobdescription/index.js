@@ -57,7 +57,10 @@ export default function JobApplication() {
         </ul>
         <p className="text-danger-main text-l-regular">Torche Education tidak pernah memungut biaya apapun selama proses rekrutmen, dan semua proses rekrutmen dilakukan secara daring (online)</p>
       </section>
-      
+      <section className="p-4">
+        <h1 className="heading-s-bold ">Apa yang akan kamu lakukan</h1>
+        
+      </section>
     </div>
   );
 }
