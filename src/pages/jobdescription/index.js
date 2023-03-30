@@ -1,6 +1,7 @@
 import TimerIcon from "assets/icons/timer.svg";
 import bg from "assets/images/jobapplication/bg.png";
 import banner from "assets/images/jobapplication/banner.png"
+import Card from "./card";
 export default function JobApplication() {
   return (
     <div>
@@ -59,7 +60,12 @@ export default function JobApplication() {
       </section>
       <section className="p-4">
         <h1 className="heading-s-bold ">Apa yang akan kamu lakukan</h1>
-        
+        <div className="flex gap-4 flex-col">
+            <Card title="Conducting research in for TORCHE’s Apps" />
+            <Card title="Developing UI design for TORCHE’s Apps and softwares" />
+            <Card title="Developing UI design for TORCHE’s Apps and softwares" />
+            <Card title="Developing UI design for TORCHE’s Apps and softwares" />
+        </div>
       </section>
     </div>
   );
