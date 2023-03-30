@@ -20,20 +20,21 @@ export default function Navbar() {
   return (
     <>
       <nav className="sticky z-50 top-0 right-0 left-0 box-border bg-primaryNavy-main ">
-        <div className=" font-rajdhani py-[1px] px-[16px] lg:px-[100px] font-medium  text-white flex items-center justify-between h-fit">
+        <div className=" font-rajdhani py-[1px] px-[16px] md:px-[32px] lg:px-[100px] font-medium  text-white flex items-center justify-between h-fit">
           <section className="flex gap-[24px]">
             <Link to="/" className="cursor-pointer">
               <img className="w-[128px] h-[72px]" src={Logo} alt="Logo" />
             </Link>
-            <ul className="hidden lg:flex items-center">
+            <ul className="hidden md:flex items-center">
               {navbarData.map((data, index) => {
                 return (
-                  <li
+                  <Link
+                    to={data.href}
                     key={index}
-                    className="px-[16px] py-[8px] hover:text-[#0362cb] transition duration-200 "
+                    className="px-[16px] py-[8px] rounded-[8px] hover:text-neutral-100 hover:bg-primaryBlue-hover transition duration-200 text-l-regular font-semibold font-rajdhani cursor-pointer"
                   >
-                    <Link to={data.href}>{data.title}</Link>
-                  </li>
+                    {data.title}
+                  </Link>
                 );
               })}
             </ul>
