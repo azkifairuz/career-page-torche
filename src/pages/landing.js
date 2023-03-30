@@ -26,7 +26,7 @@ function Landing(props) {
             </div>
 
             </section>
-            <section className=" md:px-4 lg:flex lg:gap-10 lg:mx-auto ">
+            <section className="px-4 lg:flex lg:gap-10 lg:mx-auto ">
                 <div className="w-full  bg-cover bg-center h-[240px] lg:h-[360px] lg:w-[608px] flex-shrink-0 bg-no-repeat bg-[url('assets/images/LandingImage.png')] md:h-[360px]  "></div>
                 <div className="md:px-0 mt-4 flex flex-col gap-4  lg:px-4">
                     <h1 className="heading-m-bold text-primaryBlue-main md:text-[34px]  lg:w-[512px] md:leading-[42px]">Kickstart your career in the most renowned Ed-Tech in Indonesia!</h1>
@@ -37,9 +37,9 @@ function Landing(props) {
                     
                 </div>
             </section>
-            <section className="px-4 mt-24 md:mx-auto md:text-center">
+            <section className="px-4 w-full mt-24 md:mx-auto md:text-center">
                 <h1 className="heading-m-bold">Nilai-Nilai Yang Kami Pegang</h1>
-                <div className="flex py-6 justify-center gap-6 overflow-x-auto">
+                <div className="flex py-6  md:justify-center gap-6 overflow-x-scroll">
                     <div className="w-[242px] lg:w-[397px] md:w-[214px]  p-8 border border-primaryBlue-border flex-shrink-0 flex flex-col items-center gap-1 rounded-[20px] bg-primaryBlue-surface ">
                         <img src={Empati} alt='icon'>
                             
