@@ -34,7 +34,7 @@ export default function JobApplication() {
         <h1 className="mt-4  heading-s-bold font-rajdhani">Deskripsi</h1>
         <p className="text-l-regular font-cairo">Internship with TORCHE adalah program magang, jarak jauh (remote internship) untuk mahasiswa dan lulusan baru. Internship ini berjalan selama 4 bulan dan bersifat unpaid, namun mendapatkan insentif. Jam kerja yang diharapkan untuk program magang adalah 14 jam/minggu atau 2 jam/hari (termasuk)</p>
       </section>
-      <section className="p-4">
+      <section className="p-4 mt-8">
         <h1 className="heading-s-bold">Qualifications</h1>
         <ul className="list-disc py-2 px-5 text-l-regular flex flex-col  gap-2 ">
             <li>Any major are welcome to apply</li>
@@ -44,6 +44,16 @@ export default function JobApplication() {
             <li>Having experience UI Design Software is an advantage (Figma, Adobe)</li>
             <li>Having experience UI Design Software is an advantage (Figma, Adobe)</li>
             <li>Ability to work both independently or collaborate on team project</li>
+        </ul>
+      </section>
+      <section className="p-4 mt-8">
+        <h1 className="heading-s-bold">Description</h1>
+        <ul className="list-disc text-l-regular px-5 py-2 flex flex-col gap-2">
+            <li>Published On: 27th January 2023</li>
+            <li>Job Nature: Internship</li>
+            <li>Benefits: Trainings, Certificates</li>
+            <li>Location: Remote (Online), Indonesia</li>
+            <li>Deadline Submission: 31th January 2023</li>
         </ul>
       </section>
     </div>
