@@ -5,7 +5,7 @@ import Card from "./Card";
 
 import Background from "assets/images/bg.webp";
 import Search from "./Search";
-
+import TimerIcon from "assets/icons/timer.svg";
 export default function Joblist() {
   return (
     <section className="flex-1">
