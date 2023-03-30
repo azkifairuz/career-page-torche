@@ -31,8 +31,20 @@ export default function JobApplication() {
       </header>
       <section className="p-4 mt-4 ">
         <img src={banner} alt=""></img>
-        <h1 className="mt-4 mb-2 heading-s-bold font-rajdhani">Deskripsi</h1>
+        <h1 className="mt-4  heading-s-bold font-rajdhani">Deskripsi</h1>
         <p className="text-l-regular font-cairo">Internship with TORCHE adalah program magang, jarak jauh (remote internship) untuk mahasiswa dan lulusan baru. Internship ini berjalan selama 4 bulan dan bersifat unpaid, namun mendapatkan insentif. Jam kerja yang diharapkan untuk program magang adalah 14 jam/minggu atau 2 jam/hari (termasuk)</p>
+      </section>
+      <section className="p-4">
+        <h1 className="heading-s-bold">Qualifications</h1>
+        <ul className="list-disc py-2 px-5 text-l-regular flex flex-col  gap-2 ">
+            <li>Any major are welcome to apply</li>
+            <li>Having knowledge and experience with UI Design</li>
+            <li>Highly initiative, good communication, and problem solving</li>
+            <li>Creative and detail oriented</li>
+            <li>Having experience UI Design Software is an advantage (Figma, Adobe)</li>
+            <li>Having experience UI Design Software is an advantage (Figma, Adobe)</li>
+            <li>Ability to work both independently or collaborate on team project</li>
+        </ul>
       </section>
     </div>
   );
