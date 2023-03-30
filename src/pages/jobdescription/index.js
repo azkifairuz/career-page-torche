@@ -67,6 +67,15 @@ export default function JobApplication() {
             <Card title="Developing UI design for TORCHE’s Apps and softwares" />
         </div>
       </section>
+      <section className="p-4 flex justify-between items-center shadow-[0px_-1px_16px_0_#00000029]">
+        <div className="flex flex-col  gap-3">
+            <h1 className="heading-s-medium">UI Designer</h1>
+            <span className="px-[8px] py-[4px] bg-secondary-yellow text-center text-m-regular rounded-lg">
+                magang
+            </span>
+        </div>
+        <button className="py-[14px]  px-4 bg-primaryBlue-main text-white rounded-lg">Apply Now</button>
+      </section>
     </div>
   );
 }
