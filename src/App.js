@@ -26,7 +26,7 @@ import Diterima from "./pages/user/application track/diterima";
 import Ditolak from "./pages/user/application track/ditolak";
 import Terkirim from "./pages/user/application track/terkirim";
 import Belum from "./pages/user/application track/belum";
-import JobApplication from "pages/jobApplication";
+import JobApplication from "pages/jobdescription/index";
 import UserDashboard from "pages/user/dashboard";
 import { AuthProvider } from "context";
 import Profil from "pages/user/dashboard/profil";
