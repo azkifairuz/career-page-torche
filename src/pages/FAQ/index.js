@@ -4,7 +4,6 @@ import ScreeningCv from "assets/icons/screening-cv.svg";
 import ScreeningTest from "assets/icons/screening-test.svg";
 import Interview from "assets/icons/interview.svg";
 import Offering from "assets/icons/offering.svg";
-import Background from "assets/images/bg.webp";
 
 export default function FAQ() {
   const cardData = [
