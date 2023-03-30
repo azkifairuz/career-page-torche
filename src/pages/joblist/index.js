@@ -13,13 +13,13 @@ export default function Joblist() {
         <img
           src={Background}
           alt="background"
-          className="absolute w-full h-[540px] -z-10"
+          className="absolute w-full top-0 h-[85vh] -z-10"
         />
         <h1 className="heading-xxl-bold text-neutral-100">Job List</h1>
       </header>
-      <main className="flex flex-col gap-[24px] p">
+      <main className="flex flex-col gap-[24px] md:px-[32px] lg:px-[100px]">
         <Search />
-        <ul className="w-10/12 grid md:grid-cols-2 lg:grid-cols-3 grid-flow-row justify-items-stretch gap-[24px] m-auto">
+        <ul className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-[24px] m-auto">
           {lokers.map((loker, index) => (
             <Card
               key={index}

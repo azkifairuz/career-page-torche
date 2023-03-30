@@ -23,7 +23,7 @@ export default function Filter(props) {
 
   return (
     <div className="relative flex flex-col w-full">
-      <div className=" border-primaryNavy-border border-[1px] px-[12px] py-[10px] rounded-[8px] flex gap-[12px] items-center w-full">
+      <div className=" border-primaryNavy-border border-[1px] px-[12px] py-[10px] rounded-[8px] flex gap-[12px] items-center w-full ">
         <img src={CategoryIcon} alt="search" />
         <button
           onClick={handleClick}
