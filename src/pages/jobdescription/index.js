@@ -43,7 +43,7 @@ export default function JobApplication() {
        </div>
       </section>
       <section className="p-4 mt-8 md:p-6 md:m-8 md:shadow-[0px_1px_16px_0px_#0000002E]">
-        <h1 className="heading-s-bold">Qualifications</h1>
+        <h1 className="heading-s-bold md:heading-m-bold">Kualifikasi</h1>
         <ul className="list-disc py-2 px-5 text-l-regular flex flex-col  gap-2 ">
             <li>Any major are welcome to apply</li>
             <li>Having knowledge and experience with UI Design</li>
@@ -54,8 +54,8 @@ export default function JobApplication() {
             <li>Ability to work both independently or collaborate on team project</li>
         </ul>
       </section>
-      <section className="p-4 mt-8">
-        <h1 className="heading-s-bold">Job Summary</h1>
+      <section className="p-4 mt-8 md:p-6 md:m-8 md:shadow-[0px_1px_16px_0px_#0000002E]" >
+        <h1 className="heading-s-bold md:heading-m-bold">Job Summary</h1>
         <ul className="list-disc text-l-regular px-5 py-2 flex flex-col gap-2">
             <li>Published On: 27th January 2023</li>
             <li>Job Nature: Internship</li>
