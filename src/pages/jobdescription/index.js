@@ -65,9 +65,9 @@ export default function JobApplication() {
         </ul>
         <p className="text-danger-main text-l-regular">Torche Education tidak pernah memungut biaya apapun selama proses rekrutmen, dan semua proses rekrutmen dilakukan secara daring (online)</p>
       </section>
-      <section className="p-4 md:p-8">
+      <section className="p-4 md:p-8 md:mx-auto">
         <h1 className="heading-s-bold md:heading-m-bold md:text-center ">Apa yang akan kamu lakukan</h1>
-        <div className="flex gap-4 flex-col md:grid md:grid-cols-2 md:mt-5 md:gap-6">
+        <div className="flex gap-4 md:mx-auto w-fit flex-col md:grid md:grid-cols-2 md:mt-5 md:gap-6">
             <Card title="Conducting research in for TORCHE’s Apps" />
             <Card title="Developing UI design for TORCHE’s Apps and softwares" />
             <Card title="Developing UI design for TORCHE’s Apps and softwares" />
