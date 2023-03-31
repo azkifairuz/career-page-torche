@@ -12,7 +12,8 @@
         @apply px-5    
 }
 }
-.text-xs-regular{
+@layer components{
+  .text-xs-regular{
   font-size:10px;
   line-height:18px;
 }
@@ -104,6 +105,8 @@
   @apply font-rajdhani;
   @apply font-medium;
 }
+}
+
 
 * {
   box-sizing: border-box;
