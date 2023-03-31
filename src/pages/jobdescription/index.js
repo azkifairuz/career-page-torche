@@ -5,14 +5,14 @@ import Card from "./card";
 export default function JobApplication() {
   return (
     <div>
-      <header>
-        <img className="w-screen" src={bg} alt="bg"></img>
-        <div className=" bg-neutral-100 w-full hover:bg-neutral-1000 hover:bg-opacity-5">
-          <div className="flex flex-col gap-[8px] p-[16px]">
+      <header className="  md:relative md:-mt-20 ">
+        <img className="w-screen bg-cover md:h-screen bg-no-repeat bg-center" src={bg} alt="bg"></img>
+        <div className=" bg-neutral-100 w-full md:w-[396px] md:m-8 md:absolute md:bottom-0 md:rounded-lg">
+          <div className="flex flex-col gap-[8px] p-4 md:p-6">
             <h1 className="heading-s-medium md:heading-m-medium">
               ui designer
             </h1>
-            <div className="text-neutral-1000 flex gap-[4px] text-s-regular md:text-m-regular">
+            <div className="text-neutral-1000  flex gap-1 md:gap-2 text-s-regular md:text-m-regular">
               <span className="px-[8px] py-[4px] bg-secondary-yellow rounded-[8px]">
                 magang
               </span>
@@ -20,15 +20,18 @@ export default function JobApplication() {
                 uiux
               </span>
             </div>
-            <div className="text-neutral-1000 flex justify-between items-center text-m-regular md:text-l-regular">
-              <p>place</p>
-              <span className="flex items-center gap-[4px]">
+            <div className="text-neutral-1000 flex md:flex-col   md:items-start justify-between items-center text-m-regular md:text-l-regular md:gap-2">
+              <p>Remote(online) indonesia</p>
+              <span className="flex items-center gap-1 ">
                 <img src={TimerIcon} alt="timer" />
                 <p>3d left</p>
               </span>
             </div>
           </div>
         </div>
+        <span className="text-l-regular hidden md:block md:m-8 absolute bottom-0 right-0  text-white">
+          Scroll kebawah untuk info lebih lanjut
+        </span>
       </header>
       <section className="p-4 mt-4 ">
         <img src={banner} alt=""></img>
