@@ -33,10 +33,14 @@ export default function JobApplication() {
           Scroll kebawah untuk info lebih lanjut
         </span>
       </header>
-      <section className="p-4 mt-4 ">
-        <img src={banner} alt=""></img>
-        <h1 className="mt-4  heading-s-bold font-rajdhani">Deskripsi</h1>
-        <p className="text-l-regular font-cairo">Internship with TORCHE adalah program magang, jarak jauh (remote internship) untuk mahasiswa dan lulusan baru. Internship ini berjalan selama 4 bulan dan bersifat unpaid, namun mendapatkan insentif. Jam kerja yang diharapkan untuk program magang adalah 14 jam/minggu atau 2 jam/hari (termasuk)</p>
+      <section className="p-4 md:p-8 mt-4 md:flex gap-8 items-center ">
+        <div className=" md:w-[369px] overflow-hidden bg-center bg-cover flex-shrink-0">
+        <img src={banner} alt="" className=" md:h-auto md:w-auto md:min-h-[300px] bg-center"></img>
+        </div>
+       <div>
+          <h1 className="mt-4  heading-s-bold font-rajdhani">Deskripsi</h1>
+          <p className="text-l-regular font-cairo">Internship with TORCHE adalah program magang, jarak jauh (remote internship) untuk mahasiswa dan lulusan baru. Internship ini berjalan selama 4 bulan dan bersifat unpaid, namun mendapatkan insentif. Jam kerja yang diharapkan untuk program magang adalah 14 jam/minggu atau 2 jam/hari (termasuk)</p>
+       </div>
       </section>
       <section className="p-4 mt-8">
         <h1 className="heading-s-bold">Qualifications</h1>
