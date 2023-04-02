@@ -73,7 +73,7 @@ export default function Sidebar(props) {
               </svg>
             }
             title="Status Lamaran"
-            href="applicationTracking"
+            href="applicationtracking"
           />
           <Item
             icon={<Icon.Gear size={20} />}
