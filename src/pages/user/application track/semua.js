@@ -32,8 +32,8 @@ export default function Semua(params) {
         },
     ]
     return(
-        <div className=" flex  h-screen w-screen ">
-            <div className="w-fit h-fit mx-auto my-10  grid md:grid-cols-2 grid-flow-row gap-2">
+        <div className=" flex ">
+            <div className="w-fit h-fit mx-auto my-10  flex flex-col gap-2">
             {datas.map((data)=>{
                 return <Card status={data.status} posisi={data.posisi} tanggal={data.tanggal} perusahaan={data.perusahaan} isClosed={data.isClosed} />
             })}

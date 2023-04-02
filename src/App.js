@@ -104,6 +104,7 @@ function App() {
             <Route path="dashboard" element={<UserDashboard />}>
               <Route index element={<Navigate to="profil" />} />
               <Route path="profil" element={<Profil />}></Route>
+              <Route path="applicationtracking" element={<Semua />} />
             </Route>
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
             <Route path="jobapplication" element={<JobApplication />} />
