@@ -5,7 +5,7 @@ import Preview from "components/User/Complete Profile/preview";
 
 export default function CompleteProfil() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-[72px]">
       {<HeaderSection />}
       <div className="lg:flex w-full  lg:px-[100px]">
         <div className="mt-6 p-6">

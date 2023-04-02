@@ -87,6 +87,7 @@ function App() {
             <Route path="terkirim" element={<Terkirim />} />
             <Route path="belum" element={<Belum />} />
           </Route>
+          
           <Route
             path="user"
             element={
@@ -99,7 +100,7 @@ function App() {
             }
           >
             <Route index element={<Navigate to="home" />} />
-            <Route path="home" element={<Home />} />
+            <Route path="home" element={<Landing />} />
             <Route path="dashboard" element={<UserDashboard />}>
               <Route index element={<Navigate to="profil" />} />
               <Route path="profil" element={<Profil />}></Route>
