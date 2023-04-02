@@ -7,7 +7,7 @@ export default function CompleteProfil() {
   return (
     <div className="flex flex-col mb-[72px]">
       {<HeaderSection />}
-      <div className="lg:flex w-full  lg:px-[100px]">
+      <div className="md:flex w-full  lg:px-[100px]">
         <div className="mt-6 p-6">
           <OptionBar />
         </div>
