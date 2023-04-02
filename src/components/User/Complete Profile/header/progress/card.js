@@ -10,7 +10,7 @@ export default function ProgressCard(props) {
     { href: "/organisasi", title: "Organisasi" },
   ];
   return (
-    <div className="shadow-card rounded-2xl z-50 bg-white lg:w-[397px] p-9 text-start"> 
+    <div className="shadow-card rounded-2xl z-50 md:py-2 md:mt-8 md:px-8 bg-white lg:w-[397px] p-9 text-start"> 
       <div className="flex gap-2 mb-3 text-black ">
         <h1 className="font-cairo text-l-regular">Profile</h1>
         <span className="font-cairo text-l-bold">{percent}%</span>
@@ -21,12 +21,12 @@ export default function ProgressCard(props) {
           <div className="absolute  bg-neutral-300 top-1/2 left-0 h-1 -translate-y-1/2 -z-20 rounded-md w-full  "></div>
         </div>
       </div>
-      <div className="text-start lg:pl-2 mt-3 gap-2 z-20 -ml-5">
+      <div className="text-start md:hidden lg:block lg:pl-2 mt-3 gap-2 z-20 -ml-5">
         {itemData.map((item)=>{
           return <Item href={item.href} title={item.title} />
         })}
       </div>
-      <div className="flex gap-2 cursor-pointer items-center">
+      <div className="flex gap-2 cursor-pointer mt-3 items-center">
         {<ChevronDown size={15} className="text-neutral-600" />}
         <p className="text-neutral-600 font-cairo text-m-regular">Tampilkan Semua</p>
       </div>
