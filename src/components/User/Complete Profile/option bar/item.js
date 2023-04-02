@@ -6,7 +6,7 @@ export default function Item(props) {
   return (
     <Link
       to={href}
-      className="flex items-center w-fit  gap-8  text-neutral-900  p-4 lg:hover:border-primaryBlue-main  lg:w-full lg:hover:bg-primaryBlue-surface lg:text-neutral-900  lg:hover:text-primaryBlue-main lg:hover:font-bold lg:hover:border-l-2"
+      className="flex items-center w-fit  gap-8  text-neutral-900  p-4 md:hover:border-primaryBlue-main  md:w-full md:hover:bg-primaryBlue-surface md:text-neutral-900  md:hover:text-primaryBlue-main md:hover:font-bold md:hover:border-l-2"
     >
       {icon}
       <span className="text-m-regular block  font-cairo truncate w-fit  ">{title}</span>
