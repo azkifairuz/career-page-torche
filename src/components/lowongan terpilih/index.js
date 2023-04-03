@@ -1,5 +1,5 @@
 import LokerCard from "./Card";
-import {lokers} from "../../data/loker"
+import { vacancies } from "data/vacancy"
 import { useNavigate } from "react-router-dom";
 export default function LowonganTerpilih(params) {
     const navigate = useNavigate()
@@ -11,8 +11,8 @@ export default function LowonganTerpilih(params) {
             </div>
             <div className=" grid grid-cols-4 w-fit mx-auto h-fit p-4 ">
                 {
-                    lokers.map((loker,index)=>{
-                        return <LokerCard ker={index} jobTitle={loker.JobTitle} jobType={loker.JobType} jobPlace={loker.JobPlace} click={()=> navigate("/user/jobapplication")} />
+                    vacancies.map((loker,index)=>{
+                        return <LokerCard ker={index} jobTitle={loker.name} jobType={loker.type} jobPlace={loker.place} click={()=> navigate("/user/jobapplication")} />
                     })
                 }
             </div>

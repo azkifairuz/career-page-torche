@@ -1,11 +1,11 @@
-import { lokers } from "data/loker";
-import CyberSecurity from "assets/images/joblist/cybersecurity.webp";
+import { vacancies } from "data/vacancy";
 
 import Card from "./Card";
-
-import Background from "assets/images/bg.webp";
 import Search from "./Search";
-import TimerIcon from "assets/icons/timer.svg";
+
+import CyberSecurity from "assets/images/joblist/cybersecurity.webp";
+import Background from "assets/images/bg.webp";
+
 export default function Joblist() {
   return (
     <section className="flex-1">
@@ -20,14 +20,15 @@ export default function Joblist() {
       <main className="flex flex-col gap-[24px] md:px-[32px] lg:px-[100px]">
         <Search />
         <ul className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-[24px] m-auto">
-          {lokers.map((loker, index) => (
+          {vacancies.map((loker) => (
             <Card
-              key={index}
+              key={loker.id}
               title={loker.title}
               type={loker.type}
               category={loker.category}
               place={loker.place}
               src={CyberSecurity}
+              id={loker.id}
             />
           ))}
         </ul>
