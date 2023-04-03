@@ -19,13 +19,6 @@ import {
 import Admin, { AdminDashboard, Applicants, Create, Vacancy } from "pages/admin";
 import Track from "./pages/user/application track";
 import CompleteProfil from "./pages/user/complete profile/CompleteProfile";
-import Semua from "./pages/user/application track/semua";
-import Dilihat from "./pages/user/application track/dilihat";
-import Diproses from "./pages/user/application track/diproses";
-import Diterima from "./pages/user/application track/diterima";
-import Ditolak from "./pages/user/application track/ditolak";
-import Terkirim from "./pages/user/application track/terkirim";
-import Belum from "./pages/user/application track/belum";
 import JobApplication from "pages/jobdescription/index";
 import UserDashboard from "pages/user/dashboard";
 import { AuthProvider } from "context";
