@@ -71,17 +71,6 @@ function App() {
             <Route path="applicants" element={<Applicants />} />
             <Route path="vacancy/create" element={<Create />} />
           </Route>
-          <Route path="track" element={<Track />}>
-            <Route index element={<Navigate to="semua" />} />
-            <Route path="semua" element={<Semua />} />
-            <Route path="dilihat" element={<Dilihat />} />
-            <Route path="diproses" element={<Diproses />} />
-            <Route path="diterima" element={<Diterima />} />
-            <Route path="ditolak" element={<Ditolak />} />
-            <Route path="terkirim" element={<Terkirim />} />
-            <Route path="belum" element={<Belum />} />
-          </Route>
-          
           <Route
             path="user"
             element={
