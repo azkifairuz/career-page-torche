@@ -115,7 +115,7 @@ export default function JobDetail() {
           </div>
         </section>
       </main>
-      <section className="p-[16px] md:px-8lg:px-[100px] flex justify-between items-center shadow-[0px_-1px_16px_0_#00000029]">
+      <section className="p-[16px] md:px-8 lg:px-[100px] flex justify-between items-center shadow-[0px_-1px_16px_0_#00000029]">
         <div className="flex flex-col gap-2">
           <h1 className="heading-s-medium">{vacancy.name}</h1>
           <p className="px-2 py-[4px] bg-secondary-yellow text-m-regular rounded-lg w-fit">
