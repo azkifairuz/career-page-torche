@@ -31,9 +31,9 @@ function Tracking() {
             "isClosed":"Lowobgan Sudah Di tutup"
         },
     ]
-            datas.map(()=>{
+         return datas.map((data)=>{
                 return(
-                    <Card/>
+                    <Card posisi={data.posisi} status={data.status} isClosed={data.isClosed} tanggal={data.tanggal} perusahaan={data.perusahaan}/>
                 )
             })
 }

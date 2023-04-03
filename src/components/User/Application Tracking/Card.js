@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import * as Icon from "react-bootstrap-icons";
 export default function Card(props) {
     const {posisi,perushaan,isClosed,tanggal,status}=props
