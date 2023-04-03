@@ -30,6 +30,7 @@ import JobApplication from "pages/jobdescription/index";
 import UserDashboard from "pages/user/dashboard";
 import { AuthProvider } from "context";
 import Profil from "pages/user/dashboard/profil";
+import Tracking from "./pages/user/application track";
 
 function App() {
   const [user, setUser] = useState({
@@ -104,7 +105,7 @@ function App() {
             <Route path="dashboard" element={<UserDashboard />}>
               <Route index element={<Navigate to="profil" />} />
               <Route path="profil" element={<Profil />}></Route>
-              <Route path="applicationtracking" element={<Semua />} />
+              <Route path="applicationtracking" element={<Tracking />} />
             </Route>
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
             <Route path="jobapplication" element={<JobApplication />} />
