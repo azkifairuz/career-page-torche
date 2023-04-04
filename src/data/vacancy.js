@@ -18,7 +18,7 @@ export const vacancies = [
     status: "Aktif",
   },
   {
-    id: 1,
+    id: "asdljasdklj",
     name: "Python Engineer",
     applicantsCount: {
       belumDiproses: 0,
@@ -36,7 +36,7 @@ export const vacancies = [
     category: "Marketing and Sales",
   },
   {
-    id: 1,
+    id: "1",
     name: "Account Executive",
     createdAt: "10 Maret 2023",
     endDate: "20 Maret 2023",
@@ -54,7 +54,7 @@ export const vacancies = [
     status: "Tutup",
   },
   {
-    id: 1,
+    id: "1",
     name: "Account Executive",
     description: "lorem ipsum doler",
     type: "Internship",
@@ -72,7 +72,7 @@ export const vacancies = [
     endDate: "20 Maret 2023",
   },
   {
-    id: 1,
+    id: "1",
     name: "Account Executive",
     createdAt: "10 Maret 2023",
     endDate: "20 Maret 2023",
@@ -90,7 +90,7 @@ export const vacancies = [
     status: "Tutup",
   },
   {
-    id: 1,
+    id: "1",
     name: "Account Executive",
     description: "lorem ipsum doler",
     type: "Internship",
@@ -109,7 +109,7 @@ export const vacancies = [
   },
 
   {
-    id: 1,
+    id: "1",
     name: "Account Executive",
     createdAt: "10 Maret 2023",
     endDate: "20 Maret 2023",
@@ -127,7 +127,7 @@ export const vacancies = [
     status: "Tutup",
   },
   {
-    id: 1,
+    id: "1",
     name: "Account Executive",
     applicantsCount: {
       belumDiproses: 0,
@@ -145,7 +145,7 @@ export const vacancies = [
     category: "Marketing and Sales",
   },
   {
-    id: 1,
+    id: "1",
     name: "Account Executive",
     applicantsCount: {
       belumDiproses: 0,
