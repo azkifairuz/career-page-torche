@@ -1,15 +1,49 @@
-import React from "react";
+import { useState } from "react";
 import SearchBar from "./SearchBar";
 import Filter from "./Filter";
 
+import SearchIcon from "assets/icons/search.svg";
+import FilterIcon from "assets/icons/filter_list.svg";
+import FilterTab from "./FilterTab";
+
 export default function Search() {
+  const [onShow, setOnShow] = useState(false);
+
+  const category = ["Internship", "Full Time", "Part Time"];
+  const jobType = ["Finance", "Marketing & Sales", "Human Resources"];
+
   return (
-    <section className="flex md:flex-col lg:flex-row p-[16px] gap-[9px] mx-auto bg-neutral-100 md:w-full lg:w-10/12  rounded-[8px] text-s-regular text-neutral-500">
-      <SearchBar />
-      <div className="flex md:w-full lg:w-2/5 gap-[9px]">
-        <Filter type="category" />
-        <Filter type="tipe-kerja" />
-      </div>
-    </section>
+    <div className="flex flex-col gap-[12px]">
+      <section className="flex md:flex-col bg-neutral-100 lg:flex-row md:p-4 gap-1 md:gap-[9px] flex-1 lg:mx-[102px] rounded-[8px] text-s-regular text-neutral-500">
+        <SearchBar />
+        <div className="flex gap-1 md:hidden">
+          <button className="p-3 bg-primaryBlue-main rounded-lg">
+            <img
+              src={SearchIcon}
+              alt="search"
+              className="mix-blend-color-dodge"
+            />
+          </button>
+          <button
+            onClick={() => setOnShow(!onShow)}
+            className="p-3 bg-primaryBlue-main rounded-lg"
+          >
+            <img
+              src={FilterIcon}
+              alt="filter"
+              className="mix-blend-color-dodge"
+            />
+          </button>
+        </div>
+        <div className="hidden md:flex w-full lg:w-2/5 gap-[9px]">
+          <Filter type="category" />
+          <Filter type="tipe-kerja" />
+        </div>
+      </section>
+      <section className={!onShow ? "hidden": "md:hidden"}>
+        <FilterTab data={category}/>
+        <FilterTab data={jobType} />
+      </section>
+    </div>
   );
 }
