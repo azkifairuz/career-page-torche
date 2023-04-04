@@ -9,7 +9,7 @@ import LowonganIcon from "assets/icons/LowonganIcon.svg";
 import PelamarIcon from "assets/icons/PelamarIcon.svg";
 import WawancaraIcon from "assets/icons/WawancaraIcon.svg";
 
-export default function Sidebar(props) {
+export default function AdminSidebar(props) {
   const dispatch = useAuthDispatch();
 
   const handleLogout = () => {
