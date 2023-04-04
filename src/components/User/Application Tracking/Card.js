@@ -8,7 +8,7 @@ export default function Card(props) {
 
     return(
         <>
-            <div className="flex gap-2 flex-col p-5 w-[500px] border-2 shadow rounded-lg ">
+            <div className="flex gap-2 flex-col p-6 w-[830px] border-2 shadow rounded-lg ">
                 <div className="flex justify-between items-center pb-2 border-b">
                     <div className="flex gap-2 items-center">
                         <div className={"py-2 px-4 text-green-700 font-bold text-sm font-cairo " + statusColor}>{status}</div>
