@@ -20,16 +20,16 @@ export default function JobDetail() {
           className="w-screen bg-cover md:h-screen bg-center"
           src={bg}
           alt="bg"
-        ></img>
+        />
         <section className="md:absolute flex w-full items-end justify-between bottom-8 md:px-8 lg:px-[100px]">
           <div className=" bg-neutral-100 w-full md:w-[396px] rounded-lg">
             <div className="flex flex-col gap-2 p-4 md:p-6 text-neutral-1000 ">
               <h1 className="heading-s-medium md:heading-m-medium">
                 {vacancy.name}
               </h1>
-                <p className="w-fit rounded-lg text-s-regular md:text-m-regular px-2 py-1 bg-secondary-yellow rounded-2">
-                  {vacancy.type}
-                </p>
+              <p className="w-fit rounded-lg text-s-regular md:text-m-regular px-2 py-1 bg-secondary-yellow rounded-2">
+                {vacancy.type}
+              </p>
               <div className="flex md:flex-col md:items-start justify-between items-center text-m-regular md:text-l-regular md:gap-2">
                 <p>{vacancy.place}</p>
                 <span className="flex items-center gap-1 ">
