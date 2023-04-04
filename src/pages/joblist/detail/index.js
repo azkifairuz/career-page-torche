@@ -6,7 +6,7 @@ import Card from "./Card";
 import TimerIcon from "assets/icons/timer.svg";
 import bg from "assets/images/jobapplication/bg.png";
 import banner from "assets/images/jobapplication/banner.png";
-import Navbar from "components/Layout/Navbar";
+import Navbar from "components/organisms/Layout/Navbar";
 
 export default function JobDetail() {
   const { id } = useParams();
