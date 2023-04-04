@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Table from "components/admin/TableApplicants";
+import Table from "components/organisms/TableApplicants";
 import TabButton from "components/admin/TabButton";
 import Pagination from "components/Pagination";
 

@@ -1,4 +1,4 @@
-import Sidebar from "components/admin/Sidebar";
+import Sidebar from "components/organisms/AdminSidebar";
 import { Outlet } from "react-router-dom";
 import AdminDashboard from "./dashboard";
 import Vacancy from "./vacancy";
