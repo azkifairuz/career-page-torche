@@ -1,34 +1,20 @@
 import {useState } from "react";
 import * as Icon from "react-bootstrap-icons";
 export default function Card(props) {
-    const {posisi,perushaan,isClosed,tanggal,status}=props
- const [statusColor ,setStatusColor]= useState("bg-green-300")
- const [isClosedColor,setColor] = useState("text-red-700")
+    const {posisi,salary,place,tanggal,status}=props
+
 
 
     return(
-        <>
-            <div className="flex gap-2 flex-col p-6 w-[830px] border-2 shadow rounded-lg ">
-                <div className="flex justify-between items-center pb-2 border-b">
-                    <div className="flex gap-2 items-center">
-                        <div className={"py-2 px-4 text-green-700 font-bold text-sm font-cairo " + statusColor}>{status}</div>
-                        <p className="text-sm  font-rajdhani font-thin">{tanggal}</p>
-                    </div>
-                    <div className="cursor-pointer">
-                        <Icon.ThreeDotsVertical size={20}/>
-                    </div>
-                </div>
-                <div className="flex justify-between items-center">
-                <div>
-                    <h1 className="font-bold font-cairo">{posisi}</h1>
-                    <p className="font-rajdhani">{perushaan}</p>
-                    <p className={"text-[10px] font-rajdhani  mt-5 "+ isClosedColor }>{isClosed}</p>
-                </div>
-                <div className="self-end cursor-pointer">
-                    <Icon.ArrowRightSquare size={25}/>
-                </div>
-                </div>
+        <div className="p-6 flex bg-neutral-400 gap-3 flex-col justify-between lg:w-[830px] w-full">
+           <h1 className="uppercase font-bold font-rajdhani text-[24px] leading-7">{posisi}</h1>
+            <div className="flex gap-[23px]">
+                <p className="text-m-bold">Torche App</p>
+                <p className="text-m-regular">{place}</p>
             </div>
-        </>
+            <h1 className="uppercase text-l-regular">{salary}</h1>
+            <div className="text-m-regular w-fit py-1 px-2 border border-black">Dalam Review</div>
+            <h1 className="text-s-regular">Diikirim : {tanggal}</h1>
+        </div>
     )
 }
