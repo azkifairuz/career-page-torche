@@ -12,7 +12,7 @@ export default function HeaderSection() {
     { Title: "Nationality", Desc: "indonesia" },
   ];
   return (
-    <div className={`px-6 pt-2 lg:h-[400px]  md:p-8 md:pb-16 box-border lg:justify-between lg:px-24 lg:py-10 lg:flex md:bg-[url('assets/images/hero.png')] md:bg-no-repeat md:text-white`}>
+    <div className={`px-6 pt-2 lg:h-[400px]   md:p-8 md:pb-16 box-border lg:justify-between lg:px-24 lg:py-10 lg:flex md:bg-[url('assets/images/hero.png')] md:bg-no-repeat bg-cover md:text-white`}>
       <div className="flex flex-col md:flex-row md:gap-6">
       <div className="">
         {
@@ -28,7 +28,7 @@ export default function HeaderSection() {
             <h1 className="font-rajdhani text-center  text-black capitalize heading-l-bold md:text-white md:text-start">John Kebab</h1>
             <p className="font-rajdhani heading-s-medium  text-black  text-center capitalize md:text-white md:text-start">Web Developer</p>
         </div>
-          <div className="grid grid-cols-2 items-center gap-2  md:grid-cols-3   md:items-start ">
+          <div className="grid grid-cols-2 lg:grid-cols-2 items-center gap-2  md:grid-cols-3   md:items-start ">
           {information.map((info) => {
             return <Item title={info.Title} desc={info.Desc} />;
           })}
