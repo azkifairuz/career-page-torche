@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="sticky z-50 top-0 w-full font-rajdhani px-7 py-1 font-medium bg-primaryNavy-main text-white flex items-center justify-between">
-      <div className=" md:gap-2 md:justify-start justify-between w-full flex items-center">
+        <div className=" md:gap-2 md:justify-start justify-between w-full flex items-center">
           <div>
             <Link to="/" className="cursor-pointer">
               <img className="w-[128px] h-[72px]" src={Logo} alt="Logo" />
@@ -102,21 +102,25 @@ export default function Navbar() {
       >
         {navbarData.map((data, index) => {
           return (
-            <li
+            <Link
+              onClick={handleNavbarOpen}
               key={index}
-              className="relative md:mx-3 md:my-0 my-3 transition duration-200 font-light"
+              className="relative cursor-pointer active:bg-primaryBlue-pressed py-3 px-4 hover:bg-primaryBlue-main md:mx-3 md:my-0 my-3 transition duration-200 font-light"
+              to={data.href}
             >
-              <div>{data.title}</div>
-            </li>
+              {data.title}
+            </Link>
           );
         })}
         <div className="bg-[#5885E9] rounded-full w-1/2 mx-auto mb-3">
-          <a
-            href="/registration"
-            className="flex justify-center p-3 px-[20px] text-[16px] font-cairo font-bold"
-          >
-            Daftar Kelas
-          </a>
+          <div className="md:hidden flex justify-center">
+            <Link
+              to="/"
+              className="bg-[#5885E9] rounded-full py-2 px-[20px] text-[16px] font-cairo font-bold"
+            >
+              Logout
+            </Link>
+          </div>
         </div>
       </ul>
     </>
