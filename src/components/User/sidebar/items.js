@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Item(props) {
-  const { icon, title, href,isactive } = props;
-  const [isActive,setIsActive] = useState(false)
+  const { icon, title, href,isActive, setIsActive,index } = props;
   const activeLink = "border-primaryBlue-main border-l-2 border-primaryBlue-main text-primaryBlue-main"
   const normal = ""
   console.log(isActive)
@@ -11,7 +10,11 @@ export default function Item(props) {
     <Link
       onClick={
         ()=>{
-          setIsActive(!isActive)
+          if (!isActive) {
+            setIsActive(index)
+          }else{
+            setIsActive(null)
+          }
           
         }
       }
