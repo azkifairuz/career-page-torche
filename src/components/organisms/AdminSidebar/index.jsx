@@ -31,7 +31,7 @@ export default function AdminSidebar(props) {
           <Item src={DashboardIcon} title="Dashboard" href="dashboard" />
           <Item src={LowonganIcon} title="Lowongan" href="vacancy" />
           <Item src={PelamarIcon} title="Pelamar" href="applicants" />
-          <Item src={WawancaraIcon} title="Pengaturan" href="settings" />
+          <Item src={WawancaraIcon} title="Wawancara" href="wawancara" />
         </ul>
       </main>
     </aside>
