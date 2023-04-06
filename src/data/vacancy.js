@@ -7,6 +7,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
     applicantsCount: {
       belumDiproses: 100,
@@ -33,6 +34,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
   },
   {
@@ -43,6 +45,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
     applicantsCount: {
       belumDiproses: 0,
@@ -59,6 +62,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
     applicantsCount: {
       belumDiproses: 0,
@@ -79,6 +83,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
     applicantsCount: {
       belumDiproses: 0,
@@ -95,6 +100,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
     applicantsCount: {
       belumDiproses: 0,
@@ -116,6 +122,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
     applicantsCount: {
       belumDiproses: 0,
@@ -142,6 +149,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
   },
   {
@@ -160,6 +168,7 @@ export const vacancies = [
     description: "lorem ipsum doler",
     type: "Internship",
     place: "Remote (Online) Indonesia",
+    address: "Tangerang, Indonesia",
     category: "Marketing and Sales",
   },
 ];
