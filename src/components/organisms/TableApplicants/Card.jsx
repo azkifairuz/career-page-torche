@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Card(props) {
   const { name, age, city, appliedAt, experience, major, status } = props;
   return (

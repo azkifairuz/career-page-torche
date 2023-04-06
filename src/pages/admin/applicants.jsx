@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Table from "components/organisms/TableApplicants";
-import TabButton from "components/admin/TabButton";
+import TabButton from "components/admin/VacancyTab";
 import Pagination from "components/Pagination";
 
 import { vacancies } from "data/vacancy";
