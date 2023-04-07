@@ -4,47 +4,27 @@ import { vacancies } from "data/vacancy";
 
 export default function Table(props) {
   const { filterStatus } = props;
-  if (filterStatus === "all") {
-    return (
-      <table className="w-full ">
-        <thead>
-          <tr className="bg-slate-200 shadow-md border-spacing-0">
-            <th className="py-3 pl-6 text-sm" align="left">
-              Lowongan
-            </th>
-            <th className="text-sm">Jumlah Pelamar per Status</th>
-            <th className="text-sm">Ganti Status</th>
-            <th className="text-sm pr-4">Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          {vacancies.map((item, index) => (
-            <Card key={index} {...item} />
-          ))}
-        </tbody>
-      </table>
-    );
-  }
 
-  const filteredVacancies = vacancies.filter(
-    (item) => item.status.toLowerCase() === filterStatus
-  );
+  const filteredVacancies = filterStatus !== "all"
+    ? vacancies.filter((item) => item.status.toLowerCase() === filterStatus)
+    : vacancies;
 
   return (
     <table className="w-full ">
-      <thead>
-        <tr className="bg-slate-200 shadow-md border-spacing-0">
-          <th className="py-3 pl-6 text-sm" align="left">
-            Lowongan
-          </th>
-          <th className="text-sm">Jumlah Pelamar per Status</th>
-          <th className="text-sm">Ganti Status</th>
-          <th className="text-sm pr-4">Aksi</th>
-        </tr>
+      <thead className="bg-primaryBlue-main text-neutral-100 rounded-[32px] heading-s-bold">
+        <th
+          align="left"
+          className="p-[16px] pl-[37px] rounded-l-[32px] border-0 font-semibold"
+        >
+          Lowongan
+        </th>
+        <th className=" border-0 font-semibold">Jumlah Lamaran per Status</th>
+        <th className=" border-0 font-semibold">Status</th>
+        <th className="rounded-r-[32px] border-0 ">{""}</th>
       </thead>
       <tbody>
         {filteredVacancies.map((item, index) => (
-          <Card key={index} {...item} />
+          <Card key={index} {...item} index={index} />
         ))}
       </tbody>
     </table>

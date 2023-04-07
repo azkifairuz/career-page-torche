@@ -3,27 +3,32 @@ import { Link } from "react-router-dom";
 import { ThreeDotsVertical } from "react-bootstrap-icons";
 import DataByStatus from "./DataByStatus";
 
+import Pin from "assets/icons/pin.svg";
+
 export default function Card(props) {
-  const { name, company, createdAt, applicantsCount, status } = props;
+  const { name, address, type, index, applicantsCount, status } = props;
 
   const handleChange = (e) => {
     console.log(e.target.value);
   };
 
   return (
-    <tr className="hover:bg-slate-100 border-spacing-0 ">
-      <td className="p-4 pl-6 rounded-l-xl border-0 ">
-        <h1 className="font-rajdhani font-semibold text-md">{name}</h1>
+    <tr className="border-spacing-0 ">
+      <td
+        className={`flex flex-col gap-3 pl-[27px] ${
+          index === 0 ? "pt-12" : "pt-7"
+        } rounded-l-xl border-0 font-inter`}
+      >
+        <h1 className="heading-xs-medium">{name}</h1>
         <span className="flex gap-1 items-center">
-          <p className=" text-xs">{company}</p>
+          <img src={Pin} alt="pin" />
+          <p className="text-s-regular">{address}</p>
         </span>
-        <span className="flex gap-1 items-center">
-          <p className=" text-xs">{createdAt}</p>
-        </span>
+        <p className="text-s-regular opacity-50">{type}</p>
       </td>
 
-      <td className="w-fit">
-        <div className="flex gap-1 items-center justify-center">
+      <td className={index === 0 && "pt-12"}>
+        <div className="flex gap-3 items-center justify-center">
           <DataByStatus
             count={applicantsCount.belumDiproses}
             status="Belum diproses"
@@ -34,10 +39,10 @@ export default function Card(props) {
         </div>
       </td>
 
-      <td align="center" className="rounded-r-xl border-0 px-6">
+      <td align="center" className={`${index === 0 && "pt-12"} rounded-r-xl border-0 px-6`}>
         <select
           value={status}
-          className="text-blue-500 font-semibold text-sm cursor-pointer"
+          className="text-l-bold py-2 px-4 rounded-xl cursor-pointer text-success-main bg-success-border"
           onChange={handleChange}
         >
           <option value="Aktif">Aktif</option>
@@ -45,16 +50,16 @@ export default function Card(props) {
         </select>
       </td>
 
-      <td align="center" className="pr-4">
+      <td align="center" className={`${index === 0 && "pt-12"} pr-4`}>
         <div className="relative inline-block text-left">
           <button
             type="button"
-            className="inline-flex justify-center"
+            className="inline-flex justify-center text-l-regular text-primaryBlue-main hover:underline"
             id="options-menu"
             aria-haspopup="true"
             aria-expanded="true"
           >
-            <ThreeDotsVertical size={16} />
+            Edit Lowongan
           </button>
 
           <div className="origin-top-right hidden absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">

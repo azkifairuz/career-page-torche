@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function TabButton(props) {
-  const { title, count = null, active, setFilterStatus } = props;
+  const { title, filter, count = null, active, setFilterStatus } = props;
+  const bgColor = filter === "all" ? "bg-primaryBlue-border" : filter === "aktif" ? "bg-success-border" : "bg-danger-border";
   const handleClick = () => {
     if (title === "Semua lowongan") {
       setFilterStatus("all");
@@ -13,15 +14,19 @@ export default function TabButton(props) {
   };
   return (
     <button
-      className={`flex items-center gap-2 p-4 border-b-2 border-transparent ${
+      className={`flex items-center gap-2 pb-2 border-b-2 border-transparent ${
         active && "border-b-orange-500"
       }`}
       onClick={handleClick}
     >
-      <h1 className="font-semibold font-rajdhani ">{title}</h1>
-      {count !== null && <p className="text-xs rounded font-semibold bg-white p-[6px] py-[0.5px] text-blue-800">
-        {count}
-      </p>}
+      <h1 className="heading-s-medium ">{title}</h1>
+      {count !== null && (
+        <p
+          className={`font-inter text-4 text-black font-semibold rounded-xl p-[10px] text-center ${bgColor}`}
+        >
+          {count} 
+        </p>
+      )}
     </button>
   );
 }
