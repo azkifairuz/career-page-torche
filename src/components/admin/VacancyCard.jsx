@@ -11,7 +11,7 @@ export default function VacancyCard(props) {
   } = props;
   return (
     <tr className=" text-black">
-      <td className={`flex flex-col gap-3 pl-[27px] ${index === 0 ? "pt-[47px]": "pt-[28px"} py-4 rounded-l-xl border-0 font-inter`}>
+      <td className={`flex flex-col gap-3 pl-[27px] ${index === 0 ? "pt-[48px]": "pt-[28px"} py-4 rounded-l-xl border-0 font-inter`}>
         <h1 className="heading-xs-medium">{name}</h1>
         <span className="flex gap-1 items-center">
           <img src={Pin} alt="pin" />
