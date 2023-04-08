@@ -43,7 +43,7 @@ export default function Sidebar(props) {
     </svg>
   );
 
-  const [isActive, setIsActive] = useState(null);
+  const [isActive, setIsActive] = useState(0);
 
   const handleLogout = () => {
     logout(dispatch);
