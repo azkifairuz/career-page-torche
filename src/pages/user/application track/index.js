@@ -3,7 +3,7 @@ import { ChevronDown } from "react-bootstrap-icons"
 import { applications } from "data/application"
 
 
-import Pagination from "components/User/Application Tracking/Pagination"
+import Pagination from "components/User/Pagination"
 
 function Tracking() {
      
