@@ -1,6 +1,8 @@
 import Card from "components/User/Application Tracking/Card"
 import { ChevronDown } from "react-bootstrap-icons"
 import { applications } from "data/application"
+import Pagination from "components/User/Application Tracking/pagination"
+
 function Tracking() {
         
          return (
@@ -18,6 +20,9 @@ function Tracking() {
                             <Card posisi={data.posisi} status={data.status} isClosed={data.isClosed} tanggal={data.tanggal} perusahaan={data.perusahaan}/>
                         )
                     })}
+                </div>
+                <div>
+                    <Pagination/>
                 </div>
             </div>
            
