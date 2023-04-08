@@ -1,7 +1,7 @@
 import Card from "components/User/Application Tracking/Card"
 import { ChevronDown } from "react-bootstrap-icons"
 import { applications } from "data/application"
-import Pagination from "components/User/Application Tracking/Pagination"
+import Pagination from "components/User/Pagination"
 
 function JobApplication() {
      
@@ -18,7 +18,7 @@ function JobApplication() {
                 <div className="flex flex-col gap-6 w-full">
                         {applications.slice(0,5).map((data)=>{
                         return(
-                            <Card posisi={data.posisi} status={data.status} isClosed={data.isClosed} tanggal={data.tanggal} perusahaan={data.perusahaan}/>
+                            <Card posisi={data.posisi} status={data.status} isClosed={data.isClosed} tanggal={data.tanggal} perusahaan={data.perusahaan} salary={data.salary} category={"UI/UX"}/>
                         )
                     })}
                 </div>

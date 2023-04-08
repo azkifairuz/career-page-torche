@@ -15,9 +15,7 @@ export default function Card(props) {
             </div>
             <h1 className="uppercase text-l-bold text-primaryBlue-main">{salary}</h1>
             <div>
-                {category.map((category)=>{
-                    return <span className="block bg-primaryBlue-surface text-primaryBlue-main py-2 px-3 rounded-lg">{category}</span>
-                })}
+                <span className="block bg-primaryBlue-surface text-primaryBlue-main py-2 px-3 rounded-lg">{category}</span>
             </div>
             <div className="flex justify-between">
                 <div className="text-m-regular w-fit py-1 px-2 capitalize text-primaryBlue-main bg-primaryBlue-surface border-black">{status}</div>

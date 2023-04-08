@@ -1,5 +1,4 @@
-import {useState } from "react";
-import * as Icon from "react-bootstrap-icons";
+
 export default function Card(props) {
     const {posisi,salary,place,tanggal,status}=props
 

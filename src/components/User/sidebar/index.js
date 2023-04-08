@@ -3,11 +3,10 @@ import sample from "assets/index.png";
 import * as Icon from "react-bootstrap-icons";
 import Header from "./header";
 import Item from "./items";
-import { useAuthState, useAuthDispatch, logout } from "context";
-import { Link, Navigate } from "react-router-dom";
+// import { useAuthState, useAuthDispatch, logout } from "context";
+// import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 export default function Sidebar(props) {
-  const dispatch = useAuthDispatch();
 
   const resumeIcon = (
     <svg
@@ -43,12 +42,9 @@ export default function Sidebar(props) {
     </svg>
   );
 
-  const [isActive, setIsActive] = useState(0);
+  const [isActive, setIsActive] = useState(null);
 
-  const handleLogout = () => {
-    logout(dispatch);
-    console.log("logout");
-  };
+
   const itemSidebar = [
     {
       title: "Profil",
