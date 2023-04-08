@@ -1,10 +1,8 @@
-import { useState } from "react";
 
 export default function Item(props) {
     
   const { isActive, setIsActive,index,page } = props;
   const activeItem = "bg-[#4D74CC] text-white"
-  const [currentPage, setcurrentPage] = useState(null);
   console.log()
   const handleClick = () => {
     if (!isActive) {

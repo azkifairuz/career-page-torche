@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { applications } from "data/application";
 import Item from "./item";
 export default function Pagination() {
   const pages = [1, 2, 3];
