@@ -27,6 +27,7 @@ import { AuthProvider } from "context";
 import Profil from "pages/user/dashboard/profil";
 import JobDetail from "pages/joblist/detail";
 import Tracking from "./pages/user/application track";
+import JobApplication from "pages/user/JobApplication";
 
 function App() {
   const [user, setUser] = useState({
@@ -91,6 +92,7 @@ function App() {
             <Route path="dashboard" element={<UserDashboard />}>
               <Route index element={<Navigate to="profil" />} />
               <Route path="profil" element={<Profil />}></Route>
+              <Route path="lamaran" element={<JobApplication />}></Route>
               <Route path="applicationtracking" element={<Tracking />} />
             </Route>
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
