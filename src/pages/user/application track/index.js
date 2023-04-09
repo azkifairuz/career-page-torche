@@ -1,4 +1,4 @@
-import Card from "components/User/Application Tracking/Card"
+import Card from "./Card"
 import { ChevronDown } from "react-bootstrap-icons"
 import { applications } from "data/application"
 
