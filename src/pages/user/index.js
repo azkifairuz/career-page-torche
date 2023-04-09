@@ -6,11 +6,11 @@ import { Outlet } from "react-router";
 function User() {
 
     return (
-    <>  
+    <div>  
         <Navbar/>
         <Outlet/>
         <Footer/>
-    </>
+    </div>
     );
 }
 
