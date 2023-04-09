@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Plus } from "react-bootstrap-icons";
+import { Plus, Search } from "react-bootstrap-icons";
 
 import TabButton from "components/admin/VacancyTab";
 import Table from "components/organisms/TableVacancy";
 import Pagination from "components/Pagination";
+import Select from "components/atom/Select";
+import SearchBar from "components/molecules/SearchBar";
 
 export default function Vacancy() {
   const [filterStatus, setFilterStatus] = useState("all");
@@ -45,17 +47,11 @@ export default function Vacancy() {
           setFilterStatus={setFilterStatus}
         />
       </section>
-      <section className="flex gap-6 mt-6">
-        <input
-          placeholder="Cari Lowongan.."
-          className="border-2 rounded-lg w-full py-2 px-4"
-        />
-        <input
-          placeholder="Semua kota"
-          className="border-2 rounded-xl p-2 px-4 w-2/5 "
-        />
+      <section className="flex gap-6 mt-6 w-full first:w-4/5 last:w-fit">
+        <SearchBar placeholder="Cari lowongan" icon={<Search />} width="w-4/5"  />
+        <Select title="Kota" data={["Kota A", "Kota B"]} />
       </section>
-      <div className="bg-white shadow rounded-xl p-[12px] w-full mt-[54px]">
+      <div className="bg-white drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-xl p-[12px] w-full mt-[54px]">
         <Table filterStatus={filterStatus} />
       </div>
       <Pagination maxData={maxData} />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "../../../components/molecules/SearchBar";
 import Filter from "./Filter";
 
 import SearchIcon from "assets/icons/search.svg";

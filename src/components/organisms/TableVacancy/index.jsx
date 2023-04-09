@@ -2,6 +2,8 @@ import React from "react";
 import Card from "./Card";
 import { vacancies } from "data/vacancy";
 
+import StatusSelect from "components/atom/StatusSelect";
+
 export default function Table(props) {
   const { filterStatus } = props;
 

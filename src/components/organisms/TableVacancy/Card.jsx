@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-import { ThreeDotsVertical } from "react-bootstrap-icons";
 import DataByStatus from "./DataByStatus";
 
 import Pin from "assets/icons/pin.svg";
+import StatusSelect from "components/atom/StatusSelect";
 
 export default function Card(props) {
   const { name, address, type, index, applicantsCount, status } = props;
@@ -40,14 +40,7 @@ export default function Card(props) {
       </td>
 
       <td align="center" className={`${index === 0 && "pt-12"} rounded-r-xl border-0 px-6`}>
-        <select
-          value={status}
-          className="text-l-bold py-2 px-4 rounded-xl cursor-pointer text-success-main bg-success-border"
-          onChange={handleChange}
-        >
-          <option value="Aktif">Aktif</option>
-          <option value="Tutup">Tutup</option>
-        </select>
+        <StatusSelect title="Status" data={["Aktif", "Tutup"]} status={status} />
       </td>
 
       <td align="center" className={`${index === 0 && "pt-12"} pr-4`}>
