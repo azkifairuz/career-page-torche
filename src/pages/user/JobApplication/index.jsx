@@ -1,4 +1,4 @@
-import Card from "components/User/JobApplication/card"
+import Card from "./card"
 import { ChevronDown } from "react-bootstrap-icons"
 import { applications } from "data/application"
 import Pagination from "components/User/Pagination"
