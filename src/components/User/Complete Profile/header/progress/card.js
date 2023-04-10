@@ -1,5 +1,6 @@
 import { ChevronDown } from "react-bootstrap-icons";
 import Item from "./item";
+import { useState } from "react";
 
 export default function ProgressCard(props) {
   const { percent } = props;
@@ -8,7 +9,22 @@ export default function ProgressCard(props) {
     { href: "/pengelaman", title: "Pengalaman Kerja" },
     { href: "/pendidikan", title: "Pendidikan" },
     { href: "/organisasi", title: "Organisasi" },
+    { href: "/skill", title: "Skill" },
+    { href: "/pernghargaan", title: "Pernghargaan" },
+    { href: "/portofolio", title: "Portofolio" },
+    { href: "/resume", title: "Resume" },
   ];
+  const [IsOpen, setIsOpen] = useState(false)
+  const [indexAkhir, setIndexAkhir] = useState(4)
+  const handleOpen = ()=>{
+    if (IsOpen) {
+      setIndexAkhir(8)
+      setIsOpen(!IsOpen)
+    }else{
+      setIsOpen(!IsOpen)
+      setIndexAkhir(4)
+    }
+  }
   return (
     <div className="shadow-card rounded-2xl z-50 md:py-2 md:mt-8 md:px-8 bg-white lg:w-[397px] p-9 text-start"> 
       <div className="flex gap-2 mb-3 text-black ">
@@ -22,12 +38,12 @@ export default function ProgressCard(props) {
         </div>
       </div>
       <div className="text-start md:hidden lg:block lg:pl-2 mt-3 gap-2 z-20 -ml-5">
-        {itemData.map((item)=>{
+        {itemData.slice(0,indexAkhir).map((item)=>{
           return <Item href={item.href} title={item.title} />
         })}
       </div>
       <div className="flex gap-2 cursor-pointer mt-3 items-center">
-        {<ChevronDown size={15} className="text-neutral-600" />}
+        {<ChevronDown onClick={handleOpen} size={15} className="text-neutral-600" />}
         <p className="text-neutral-600 font-cairo text-m-regular">Tampilkan Semua</p>
       </div>
     </div>
