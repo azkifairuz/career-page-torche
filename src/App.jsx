@@ -21,12 +21,12 @@ import Admin, {
   Create,
   Vacancy,
 } from "pages/admin";
-import CompleteProfil from "./pages/user/complete profile/CompleteProfile";
+import CompleteProfil from "./pages/user/dashboard/complete profile/CompleteProfile";
 import UserDashboard from "pages/user/dashboard";
 import { AuthProvider } from "context";
 import Profil from "pages/user/dashboard/profil";
 import JobDetail from "pages/joblist/detail";
-import Tracking from "./pages/user/application track";
+import Tracking from "./pages/user/dashboard/application track";
 import JobApplication from "pages/user/JobApplication";
 
 function App() {
