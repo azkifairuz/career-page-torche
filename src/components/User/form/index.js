@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 export default function Form(params) {
-  const [input, setinput] = useState({});
+  const [input, setinput] = useState({
+    Name:"john Doe"
+  });
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setinput((values) => ({ ...values, [name]: value }));
+    console.log(name);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(input);
   };
   return (
-    <div>
-      <div className="p-4 shadow-card lg:shadow-none lg:w-10/12 lg:max-w-[714px]  rounded-lg">
-        <header className="border-b-2 border-primaryBlue-main p-2">
+    <form onSubmit={handleSubmit} className="p-4 shadow-card flex flex-col gap-8 lg:shadow-none lg:w-10/12 lg:max-w-[714px] rounded-lg">
+      <div>
+        <header>
           <h1 className="font-rajdhani text-start heading-l-medium ">
             Basic Information
           </h1>
         </header>
         <section
-          onSubmit={handleSubmit}
           className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-2"
         >
           <div className="flex flex-col gap-1">
@@ -28,6 +30,7 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Name"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.Name}
               onChange={handleChange}
@@ -39,6 +42,7 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Title"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.Title}
               onChange={handleChange}
@@ -50,6 +54,7 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Bahasa"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.Bahasa}
               onChange={handleChange}
@@ -61,6 +66,7 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Umur/JenisKelamin"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input["Umur/JenisKelamin"]}
               onChange={handleChange}
@@ -72,6 +78,7 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Gaji"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.Gaji}
               onChange={handleChange}
@@ -83,6 +90,7 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Expectation"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 md:outline-neutral-700 focus:ring-primaryBlue-main"
               value={input.Expectation}
               onChange={handleChange}
@@ -94,6 +102,7 @@ export default function Form(params) {
             </label>
             <textarea
               type="text"
+              name="Deskripsi"
               className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.Deskripsi}
               onChange={handleChange}
@@ -101,9 +110,9 @@ export default function Form(params) {
           </div>
         </section>
       </div>
-      <div className="p-4 shadow-card lg:shadow-none lg:w-10/12 lg:max-w-[714px] rounded-lg">
-        <header className="border-b-2 border-primaryBlue-main p-2">
-          <h1 className="font-rajdhani text-start heading-l-medium">Kontak</h1>
+      <div>
+        <header>
+          <h1 className="font-rajdhani text-start heading-l-medium">Contact</h1>
         </header>
         <section className="flex mt-2 lg:grid lg:grid-cols-2 flex-col gap-4">
           <div className="flex flex-col gap-1">
@@ -112,6 +121,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Phone"
+              value={input.Phone}
+              onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
@@ -121,6 +133,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Email"
+              value={input.Email}
+              onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md  outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
@@ -130,6 +145,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="Country"
+              value={input.Country}
+              onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
@@ -139,6 +157,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
+              name="City"
+              value={input.City}
+              onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
@@ -148,14 +169,17 @@ export default function Form(params) {
             </label>
             <textarea
               type="text"
+              name="Address"
+              value={input.Address}
+              onChange={handleChange}
               className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             ></textarea>
           </div>
-          <button className="bg-primaryBlue-main lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
+          <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
             Save Settings
           </button>
         </section>
       </div>
-    </div>
+    </form>
   );
 }

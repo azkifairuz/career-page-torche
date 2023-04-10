@@ -21,7 +21,7 @@ import Admin, {
   Create,
   Vacancy,
 } from "pages/admin";
-import CompleteProfil from "./pages/user/dashboard/complete profile/CompleteProfile";
+import CompleteProfil from "./pages/complete profile/CompleteProfile";
 import UserDashboard from "pages/user/dashboard";
 import { AuthProvider } from "context";
 import Profil from "pages/user/dashboard/profil";

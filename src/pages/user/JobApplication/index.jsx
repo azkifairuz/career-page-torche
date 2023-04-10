@@ -7,7 +7,7 @@ function JobApplication() {
      
         
          return (
-            <div className="capitalize mt-14 mr-[100px] w-fit">
+            <div className="capitalize mt-14 mr-[100px] w-fit lg:w-10/12 lg:max-w-[714px]">
                 <div className="flex justify-between mb-16 w-ful">
                     <h1 className="heading-l-bold">Lamaran</h1>
                     <div>
