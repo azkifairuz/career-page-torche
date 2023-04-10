@@ -1,7 +1,7 @@
 import { ChevronDown } from "react-bootstrap-icons";
 import Item from "./item";
 import { useState } from "react";
-
+import ArrowDown from "assets/icons/chevron-down.svg";
 export default function ProgressCard(props) {
   const { percent } = props;
   const itemData = [
@@ -17,7 +17,7 @@ export default function ProgressCard(props) {
   const [IsOpen, setIsOpen] = useState(false)
   const [indexAkhir, setIndexAkhir] = useState(4)
   const handleOpen = ()=>{
-    if (IsOpen) {
+    if (!IsOpen) {
       setIndexAkhir(8)
       setIsOpen(!IsOpen)
     }else{
@@ -37,13 +37,13 @@ export default function ProgressCard(props) {
           <div className="absolute  bg-neutral-300 top-1/2 left-0 h-1 -translate-y-1/2 -z-20 rounded-md w-full  "></div>
         </div>
       </div>
-      <div className="text-start md:hidden lg:block lg:pl-2 mt-3 gap-2 z-20 -ml-5">
+      <div className={`text-start lg:block lg:pl-2 mt-3 gap-2 z-20 -ml-5 first-letter ${!IsOpen ? "md:hidden":"md:block"} `}>
         {itemData.slice(0,indexAkhir).map((item)=>{
           return <Item href={item.href} title={item.title} />
         })}
       </div>
-      <div className="flex gap-2 cursor-pointer mt-3 items-center">
-        {<ChevronDown onClick={handleOpen} size={15} className="text-neutral-600" />}
+      <div onClick={handleOpen}  className="flex gap-2 cursor-pointer mt-3 items-center">
+        {<img alt="arrow" src={ArrowDown}  className={`${IsOpen && "rotate-180"} transition-all duration-300 ease-in-out`} />}
         <p className="text-neutral-600 font-cairo text-m-regular">Tampilkan Semua</p>
       </div>
     </div>

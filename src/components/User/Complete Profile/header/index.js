@@ -12,7 +12,7 @@ export default function HeaderSection() {
     { Title: "Nationality", Desc: "indonesia" },
   ];
   return (
-    <div className={`px-6 pt-2 lg:h-[400px]   md:p-8 md:pb-16 box-border lg:justify-between lg:px-24 lg:py-10 lg:flex md:bg-[url('assets/images/hero.png')] md:bg-no-repeat bg-cover md:text-white`}>
+    <div className={`px-6 pt-2 lg:h-fit   md:p-8 md:pb-16 box-border lg:justify-between lg:px-24 lg:py-10 lg:flex md:bg-[url('assets/images/hero.png')] md:bg-no-repeat bg-cover md:text-white`}>
       <div className="flex flex-col md:flex-row md:gap-6">
       <div className="">
         {
