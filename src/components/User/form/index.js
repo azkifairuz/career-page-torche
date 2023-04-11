@@ -1,30 +1,34 @@
 import React, { useState } from "react";
-export default function Form(params) {
+export default function Form() {
+  const data = {}
   const [input, setinput] = useState({
-    Name:"",
-    Title:"",
-    Bahasa:"",
-    "Umur/JenisKelamin":"",
-    GajiSaatIni:"",
-    GajiDiharapkan:"",
-    Deskripsi:"",
-    Phone:"",
-    Email:"",
-    Country:"",
-    City:"",
-    Address:""
+    username:"",
+    title:"",
+    bahasa:"",
+    gender:"",
+    gajiSaatIni:"",
+    gajiDiharapkan:"",
+    deskripsi:"",
+    phone:"",
+    email:"",
+    country:"",
+    city:"",
+    address:""
 
   });
+  
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setinput((values) => ({ ...values, [name]: value }));
-    console.log(name);
+    
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(input);
+    data.push(input)
+    console.log(data);
   };
+ 
   return (
     <form onSubmit={handleSubmit} className="p-4 shadow-card flex flex-col gap-8 lg:shadow-none lg:w-10/12 lg:max-w-[714px] rounded-lg">
       <div>
@@ -42,33 +46,33 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="Name"
+              name="username"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.Name}
+              value={input.username}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Title
+              title
             </label>
             <input
               type="text"
-              name="Title"
+              name="title"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.Title}
+              value={input.title}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Bahasa
+              bahasa
             </label>
             <input
               type="text"
-              name="Bahasa"
+              name="bahasa"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.Bahasa}
+              value={input.bahasa}
               onChange={handleChange}
             />
           </div>
@@ -78,9 +82,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="Umur/JenisKelamin"
+              name=gender
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input["Umur/JenisKelamin"]}
+              value={input[gender]}
               onChange={handleChange}
             />
           </div>
@@ -90,9 +94,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="GajiSaatIni"
+              name="gajiSaatIni"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.GajiSaatIni}
+              value={input.gajiSaatIni}
               onChange={handleChange}
             />
           </div>
@@ -102,21 +106,21 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="GajiDiharapkan"
+              name="gajiDiharapkan"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 md:outline-neutral-700 focus:ring-primaryBlue-main"
-              value={input.GajiDiharapkan}
+              value={input.gajiDiharapkan}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col lg:col-span-2 gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Deskripsi
+              deskripsi
             </label>
             <textarea
               type="text"
-              name="Deskripsi"
+              name="deskripsi"
               className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.Deskripsi}
+              value={input.deskripsi}
               onChange={handleChange}
             ></textarea>
           </div>
@@ -129,24 +133,24 @@ export default function Form(params) {
         <section className="flex mt-2 lg:grid lg:grid-cols-2 flex-col gap-4">
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Phone
+              phone
             </label>
             <input
               type="text"
-              name="Phone"
-              value={input.Phone}
+              name="phone"
+              value={input.phone}
               onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo  self-start text-neutral-800 text-xl-regular">
-              Alamat Email
+              Alamat email
             </label>
             <input
               type="text"
-              name="Email"
-              value={input.Email}
+              name="email"
+              value={input.email}
               onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md  outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
@@ -157,8 +161,8 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="Country"
-              value={input.Country}
+              name="country"
+              value={input.country}
               onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
@@ -169,8 +173,8 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="City"
-              value={input.City}
+              name="city"
+              value={input.city}
               onChange={handleChange}
               className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
@@ -181,8 +185,8 @@ export default function Form(params) {
             </label>
             <textarea
               type="text"
-              name="Address"
-              value={input.Address}
+              name="address"
+              value={input.address}
               onChange={handleChange}
               className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             ></textarea>
