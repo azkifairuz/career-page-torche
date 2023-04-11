@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {user} from "data/user"
+
 export default function Form() {
   
   const [input, setinput] = useState({
@@ -17,7 +18,7 @@ export default function Form() {
     address:user.address
 
   });
-  
+  console.log()
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -42,15 +43,15 @@ export default function Form() {
   };
  
   return (
-    <form onSubmit={handleSubmit} className="p-4 shadow-card flex flex-col gap-8 lg:shadow-none lg:w-10/12 lg:max-w-[714px] rounded-lg">
+    <form onSubmit={handleSubmit} className="md:w-[472px] p-4 shadow-[0px_0px_10px_0_#0000001A] flex  md:py-[32px] md:px-[42px] flex-col gap-8 lg:shadow-none lg:w-10/12 lg:max-w-[714px] rounded-lg">
       <div>
-        <header>
+        <header className="mb-[30px]">
           <h1 className="font-rajdhani text-start heading-l-medium ">
             Basic Information
           </h1>
         </header>
         <section
-          className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-2"
+          className="flex flex-col lg:grid lg:grid-cols-2 gap-5 mt-2"
         >
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800  text-xl-regular">
@@ -59,7 +60,7 @@ export default function Form() {
             <input
               type="text"
               name="username"
-              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 text-neutral-500  outline outline-1 outline-primaryBlue-main rounded-md lg:focus:outline-neutral-800   focus:outline-primaryBlue-main md:outline-neutral-500 lg:ring-neutral-800 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.username}
               onChange={handleChange}
             />
@@ -71,7 +72,7 @@ export default function Form() {
             <input
               type="text"
               name="title"
-              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.title}
               onChange={handleChange}
             />
@@ -83,7 +84,7 @@ export default function Form() {
             <input
               type="text"
               name="language"
-              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.language}
               onChange={handleChange}
             />
@@ -95,7 +96,7 @@ export default function Form() {
             <input
               type="text"
               name="genderOrAge"
-              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.ageOrGender || ""}
               onChange={handleChange}
             />
@@ -107,8 +108,8 @@ export default function Form() {
             <input
               type="text"
               name="currentSalary"
-              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.currentSalary}
+              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              value={input.currentSalary.toLocaleString("id-ID")}
               onChange={handleChange}
             />
           </div>
@@ -119,8 +120,8 @@ export default function Form() {
             <input
               type="text"
               name="expectedSalary"
-              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 md:outline-neutral-700 focus:ring-primaryBlue-main"
-              value={input.expectedSalary}
+              className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline  md:outline-neutral-500 focus:outline-primaryBlue-main focus:ring-1  lg:focus:outline-neutral-700 focus:ring-primaryBlue-main"
+              value={input.expectedSalary.toLocaleString("id-ID")}
               onChange={handleChange}
             />
           </div>
@@ -131,7 +132,7 @@ export default function Form() {
             <textarea
               type="text"
               name="description"
-              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.description}
               onChange={handleChange}
             ></textarea>
@@ -152,7 +153,7 @@ export default function Form() {
               name="phone"
               value={input.phone}
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -164,7 +165,7 @@ export default function Form() {
               name="email"
               value={input.email}
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md  outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -176,7 +177,7 @@ export default function Form() {
               name="country"
               value={input.country}
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -188,7 +189,7 @@ export default function Form() {
               name="city"
               value={input.city}
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex lg:col-span-2 flex-col gap-1">
@@ -200,7 +201,7 @@ export default function Form() {
               name="address"
               value={input.address}
               onChange={handleChange}
-              className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             ></textarea>
           </div>
           <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
