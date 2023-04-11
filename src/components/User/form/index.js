@@ -18,7 +18,7 @@ export default function Form() {
     address:user.address
 
   });
-  console.log()
+  const [isValid, setIsValid] = useState(true)
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -27,7 +27,14 @@ export default function Form() {
     
   };
   const handleSubmit = (event) => {
-    event.preventDefault();   
+    event.preventDefault(); 
+    if (input.username === "") {
+      setIsValid(false)
+      
+    }else{
+      setIsValid(true)
+    }
+    console.log(isValid);
     console.log(user);
     user.username = input.username
     user.title = input.title
@@ -64,6 +71,7 @@ export default function Form() {
               value={input.username}
               onChange={handleChange}
             />
+            <p className={`text-danger-main ${isValid ? "hidden":"block" }`}>Nama Tidak Boleh Kosong</p>
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
