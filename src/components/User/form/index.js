@@ -1,7 +1,19 @@
 import React, { useState } from "react";
 export default function Form(params) {
   const [input, setinput] = useState({
-    Name:"john Doe"
+    Name:"",
+    Title:"",
+    Bahasa:"",
+    "Umur/JenisKelamin":"",
+    GajiSaatIni:"",
+    GajiDiharapkan:"",
+    Deskripsi:"",
+    Phone:"",
+    Email:"",
+    Country:"",
+    City:"",
+    Address:""
+
   });
   const handleChange = (event) => {
     const name = event.target.name;
@@ -78,9 +90,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="Gaji"
+              name="GajiSaatIni"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.Gaji}
+              value={input.GajiSaatIni}
               onChange={handleChange}
             />
           </div>
@@ -90,9 +102,9 @@ export default function Form(params) {
             </label>
             <input
               type="text"
-              name="Expectation"
+              name="GajiDiharapkan"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 md:outline-neutral-700 focus:ring-primaryBlue-main"
-              value={input.Expectation}
+              value={input.GajiDiharapkan}
               onChange={handleChange}
             />
           </div>
