@@ -223,7 +223,7 @@ export default function Form() {
               className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             ></textarea>
           </div>
-          <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
+          <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:place-self-end lg:w-[314px] lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
             Save Settings
           </button>
         </section>
