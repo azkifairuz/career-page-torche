@@ -1,19 +1,20 @@
 import React, { useState } from "react";
+import {user} from "data/user"
 export default function Form() {
-  const data = {}
+  
   const [input, setinput] = useState({
-    username:"",
-    title:"",
-    bahasa:"",
-    gender:"",
-    gajiSaatIni:"",
-    gajiDiharapkan:"",
-    deskripsi:"",
-    phone:"",
-    email:"",
-    country:"",
-    city:"",
-    address:""
+    username:user.username,
+    title:user.title,
+    language:user.language,
+    ageOrGender:user.ageOrGender,
+    currentSalary:user.currentSalary,
+    expectedSalary:user.expectedSalary,
+    description:user.description,
+    phone:user.phone,
+    email:user.email,
+    country:user.country,
+    city:user.city,
+    address:user.address
 
   });
   
@@ -21,12 +22,23 @@ export default function Form() {
     const name = event.target.name;
     const value = event.target.value;
     setinput((values) => ({ ...values, [name]: value }));
+
     
   };
   const handleSubmit = (event) => {
     event.preventDefault();   
-    console.log(data);
-    
+    console.log(user);
+    user.username = input.username
+    user.title = input.title
+    user.language = input.language
+    user.ageOrGender = input.ageOrGender
+    user.currentSalary = input.currentSalary
+    user.expectedSalary = input.expectedSalary
+    user.description = input.description
+    user.phone = input.phone
+    user.country = input.country
+    user.city = input.city
+    user.address = input.address
   };
  
   return (
@@ -66,13 +78,13 @@ export default function Form() {
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              bahasa
+              language
             </label>
             <input
               type="text"
-              name="bahasa"
+              name="language"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.bahasa}
+              value={input.language}
               onChange={handleChange}
             />
           </div>
@@ -82,9 +94,9 @@ export default function Form() {
             </label>
             <input
               type="text"
-              name="gender"
+              name="genderOrAge"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.gender}
+              value={input.ageOrGender || ""}
               onChange={handleChange}
             />
           </div>
@@ -94,9 +106,9 @@ export default function Form() {
             </label>
             <input
               type="text"
-              name="gajiSaatIni"
+              name="currentSalary"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.gajiSaatIni}
+              value={input.currentSalary}
               onChange={handleChange}
             />
           </div>
@@ -106,21 +118,21 @@ export default function Form() {
             </label>
             <input
               type="text"
-              name="gajiDiharapkan"
+              name="expectedSalary"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main focus:ring-1 md:outline-neutral-700 focus:ring-primaryBlue-main"
-              value={input.gajiDiharapkan}
+              value={input.expectedSalary}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col lg:col-span-2 gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              deskripsi
+              description
             </label>
             <textarea
               type="text"
-              name="deskripsi"
+              name="description"
               className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.deskripsi}
+              value={input.description}
               onChange={handleChange}
             ></textarea>
           </div>
