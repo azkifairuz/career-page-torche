@@ -24,9 +24,9 @@ export default function Form() {
     
   };
   const handleSubmit = (event) => {
-    event.preventDefault();
-    data.push(input)
+    event.preventDefault();   
     console.log(data);
+    
   };
  
   return (
@@ -82,9 +82,9 @@ export default function Form() {
             </label>
             <input
               type="text"
-              name=gender
+              name="gender"
               className="py-2 px-4 outline-1 rounded-md outline-primaryBlue-main outline focus:outline-primaryBlue-main md:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input[gender]}
+              value={input.gender}
               onChange={handleChange}
             />
           </div>
