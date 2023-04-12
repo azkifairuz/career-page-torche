@@ -28,6 +28,8 @@ import Profil from "pages/user/dashboard/profil";
 import JobDetail from "pages/joblist/detail";
 import Tracking from "./pages/user/dashboard/application track";
 import JobApplication from "pages/user/JobApplication";
+import Resume from "pages/user/dashboard/resume";
+import Setting from "pages/user/dashboard/setting";
 
 function App() {
   const [user, setUser] = useState({
@@ -94,6 +96,8 @@ function App() {
               <Route path="profil" element={<Profil />}></Route>
               <Route path="lamaran" element={<JobApplication />}></Route>
               <Route path="applicationtracking" element={<Tracking />} />
+              <Route path="resume" element={<Resume />} />
+              <Route path="setting" element={<Setting />} />
             </Route>
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
             <Route path="joblist" element={<Joblist />} />
