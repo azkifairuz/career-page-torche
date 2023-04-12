@@ -2,9 +2,9 @@ import { useState } from "react";
 import { ChevronDown } from "react-bootstrap-icons";
 
 export default function Select(props) {
-  const { title, data } = props
+  const { title, data, width, active } = props
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(active);
 
   const handleClick = () => {
     setIsOpen(!isOpen);

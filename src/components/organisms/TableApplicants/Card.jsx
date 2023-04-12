@@ -1,34 +1,45 @@
+import ProfileIcon from "assets/images/person.png";
+import Select from "components/atom/Select";
+
 export default function Card(props) {
-  const { name, age, city, appliedAt, experience, major, status } = props;
+  const { name, age, appliedAt, experience, major, status, index } = props;
+  const statuses = [
+    "Belum diproses",
+    "Diproses",
+    "Diterima",
+    "Ditolak",
+    "Disimpan",
+    "Undur diri",
+  ];
   return (
-    <tr className="hover:bg-slate-100 border-spacing-0 ">
+    <tr className={`py-5 ${index === 0 && "pt-[31px]"}`}>
       <td>
-        <input type="checkbox" className="ml-6" />
+        <div className="pl-4 flex items-center">
+          <input type="checkbox" className="w-6 h-6 bg-black " />
+        </div>
       </td>
 
-      <td className="p-4 pl-6 rounded-l-xl border-0 ">
-        <h1 className="font-rajdhani font-semibold text-md">{name}</h1>
-        <p className=" text-xs">{age}</p>
-        <p className=" text-xs">{city}</p>
+      <td align="center" className={`py-5 ${index === 0 && "pt-[31px]"}`}>
+        <div className="flex items-center text-left w-fit gap-2 text-black">
+          <img src={ProfileIcon} alt="profile" className="w-[60px] h-[60px]" />
+          <section>
+            <h1 className="text-l-regular">{name}</h1>
+            <p className="text-s-regular opacity-50">{age}</p>
+            <p className="text-s-regular opacity-50">{major}</p>
+          </section>
+        </div>
       </td>
 
-      <td className="text-sm">{major}</td>
+      <td align="center" className={`py-5 ${index === 0 && "pt-[31px]"}`}>
+        {experience}
+      </td>
 
-      <td className="text-sm">{experience}</td>
+      <td align="center" className={`py-5 ${index === 0 && "pt-[31px]"}`}>
+        {appliedAt}
+      </td>
 
-      <td className="text-sm">{appliedAt}</td>
-
-      <td align="center" className="rounded-r-xl border-0 px-6">
-        <select className="text-blue-500 font-semibold text-sm cursor-pointer" value={status} onChange={() => (console.log("test  "))}>
-          <option value={"Belum diproses"}>
-            Belum diproses
-          </option>
-          <option value={"Diproses"}>Diproses</option>
-          <option value={"Diterima"}>Diterima</option>
-          <option value={"Ditolak"}>Ditolak</option>
-          <option value={"Disimpan"}>Disimpan</option>
-          <option value={"Diproses"}>Undur diri</option>
-        </select>
+      <td align="center" className={`py-5 ${index === 0 && "pt-[31px]"} `}>
+        <Select title={"status"} active={status} data={statuses} />
       </td>
     </tr>
   );

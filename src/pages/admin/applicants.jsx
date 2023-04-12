@@ -1,14 +1,19 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Search } from "react-bootstrap-icons";
 
 import Table from "components/organisms/TableApplicants";
 import TabButton from "components/admin/VacancyTab";
-import Pagination from "components/Pagination";
+import Pagination from "components/molecules/Pagination";
+import Select from "components/atom/Select";
+import SearchBar from "components/molecules/SearchBar";
 
 import { vacancies } from "data/vacancy";
 import { applicants } from "data/applicants";
 
 export default function Applicants() {
   const [applicantsArr, setApplicantsArr] = useState(applicants[0].data);
+  const [filterStatus, setFilterStatus] = useState("all");
   const [vacancySelected, setVacancySelected] = useState(vacancies[0]);
   const maxData = 100;
 
@@ -21,51 +26,45 @@ export default function Applicants() {
   };
 
   return (
-    <main className="flex-1 p-8 font-cairo flex flex-col gap-4">
-      <header className="flex justify-between items-center   ">
-        <h1 className="font-bold font-rajdhani text-2xl">
-          Kelola pelamar lowongan Anda di sini!
-        </h1>
+    <main className="flex-1 p-8 font-cairo flex flex-col">
+      <header className="flex justify-between items-center">
+        <h1 className="heading-l-bold ">Kelola Lowongan</h1>
       </header>
-
-      <select
-        className="text-black border-2 rounded-xl p-2 px-4 w-2/5 "
-        value={vacancySelected.name}
-        onChange={handleSelectChange}
-      >
-        {vacancies.map((item, index) => (
-          <option value={item.name} key={index}>{item.name}</option>
-        ))}
-      </select>
-
-      <div className="shadow-md w-full rounded-xl">
-        <section className="bg-blue-800 text-white px-4 flex  rounded-t-xl">
-          <TabButton title="Semua" active={true} />
-        </section>
-        <section className=" text-black px-4 flex">
-          <button className="flex items-center gap-2 p-3 px-4 border-b-2 border-transparent border-b-blue-600">
-            <h1 className="font-semibold font-rajdhani ">Belum diproses</h1>
-            <p className="text-xs rounded bg-blue-200 font-bold p-2 py-1 text-blue-800">
-              88
-            </p>
-          </button>
-
-          <button className="flex items-center gap-2 p-3 px-4 border-b-2 border-transparent">
-            <h1 className="font-semibold font-rajdhani ">Diproses</h1>
-            <p className="text-xs rounded bg-blue-200 font-bold p-2 py-1 text-blue-800">
-              88
-            </p>
-          </button>
-        </section>
-        <section className="p-4">
-          <input
-            placeholder="Cari Lowongan.."
-            className="border-2 rounded-lg w-full py-2 px-4"
-          />
-        </section>
+      <section className="flex gap-10 mt-4">
+        <TabButton
+          filter="all"
+          title="Semua lowongan"
+          count={48}
+          active={filterStatus === "all"}
+          setFilterStatus={setFilterStatus}
+        />
+        <TabButton
+          filter="aktif"
+          title="Lowongan aktif"
+          count={0}
+          active={filterStatus === "aktif"}
+          setFilterStatus={setFilterStatus}
+        />
+        <TabButton
+          filter="tutup"
+          title="Lowongan tutup"
+          count={48}
+          active={filterStatus === "tutup"}
+          setFilterStatus={setFilterStatus}
+        />
+      </section>
+      <section className="flex gap-6 mt-6 w-full first:w-4/5 last:w-fit ">
+        <SearchBar
+          placeholder="Cari lowongan"
+          icon={<Search />}
+          width="w-4/5"
+        />
+        <Select title="Kota" data={["Kota A", "Kota B"]} />
+      </section>
+      <div className="bg-white drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-xl p-[12px] w-full mt-[54px]">
         <Table data={applicantsArr} />
-        <Pagination maxData={maxData} />
-      </div>
+      </div>  
+      <Pagination maxData={maxData} />
     </main>
   );
 }
