@@ -8,9 +8,9 @@ export default function Pagination(props) {
     setMaxRow(e.target.value);
   };
   return (
-    <section className="border-t-2 border-t-slate-200 text-black p-4 gap-4 flex justify-end items-center">
+    <section className="border-t-2 border-t-slate-200 text-black p-4 gap-4 flex justify-end items-center text-l-bold">
       <div className="flex items-center">
-        <p>Rows per page: </p>
+        <p>Tampilkan per Halaman: </p>
         <select className="p-2" value={maxRow} onChange={handleSelect}>
           <option value={10}>10</option>
           <option value={20}>20</option>
