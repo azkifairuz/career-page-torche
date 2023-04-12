@@ -9,7 +9,7 @@ function Tracking() {
      
         
          return (
-            <div className="capitalize mt-14 mr-[100px] w-fit">
+            <div className="capitalize p-4 mt-14 mr-[100px] lg:w-10/12 lg:max-w-[714px]">
                 <div className="flex justify-between mb-16 w-ful">
                     <h1 className="heading-l-bold">status lamaran</h1>
                     <select  className="border-2 flex flex-row items-center gap-11 text-xl-regular bg-primaryBlue-surface border-primaryBlue-border rounded-[4px] py-2 px-4 w-[160px]">

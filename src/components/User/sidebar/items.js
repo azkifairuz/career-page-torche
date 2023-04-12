@@ -9,12 +9,7 @@ export default function Item(props) {
     <Link
       onClick={
         ()=>{
-          if (!isActive) {
-            setIsActive(index)
-          }else{
-            setIsActive(null)
-          }
-          
+          setIsActive(index)
         }
       }
       to={href}
