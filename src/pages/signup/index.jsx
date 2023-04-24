@@ -1,8 +1,8 @@
 import InputField from "components/atom/InputField";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logoBlack from "assets/logos/Torche_Logo_Black.png";
-import { Check, CheckCircleFill } from "react-bootstrap-icons";
+import { CheckCircleFill } from "react-bootstrap-icons";
+import AuthContainer from "components/organisms/AuthContainer";
 
 function Signup() {
   const checkColors = ["#D9D9D9", "green"];
@@ -75,12 +75,7 @@ function Signup() {
 
   return (
     <main className=" flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
-      <div className="flex flex-col items-center gap-[32px] p-[16px] md:p-[48px] bg-white font-cairo w-[503px] h-fit">
-        <img
-          src={logoBlack}
-          alt="Logo"
-          className="block md:hidden w-[128px] mt-[36px] mb-[24px]"
-        />
+      <AuthContainer>
         <form className="flex flex-col gap-[16px] w-full h-full" method="post">
           <InputField
             label="Fullname"
@@ -157,7 +152,7 @@ function Signup() {
             Masuk Sekarang
           </Link>
         </p>
-      </div>
+      </AuthContainer>
     </main>
   );
 }

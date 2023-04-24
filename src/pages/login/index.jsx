@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import InputField from "components/atom/InputField";
 
 import Google from "assets/icons/Google.svg";
-import logoBlack from "assets/logos/Torche_Logo_Black.png";
 import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
+import AuthContainer from "components/organisms/AuthContainer";
 
 function Login() {
   const navigate = useNavigate();
@@ -23,13 +23,7 @@ function Login() {
 
   return (
     <main className=" flex p-0 md:px-[100px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
-      <div className="flex flex-col items-center gap-[24px] p-[16px] md:p-[48px] bg-white font-cairo w-[503px] h-screen md:h-fit">
-        <img
-          src={logoBlack}
-          alt="Logo"
-          className="block md:hidden w-[128px] mt-[36px] mb-[24px]"
-        />
-
+      <AuthContainer>
         <form
           className="flex flex-col gap-[16px] w-full h-full"
           action=""
@@ -77,7 +71,8 @@ function Login() {
             Buat Akun
           </Link>
         </p>
-      </div>
+      </AuthContainer>
+
       <img
         src={logoWhite}
         alt="Logo"
