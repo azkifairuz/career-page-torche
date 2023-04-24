@@ -1,5 +1,5 @@
 import ProfileIcon from "assets/images/person.png";
-import Select from "components/atom/Select";
+import Select from "components/atoms/Select";
 
 export default function Card(props) {
   const { name, age, appliedAt, experience, major, status, index } = props;

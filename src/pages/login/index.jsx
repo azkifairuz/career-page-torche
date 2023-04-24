@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import InputField from "components/atom/InputField";
+import InputField from "components/atoms/InputField";
 
 import Google from "assets/icons/Google.svg";
 import logoWhite from "assets/logos/Torche_Logo-01_White.webp";

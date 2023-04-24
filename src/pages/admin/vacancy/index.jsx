@@ -6,7 +6,7 @@ import { Plus, Search } from "react-bootstrap-icons";
 import TabButton from "components/admin/VacancyTab";
 import Table from "components/organisms/TableVacancy";
 import Pagination from "components/molecules/Pagination";
-import Select from "components/atom/Select";
+import Select from "components/atoms/Select";
 import SearchBar from "components/molecules/SearchBar";
 
 export default function Vacancy() {

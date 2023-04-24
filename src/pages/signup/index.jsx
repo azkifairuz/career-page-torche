@@ -1,10 +1,14 @@
-import InputField from "components/atom/InputField";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CheckCircleFill } from "react-bootstrap-icons";
+
+import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
 
+import Background from "assets/images/RegisterBG.webp";
+
 function Signup() {
+  const navigate = useNavigate();
   const checkColors = ["#D9D9D9", "green"];
 
   const [password, setPassword] = useState("");
@@ -70,11 +74,13 @@ function Signup() {
       alert("Password tidak sama");
     } else {
       alert("Selamat datang");
+      navigate("/signup/verify");
     }
   };
 
   return (
-    <main className=" flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
+    <main className=" flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
+      <img src={Background} alt="background" className="fixed -z-10 top-0 left-0 right-0 bottom-0" />
       <AuthContainer>
         <form className="flex flex-col gap-[16px] w-full h-full" method="post">
           <InputField
@@ -156,4 +162,5 @@ function Signup() {
     </main>
   );
 }
+
 export default Signup;

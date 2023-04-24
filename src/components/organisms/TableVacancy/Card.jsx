@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import DataByStatus from "./DataByStatus";
 
 import Pin from "assets/icons/pin.svg";
-import StatusSelect from "components/atom/StatusSelect";
+import StatusSelect from "components/atoms/StatusSelect";
 
 export default function Card(props) {
   const { name, address, type, index, applicantsCount, status } = props;
