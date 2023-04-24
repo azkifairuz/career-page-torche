@@ -14,6 +14,7 @@ import {
   FAQ,
   Signup,
   User,
+  Verify,
 } from "./pages";
 import Admin, {
   AdminDashboard,
@@ -52,7 +53,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
+          <Route path="signup" >
+            <Route index element={<Signup />} />
+            <Route path="verify" element={<Verify />} />
+            {/* <Route path="success" element={<SignupSuccess />} /> */}
+          </Route>
           <Route path="/" element={<Layout />}>
             <Route index element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
