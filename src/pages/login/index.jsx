@@ -6,6 +6,7 @@ import InputField from "components/atoms/InputField";
 import Google from "assets/icons/Google.svg";
 import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
 import AuthContainer from "components/organisms/AuthContainer";
+import AuthButton from "components/atoms/AuthButton";
 
 function Login() {
   const navigate = useNavigate();
@@ -46,13 +47,7 @@ function Login() {
               </p>
             </a>
           </div>
-          <button
-            onClick={isAdmin}
-            name="loginbutton"
-            className="w-full bg-primaryBlue-main text-white focus:outline-none px-[14px] py-[16px] rounded-[8px]"
-          >
-            Masuk
-          </button>
+          <AuthButton onClick={isAdmin} name="login-button" title="Masuk" />
         </form>
         <p className="text-neutral-1000 text-[14px]">atau masuk dengan </p>
         <button

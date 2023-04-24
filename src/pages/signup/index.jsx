@@ -6,6 +6,7 @@ import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
 
 import Background from "assets/images/RegisterBG.webp";
+import AuthButton from "components/atoms/AuthButton";
 
 function Signup() {
   const navigate = useNavigate();
@@ -80,7 +81,11 @@ function Signup() {
 
   return (
     <main className=" flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
-      <img src={Background} alt="background" className="fixed -z-10 top-0 left-0 right-0 bottom-0" />
+      <img
+        src={Background}
+        alt="background"
+        className="fixed -z-10 top-0 left-0 right-0 bottom-0"
+      />
       <AuthContainer>
         <form className="flex flex-col gap-[16px] w-full h-full" method="post">
           <InputField
@@ -141,13 +146,11 @@ function Signup() {
             value={confirmPassword}
             onChange={handleConfirmPasswordChange}
           />
-          <button
+          <AuthButton
             onClick={handleSubmit}
-            name="loginbutton"
-            className="w-full bg-primaryBlue-main hover:bg-primaryBlue-hover active:bg-primaryBlue-pressed  text-white focus:outline-none px-[14px] py-[16px] rounded-[8px] "
-          >
-            Daftar Sekarang
-          </button>
+            name="signup-button"
+            title="Daftar Sekarang"
+          />
         </form>
         <p className="text-neutral-1000 text-[14px]">
           sudah punya akun?{" "}
