@@ -79,6 +79,7 @@ module.exports = {
         rajdhani: ["Rajdhani", "sans-serif"],
         cairo: ["Cairo", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       boxShadow:{
         card: "0 0px 10px rgb(0 0 0 / 0.2)",
