@@ -14,11 +14,11 @@ export default function Verify() {
   }
 
   return (
-    <main className="flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
+    <main className="relative flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
       <img
         src={Background}
         alt="background"
-        className="fixed -z-10 top-0 left-0 min-h-screen"
+        className="absolute -z-10 top-0 left-0 h-full w-full"
       />
       <AuthContainer>
         <p className="text-neutral-1000">
