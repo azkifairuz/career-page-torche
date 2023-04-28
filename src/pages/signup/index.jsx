@@ -2,24 +2,32 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CheckCircleFill } from "react-bootstrap-icons";
 
+import {
+  minCharacterRegex,
+  fullRegex,
+  numberRegex,
+  upperCaseRegex,
+} from "utils/regex";
+
+import { regexColorChange } from "utils/regexColorChange";
+
 import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
+import AuthButton from "components/atoms/AuthButton";
 
 import Background from "assets/images/RegisterBG.webp";
-import AuthButton from "components/atoms/AuthButton";
 
 function Signup() {
   const navigate = useNavigate();
-  const checkColors = ["#D9D9D9", "green"];
 
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const [minCheckColor, setMinCheckColor] = useState(checkColors[0]);
-  const [upperCheckColor, setUpperCheckColor] = useState(checkColors[0]);
-  const [numberCheckColor, setNumberCheckColor] = useState(checkColors[0]);
+  const [minCheckColor, setMinCheckColor] = useState("#D9D9D9");
+  const [upperCheckColor, setUpperCheckColor] = useState("#D9D9D9");
+  const [numberCheckColor, setNumberCheckColor] = useState("#D9D9D9");
 
   const [isPassValid, setIsPassValid] = useState(false);
 
@@ -34,22 +42,10 @@ function Signup() {
     }
   };
 
-  const regexColorChange = (regex, text, colorSetter) => {
-    if (regex.test(text)) {
-      colorSetter(checkColors[1]);
-    } else {
-      colorSetter(checkColors[0]);
-    }
-  };
-
   const handlePassswordChange = (e) => {
     const currentPassword = e.target.value;
 
     setPassword(currentPassword);
-    const minCharacterRegex = new RegExp("^(?=.{8,})");
-    const upperCaseRegex = new RegExp("^(?=.*[A-Z])");
-    const numberRegex = new RegExp("^(?=.*[0-9])");
-    const fullRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[0-9])");
 
     regexColorChange(minCharacterRegex, currentPassword, setMinCheckColor);
     regexColorChange(upperCaseRegex, currentPassword, setUpperCheckColor);
@@ -80,11 +76,11 @@ function Signup() {
   };
 
   return (
-    <main className=" flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
+    <main className="relative flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
       <img
         src={Background}
         alt="background"
-        className="fixed -z-10 top-0 left-0 right-0 bottom-0"
+        className="absolute -z-10 top-0 left-0 h-full w-full"
       />
       <AuthContainer>
         <form className="flex flex-col gap-[16px] w-full h-full" method="post">
