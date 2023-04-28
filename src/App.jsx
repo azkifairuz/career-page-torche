@@ -31,6 +31,7 @@ import Tracking from "./pages/user/dashboard/application track";
 import JobApplication from "pages/user/JobApplication";
 import Resume from "pages/user/dashboard/resume";
 import Setting from "pages/user/dashboard/setting";
+import ForgetPassword from "pages/forget-password";
 
 function App() {
   const [user, setUser] = useState({
@@ -58,6 +59,7 @@ function App() {
             <Route path="verify" element={<Verify />} />
             {/* <Route path="success" element={<SignupSuccess />} /> */}
           </Route>
+          <Route path="forget-password" element={<ForgetPassword />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Landing />} />
             <Route path="joblist" element={<Joblist />} />
