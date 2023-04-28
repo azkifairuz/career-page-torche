@@ -11,9 +11,11 @@ import GoogleButton from "components/atoms/GoogleButton";
 function Login() {
   const navigate = useNavigate();
   const [users, setUsers] = useState("");
+
   const handler = (e) => {
     setUsers(e.target.value);
   };
+
   function isAdmin() {
     if (users === "admin") {
       return navigate("/admin");
@@ -23,19 +25,15 @@ function Login() {
   }
 
   return (
-    <main className=" flex p-0 md:px-[100px] md:py-[129px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
+    <main className="relative flex p-0 md:px-[100px] md:py-[129px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
       <AuthContainer>
         <form
-          className="flex flex-col gap-[16px] w-full h-full"
+          className="flex flex-col gap-4 w-full h-full"
           action=""
           method="post"
         >
-          <InputField
-            label="Email"
-            type="text"
-            placeholder="Your Email Here    "
-          />
-          <div className="flex flex-col gap-[8px] items-start   ">
+          <InputField label="Email" type="text" placeholder="Your Email Here" />
+          <div className="flex flex-col gap-2 items-start">
             <InputField
               label="Kata Sandi"
               type="password"
@@ -61,7 +59,7 @@ function Login() {
       <img
         src={logoWhite}
         alt="Logo"
-        className="hidden md:block absolute w-[128px] bottom-0  left-[32px]"
+        className="hidden md:block absolute w-32 bottom-8  left-8"
       />
     </main>
   );
