@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import AuthContainer from "components/organisms/AuthContainer";
 import InputField from "components/atoms/InputField";
@@ -53,7 +53,11 @@ export default function ChangePassword() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/login");
+    if (password !== confirmPassword) {
+      alert("Password tidak sama");
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
