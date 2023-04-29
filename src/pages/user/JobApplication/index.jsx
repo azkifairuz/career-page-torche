@@ -20,7 +20,7 @@ function JobApplication() {
                 <div className="flex flex-col gap-6 w-full">
                         {applications.slice(0,5).map((data)=>{
                         return(
-                            <Card posisi={data.posisi} place={data.place} time={data.status} isClosed={data.isClosed} tanggal={data.tglDikirim} perusahaan={data.perusahaan} salary={data.salary} category={data.category}/>
+                            <Card posisi={data.posisi} place={data.place}  isClosed={data.isClosed} tanggal={data.tglDikirim} perusahaan={data.perusahaan} salary={data.salary} category={data.category}/>
                         )
                     })}
                 </div>
