@@ -77,7 +77,7 @@ export default function Sidebar(props) {
       <header className="w-full">
         <Header
           image={sample}
-          classname="flex flex-col justify-center items-center gap-2 p-10 w-full lg:shadow-none shadow-card
+          classname="flex flex-col justify-center items-center gap-2 p-10 w-full lg:shadow-none shadow-[0px_0px_10px_0px_#0000001A]
          rounded-md "
           profesi="Web Developer"
           name="John Doe"
