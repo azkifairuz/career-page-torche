@@ -4,7 +4,7 @@ export default function Card(props) {
 
 
     return(
-        <div className="py-6 px-8 flex shadow-[0px_0px_8px_0px_#00000033] bg-neutral-100 gap-3 flex-col justify-between lg:w-[830px] w-full">
+        <div className="p-4 w-[284px] flex shadow-[0px_0px_8px_0px_#00000033] bg-neutral-100 gap-3 flex-col justify-between lg:w-[830px]">
            <div className="flex justify-between">
            <h1 className="uppercase font-bold font-rajdhani text-[24px] leading-7">{posisi}</h1>
            <button className="py-2 rounded-lg px-6 bg-primaryBlue-main font-cairo text-white capitalize active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">details</button>

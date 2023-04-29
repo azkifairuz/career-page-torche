@@ -7,11 +7,11 @@ function JobApplication() {
      
         
          return (
-            <div className="capitalize  w-fit ">
-                <div className="flex justify-between mb-16 w-ful">
+            <div className="capitalize flex flex-col gap-4 w-fit p-6">
+                <div className="flex justify-between border-b pb-2 border-primaryBlue-border w-ful">
                     <h1 className="heading-l-bold">Lamaran</h1>
                     <div>
-                        <select className="border-2  flex flex-row items-center gap-11 text-xl-regular bg-primaryBlue-surface border-primaryBlue-border rounded-[4px] py-2 px-4 w-[160px]">
+                        <select className="border-2 text-xl-regular text-neutral-900 w-[108px] flex flex-row items-center gap-11 text-xl-regular bg-primaryBlue-surface border-primaryBlue-border rounded-[4px] py-1 px-2 ">
                         <option>Terbaru</option>
                         <ChevronDown size={20} color={"#5885E9"}/>
                     </select>
