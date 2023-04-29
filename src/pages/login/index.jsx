@@ -39,11 +39,12 @@ function Login() {
               type="password"
               placeholder="••••••••"
             />
-            <a href="/#">
-              <p className="text-sm text-center text-primaryBlue-main font-cairo font-bold">
-                Forgot Password?
-              </p>
-            </a>
+            <Link
+              to="/forget-password"
+              className="text-sm text-center text-primaryBlue-main font-cairo font-bold"
+            >
+              Forgot Password?
+            </Link>
           </div>
           <AuthButton onClick={isAdmin} name="login-button" title="Masuk" />
         </form>
