@@ -5,10 +5,17 @@ export default function Pagination() {
   const [currentPage, setCurrentPage] = useState(0);
   console.log(currentPage)
   const btnNext = ()=>{
-    setCurrentPage(currentPage+1)
+    if (currentPage+1 < pages.length) {
+        setCurrentPage(currentPage+1)
+    }else{
+    setCurrentPage(currentPage-currentPage)
+    }
   }
   const btnPrev = ()=>{
-    setCurrentPage(currentPage-1)
+    if (currentPage > 0 ) {
+      setCurrentPage(currentPage-1)
+    }
+    return
   }
   return (
     <section className=" mt-[48px] w-fit h-fit bg-white  text-black flex justify-end items-center">
@@ -17,19 +24,26 @@ export default function Pagination() {
       className="pr-[21px] border border-[#EBEBEB] pl-[17px] py-[10px] text-neutral-700 text-cairo text-xl-regular ">
         Prev
       </button>
-      {
-        pages.map((page,index)=>{
-           return(
-            <Item 
-            key={index} 
-            page={page}
-            index={index}
-            isActive = {currentPage === index}
-            setIsActive = {setCurrentPage}
-            />
-           )
-        })
-      }
+      <section className="paginationLarge md:block hidden">
+        {
+            pages.map((page,index)=>{
+              return(
+               <Item 
+               key={index} 
+               page={page}
+               index={index}
+               isActive = {currentPage === index}
+               setIsActive = {setCurrentPage}
+               />
+              )
+           })
+        }
+      </section>
+      <section className="paginationMobile md:hidden border-[#EBEBEB] bg-[#4D74CC] text-white text-neutral-700 border  py-[10px] px-[17px]">
+        {
+          currentPage+1
+        }
+      </section>
       <button 
       onClick={btnNext}
       className=" border border-[#EBEBEB] pr-[21px] pl-[17px] py-[10px]  text-neutral-700 text-cairo text-xl-regular ">
