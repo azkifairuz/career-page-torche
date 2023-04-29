@@ -39,7 +39,7 @@ export default function Pagination() {
            })
         }
       </section>
-      <section className="paginationMobile md:hidden border-[#EBEBEB] bg-[#4D74CC] text-white text-neutral-700 border  py-[10px] px-[17px]">
+      <section className="paginationMobile md:hidden border-[#EBEBEB] bg-[#4D74CC] text-white border  py-[10px] px-[17px]">
         {
           currentPage+1
         }

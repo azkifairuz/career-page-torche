@@ -7,7 +7,7 @@ function JobApplication() {
      
         
          return (
-            <div className="capitalize flex flex-col gap-4 w-fit p-6">
+            <div className="capitalize flex flex-col shadow-[0px_0px_10px_0px_#0000001A]  gap-4 w-fit p-6">
                 <div className="flex justify-between border-b pb-2 border-primaryBlue-border w-ful">
                     <h1 className="heading-l-bold">Lamaran</h1>
                     <div>
