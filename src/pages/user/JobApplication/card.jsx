@@ -6,7 +6,7 @@ export default function Card(props) {
         categories.push({element})
     });
   return (
-    <div className="p-4 md:w-[422px] lg:w-[819px] flex shadow-[0px_0px_10px_0px_#0000001A] bg-neutral-100 gap-3 flex-col justify-between md:flex-row  ">
+    <div className="p-4 md:min-w-[422px]  flex shadow-[0px_0px_10px_0px_#0000001A] bg-neutral-100 gap-3 flex-col justify-between md:flex-row  ">
         <div className="flex flex-col w-full ">
           <div className="flex justify-between ">
             <h1 className="uppercase font-bold font-rajdhani text-[24px] leading-7">
