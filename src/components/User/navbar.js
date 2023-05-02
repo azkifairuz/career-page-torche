@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import notificationBadge from "assets/icons/notification-badge.svg"
 import Logo from "../../assets/logos/Torche_Logo-01_White.webp";
 import sample from "assets/index.png";
+import chevron from "assets/icons/chevron-white.svg"
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
@@ -61,15 +62,15 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-        <div className="md:flex hidden justify-center items-center">
-            <div className="relative w-[28px] h-[28px]">
+        <div className="relative w-[28px] mr-[16px] md:flex hidden h-[28px]">
                 <span className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${notification.length >0  ? "flex":"hidden"} `}>{notification.length}</span>
                 <img src={notificationBadge} className="w-[17.7px] h-[22.75px]"></img>
-            </div>
-            <div>
-              <img src={sample} className="w-[48px] h-[48px] rounded-full" />
-            </div>
-          </div>
+        </div>
+        <div className="md:flex justify-center hidden items-center gap-[8px]">
+          <img src={sample} className="w-[48px] h-[48px] rounded-full" />
+          <h1 className="text-m-regular  text-center min-w-[71px] ">John Doe</h1>
+          <img src={chevron} className="w-[12.11px] h-7.13px"/>
+        </div>
       </nav>
       <div
         className={`${
