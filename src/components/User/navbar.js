@@ -15,7 +15,8 @@ export default function Navbar() {
     { href: "joblist", title: "Job List" },
     { href: "dashboard", title: "Profile" },
   ];
-
+  const notification = []
+  const totalNotification = notification.length
   return (
     <>
       <nav className="sticky z-50 top-0 w-full font-rajdhani px-7 py-1 font-medium bg-primaryNavy-main text-white flex items-center justify-between">
@@ -114,12 +115,9 @@ export default function Navbar() {
         })}
         <div className="bg-[#5885E9] rounded-full w-1/2 mx-auto mb-3">
           <div className="md:hidden flex justify-center">
-            <Link
-              to="/"
-              className="bg-[#5885E9] rounded-full py-2 px-[20px] text-[16px] font-cairo font-bold"
-            >
-              Logout
-            </Link>
+            <div>
+              
+            </div>
           </div>
         </div>
       </ul>
