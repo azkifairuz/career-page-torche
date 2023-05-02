@@ -1,15 +1,17 @@
 import { vacancies } from "data/vacancy";
 
-import VacancyCard from "components/admin/VacancyCard";
+import VacancyCard from "components/molecules/VacancyCard";
 import Card from "./Card";
 import lamaran1 from "assets/icons/lamaran-1.svg";
 import lamaran2 from "assets/icons/lamaran-2.svg";
 import lamaran3 from "assets/icons/lamaran-3.svg";
+import AdminNavbar from "components/organisms/AdminNavbar";
 
 export default function AdminDashboard() {
   return (
-    <div className="box-border flex-1 p-8 bg-[#fcfdfd] font-cairo flex flex-col gap-4">
-      <h1 className="heading-l-bold mt-[44px]">Welcome to Admin Career Page</h1>
+    <div className="box-border flex-1 pb-[35px] pr-[100px] pl-[30px] bg-[#fcfdfd] font-cairo flex flex-col">
+      <AdminNavbar />
+      <h1 className="heading-l-bold">Welcome to Admin Career Page</h1>
       <section className="flex gap-4 mt-[55px]">
         <Card count="10" title="Lamaran Sedang Aktif" icon={lamaran1} />
         <Card count="10" title="Lamaran Belum Diproses" icon={lamaran2} />

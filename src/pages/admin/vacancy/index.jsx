@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 
 import { Plus, Search } from "react-bootstrap-icons";
 
-import TabButton from "components/admin/VacancyTab";
+import TabButton from "components/molecules/VacancyTab";
 import Table from "components/organisms/TableVacancy";
 import Pagination from "components/molecules/Pagination";
 import Select from "components/atoms/Select";
 import SearchBar from "components/molecules/SearchBar";
+import AdminNavbar from "components/organisms/AdminNavbar";
 
 export default function Vacancy() {
   const [filterStatus, setFilterStatus] = useState("all");
   const maxData = 100;
   return (
-    <main className="flex-1 p-10 text-black">
-      <header className="flex justify-between items-center">
+    <main className="flex flex-col flex-1 pb-[35px] pr-[100px] pl-[30px] text-black">
+      <AdminNavbar />
+      <section className="flex justify-between items-center">
         <h1 className="heading-l-bold ">Kelola Lowongan</h1>
         <Link
           to="create"
@@ -23,7 +25,7 @@ export default function Vacancy() {
           <Plus size={24} color="black" />
           <p className="text-white text-m-bold">Buat lowongan baru</p>
         </Link>
-      </header>
+      </section>
       <section className="mt-4 flex gap-10">
         <TabButton
           filter="all"
