@@ -50,7 +50,7 @@ export default function Form() {
   };
  
   return (
-    <form onSubmit={handleSubmit} className="md:w-[472px] p-4 shadow-[0px_0px_10px_0_#0000001A] flex  md:py-[32px] md:px-[42px] flex-col gap-8 lg:shadow-none lg:w-10/12 lg:max-w-[714px] rounded-lg">
+    <form onSubmit={handleSubmit} className="md:w-[472px] p-4 shadow-[0px_0px_10px_0_#0000001A] flex  md:py-[32px] md:px-[42px] flex-col gap-8 lg:shadow-none lg:w-[80%] lg:max-w-[1000px] lg:min-w-[714px] rounded-lg">
       <div>
         <header className="mb-[30px]">
           <h1 className="font-rajdhani text-start heading-l-medium ">
