@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TabButton(props) {
+export default function VacancyTab(props) {
   const { title, filter, count = null, active, setFilterStatus } = props;
   const bgColor = filter === "all" ? "bg-primaryBlue-border" : filter === "aktif" ? "bg-success-border" : "bg-danger-border";
   const handleClick = () => {
