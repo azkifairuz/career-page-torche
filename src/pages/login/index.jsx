@@ -3,10 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 
 import InputField from "components/atoms/InputField";
 
-import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
 import AuthContainer from "components/organisms/AuthContainer";
 import AuthButton from "components/atoms/AuthButton";
 import GoogleButton from "components/atoms/GoogleButton";
+
+import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
+import LoginBG from "assets/images/LoginBG.webp";
 
 function Login() {
   const navigate = useNavigate();
@@ -25,7 +27,12 @@ function Login() {
   }
 
   return (
-    <main className="relative flex p-0 md:px-[100px] md:py-[129px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
+    <main className="relative flex p-0 md:px-[100px] md:py-[129px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen -z-20">
+      <img
+        src={LoginBG}
+        alt="Login Background"
+        className="hidden md:block absolute left-0 top-0 -z-10  "
+      />
       <AuthContainer>
         <form
           className="flex flex-col gap-4 w-full h-full"
