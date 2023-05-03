@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Search } from "react-bootstrap-icons";
 
 import Table from "components/organisms/TableApplicants";
@@ -8,23 +7,13 @@ import Pagination from "components/molecules/Pagination";
 import Select from "components/atoms/Select";
 import SearchBar from "components/molecules/SearchBar";
 
-import { vacancies } from "data/vacancy";
 import { applicants } from "data/applicants";
 import AdminNavbar from "components/organisms/AdminNavbar";
 
 export default function Applicants() {
   const [applicantsArr, setApplicantsArr] = useState(applicants[0].data);
   const [filterStatus, setFilterStatus] = useState("all");
-  const [vacancySelected, setVacancySelected] = useState(vacancies[0]);
   const maxData = 100;
-
-  const handleSelectChange = (e) => {
-    e.preventDefault();
-    setVacancySelected(vacancies.find((item) => item.name === e.target.value));
-    setApplicantsArr(
-      applicants.find((item) => item.name === e.target.value).data
-    );
-  };
 
   const applicantStatus = [
     {
