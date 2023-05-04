@@ -27,11 +27,11 @@ function Login() {
   }
 
   return (
-    <main className="relative flex p-0 md:px-[100px] md:py-[129px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen -z-20">
+    <main className="relative flex p-0 md:px-[100px] md:py-[129px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
       <img
         src={LoginBG}
         alt="Login Background"
-        className="hidden md:block absolute left-0 top-0 -z-10  "
+        className="hidden md:block absolute left-0 top-0 "
       />
       <AuthContainer>
         <form
