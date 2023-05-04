@@ -16,12 +16,12 @@ export default function Navbar() {
     { href: "joblist", title: "Job List" },
     { href: "dashboard", title: "Profile" },
   ];
-  const notification = [1,2,3,4]
-  
+  const notification = [1, 2, 3, 4]
+
 
   return (
     <>
-      <nav className="sticky z-50 top-0 w-full font-rajdhani px-7 py-1 font-medium bg-primaryNavy-main text-white flex items-center justify-between">
+      <nav className="sticky z-50 top-0 w-full font-rajdhani px-7 lg:px-[100px] py-1 font-medium bg-primaryNavy-main text-white flex items-center justify-between">
         <div className=" md:gap-2 md:justify-start justify-between w-full flex items-center">
           <div>
             <Link to="/" className="cursor-pointer">
@@ -62,27 +62,28 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-        <div className="relative w-[28px] mr-[16px] md:flex hidden h-[28px]">
-                <span className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${notification.length >0  ? "flex":"hidden"} `}>{notification.length}</span>
-                <img src={notificationBadge} className="w-[17.7px] h-[22.75px]"></img>
+        <div className="flex items-center gap-[16px]">
+          <div className="relative w-[28px] mr-[16px]  md:flex hidden ">
+            <span className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${notification.length > 0 ? "flex" : "hidden"} `}>{notification.length}</span>
+            <img src={notificationBadge} className="w-[17.7px] h-[22.75px]"></img>
+          </div>
+          <div className="md:flex justify-center hidden items-center gap-[8px]">
+            <img src={sample} className="w-[48px] h-[48px] rounded-full" />
+            <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">John Doe</h1>
+            <img src={chevron} className="w-[12.11px] h-7.13px" />
+          </div>
         </div>
-        <div className="md:flex justify-center hidden items-center gap-[8px]">
-          <img src={sample} className="w-[48px] h-[48px] rounded-full" />
-          <h1 className="text-m-regular  text-center min-w-[71px] ">John Doe</h1>
-          <img src={chevron} className="w-[12.11px] h-7.13px"/>
-        </div>
+
       </nav>
       <div
-        className={`${
-          isNavbarOpen ? "block" : "hidden"
-        } backdrop md:hidden absolute z-40 left-0 top-0 right-0 min-h-screen`}
+        className={`${isNavbarOpen ? "block" : "hidden"
+          } backdrop md:hidden absolute z-40 left-0 top-0 right-0 min-h-screen`}
         style={{ background: "rgba(23, 35, 46, 0.9)" }}
       ></div>
       <button
         onClick={handleNavbarOpen}
-        className={`${
-          isNavbarOpen ? "block" : "hidden"
-        } md:hidden absolute right-5 top-5 z-50 text-white`}
+        className={`${isNavbarOpen ? "block" : "hidden"
+          } md:hidden absolute right-5 top-5 z-50 text-white`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -100,9 +101,8 @@ export default function Navbar() {
         </svg>
       </button>
       <ul
-        className={`${
-          isNavbarOpen ? "block" : "hidden"
-        } md:hidden absolute w-full text-white bg-primaryNavy-main flex flex-col mt-0 bg-red p-3 z-50 min-h-[calc(100%-70px)]`}
+        className={`${isNavbarOpen ? "block" : "hidden"
+          } md:hidden absolute w-full text-white bg-primaryNavy-main flex flex-col mt-0 bg-red p-3 z-50 min-h-[calc(100%-70px)]`}
       >
         {navbarData.map((data, index) => {
           return (
