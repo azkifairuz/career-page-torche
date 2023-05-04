@@ -43,13 +43,16 @@ export default function Pagination() {
           currentPage+1
         }
       </section> */}
-      <select className="paginationMobile md:hidden bg-white text-neutral-900 border border-primaryBlue-border py-1 px-2">
+      <select className="paginationMobile md:hidden bg-no-repeat bg-right bg-[url(assets/icons/chevron-down.svg)] appearance-none bg-white text-neutral-900 border text-xl-regular border-primaryBlue-border w-[64px] h-[48px] py-[10px] px-2">
         {
           pages.map((page =>{
             return(<option>{page}</option>)
           }))
         }
       </select>
+      <section className="md:hidden bg-white text-neutral-900 border text-xl-regular  pr-[21px] pl-[17px] py-[10px]">
+        /{pages.length}
+      </section>
       <button 
       onClick={btnNext}
       className=" border border-[#EBEBEB] pr-[21px] pl-[17px] py-[10px]  text-neutral-700 text-cairo text-xl-regular ">
