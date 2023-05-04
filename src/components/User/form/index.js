@@ -115,7 +115,7 @@ export default function Form() {
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Gaj Sekarang (IDR)
+              Gaji Sekarang (IDR)
             </label>
             <input
               type="text"
