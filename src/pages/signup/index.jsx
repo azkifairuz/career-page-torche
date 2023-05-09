@@ -16,6 +16,7 @@ import AuthContainer from "components/organisms/AuthContainer";
 import AuthButton from "components/atoms/AuthButton";
 
 import Background from "assets/images/RegisterBG.webp";
+import PasswordInput from "components/atoms/PasswordInput";
 
 function Signup() {
   const navigate = useNavigate();
@@ -99,7 +100,7 @@ function Signup() {
             onChange={handleEmailChange}
           />
           <div className="flex flex-col gap-[8px] items-start   ">
-            <InputField
+            <PasswordInput
               label="Kata Sandi"
               type="password"
               placeholder="••••••••"
@@ -135,7 +136,7 @@ function Signup() {
               <p className="text-neutral-1000 text-">Menggunakan angka</p>
             </div>
           </div>
-          <InputField
+          <PasswordInput
             label="Konfirmasi Kata Sandi"
             type="password"
             placeholder="••••••••"
