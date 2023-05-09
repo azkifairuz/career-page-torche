@@ -33,6 +33,7 @@ import Resume from "pages/user/dashboard/resume";
 import Setting from "pages/user/dashboard/setting";
 import ForgetPassword from "pages/forget-password";
 import ChangePassword from "pages/forget-password/confirmed";
+import ScrollToTop from "utils/scrollToTop";
 
 function App() {
   const [user, setUser] = useState({
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <AuthProvider>
+      <ScrollToTop />
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<Login />} />
