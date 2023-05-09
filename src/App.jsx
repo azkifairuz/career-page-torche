@@ -36,6 +36,7 @@ import ChangePassword from "pages/forget-password/confirmed";
 import ScrollToTop from "utils/scrollToTop";
 
 function App() {
+
   const [user, setUser] = useState({
     id: "test-1",
     name: "test",
@@ -53,8 +54,8 @@ function App() {
 
   return (
     <AuthProvider>
-      <ScrollToTop />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="login" element={<Login />} />
           <Route path="signup">
