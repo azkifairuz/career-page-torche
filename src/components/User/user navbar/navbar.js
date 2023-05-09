@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import notificationBadge from "assets/icons/notification-badge.svg"
 import Item from "./items";
-import Logo from "../../assets/logos/Torche_Logo-01_White.webp";
+import Logo from "assets/logos/Torche_Logo-01_White.webp";
 import sample from "assets/index.png";
 import chevron from "assets/icons/chevron-white.svg";
 export default function Navbar() {
