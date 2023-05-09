@@ -138,8 +138,8 @@ export default function Navbar() {
             className={` lg:flex lg:relative  w-[200px] hidden items-center gap-[8px] cursor-pointer`}>
             <img src={sample} alt="profie" className="w-[48px] h-[48px] rounded-full" />
             <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">John Doe</h1>
-            <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-0"} ease-linear w-[12.11px] h-7.13px rotate-[180deg]`} />
-            <ul className={`${isProfilNavOpen && "hidden"}  ease-in-out duration-150 absolute w-[200px] rounded-lg bg-white left-0 top-16`}>
+            <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-0"} transition ease-in-out w-[12.11px] h-7.13px rotate-[180deg]`} />
+            <ul className={`${isProfilNavOpen && "hidden"} transition  ease-in-out absolute w-[200px] rounded-lg bg-white left-0 top-16`}>
             {profilNav.map((item,index)=>{
             return(
               <Item
