@@ -8,11 +8,14 @@ import sample from "assets/index.png";
 import chevron from "assets/icons/chevron-white.svg";
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [isProvilNavOpen,SetIsProfilNavOpen] = useState(false)
+  const [isProfilNavOpen,setIsProfilNavOpen] = useState(false)
   const [isActive, setIsActive] = useState(0);
   const handleNavbarOpen = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
+  const handleProfilNav = ()=>{
+    setIsProfilNavOpen(!isProfilNavOpen)
+  }
   const resumeIcon = (
     <svg
       width="16"
@@ -23,7 +26,7 @@ export default function Navbar() {
     >
       <path
         d="M5 3.19031H3C1.89543 3.19031 1 4.08574 1 5.19031V17.1903C1 18.2949 1.89543 19.1903 3 19.1903H13C14.1046 19.1903 15 18.2949 15 17.1903V5.19031C15 4.08574 14.1046 3.19031 13 3.19031H11M5 3.19031C5 4.29488 5.89543 5.19031 7 5.19031H9C10.1046 5.19031 11 4.29488 11 3.19031M5 3.19031C5 2.08574 5.89543 1.19031 7 1.19031H9C10.1046 1.19031 11 2.08574 11 3.19031M8 10.1903H11M8 14.1903H11M5 10.1903H5.01M5 14.1903H5.01"
-        stroke="#494949"
+        stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
       />
@@ -39,7 +42,7 @@ export default function Navbar() {
     >
       <path
         d="M5 3.19031H3C1.89543 3.19031 1 4.08574 1 5.19031V17.1903C1 18.2949 1.89543 19.1903 3 19.1903H13C14.1046 19.1903 15 18.2949 15 17.1903V16.1903M5 3.19031C5 4.29488 5.89543 5.19031 7 5.19031H9C10.1046 5.19031 11 4.29488 11 3.19031M5 3.19031C5 2.08574 5.89543 1.19031 7 1.19031H9C10.1046 1.19031 11 2.08574 11 3.19031M11 3.19031H13C14.1046 3.19031 15 4.08574 15 5.19031V8.19031M17 12.1903H7M7 12.1903L10 9.19031M7 12.1903L10 15.1903"
-        stroke="#494949"
+        stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -47,35 +50,35 @@ export default function Navbar() {
     </svg>
   );
   const navbarData = [
-    { href: "/", title: "Home" },
-    { href: "/joblist", title: "Job List" },
-    { href: "/about", title: "About Torche" },
-    { href: "/faq", title: "FAQ" },
+    { href: "/user", title: "Home" },
+    { href: "joblist", title: "Job List" },
+    { href: "about", title: "About Torche" },
+    { href: "faq", title: "FAQ" },
   ];
   const profilNav = [
     {
       title: "Profil",
-      href: "profil",
+      href: "dashboard",
       icon: <Icon.Person size={20} />,
     },
     {
       title: "Resume",
-      href: "resume",
+      href: "dashboard/resume",
       icon: resumeIcon,
     },
     {
       title: "Lamaran",
-      href: "lamaran",
+      href: "dashboard/lamaran",
       icon: <Icon.Briefcase size={20} />,
     },
     {
       title: "Status Lamaran",
-      href: "applicationtracking",
+      href: "dashboard/applicationtracking",
       icon: trackingIcon,
     },
     {
       title: "Setting",
-      href: "setting",
+      href: "dashboard/setting",
       icon: <Icon.Gear size={20} />,
     },
   ];
@@ -130,11 +133,13 @@ export default function Navbar() {
             <span className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${notification.length > 0 ? "flex" : "hidden"} `}>{notification.length}</span>
             <img src={notificationBadge} alt="notification" className="w-[17.7px] h-[22.75px]"></img>
           </div>
-          <li className="lg:flex lg:relative  w-[200px] hidden items-center gap-[8px]">
+          <li 
+            onClick={handleProfilNav}
+            className={` lg:flex lg:relative  w-[200px] hidden items-center gap-[8px] cursor-pointer`}>
             <img src={sample} alt="profie" className="w-[48px] h-[48px] rounded-full" />
             <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">John Doe</h1>
-            <img src={chevron} alt="chevron" className="w-[12.11px] h-7.13px" />
-            <ul className="absolute w-[200px] rounded-lg bg-white left-0 top-16">
+            <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-0"} w-[12.11px] h-7.13px rotate-[180deg]`} />
+            <ul className={`${isProfilNavOpen && "hidden"} absolute w-[200px] rounded-lg bg-white left-0 top-16`}>
             {profilNav.map((item,index)=>{
             return(
               <Item
