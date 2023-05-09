@@ -11,8 +11,9 @@ export default function FilterTab(props) {
         name="Semua"
         onClick={() => setActive("Semua")}
       />
-      {data.map((item) => (
+      {data.map((item, index) => (
         <PillButton
+          key={item+index}
           isActive={active === item}
           name={item}
           onClick={() => setActive(item)}
