@@ -10,7 +10,7 @@ export default function InputField(props) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full px-[16px] py-[10px] rounded-[8px] border-[1px] border-primaryNavy-border focus:outline-none focus:border-primaryNavy-focus cursor-pointer"
+        className="w-full px-[16px] py-[10px] rounded-[8px] border-[1px] border-primaryNavy-border focus:outline-none focus:border-primaryNavy-focus "
       />
     </div>
   );
