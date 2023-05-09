@@ -1,20 +1,86 @@
+import * as Icon from "react-bootstrap-icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import notificationBadge from "assets/icons/notification-badge.svg"
-import Logo from "../../assets/logos/Torche_Logo-01_White.webp";
+import Item from "./items";
+import Logo from "assets/logos/Torche_Logo-01_White.webp";
 import sample from "assets/index.png";
-import chevron from "assets/icons/chevron-white.svg"
+import chevron from "assets/icons/chevron-white.svg";
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-
+  const [isProfilNavOpen,setIsProfilNavOpen] = useState(false)
+  const [isActive, setIsActive] = useState(0);
   const handleNavbarOpen = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
-
+  const handleProfilNav = ()=>{
+    setIsProfilNavOpen(!isProfilNavOpen)
+  }
+  const resumeIcon = (
+    <svg
+      width="16"
+      height="21"
+      viewBox="0 0 16 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 3.19031H3C1.89543 3.19031 1 4.08574 1 5.19031V17.1903C1 18.2949 1.89543 19.1903 3 19.1903H13C14.1046 19.1903 15 18.2949 15 17.1903V5.19031C15 4.08574 14.1046 3.19031 13 3.19031H11M5 3.19031C5 4.29488 5.89543 5.19031 7 5.19031H9C10.1046 5.19031 11 4.29488 11 3.19031M5 3.19031C5 2.08574 5.89543 1.19031 7 1.19031H9C10.1046 1.19031 11 2.08574 11 3.19031M8 10.1903H11M8 14.1903H11M5 10.1903H5.01M5 14.1903H5.01"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  );
+  const trackingIcon = (
+    <svg
+      width="18"
+      height="21"
+      viewBox="0 0 18 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 3.19031H3C1.89543 3.19031 1 4.08574 1 5.19031V17.1903C1 18.2949 1.89543 19.1903 3 19.1903H13C14.1046 19.1903 15 18.2949 15 17.1903V16.1903M5 3.19031C5 4.29488 5.89543 5.19031 7 5.19031H9C10.1046 5.19031 11 4.29488 11 3.19031M5 3.19031C5 2.08574 5.89543 1.19031 7 1.19031H9C10.1046 1.19031 11 2.08574 11 3.19031M11 3.19031H13C14.1046 3.19031 15 4.08574 15 5.19031V8.19031M17 12.1903H7M7 12.1903L10 9.19031M7 12.1903L10 15.1903"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
   const navbarData = [
-    { href: "home", title: "Home" },
+    { href: "/user", title: "Home" },
     { href: "joblist", title: "Job List" },
-    { href: "dashboard", title: "Profile" },
+    { href: "about", title: "About Torche" },
+    { href: "faq", title: "FAQ" },
+  ];
+  const profilNav = [
+    {
+      title: "Profil",
+      href: "dashboard",
+      icon: <Icon.Person size={20} />,
+    },
+    {
+      title: "Resume",
+      href: "dashboard/resume",
+      icon: resumeIcon,
+    },
+    {
+      title: "Lamaran",
+      href: "dashboard/lamaran",
+      icon: <Icon.Briefcase size={20} />,
+    },
+    {
+      title: "Status Lamaran",
+      href: "dashboard/applicationtracking",
+      icon: trackingIcon,
+    },
+    {
+      title: "Setting",
+      href: "dashboard/setting",
+      icon: <Icon.Gear size={20} />,
+    },
   ];
   const notification = [1, 2, 3, 4]
 
@@ -65,13 +131,31 @@ export default function Navbar() {
         <div className="flex items-center gap-[16px]">
           <div className="relative w-[28px] mr-[16px]  md:flex hidden ">
             <span className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${notification.length > 0 ? "flex" : "hidden"} `}>{notification.length}</span>
-            <img src={notificationBadge} className="w-[17.7px] h-[22.75px]"></img>
+            <img src={notificationBadge} alt="notification" className="w-[17.7px] h-[22.75px]"></img>
           </div>
-          <div className="md:flex justify-center hidden items-center gap-[8px]">
-            <img src={sample} className="w-[48px] h-[48px] rounded-full" />
+          <li 
+            onClick={handleProfilNav}
+            className={` lg:flex lg:relative  w-[200px] hidden items-center gap-[8px] cursor-pointer`}>
+            <img src={sample} alt="profie" className="w-[48px] h-[48px] rounded-full" />
             <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">John Doe</h1>
-            <img src={chevron} className="w-[12.11px] h-7.13px" />
-          </div>
+            <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-0"} ease-linear w-[12.11px] h-7.13px rotate-[180deg]`} />
+            <ul className={`${isProfilNavOpen && "hidden"}  ease-in-out duration-150 absolute w-[200px] rounded-lg bg-white left-0 top-16`}>
+            {profilNav.map((item,index)=>{
+            return(
+              <Item
+              key={index}
+              title={item.title}
+              icon = {item.icon}
+              href = {item.href}
+              isActive = {isActive === index}
+              index = {index}
+              setIsActive = {setIsActive}
+              />
+            )
+          })}
+            </ul>
+          </li>
+          
         </div>
 
       </nav>

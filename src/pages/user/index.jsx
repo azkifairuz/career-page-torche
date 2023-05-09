@@ -1,6 +1,6 @@
 import Footer from "components/organisms/Layout/Footer";
 
-import Navbar from "components/User/navbar";
+import Navbar from "components/User/user navbar/navbar";
 import { Outlet } from "react-router";
 
 function User() {
