@@ -1,7 +1,7 @@
 import HeaderSection from "components/User/Complete Profile/header";
 import OptionBar from "components/User/Complete Profile/option bar";
 import Preview from "components/User/Complete Profile/preview";
-import AboutPopUp from "components/User/Complete Profile/popup/about";
+import AboutPopUp from "components/User/Complete Profile/popup/aboutPopup";
 
 export default function CompleteProfil() {
   return (
