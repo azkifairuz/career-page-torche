@@ -10,7 +10,9 @@ export default function AboutPopUp(params) {
       setYear(event.target.value);
     };
   
-
+    const handleMonthChange = (event) => {
+        setMonth(event.target.value);
+      };
 
     return (
         <form className="rounded-lg z-50 w-[537px] bg-white">
