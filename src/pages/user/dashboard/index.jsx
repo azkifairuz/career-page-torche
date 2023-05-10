@@ -1,4 +1,4 @@
-import Sidebar from "components/User/sidebar";
+import Sidebar from "components/organisms/userSidebar";
 import { Outlet } from "react-router-dom";
 
 export default function UserDashboard() {
