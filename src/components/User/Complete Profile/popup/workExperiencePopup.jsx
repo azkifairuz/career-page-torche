@@ -1,9 +1,17 @@
+import { months } from "data/month";
 import { X } from "react-bootstrap-icons";
 export default function AboutPopUp(params) {
     const currentYear = new Date().getFullYear();
     const years = Array.from({length: currentYear - 1999}, (_, i) => 2000 + i);// buat list tahun dri 2000-skrng
+    const [year, setYear] = useState("");
+    const [month, setMonth] = useState("");
+  
+    const handleYearChange = (event) => {
+      setYear(event.target.value);
+    };
+  
 
-    
+
     return (
         <form className="rounded-lg z-50 w-[537px] bg-white">
             <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
