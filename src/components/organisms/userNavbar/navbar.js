@@ -64,7 +64,7 @@ export default function Navbar() {
     },
     {
       title: "Resume",
-      href: "dashboard/resume",
+      href: "completeprofile",
       icon: resumeIcon,
     },
     {

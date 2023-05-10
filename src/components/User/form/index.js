@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { user } from "data/user"
-
 export default function Form() {
 
   const [input, setinput] = useState({
