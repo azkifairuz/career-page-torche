@@ -73,7 +73,7 @@ export default function AboutPopUp(params) {
                     </div>
                 </section>
                 <section>
-                    <p className="text-xl-regular">Tahun Mulai</p>
+                    <p className="text-xl-regular">Tahun Keluar</p>
                     <div className="flex w-full  items-center gap-[26px]">
                     <select
                             id="month"
@@ -105,6 +105,10 @@ export default function AboutPopUp(params) {
                         </select>
                        
                     </div>
+                </section>
+                <section className="flex gap-2">
+                    <input type="checkbox" className="h-6 w-6 rounded-[4px] border border-neutral-500" />
+                    <p className="text-l-regular">Saat ini saya bekerja di sini</p>
                 </section>
                 <section>
                     <p className="text-l-regular text-neutral-900">Jelaskan Profil Pekerjaan Anda</p>
