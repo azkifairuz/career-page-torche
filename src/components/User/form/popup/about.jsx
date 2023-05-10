@@ -2,7 +2,7 @@ import { X } from "react-bootstrap-icons";
 export default function AboutPopUp(params) {
     return (
         <div className="rounded-lg w-[537px]">
-            <div className="p-[16px_32px_16px_32px] border border-neutral-400 flex justify-between">
+            <div className="p-[16px_32px_16px_32px] border border-neutral-400 flex items-center justify-between">
                 <h1 className="heading-s-bold">Tentang Saya</h1>
                 <X size="16.48px" color="#727272" />
             </div>
@@ -13,6 +13,9 @@ export default function AboutPopUp(params) {
                 className="h-[180px] w-full resize-none outline-1"> 
 
                 </textarea>
+            </div>
+            <div className="w-full py-[16px] px-[32px] gap-[16px] flex justify-end items-center">
+
             </div>
         </div>
     )
