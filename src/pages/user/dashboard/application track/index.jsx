@@ -1,15 +1,10 @@
 import Card from "./Card"
-import chevron from "assets/icons/chevron-down.svg"
 
 import { applications } from "data/application"
 
 
 import Pagination from "components/User/Pagination"
 
-const chevronDown = {
-    backgroundImage: `url(${chevron})`,
-    backgroundRepeat: 'no-repeat'
-}
 function Tracking() {
      
         
