@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import {user} from "data/user"
+import { user } from "data/user"
 
 export default function Form() {
-  
+
   const [input, setinput] = useState({
-    username:user.username,
-    title:user.title,
-    language:user.language,
-    ageOrGender:user.ageOrGender,
-    currentSalary:user.currentSalary,
-    expectedSalary:user.expectedSalary,
-    description:user.description,
-    phone:user.phone,
-    email:user.email,
-    country:user.country,
-    city:user.city,
-    address:user.address
+    username: user.username,
+    title: user.title,
+    language: user.language,
+    ageOrGender: user.ageOrGender,
+    currentSalary: user.currentSalary,
+    expectedSalary: user.expectedSalary,
+    description: user.description,
+    phone: user.phone,
+    email: user.email,
+    country: user.country,
+    city: user.city,
+    address: user.address
 
   });
   const [isValid, setIsValid] = useState(true)
@@ -24,14 +24,14 @@ export default function Form() {
     const value = event.target.value;
     setinput((values) => ({ ...values, [name]: value }));
 
-    
+
   };
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     if (input.username === "") {
       setIsValid(false)
-      
-    }else{
+
+    } else {
       setIsValid(true)
     }
     console.log(isValid);
@@ -48,9 +48,12 @@ export default function Form() {
     user.city = input.city
     user.address = input.address
   };
- 
+
   return (
-    <form onSubmit={handleSubmit} className="md:w-[472px] p-4 shadow-[0px_0px_10px_0_#0000001A] flex  md:py-[32px] md:px-[42px] flex-col gap-8 lg:shadow-none lg:w-[80%] lg:max-w-[1000px] lg:min-w-[714px] rounded-lg">
+    <form
+      onSubmit={handleSubmit}
+      className="md:w-[472px] p-4 shadow-[0px_0px_10px_0_#0000001A] flex  md:py-[32px] md:px-[42px] flex-col gap-8 lg:shadow-none lg:w-[80%] lg:max-w-[1000px] lg:min-w-[714px] rounded-lg"
+    >
       <div>
         <header className="mb-[30px]">
           <h1 className="font-rajdhani text-start heading-l-medium ">
@@ -72,7 +75,7 @@ export default function Form() {
               value={input.username}
               onChange={handleChange}
             />
-            <p className={`text-danger-main ${isValid ? "hidden":"block" }`}>Nama Tidak Boleh Kosong</p>
+            <p className={`text-danger-main ${isValid ? "hidden" : "block"}`}>Nama Tidak Boleh Kosong</p>
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
