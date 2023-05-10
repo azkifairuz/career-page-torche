@@ -41,6 +41,20 @@ export default function AboutPopUp(params) {
                 <section>
                     <p className="text-xl-regular">Tahun Mulai</p>
                     <div className="flex w-full  items-center gap-[26px]">
+                    <select
+                            id="month"
+                            name="month"
+                            value={month}
+                            onChange={handleMonthChange}
+                            className="w-1/2 text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                        >
+                            <option value="">Bulan</option>
+                            {months.map((m) => (
+                                <option key={m.value} value={m.value}>
+                                    {m.label}
+                                </option>
+                            ))}
+                        </select>
                         <select
                             id="year"
                             name="year"
@@ -55,7 +69,13 @@ export default function AboutPopUp(params) {
                                 </option>
                             ))}
                         </select>
-                        <select
+                       
+                    </div>
+                </section>
+                <section>
+                    <p className="text-xl-regular">Tahun Mulai</p>
+                    <div className="flex w-full  items-center gap-[26px]">
+                    <select
                             id="month"
                             name="month"
                             value={month}
@@ -69,6 +89,21 @@ export default function AboutPopUp(params) {
                                 </option>
                             ))}
                         </select>
+                        <select
+                            id="year"
+                            name="year"
+                            value={year}
+                            onChange={handleYearChange}
+                            className="w-1/2 text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                        >
+                            <option value="">Tahun</option>
+                            {years.map((y) => (
+                                <option key={y} value={y}>
+                                    {y}
+                                </option>
+                            ))}
+                        </select>
+                       
                     </div>
                 </section>
                 <section>
