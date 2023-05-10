@@ -9,7 +9,7 @@ import chevron from "assets/icons/chevron-white.svg";
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isProfilNavOpen,setIsProfilNavOpen] = useState(false)
-  const [isActive, setIsActive] = useState(0);
+  const [isActive, setIsActive] = useState(-1);
   const handleNavbarOpen = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
