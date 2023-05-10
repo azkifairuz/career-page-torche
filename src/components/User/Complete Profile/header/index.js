@@ -1,5 +1,5 @@
 import sample from "assets/index.png";
-import Header from "components/User/sidebar/header";
+import Header from "components/organisms/userSidebar/header";
 import Item from "./item";
 import ProgressCard from "./progress/card";
 export default function HeaderSection() {
