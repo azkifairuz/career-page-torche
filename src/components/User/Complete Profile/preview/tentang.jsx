@@ -1,10 +1,7 @@
 import { PencilFill } from "react-bootstrap-icons";
-import { useNavigate } from "react-router-dom";
 import AboutPopUp from "components/User/Complete Profile/popup/aboutPopup";
 import { useState } from "react";
-export default function Tentang(props) {
-    const navigate = useNavigate()
-    const { onclick } = props
+export default function Tentang() {
     const [isCardOpen, setIsCardOpen] = useState(false)
     const handleCardOpen = () => {
         setIsCardOpen(!isCardOpen)

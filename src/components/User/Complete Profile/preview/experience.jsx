@@ -1,16 +1,14 @@
 import { Pencil, PlusCircle, Trash } from "react-bootstrap-icons";
-import { useNavigate } from "react-router-dom";
+
 import WorkPopup from "components/User/Complete Profile/popup/workExperiencePopup";
 import { useState } from "react";
 
-export default function Pengalaman(props) {
-    const {onclick} = props
+export default function Pengalaman() {
     const [isCardOpen,setIsCardOpen] = useState(false)
     const handleCardOpen = ()=>{
       setIsCardOpen(!isCardOpen)
       console.log(isCardOpen);
     }
-    const navigate = useNavigate()
     return (
         <div className=" w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
             <div className={` ${!isCardOpen && "hidden"}   fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
