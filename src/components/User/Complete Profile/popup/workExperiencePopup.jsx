@@ -1,7 +1,7 @@
 import { months } from "data/month";
 import React, { useState } from "react";
 import { X } from "react-bootstrap-icons";
-export default function AboutPopUp(props) {
+export default function WorkPopup(props) {
     const { onclick } = props
     const currentYear = new Date().getFullYear();
     const years = Array.from({ length: currentYear - 1999 }, (_, i) => 2000 + i);// buat list tahun dri 2000-skrng

@@ -4,6 +4,7 @@ import Preview from "components/User/Complete Profile/preview";
 import AboutPopUp from "components/User/Complete Profile/popup/aboutPopup";
 import WorkPopup from "components/User/Complete Profile/popup/workExperiencePopup";
 import { useState } from "react";
+import EducationPopup from "components/User/Complete Profile/popup/educationPopup";
 export default function CompleteProfil() {
   const [isCardOpen,setIsCardOpen] = useState(false)
   const handleCardOpen = ()=>{
@@ -17,7 +18,7 @@ export default function CompleteProfil() {
         <div className="mt-6 p-6">
           <OptionBar />
         </div>
-
+       
         
         <div className="lg:w-[819px]">
           <Preview click={handleCardOpen} isCardOpen={isCardOpen} />
