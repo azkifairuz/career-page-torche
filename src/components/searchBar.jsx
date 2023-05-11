@@ -1,4 +1,4 @@
-export default function SearchBar(params) {
+export default function SearchBar() {
   return (
     <div className="">
       <label
