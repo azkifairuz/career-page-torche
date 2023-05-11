@@ -7,7 +7,8 @@ export default function EducationPopup(props) {
     const years = Array.from({ length: currentYear - 1999 }, (_, i) => 2000 + i);// buat list tahun dri 2000-skrng
     const [year, setYear] = useState("");
     const [month, setMonth] = useState("");
-    const [gelar,setGelar] = useState
+    const [gelar, setGelar] = useState("");
+
     const gelars = [
         { label: 'SD', value: 'sd' },
         { label: 'SMP', value: 'smp' },
@@ -18,15 +19,13 @@ export default function EducationPopup(props) {
         { label: 'S1', value: 's1' },
         { label: 'S2', value: 's2' },
         { label: 'S3', value: 's3' },
-    ];
+      ];
     const handleYearChange = (event) => {
         setYear(event.target.value);
     };
-
     const handleGelarChange = (event) => {
         setGelar(event.target.value);
     };
-
     const handleMonthChange = (event) => {
         setMonth(event.target.value);
     };
@@ -46,23 +45,23 @@ export default function EducationPopup(props) {
                     <p className="text-xl-regular">Gelar</p>
                     <div className="flex w-full  items-center gap-[26px]">
                         <select
-                            id="month"
-                            name="month"
-                            value={gelar}
-                            onChange={handleMonthChange}
-                            className="w-1/2 text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                            id="gelar"
+                            name="gelar"
+                            value={month}
+                            onChange={handleGelarChange}
+                            className="w-full text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
                         >
-                            <option value="">Masukan Gelar</option>
-                            {gelars.map((g) => (
-                                <option key={g.value} value={g.value}>
-                                    {g.label}
+                            <option value="">Pilih Gelar Anda</option>
+                            {gelars.map((gelar) => (
+                                <option key={gelar.value} value={gelar.value}>
+                                    {gelar.label}
                                 </option>
                             ))}
                         </select>
-                    </div>
+                        </div>
                 </section>
                 <section>
-                    <p className="text-xl-regular">Perusahaan</p>
+                    <p className="text-xl-regular">Instansi</p>
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
@@ -139,10 +138,10 @@ export default function EducationPopup(props) {
                 </section>
                 <section className="flex gap-2">
                     <input type="checkbox" className="h-6 w-6 rounded-[4px] border border-neutral-500" />
-                    <p className="text-l-regular">Saat ini saya bekerja di sini</p>
+                    <p className="text-l-regular">Saat ini saya masih beresekolah di sini</p>
                 </section>
                 <section>
-                    <p className="text-l-regular text-neutral-900">Jelaskan Profil Pekerjaan Anda</p>
+                    <p className="text-l-regular text-neutral-900">Deskripsi Tambahan</p>
                     <textarea
                         type="text"
                         className="h-[180px] border rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
