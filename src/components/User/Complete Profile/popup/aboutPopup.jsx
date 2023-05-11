@@ -5,7 +5,11 @@ export default function AboutPopUp(props) {
         <form className="rounded-lg z-50 w-[537px] bg-white">
             <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
                 <h1 className="heading-s-bold">Tentang Saya</h1>
-                <X size={25} color="#727272" onClick={onclick} />
+                <X
+                    size={25}
+                    color="#727272"
+                    className="cursor-pointer"
+                    onClick={onclick} />
             </div>
             <div className="px-[32px]  py-[16px] flex flex-col gap-[16px]">
                 <p className="text-l-regular text-neutral-900">Jelaskan singkat tentang dirimu agar perekrut dapat dengan mudah melihat kualifikasimu.</p>

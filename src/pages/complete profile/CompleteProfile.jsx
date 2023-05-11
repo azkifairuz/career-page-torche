@@ -17,13 +17,14 @@ export default function CompleteProfil() {
         <div className="mt-6 p-6">
           <OptionBar />
         </div>
-        <div className={` ${isCardOpen && "hidden"}  fixed flex justify-center items-center  h-screen z-50 bg-opacity-50 w-full  right-0 left-0 bottom-0 top-0 bg-black`}>
-          <div className="rounded-lg w-fit">
+        <div className={` ${!isCardOpen && "hidden"}   fixed flex inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
+          <div className="rounded-lg w-fit ">
             <AboutPopUp onclick={handleCardOpen}/>
           </div>
         </div>
+        
         <div className="lg:w-[819px]">
-          <Preview click={handleCardOpen} />
+          <Preview click={handleCardOpen} isCardOpen={isCardOpen} />
         </div>
       </div>
     </div>
