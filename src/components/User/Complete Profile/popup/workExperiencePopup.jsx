@@ -1,7 +1,8 @@
 import { months } from "data/month";
 import React, { useState } from "react";
 import { X } from "react-bootstrap-icons";
-export default function AboutPopUp(params) {
+export default function WorkPopup(props) {
+    const { onclick } = props
     const currentYear = new Date().getFullYear();
     const years = Array.from({ length: currentYear - 1999 }, (_, i) => 2000 + i);// buat list tahun dri 2000-skrng
     const [year, setYear] = useState("");
@@ -16,10 +17,14 @@ export default function AboutPopUp(params) {
     };
 
     return (
-        <form className="rounded-lg z-50 w-[537px] bg-white">
+        <form className="rounded-lg z-50 w-[537px]  bg-white">
             <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
                 <h1 className="heading-s-bold">Pengalaman Kerja</h1>
-                <X size={25} color="#727272" />
+                <X
+                    size={25}
+                    color="#727272"
+                    className="cursor-pointer"
+                    onClick={onclick} />
             </div>
             <div className="px-[32px]  py-[16px] flex flex-col gap-[16px]">
                 <section>
@@ -41,7 +46,7 @@ export default function AboutPopUp(params) {
                 <section>
                     <p className="text-xl-regular">Tahun Mulai</p>
                     <div className="flex w-full  items-center gap-[26px]">
-                    <select
+                        <select
                             id="month"
                             name="month"
                             value={month}
@@ -69,13 +74,13 @@ export default function AboutPopUp(params) {
                                 </option>
                             ))}
                         </select>
-                       
+
                     </div>
                 </section>
                 <section>
                     <p className="text-xl-regular">Tahun Keluar</p>
                     <div className="flex w-full  items-center gap-[26px]">
-                    <select
+                        <select
                             id="month"
                             name="month"
                             value={month}
@@ -103,7 +108,7 @@ export default function AboutPopUp(params) {
                                 </option>
                             ))}
                         </select>
-                       
+
                     </div>
                 </section>
                 <section className="flex gap-2">
@@ -120,7 +125,10 @@ export default function AboutPopUp(params) {
                 </section>
             </div>
             <div className="w-full border-t border-neutral-400 py-[16px] px-[32px] gap-[16px] flex justify-end items-center">
-                <button className="py-[9px] px-[16px] hover:bg-neutral-300 font-rajdhani border border-neutral-700 rounded-lg">Cancel</button>
+                <button
+                    onClick={onclick} 
+                    type="button"
+                    className="py-[9px] px-[16px] hover:bg-neutral-300 font-rajdhani border border-neutral-700 rounded-lg">Cancel</button>
                 <button className="py-[9px] px-[24px] font-rajdhani bg-primaryBlue-main text-white active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover rounded-lg">Save</button>
             </div>
         </form>

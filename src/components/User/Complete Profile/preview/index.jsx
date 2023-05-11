@@ -8,11 +8,11 @@ import Skill from "./skill";
 import Tentang from "./tentang";
 
 export default function Preview(props) {
-    const {click} = props
+    
     return(
         <div className="flex flex-col gap-6 p-6 mx-auto justify-center items-center">
-            <Tentang onclick={click}/>
-            <Pengalaman/>
+            <Tentang />
+            <Pengalaman />
             <Pendidikan/>
             <Organisasi/>
             <Skill/>
