@@ -1,10 +1,7 @@
 import HeaderSection from "components/User/Complete Profile/header";
 import OptionBar from "components/User/Complete Profile/option bar";
 import Preview from "components/User/Complete Profile/preview";
-import AboutPopUp from "components/User/Complete Profile/popup/aboutPopup";
-import WorkPopup from "components/User/Complete Profile/popup/workExperiencePopup";
 import { useState } from "react";
-import EducationPopup from "components/User/Complete Profile/popup/educationPopup";
 export default function CompleteProfil() {
   const [isCardOpen,setIsCardOpen] = useState(false)
   const handleCardOpen = ()=>{
