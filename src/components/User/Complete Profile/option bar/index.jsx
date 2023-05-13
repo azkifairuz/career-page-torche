@@ -15,7 +15,7 @@ export default function OptionBar(params) {
         <div className="flex md:flex-col lg:gap-0  md:w-[175px] lg:w-[397px] md:scrollbar-hide gap-8 w-full overflow-x-auto">
             {
                 itemData.map((item)=>{
-                    return <Item itemKey={item.id} href={item.href} title={item.title}/>
+                    return <Item key={item.id} href={item.href} title={item.title}/>
                 })
             }
         </div>
