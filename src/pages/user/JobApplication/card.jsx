@@ -25,9 +25,9 @@ export default function Card(props) {
           </h1>
           <div className="grid grid-cols-2 lg:flex w-fit gap-[5px] mt-4">
             {
-                categories.map((categori)=>{
+                categories.map((categori,index)=>{
                     return(
-                        <div className="block bg-primaryBlue-surface text-s-regular text-start capitalize text-primaryBlue-main py-2 px-3 rounded-lg">
+                        <div key={index} className="block bg-primaryBlue-surface text-s-regular text-start capitalize text-primaryBlue-main py-2 px-3 rounded-lg">
                             {categori.element}
                         </div>
                     )

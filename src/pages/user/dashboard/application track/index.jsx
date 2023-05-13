@@ -17,9 +17,9 @@ function Tracking() {
                     </select>
                 </div>
                 <div className="flex flex-col gap-6 w-full">
-                        {applications.slice(0,5).map((data)=>{
+                        {applications.slice(0,5).map((data,index)=>{
                         return(
-                            <Card  posisi={data.posisi}  status={data.status} isClosed={data.isClosed} tanggal={data.tglDikirim} perusahaan={data.perusahaan} salary={data.salary}/>
+                            <Card  key={index} posisi={data.posisi}  status={data.status} isClosed={data.isClosed} tanggal={data.tglDikirim} perusahaan={data.perusahaan} salary={data.salary}/>
                         )
                     })}
                 </div>
