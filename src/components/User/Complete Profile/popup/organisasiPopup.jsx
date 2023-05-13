@@ -1,7 +1,7 @@
 import { months } from "data/month";
 import React, { useState } from "react";
 import { X } from "react-bootstrap-icons";
-export default function EducationPopup(props) {
+export default function OrganisasiPopup(props) {
     const { onclick } = props
     const currentYear = new Date().getFullYear();
     const years = Array.from({ length: currentYear - 1999 }, (_, i) => 2000 + i);// buat list tahun dri 2000-skrng
@@ -9,17 +9,6 @@ export default function EducationPopup(props) {
     const [month, setMonth] = useState("");
     const [gelar, setGelar] = useState("");
 
-    const gelars = [
-        { label: 'SD', value: 'sd' },
-        { label: 'SMP', value: 'smp' },
-        { label: 'SMK', value: 'smk' },
-        { label: 'D1', value: 'd1' },
-        { label: 'D2', value: 'd2' },
-        { label: 'D3', value: 'd3' },
-        { label: 'S1', value: 's1' },
-        { label: 'S2', value: 's2' },
-        { label: 'S3', value: 's3' },
-      ];
     const handleYearChange = (event) => {
         setYear(event.target.value);
     };
