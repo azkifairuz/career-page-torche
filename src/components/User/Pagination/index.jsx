@@ -45,8 +45,8 @@ export default function Pagination() {
       </section> */}
       <select className="paginationMobile md:hidden bg-no-repeat bg-right bg-[url(assets/icons/chevron-down.svg)] appearance-none bg-white text-neutral-900 border text-xl-regular border-primaryBlue-border w-[64px] h-[48px] py-[10px] px-2">
         {
-          pages.map((page =>{
-            return(<option>{page}</option>)
+          pages.map(((page,index) =>{
+            return(<option key={index}>{page}</option>)
           }))
         }
       </select>
