@@ -1,9 +1,9 @@
 import point from "assets/icons/Torche_Point.svg"
 export default function Benefit(params) {
     const benefitList = [
-        {title:"Belajar langsung dari pengalaman"},
-        {title:"Lingkungan kerja yang nyaman dan ramah"},
-        {title:"Jam kerja yang flexibel"},
+        {id:1,title:"Belajar langsung dari pengalaman"},
+        {id:2,title:"Lingkungan kerja yang nyaman dan ramah"},
+        {id:3,title:"Jam kerja yang flexibel"},
     ]
 
     return (

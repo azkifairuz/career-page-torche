@@ -2,20 +2,20 @@ import Item from "./item";
 
 export default function OptionBar(params) {
     const itemData = [
-        { href: "/tentang", title: "Tentang" },
-        { href: "/pengelaman", title: "Pengalaman Kerja" },
-        { href: "/pendidikan", title: "Pendidikan" },
-        { href: "/organisasi", title: "Organisasi" },
-        { href: "/skills", title: "Skills" },
-        { href: "/penghargaan", title: "Penghargaan" },
-        { href: "/portofolio", title: "Portofolio" },
-        { href: "/resume", title: "Resume" },
+        { id:1, href: "/tentang", title: "Tentang" },
+        { id:2, href: "/pengelaman", title: "Pengalaman Kerja" },
+        { id:3, href: "/pendidikan", title: "Pendidikan" },
+        { id:4, href: "/organisasi", title: "Organisasi" },
+        { id:5, href: "/skills", title: "Skills" },
+        { id:6, href: "/penghargaan", title: "Penghargaan" },
+        { id:7, href: "/portofolio", title: "Portofolio" },
+        { id:9, href: "/resume", title: "Resume" },
       ];
     return(
         <div className="flex md:flex-col lg:gap-0  md:w-[175px] lg:w-[397px] md:scrollbar-hide gap-8 w-full overflow-x-auto">
             {
                 itemData.map((item)=>{
-                    return <Item href={item.href} title={item.title}/>
+                    return <Item itemKey={item.id} href={item.href} title={item.title}/>
                 })
             }
         </div>
