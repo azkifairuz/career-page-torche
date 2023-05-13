@@ -40,7 +40,7 @@ export default function AchivementPopup(props) {
                     />
                 </section>
                 <section>
-                    <p className="text-l-regular text-neutral-900">Perusahaan</p>
+                    <p className="text-l-regular text-neutral-900">Tahun</p>
                     <select
                         id="year"
                         name="year"
