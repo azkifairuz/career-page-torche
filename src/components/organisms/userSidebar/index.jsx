@@ -53,7 +53,7 @@ export default function Sidebar(props) {
     },
     {
       title: "Resume",
-      href: "/user/ompleteprofile",
+      href: "/user/completeprofile",
       icon: resumeIcon,
     },
     {
