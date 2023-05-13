@@ -40,6 +40,17 @@ export default function SkillPopup(props) {
     }
   }
 
+  function handleDelete(select) {
+    console.log(select)
+     setSelectedSkills((prevSkill)=>
+      prevSkill.filter((skill)=>skill !== select)
+     )
+  }
+
+  function isChecked(skill) {
+    return selectedSkills.includes(skill)
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     console.log("Selected skills:", selectedSkills);
@@ -72,6 +83,7 @@ export default function SkillPopup(props) {
                       type="checkbox"
                       value={skill}
                       onChange={handleCheckboxChange}
+                      checked={isChecked(skill)}
                       className="h-6 w-6 rounded-[4px] border border-neutral-500"
                     />
                     <p className="text-l-regular">{skill}</p>
@@ -84,8 +96,8 @@ export default function SkillPopup(props) {
                 <p>Please select some skills</p>
               ) : (
                 <ul className="grid grid-cols-2 gap-4">
-                  {selectedSkills.map((skill,index) => (
-                    <li className="p-[8px_16px_8px_16px] w-fit text-white text-l-regular bg-primaryBlue-main rounded-lg flex gap-[8px] justify-between items-start" key={skill}>{skill}<X  size={30}/></li>
+                  {selectedSkills.map((skill) => (
+                    <li onClick={()=>handleDelete(skill)} className="p-[8px_16px_8px_16px] w-fit text-white text-l-regular bg-primaryBlue-main rounded-lg flex gap-[8px] justify-between items-start" key={skill}>{skill}<X  size={30}/></li>
                   ))}
                 </ul>
               )}
