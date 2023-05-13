@@ -10,7 +10,7 @@ export default function Benefit(params) {
         <div className="flex flex-col gap-2">
             {benefitList.map((benefit)=>  {
                 return (
-                    <div className="flex gap-2  items-center">
+                    <div key={benefit.id} className="flex gap-2  items-center">
                         <img src={point} alt="icon" className="w-5 h-4"></img>
                         <div className="text-m-bold  font-cairo">{benefit.title}</div>
                     </div>
