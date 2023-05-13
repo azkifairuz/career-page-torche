@@ -1,6 +1,19 @@
 import { X } from "react-bootstrap-icons";
 import { FileEarmarkPlus } from "react-bootstrap-icons";
 export default function ResumePopup(props) {
+    const MaxFileSize = 5* 1024 *1024
+
+    const handleFileChange = (event)=>{
+        const selectedFile = event.target.files[0];
+        if (!selectedFile) {
+            return alert("file tidak boleh kosong")
+        }
+
+        if (selectedFile.size > MaxFileSize) {
+            return alert("ukuran file lebih dri 5mb")
+        }
+        return console.log("berhasil");
+    }
     return(
         <form className="rounded-lg z-50 w-[537px] bg-white">
         <section className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
@@ -16,6 +29,7 @@ export default function ResumePopup(props) {
                 <FileEarmarkPlus className="text-primaryBlue-main" size={18} />
                 <label htmlFor="uploadCv" className="block text-center text-l-regular text-primaryBlue-main font-medium text-lg">Upload CV</label>
                 <input
+                    onChange={handleFileChange}
                     id="uploadCv"
                     type="file"
                     accept="application/pdf"
