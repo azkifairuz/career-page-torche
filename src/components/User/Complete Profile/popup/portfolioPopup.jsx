@@ -4,12 +4,7 @@ import { X } from "react-bootstrap-icons";
 export default function PortfolioPopup(props) {
     const { onclick } = props
     const currentYear = new Date().getFullYear();
-    const years = Array.from({ length: currentYear - 1999 }, (_, i) => 2000 + i);// buat list tahun dri 2000-skrng
-    const [year, setYear] = useState("");
 
-    const handleYearChange = (event) => {
-        setYear(event.target.value);
-    };
 
 
     return (
