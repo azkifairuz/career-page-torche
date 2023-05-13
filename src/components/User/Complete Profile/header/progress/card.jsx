@@ -4,14 +4,14 @@ import ArrowDown from "assets/icons/chevron-down.svg";
 export default function ProgressCard(props) {
   const { percent } = props;
   const itemData = [
-    { href: "/tentang", title: "Tentang" },
-    { href: "/pengelaman", title: "Pengalaman Kerja" },
-    { href: "/pendidikan", title: "Pendidikan" },
-    { href: "/organisasi", title: "Organisasi" },
-    { href: "/skill", title: "Skill" },
-    { href: "/pernghargaan", title: "Pernghargaan" },
-    { href: "/portofolio", title: "Portofolio" },
-    { href: "/resume", title: "Resume" },
+    { id:1 ,href: "/tentang", title: "Tentang" },
+    { id:2 ,href: "/pengelaman", title: "Pengalaman Kerja" },
+    { id:3 ,href: "/pendidikan", title: "Pendidikan" },
+    { id:4 ,href: "/organisasi", title: "Organisasi" },
+    { id:5 ,href: "/skill", title: "Skill" },
+    { id:6 ,href: "/pernghargaan", title: "Pernghargaan" },
+    { id:7 ,href: "/portofolio", title: "Portofolio" },
+    { id:8 ,href: "/resume", title: "Resume" },
   ];
   const [IsOpen, setIsOpen] = useState(false)
   const [indexAkhir, setIndexAkhir] = useState(4)
@@ -38,7 +38,7 @@ export default function ProgressCard(props) {
       </div>
       <div className={`text-start lg:block lg:pl-2 mt-3 gap-2 z-20 -ml-5 first-letter ${!IsOpen ? "md:hidden":"md:block"} `}>
         {itemData.slice(0,indexAkhir).map((item)=>{
-          return <Item href={item.href} title={item.title} />
+          return <Item key={item.id} href={item.href} title={item.title} />
         })}
       </div>
       <div onClick={handleOpen}  className="flex gap-2 cursor-pointer mt-3 items-center">

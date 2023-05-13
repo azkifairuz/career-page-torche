@@ -28,7 +28,7 @@ function Landing(props) {
             <h1 className=" heading-m-bold w-[170px] md:text-[34px] md:leading-[42px] md:w-full md:text-center ">Posisi yang sedang dibuka</h1>
             <div className=" flex py-4 overflow-x-scroll w-full gap-4 md:flex-wrap  md:items-center md:justify-center lg:mx-auto lg:grid lg:grid-cols-4 lg:content-center lg:snap-center lg:w-fit lg:px-5 ">
 
-            <Category/>
+                <Category/>
             </div>
 
             </section>

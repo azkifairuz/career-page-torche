@@ -4,12 +4,12 @@ import Item from "./item";
 import ProgressCard from "./progress/card";
 export default function HeaderSection() {
   const information = [
-    { Title: "Phone", Desc: "+62 1234 5721 63" },
-    { Title: "Email", Desc: "loremipsum@gmail.com" },
-    { Title: "Lokasi", Desc: "Jakarta, Indonesia" },
-    { Title: "Usia,jenis-kelamin", Desc: "25,Lak-Laki" },
-    { Title: "Status", Desc: "Open to Work" },
-    { Title: "Nationality", Desc: "indonesia" },
+    { id : 1 ,Title: "Phone", Desc: "+62 1234 5721 63" },
+    { id : 2 ,Title: "Email", Desc: "loremipsum@gmail.com" },
+    { id : 3,Title: "Lokasi", Desc: "Jakarta, Indonesia" },
+    { id : 4 ,Title: "Usia,jenis-kelamin", Desc: "25,Lak-Laki" },
+    { id : 5 ,Title: "Status", Desc: "Open to Work" },
+    { id : 6 ,Title: "Nationality", Desc: "indonesia" },
   ];
   return (
     <div className={`px-6 pt-2 lg:h-fit   md:p-8 md:pb-16 box-border lg:justify-between lg:px-24 lg:py-10 lg:flex md:bg-[url('assets/images/hero.png')] md:bg-no-repeat bg-cover md:text-white`}>
@@ -30,7 +30,7 @@ export default function HeaderSection() {
         </div>
           <div className="grid grid-cols-2 lg:grid-cols-2 items-center gap-2  md:grid-cols-3   md:items-start ">
           {information.map((info) => {
-            return <Item title={info.Title} desc={info.Desc} />;
+            return <Item key={info.id} title={info.Title} desc={info.Desc} />;
           })}
         </div>
       </div>
