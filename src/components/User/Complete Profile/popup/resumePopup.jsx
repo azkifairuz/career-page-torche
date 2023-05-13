@@ -1,6 +1,7 @@
 import { X } from "react-bootstrap-icons";
 import { FileEarmarkPlus } from "react-bootstrap-icons";
 export default function ResumePopup(props) {
+    const {onclick} = props
     const MaxFileSize = 5* 1024 *1024
 
     const handleFileChange = (event)=>{
