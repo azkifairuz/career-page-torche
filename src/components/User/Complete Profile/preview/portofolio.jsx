@@ -9,7 +9,7 @@ export default function Portfolio(params) {
                 <h1 className="heading-s-bold font-rajdhani">Portfolio</h1>
                 <div 
                 onClick={()=>navigate("/tambahPortfolio")}
-                className="flex items-center  gap-2 py-1 px-2 text-white w-fit bg-primaryBlue-main rounded">
+                className="flex items-center cursor-pointer gap-2 py-1 px-2 text-white w-fit bg-primaryBlue-main rounded">
                     <PlusCircle size={12}/>
                     <p className="font-cairo text-s-regular">Tambah</p>
                 </div>
