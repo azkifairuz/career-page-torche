@@ -9,7 +9,7 @@ export default function Pendidikan(params) {
     }
     return(
         <div className=" w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
-            <div className={` ${!isCardOpen && "hidden"}   fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
+            <div className={` ${!isCardOpen && "hidden"} h-screen  fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
                 <div className="rounded-lg w-fit mt-[300px]">
                     <EducationPopup onclick={handleCardOpen} />
                 </div>
