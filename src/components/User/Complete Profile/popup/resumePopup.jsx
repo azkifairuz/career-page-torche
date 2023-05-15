@@ -26,9 +26,9 @@ export default function ResumePopup(props) {
                 onClick={onclick} />
         </section>
         <section className="px-[32px]  py-[16px] flex flex-col gap-[16px]">
-            <div className="border-2 border-dotted rounded-md px-[16px] py-2 flex gap-[9px] justify-center items-center border-primaryBlue-main appearance-none w-full outline-1">
+            <div className="border-2 cursor-pointer border-dotted rounded-md px-[16px] py-2 flex gap-[9px] justify-center items-center border-primaryBlue-main appearance-none w-full outline-1">
                 <FileEarmarkPlus className="text-primaryBlue-main" size={18} />
-                <label htmlFor="uploadCv" className="block text-center text-l-regular text-primaryBlue-main font-medium text-lg">Upload CV</label>
+                <label htmlFor="uploadCv" className="block text-center text-l-regular cursor-pointer text-primaryBlue-main font-medium text-lg">Upload CV</label>
                 <input
                     onChange={handleFileChange}
                     id="uploadCv"
