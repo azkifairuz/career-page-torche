@@ -24,19 +24,19 @@ export default function AchivementPopup(props) {
             </div>
             <div className="px-[32px]  py-[16px] flex flex-col gap-[16px]">
                 <section>
-                    <p className="text-l-regular text-neutral-900">Penghargaan</p>
+                    <p className="text-l-regular  text-neutral-900">Penghargaan</p>
                     <input
                         type="text"
                         placeholder="Masukan Penghargaan"
-                        className="w-full border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                        className="w-full border placeholder:text-neutral-500 focus:outline-none focus:border-primaryBlue-main rounded-lg py-2 px-4  border-neutral-500"
                     />
                 </section>
                 <section>
-                    <p className="ttext-l-regular text-neutral-900">Perusahaan</p>
+                    <p className="ttext-l-regular text-neutral-900">Prestasi</p>
                     <input
                         type="text"
-                        placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        placeholder="Masukan Prestasi"
+                        className="w-full placeholder:text-neutral-500 focus:outline-none focus:border-primaryBlue-main rounded-lg py-2 px-4 border  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -46,7 +46,7 @@ export default function AchivementPopup(props) {
                         name="year"
                         value={year}
                         onChange={handleYearChange}
-                        className="w-full text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                        className="w-full text-neutral-500 bg-white border focus:outline-none focus:border-primaryBlue-border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
                     >
                         <option value="">Tahun</option>
                         {years.map((y) => (
@@ -61,7 +61,7 @@ export default function AchivementPopup(props) {
                     <textarea
                         type="text"
                         placeholder="Masukan Deskripsi"
-                        className="h-[180px] border rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
+                        className="h-[180px] border rounded-[4px] focus:outline-none focus:border-primaryBlue-main px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
                         
                     </textarea>
                 </section>

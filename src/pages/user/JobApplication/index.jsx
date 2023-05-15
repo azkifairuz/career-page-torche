@@ -16,9 +16,10 @@ function JobApplication() {
         </div>
       </div>
       <div className="flex flex-col gap-6 w-full">
-        {applications.slice(0, 5).map((data) => {
+        {applications.slice(0, 5).map((data,index) => {
           return (
             <Card
+              key={index}
               posisi={data.posisi}
               place={data.place}
               isClosed={data.isClosed}

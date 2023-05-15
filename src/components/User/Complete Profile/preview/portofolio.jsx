@@ -1,5 +1,6 @@
 import { PlusCircle } from "react-bootstrap-icons";
 import { useState } from "react";
+import PortfolioPopup from "../popup/portfolioPopup";
 export default function Portfolio(params) {
     const [isCardOpen,setIsCardOpen] = useState(false)
     const handleCardOpen = ()=>{
@@ -8,6 +9,11 @@ export default function Portfolio(params) {
     }
     return(
         <div className=" w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
+            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"} h-screen  fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
+                <div onClick={(event) => event.stopPropagation()} className="rounded-lg w-fit mt-72">
+                    <PortfolioPopup onclick={handleCardOpen} />
+                </div>
+            </div>
             <div className="flex justify-between">
                 <h1 className="heading-s-bold font-rajdhani">Portfolio</h1>
                 <div 
