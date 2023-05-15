@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
 export default function Setting(props) {
     const { userEmail = "Alexander.colombus@gmail.com", password = "alex123", contact = "8132 1234 52" } = props
@@ -22,7 +22,9 @@ export default function Setting(props) {
         setPhoneNumber(event.target.value)
     }
 
-    
+    const submitPhoneNumber = (event)=>{
+        event.preventDefault()
+    }
     return (
         <div className="p-[8px_8px_16px_8px] w-[313px] flex flex-col gap-4">
             <section className="border-b pb-[4px] border-primaryBlue-main">
@@ -50,7 +52,9 @@ export default function Setting(props) {
                 </div>
             </section>
 
-            <form className="p-[16px_16px_24px_16px] shadow-[0p_x0px_10px_0px_#0000001A] w-full rounded-lg">
+            <form 
+            onSubmit={submitPhoneNumber}
+            className="p-[16px_16px_24px_16px] shadow-[0p_x0px_10px_0px_#0000001A] w-full rounded-lg">
                 <label
                     htmlFor="editContact"
                     className="heading-m-bold ">
