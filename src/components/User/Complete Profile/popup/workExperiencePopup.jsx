@@ -32,7 +32,7 @@ export default function WorkPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan posisi"
-                        className="w-full border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                        className="w-full border placeholder:text-neutral-500 rounded-lg py-2 px-4 focus:outline-none focus:border-primaryBlue-border border-neutral-500"
                     />
                 </section>
                 <section>
@@ -40,7 +40,7 @@ export default function WorkPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border focus:outline-none focus:border-primaryBlue-border  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -112,14 +112,14 @@ export default function WorkPopup(props) {
                     </div>
                 </section>
                 <section className="flex gap-2">
-                    <input type="checkbox" className="h-6 w-6 rounded-[4px] border border-neutral-500" />
+                    <input type="checkbox" className="h-6 w-6 rounded-[4px] border focus:outline-none focus:border-primaryBlue-border border-neutral-500" />
                     <p className="text-l-regular">Saat ini saya bekerja di sini</p>
                 </section>
                 <section>
                     <p className="text-l-regular text-neutral-900">Jelaskan Profil Pekerjaan Anda</p>
                     <textarea
                         type="text"
-                        className="h-[180px] border rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
+                        className="h-[180px] border focus:outline-none focus:border-primaryBlue-bordery34 rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
 
                     </textarea>
                 </section>
