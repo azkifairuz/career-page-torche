@@ -10,28 +10,31 @@ export default function Setting(props) {
         { code: '44', name: 'United Kingdom' },
         { code: '91', name: 'India' },
         { code: '81', name: 'Japan' },
-      ];
-    
-    const [countryCode,setCountryCode] = useState('')
-    const [phoneNumber,setPhoneNumber] = useState('')
-    
-    const handleCountryCode = (event) =>{
+    ];
+
+    const [countryCode, setCountryCode] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState(`${contact}`)
+
+    const handleCountryCode = (event) => {
         setCountryCode(event.target.value)
     }
-    const handlePhoneNumber = (event) =>{
+    const handlePhoneNumber = (event) => {
         setPhoneNumber(event.target.value)
     }
 
-    const submitPhoneNumber = (event)=>{
+    const submitPhoneNumber = (event) => {
         event.preventDefault()
+
+        console.log(`Phone Number: ${phoneNumber}`);
+        console.log(`Country Cde: ${countryCode}`);
     }
     return (
-        <div className="p-[8px_8px_16px_8px] w-[313px] flex flex-col gap-4">
+        <div className="p-[8px_8px_16px_8px] shadow-[0px_0px_10px_0px_#0000001A]  min-w-[313px] flex flex-col gap-4">
             <section className="border-b pb-[4px] border-primaryBlue-main">
                 <h1 className="heading-l-bold">Setting</h1>
             </section>
 
-            <section className="w-[284px] p-[16px] items-start shadow-[0p_x0px_10px_0px_#0000001A] flex flex-col gap-[24px] rounded-lg">
+            <section className="min-w-[284px] p-[16px] items-start justify-center shadow-[0px_0px_10px_0px_#0000001A] flex flex-col gap-[24px] rounded-lg">
                 <div className="flex flex-col gap-2 w-full">
                     <h1 className="heading-m-bold">Email</h1>
                     <p className="font-cairo text-[16px] leading-[24px] text-neutral-700">{userEmail}</p>
@@ -52,15 +55,43 @@ export default function Setting(props) {
                 </div>
             </section>
 
-            <form 
-            onSubmit={submitPhoneNumber}
-            className="p-[16px_16px_24px_16px] shadow-[0p_x0px_10px_0px_#0000001A] w-full rounded-lg">
+            <form
+                onSubmit={submitPhoneNumber}
+                className="p-[16px_16px_24px_16px] flex flex-col gap-[24px] justify-center shadow-[0px_0px_10px_0px_#0000001A] w-full rounded-lg">
                 <label
                     htmlFor="editContact"
                     className="heading-m-bold ">
                     Contact
                 </label>
-                <input></input>
+                <div className="border-neutral-500 text-neutral-700 flex gap-[14px] border w-full rounded-lg focus:outline-none  focus:border-primaryBlue-main">
+                    <select
+                        className="bg-transparent py-2 pl-4"
+                        value={countryCode}
+                        onChange={handleCountryCode}
+                    >
+                        {
+                            countryCodes.map((country) => (
+                                <option key={country.code} value={country.code}>
+                                    +{country.code}
+                                </option>
+                            ))
+                        }
+                    </select>
+                    <input
+                        className="py-2 pr-4 focus:outline-none  bg-transparent rounded-r-lg border-r border-r-neutral"
+                        id="editContact"
+                        type="text"
+                        value={phoneNumber}
+                        onChange={handlePhoneNumber}>
+
+                    </input>
+
+                </div>
+                <button
+                    type="submit"
+                    className="text-s-regular w-full text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                    Save
+                </button>
             </form>
         </div>
     )
