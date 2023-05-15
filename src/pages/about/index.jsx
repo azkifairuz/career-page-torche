@@ -35,7 +35,7 @@ function About() {
           </p>
         </article>
       </section>
-      <section className="flex w-full flex-wrap gap-7 lg:gap-6">
+      <section className="h-fit px-4 flex overflow-x-scroll w-full md:overflow-visible md:flex-wrap gap-7 lg:gap-6 ">
         <Card
           title="Internationally Standardized Curriculum"
           description="Torche menyediakan kurikulum teknik kimia terbaik terbaik dari 5 universitas terbaik di Indonesia yang digabungkan dengan 5 Universitas terbaik di Dunia"
