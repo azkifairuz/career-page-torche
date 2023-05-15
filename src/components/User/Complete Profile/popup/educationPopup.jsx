@@ -49,7 +49,7 @@ export default function EducationPopup(props) {
                             name="gelar"
                             value={gelar}
                             onChange={handleGelarChange}
-                            className="w-full text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                            className="w-full text-neutral-500 bg-white border  focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
                         >
                             <option value="">Pilih Gelar Anda</option>
                             {gelars.map((gelar) => (
@@ -76,7 +76,7 @@ export default function EducationPopup(props) {
                             name="month"
                             value={month}
                             onChange={handleMonthChange}
-                            className="w-1/2 text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                            className="w-1/2 text-neutral-500 bg-white border  focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
                         >
                             <option value="">Bulan</option>
                             {months.map((m) => (
@@ -90,7 +90,7 @@ export default function EducationPopup(props) {
                             name="year"
                             value={year}
                             onChange={handleYearChange}
-                            className="w-1/2 text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                            className="w-1/2 text-neutral-500 bg-white border focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
                         >
                             <option value="">Tahun</option>
                             {years.map((y) => (
@@ -137,14 +137,14 @@ export default function EducationPopup(props) {
                     </div>
                 </section>
                 <section className="flex gap-2">
-                    <input type="checkbox" className="h-6 w-6 rounded-[4px] border border-neutral-500" />
+                    <input type="checkbox" className="h-6 w-6 focus:border-2 focus:outline-none focus:border-primaryBlue-main rounded-[4px] border border-neutral-500" />
                     <p className="text-l-regular">Saat ini saya masih beresekolah di sini</p>
                 </section>
                 <section>
                     <p className="text-l-regular text-neutral-900">Deskripsi Tambahan</p>
                     <textarea
                         type="text"
-                        className="h-[180px] border rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
+                        className="h-[180px] border focus:outline-none focus:border-primaryBlue-main rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
 
                     </textarea>
                 </section>

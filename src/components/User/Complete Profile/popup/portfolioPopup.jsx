@@ -23,7 +23,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan Penghargaan"
-                        className="w-full border placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                        className="w-full border placeholder:text-neutral-500 focus:outline-none focus:border-primaryBlue-main rounded-lg py-2 px-4  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -31,7 +31,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 focus:outline-none focus:border-primaryBlue-main rounded-lg py-2 px-4 border  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -39,7 +39,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 focus:outline-none focus:border-primaryBlue-main rounded-lg py-2 px-4 border  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -47,7 +47,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 focus:outline-none focus:border-primaryBlue-main rounded-lg py-2 px-4 border  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -55,7 +55,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 rounded-lg focus:outline-none focus:border-primaryBlue-main py-2 px-4 border  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -63,7 +63,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  focus:outline-none focus:border-primaryBlue-main border-neutral-500"
                     />
                 </section>
                 <section>
@@ -71,7 +71,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border focus:outline-none focus:border-primaryBlue-main  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -79,7 +79,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border focus:outline-none focus:border-primaryBlue-main  border-neutral-500"
                     />
                 </section>
                 <section>
@@ -87,7 +87,7 @@ export default function PortfolioPopup(props) {
                     <input
                         type="text"
                         placeholder="Masukan perusahaan"
-                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border  border-neutral-500"
+                        className="w-full placeholder:text-neutral-500 rounded-lg py-2 px-4 border focus:outline-none focus:border-primaryBlue-main  border-neutral-500"
                     />
                 </section>
             </div>

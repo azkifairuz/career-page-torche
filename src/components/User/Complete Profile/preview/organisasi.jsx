@@ -9,8 +9,8 @@ export default function Organisasi(props) {
     }
     return (
         <div className="w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
-            <div className={` ${!isCardOpen && "hidden"}   fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
-                <div className="rounded-lg w-fit ">
+            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"}   fixed flex p-52 inset-0 h-screen overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
+                <div className="rounded-lg w-fit mt-52">
                     <OrganisasiPopup onclick={handleCardOpen} />
                 </div>
             </div>

@@ -15,7 +15,7 @@ export default function AboutPopUp(props) {
                 <p className="text-l-regular text-neutral-900">Jelaskan singkat tentang dirimu agar perekrut dapat dengan mudah melihat kualifikasimu.</p>
                 <textarea 
                 type="text"
-                className="h-[180px] border rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1"> 
+                className="h-[180px] border rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none focus:border-primaryBlue-main"> 
 
                 </textarea>
             </div>
