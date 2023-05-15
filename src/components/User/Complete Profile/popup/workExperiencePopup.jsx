@@ -18,7 +18,7 @@ export default function WorkPopup(props) {
 
     return (
         <form className="rounded-lg z-50 w-[537px]  bg-white">
-            <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
+            <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 focus:outline-none focus:border-primaryBlue-main flex items-center justify-between">
                 <h1 className="heading-s-bold">Pengalaman Kerja</h1>
                 <X
                     size={25}

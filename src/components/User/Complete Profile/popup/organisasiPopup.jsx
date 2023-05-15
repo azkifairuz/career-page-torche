@@ -7,14 +7,12 @@ export default function OrganisasiPopup(props) {
     const years = Array.from({ length: currentYear - 1999 }, (_, i) => 2000 + i);// buat list tahun dri 2000-skrng
     const [year, setYear] = useState("");
     const [month, setMonth] = useState("");
-    const [gelar, setGelar] = useState("");
+    
 
     const handleYearChange = (event) => {
         setYear(event.target.value);
     };
-    const handleGelarChange = (event) => {
-        setGelar(event.target.value);
-    };
+   
     const handleMonthChange = (event) => {
         setMonth(event.target.value);
     };
@@ -54,7 +52,7 @@ export default function OrganisasiPopup(props) {
                             name="month"
                             value={month}
                             onChange={handleMonthChange}
-                            className="w-1/2 text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                            className="w-1/2 text-neutral-500 bg-white border  focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
                         >
                             <option value="">Bulan</option>
                             {months.map((m) => (
@@ -68,7 +66,7 @@ export default function OrganisasiPopup(props) {
                             name="year"
                             value={year}
                             onChange={handleYearChange}
-                            className="w-1/2 text-neutral-500 bg-white border focus:border-2 focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
+                            className="w-1/2 text-neutral-500 bg-white border  focus:outline-none focus:border-primaryBlue-main placeholder:text-neutral-500 rounded-lg py-2 px-4  border-neutral-500"
                         >
                             <option value="">Tahun</option>
                             {years.map((y) => (
@@ -115,14 +113,14 @@ export default function OrganisasiPopup(props) {
                     </div>
                 </section>
                 <section className="flex gap-2">
-                    <input type="checkbox" className="h-6 w-6 rounded-[4px] border border-neutral-500" />
+                    <input type="checkbox" className="h-6 w-6 rounded-[4px] border focus:outline-none focus:border-primaryBlue-main border-neutral-500" />
                     <p className="text-l-regular">Saat ini saya masih beresekolah di sini</p>
                 </section>
                 <section>
                     <p className="text-l-regular text-neutral-900">Deskripsi Tambahan</p>
                     <textarea
                         type="text"
-                        className="h-[180px] border rounded-[4px] px-[16px] py-2 border-neutral-700 w-full resize-none outline-1">
+                        className="h-[180px] border rounded-[4px] px-[16px] py-2 focus:outline-none focus:border-primaryBlue-main border-neutral-700 w-full resize-none outline-1">
 
                     </textarea>
                 </section>
