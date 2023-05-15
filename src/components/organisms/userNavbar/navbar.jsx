@@ -54,7 +54,7 @@ export default function Navbar() {
     { href: "/user", title: "Home" },
     { href: "joblist", title: "Job List" },
     { href: "about", title: "About Torche" },
-    { href: "faq", title: "FAQ" },
+    { href: "FAQ", title: "FAQ" },
   ];
   const profilNav = [
     {

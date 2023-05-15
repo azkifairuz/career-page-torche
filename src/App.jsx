@@ -113,8 +113,10 @@ function App() {
               <Route path="resume" element={<Resume />} />
               <Route path="setting" element={<Setting />} />
             </Route>
+            <Route path="FAQ" element={<FAQ />} />
             <Route path="completeprofile" element={<CompleteProfil />}></Route>
             <Route path="joblist" element={<Joblist />} />
+            <Route path="about" element={<About />} />
           </Route>
           <Route path="*" element={<Custom404 />} />
         </Routes>
