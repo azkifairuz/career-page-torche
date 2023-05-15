@@ -29,7 +29,6 @@ import Profil from "pages/user/dashboard/profil";
 import JobDetail from "pages/joblist/detail";
 import Tracking from "./pages/user/dashboard/application track";
 import JobApplication from "pages/user/JobApplication";
-import Resume from "pages/user/dashboard/resume";
 import Setting from "pages/user/dashboard/setting";
 import ForgetPassword from "pages/forget-password";
 import ChangePassword from "pages/forget-password/confirmed";
@@ -110,7 +109,6 @@ function App() {
               <Route path="profil" element={<Profil />}></Route>
               <Route path="lamaran" element={<JobApplication />}></Route>
               <Route path="applicationtracking" element={<Tracking />} />
-              <Route path="resume" element={<Resume />} />
               <Route path="setting" element={<Setting />} />
             </Route>
             <Route path="FAQ" element={<FAQ />} />
