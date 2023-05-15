@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-
+import { PencilFill } from "react-bootstrap-icons";
+import downloadIcon  from "assets/icons/download.svg";
 export default function Setting(props) {
     const { userEmail = "Alexander.colombus@gmail.com", password = "alex123", contact = "8132 1234 52" } = props
     const passwordDisplay = Array(password.length).fill('●').join('')
@@ -29,7 +30,7 @@ export default function Setting(props) {
         console.log(`Country Cde: ${countryCode}`);
     }
     return (
-        <div className="p-[8px_8px_16px_8px] shadow-[0px_0px_10px_0px_#0000001A]  min-w-[313px] flex flex-col gap-4">
+        <div className="p-[8px_8px_16px_8px] rounded-lg shadow-[0px_0px_10px_0px_#0000001A]  min-w-[313px] flex flex-col gap-4">
             <section className="border-b pb-[4px] border-primaryBlue-main">
                 <h1 className="heading-l-bold">Setting</h1>
             </section>
@@ -39,7 +40,8 @@ export default function Setting(props) {
                     <h1 className="heading-m-bold">Email</h1>
                     <p className="font-cairo text-[16px] leading-[24px] text-neutral-700">{userEmail}</p>
                     <button
-                        className="text-s-regular text-white py-2 px-4 bg-primaryBlue-main rounded-lg active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                        className="text-s-regular flex gap-[10px] justify-center items-center text-white py-2 px-4 bg-primaryBlue-main rounded-lg active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                        <PencilFill size={12}/>
                         Edit
                     </button>
                 </div>
@@ -49,7 +51,8 @@ export default function Setting(props) {
                         type="password"
                         className="font-cairo text-[16px] leading-[24px] text-neutral-700">{passwordDisplay}</p>
                     <button
-                        className="text-s-regular text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                        className="text-s-regular flex gap-[10px] justify-center items-center text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                        <PencilFill size={12}/>
                         Edit
                     </button>
                 </div>
@@ -89,7 +92,8 @@ export default function Setting(props) {
                 </div>
                 <button
                     type="submit"
-                    className="text-s-regular w-full text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                    className="text-s-regular flex justify-center items-center  gap-[10px] w-full text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                    <img src={downloadIcon} alt="download-icon" />
                     Save
                 </button>
             </form>
