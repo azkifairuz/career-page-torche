@@ -18,7 +18,11 @@ export default function Setting(props) {
     const handleCountryCode = (event) =>{
         setCountryCode(event.target.value)
     }
+    const handlePhoneNumber = (event) =>{
+        setPhoneNumber(event.target.value)
+    }
 
+    
     return (
         <div className="p-[8px_8px_16px_8px] w-[313px] flex flex-col gap-4">
             <section className="border-b pb-[4px] border-primaryBlue-main">
