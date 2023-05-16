@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { PencilFill } from "react-bootstrap-icons";
 import downloadIcon  from "assets/icons/download.svg";
+import ToggleSwitch from "components/atoms/ToggleSwicth";
 export default function Setting(props) {
     const { userEmail = "Alexander.colombus@gmail.com", password = "alex123", contact = "8132 1234 52" } = props
     const passwordDisplay = Array(password.length).fill('●').join('')
@@ -15,13 +16,22 @@ export default function Setting(props) {
 
     const [countryCode, setCountryCode] = useState('')
     const [phoneNumber, setPhoneNumber] = useState(`${contact}`)
-
+    const [isJobOpening,setIsJobOpening] = useState(false)
+    const [isJobApplication,setIsJobApplication] = useState(false)
+    
     const handleCountryCode = (event) => {
         setCountryCode(event.target.value)
     }
     const handlePhoneNumber = (event) => {
         setPhoneNumber(event.target.value)
     }
+    
+    const handleToggle1 = () => {
+        setIsJobApplication(!isJobApplication);
+      };
+    const handleToggle2 = () => {
+        setIsJobOpening(!isJobOpening);
+      };
 
     const submitPhoneNumber = (event) => {
         event.preventDefault()
@@ -97,6 +107,25 @@ export default function Setting(props) {
                     Save
                 </button>
             </form>
+
+            <section className="p-[16px] shadow-[0px_0px_10px_0px_#0000001A] rounded-lg flex flex-col gap-[5px] w-full">
+                        <h1 className=" text-neutral-900 font-cairo text-[18px] leading-[24px] ">We'll send you email for updated on job-related news with our notifications.</h1>
+
+                        <div className="flex gap-[4px]  flex-col">
+                            <h1 className="heading-m-bold">
+                                Jobs Oppening
+                            </h1>
+                            <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
+                            <ToggleSwitch onclick={handleToggle2} isActive= {isJobOpening}  />
+                        </div>
+                        <div className="flex gap-[4px]  flex-col">
+                            <h1 className="heading-m-bold">
+                                Jobs Oppening
+                            </h1>
+                            <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
+                            <ToggleSwitch onclick={handleToggle1} isActive= {isJobApplication} />
+                        </div>
+            </section>
         </div>
     )
 }
