@@ -81,53 +81,63 @@ export default function Setting(props) {
                     className="heading-m-bold ">
                     Contact
                 </label>
-                <div className="border-neutral-500 text-neutral-700 flex gap-[14px] border w-full rounded-lg focus:outline-none  focus:border-primaryBlue-main">
-                    <select
-                        className="bg-transparent py-2 pl-4"
-                        value={countryCode}
-                        onChange={handleCountryCode}
-                    >
-                        {
-                            countryCodes.map((country) => (
-                                <option key={country.code} value={country.code}>
-                                    +{country.code}
-                                </option>
-                            ))
-                        }
-                    </select>
-                    <input
-                        className="py-2 pr-4 focus:outline-none  bg-transparent rounded-r-lg border-r border-r-neutral"
-                        id="editContact"
-                        type="text"
-                        value={phoneNumber}
-                        onChange={handlePhoneNumber}>
+                <section className="flex flex-col gap-4 md:flex-row md:justify-between items-center ">
+                    <div className="border-neutral-500 text-neutral-700 flex gap-[14px] border w-full rounded-lg focus:outline-none  focus:border-primaryBlue-main">
+                        <select
+                            className="bg-transparent py-2 pl-4"
+                            value={countryCode}
+                            onChange={handleCountryCode}
+                        >
+                            {
+                                countryCodes.map((country) => (
+                                    <option key={country.code} value={country.code}>
+                                        +{country.code}
+                                    </option>
+                                ))
+                            }
+                        </select>
+                        <input
+                            className="py-2 pr-4 focus:outline-none  bg-transparent rounded-r-lg "
+                            id="editContact"
+                            type="text"
+                            value={phoneNumber}
+                            onChange={handlePhoneNumber}>
 
-                    </input>
-                </div>
-                <button
-                    type="submit"
-                    className="text-s-regular flex justify-center mt-[8px] items-center  gap-[10px] w-full text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
-                    <img src={downloadIcon} alt="download-icon" />
-                    Save
-                </button>
+                        </input>
+                    </div>
+                    <button
+                        type="submit"
+                        className="text-s-regular flex justify-center mt-[8px] md:mt-0 md:w-fit  items-center  gap-[10px] w-full text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                        <img src={downloadIcon} alt="download-icon" />
+                        Save
+                    </button>
+                </section>
             </form>
 
-            <section className="p-[16px] shadow-[0px_0px_10px_0px_#0000001A] rounded-lg flex flex-col gap-[5px] w-full">
-                <h1 className=" text-neutral-900 font-cairo text-[18px] leading-[24px] ">We'll send you email for updated on job-related news with our notifications.</h1>
+            <section className="p-[16px] shadow-[0px_0px_10px_0px_#0000001A] rounded-lg flex flex-col gap-[5px] md:gap-[24px] w-full">
+                <h1 className=" text-neutral-900 font-cairo text-[18px] leading-[24px] mb-[19px] md:mb-[16px]">We'll send you email for updated on job-related news with our notifications.</h1>
 
-                <div className="flex gap-[4px]  flex-col">
-                    <h1 className="heading-m-bold">
-                        Jobs Oppening
-                    </h1>
-                    <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
-                    <ToggleSwitch onclick={handleToggle2} isActive={isJobOpening} />
+                <div className="flex gap-[4px] flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="flex flex-col gap-1 md:gap-[10px]">
+                        <h1 className="heading-m-bold">
+                            Jobs Oppening
+                        </h1>
+                        <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
+                    </div>
+                    <div className="self-end">
+                     <ToggleSwitch onclick={handleToggle2} isActive={isJobOpening} />
+                    </div>
                 </div>
-                <div className="flex gap-[4px]  flex-col">
-                    <h1 className="heading-m-bold">
-                        Jobs Application
-                    </h1>
-                    <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for Jobs that you have applied to.</p>
-                    <ToggleSwitch onclick={handleToggle1} isActive={isJobApplication} />
+                <div className="flex gap-[4px]  flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="flex flex-col gap-1 md:gap-[10px]">
+                        <h1 className="heading-m-bold">
+                            Jobs Application
+                        </h1>
+                        <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for Jobs that you have applied to.</p>
+                    </div>
+                   <div className="self-end">
+                   <ToggleSwitch  onclick={handleToggle1} isActive={isJobApplication} />
+                   </div>
                 </div>
             </section>
         </div>
