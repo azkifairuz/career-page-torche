@@ -16,14 +16,22 @@ export default function Setting(props) {
 
     const [countryCode, setCountryCode] = useState('')
     const [phoneNumber, setPhoneNumber] = useState(`${contact}`)
-    const [isJoOpening,setIsJobOpening] = useState(false)
-
+    const [isJobOpening,setIsJobOpening] = useState(false)
+    const [isJobApplication,setIsJobApplication] = useState(false)
+    
     const handleCountryCode = (event) => {
         setCountryCode(event.target.value)
     }
     const handlePhoneNumber = (event) => {
         setPhoneNumber(event.target.value)
     }
+    
+    const handleToggle1 = () => {
+        setIsJobApplication(!isJobApplication);
+      };
+    const handleToggle2 = () => {
+        setIsJobOpening(!isJobOpening);
+      };
 
     const submitPhoneNumber = (event) => {
         event.preventDefault()
@@ -108,7 +116,14 @@ export default function Setting(props) {
                                 Jobs Oppening
                             </h1>
                             <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
-                            <ToggleSwitch />
+                            <ToggleSwitch onclick={handleToggle2} isActive= {isJobOpening}  />
+                        </div>
+                        <div className="flex gap-[4px]  flex-col">
+                            <h1 className="heading-m-bold">
+                                Jobs Oppening
+                            </h1>
+                            <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
+                            <ToggleSwitch onclick={handleToggle1} isActive= {isJobApplication} />
                         </div>
             </section>
         </div>
