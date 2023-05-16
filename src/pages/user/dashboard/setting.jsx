@@ -97,6 +97,18 @@ export default function Setting(props) {
                     Save
                 </button>
             </form>
+
+            <section className="p-[16px] shadow-[0px_0px_10px_0px_#0000001A] rounded-lg flex flex-col gap-[5px] w-full">
+                        <h1 className=" text-neutral-900 font-cairo text-[18px] leading-[24px] ">We'll send you email for updated on job-related news with our notifications.</h1>
+
+                        <div className="flex gap-[4px]  flex-col">
+                            <h1 className="heading-m-bold">
+                                Jobs Oppening
+                            </h1>
+                            <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
+                            <input type="checkbox" className="w-fit"/>
+                        </div>
+            </section>
         </div>
     )
 }
