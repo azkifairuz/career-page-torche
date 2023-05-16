@@ -60,13 +60,13 @@ export default function Setting(props) {
                         Edit
                     </button>
                 </div>
-                <div className="flex flex-col gap-2 w-full">
-                    <h1 className="heading-m-bold">Password</h1>
-                    <p
-                        type="password"
-                        className="font-cairo text-[16px] leading-[24px] text-neutral-700">{passwordDisplay}</p>
+                <div className="flex flex-col gap-2 w-full md:flex-row md:justify-between">
+                    <div className="flex flex-col md:justify-between md:gap-4">
+                        <h1 className="heading-m-bold">Password</h1>
+                        <p className="font-cairo text-[16px] leading-[24px] text-neutral-700">{passwordDisplay}</p>
+                    </div>
                     <button
-                        className="text-s-regular flex gap-[10px] mt-[8px]  justify-center items-center text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
+                        className="text-s-regular flex gap-[10px] mt-[8px] md:h-fit md:-mb-2 md:self-end  justify-center items-center text-white py-2 px-4 rounded-lg bg-primaryBlue-main active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover">
                         <PencilFill size={12} />
                         Edit
                     </button>
