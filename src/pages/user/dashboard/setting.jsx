@@ -49,7 +49,7 @@ export default function Setting(props) {
             </section>
 
             <section className="min-w-[284px] p-[16px] items-start justify-center shadow-[0px_0px_10px_0px_#0000001A] flex flex-col gap-[24px] rounded-lg">
-                <div className="flex flex-col gap-2 w-full">
+                <div className="flex flex-col md:flex-row gap-2 w-full">
                     <div>
                         <h1 className="heading-m-bold">Email</h1>
                         <p className="font-cairo text-[16px] leading-[24px] text-neutral-700">{userEmail}</p>
