@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { PencilFill } from "react-bootstrap-icons";
 import downloadIcon  from "assets/icons/download.svg";
+import ToggleSwitch from "components/atoms/ToggleSwicth";
 export default function Setting(props) {
     const { userEmail = "Alexander.colombus@gmail.com", password = "alex123", contact = "8132 1234 52" } = props
     const passwordDisplay = Array(password.length).fill('●').join('')
@@ -15,6 +16,7 @@ export default function Setting(props) {
 
     const [countryCode, setCountryCode] = useState('')
     const [phoneNumber, setPhoneNumber] = useState(`${contact}`)
+    const [isJoOpening,setIsJobOpening] = useState(false)
 
     const handleCountryCode = (event) => {
         setCountryCode(event.target.value)
@@ -106,7 +108,7 @@ export default function Setting(props) {
                                 Jobs Oppening
                             </h1>
                             <p className="font-cairo text-[14px] leading-[24px] text-neutral-700">Notification email for job openings that suit your profile</p>
-                            <input type="checkbox" className="w-fit"/>
+                            <ToggleSwitch />
                         </div>
             </section>
         </div>
