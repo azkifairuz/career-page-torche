@@ -45,7 +45,7 @@ export default function AdminSidebar(props) {
         </ul>
       </aside>
       <button
-        className="absolute left-9 top-[63px] lg:hidden"
+        className="absolute left-[18px] md:left-[32px] lg:left-[30px]  top-[63px] lg:hidden"
         onClick={handleOpen}
       >
         <img src={Hamburger} alt="Hamburger Button" />
