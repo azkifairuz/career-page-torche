@@ -92,7 +92,7 @@ export default function Setting(props) {
                     Contact
                 </label>
                 <section className="flex flex-col gap-4 md:flex-row md:justify-between items-center ">
-                    <div className={`${isFocused && "border-primaryBlue-main"}  border-neutral-500 md:max-w-[344px] text-neutral-700 flex gap-[14px] border w-full rounded-lg `}>
+                    <div className={`${isFocused && "border-primaryBlue-main"} shadow-[0px_0px_10px_0px_#0000001A] border-neutral-500 md:max-w-[344px] text-neutral-700 flex gap-[14px] border w-full rounded-lg `}>
                         <select
                             className="bg-transparent py-2 pl-4  focus:outline-none "
                             onChange={handleCountryCode}
