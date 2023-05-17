@@ -5,10 +5,8 @@ export default function Form() {
   const [input, setinput] = useState({
     username: user.username,
     title: user.title,
-    language: user.language,
-    ageOrGender: user.ageOrGender,
-    currentSalary: user.currentSalary,
-    expectedSalary: user.expectedSalary,
+    gender: user.gender,
+    age: user.age,
     description: user.description,
     phone: user.phone,
     email: user.email,
@@ -37,10 +35,8 @@ export default function Form() {
     console.log(user);
     user.username = input.username
     user.title = input.title
-    user.language = input.language
-    user.ageOrGender = input.ageOrGender
-    user.currentSalary = input.currentSalary
-    user.expectedSalary = input.expectedSalary
+    user.gender = input.gender
+    user.age = input.age
     user.description = input.description
     user.phone = input.phone
     user.country = input.country
@@ -91,27 +87,27 @@ export default function Form() {
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              language
+              Jenis Kelamin
             </label>
             <input
               type="text"
-              name="language"
-              placeholder="Input Your Language"
+              name="gender"
+              placeholder="Input Your gender"
               className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.language}
+              value={input.gender}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Umur/Jenis Kelamin
+              Tanggal Lahir
             </label>
             <input
               type="text"
               name="genderOrAge"
               placeholder="eg:12/men"
               className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.ageOrGender || ""}
+              value={input.age || ""}
               onChange={handleChange}
             />
           </div>
