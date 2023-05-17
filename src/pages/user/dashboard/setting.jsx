@@ -24,7 +24,9 @@ export default function Setting(props) {
         setIsFocused(true);
       };
     
-
+      const handleBlur = () => {
+        setIsFocused(false);
+      };
     
 
     const handleCountryCode = (event) => {
@@ -111,6 +113,7 @@ export default function Setting(props) {
                             value={phoneNumber}
                             onChange={handlePhoneNumber}
                             onFocus={handleFocus}
+                            onBlur={handleBlur}
                             >
                             
                         </input>
