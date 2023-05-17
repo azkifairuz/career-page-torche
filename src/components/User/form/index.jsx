@@ -1,154 +1,131 @@
 import React, { useState } from "react";
-import { user } from "data/user"
+import { user } from "data/user";
+import { countryCodes } from "data/countryCodes";
 export default function Form() {
-
   const [input, setinput] = useState({
     username: user.username,
     title: user.title,
-    language: user.language,
-    ageOrGender: user.ageOrGender,
-    currentSalary: user.currentSalary,
-    expectedSalary: user.expectedSalary,
+    gender: user.gender,
+    dateBirth: user.dateBirth,
     description: user.description,
     phone: user.phone,
     email: user.email,
     country: user.country,
     city: user.city,
-    address: user.address
-
+    address: user.address,
   });
-  const [isValid, setIsValid] = useState(true)
+  const [countryCode, setCountryCode] = useState("");
+  const handleCountryCode = (event) => {
+    setCountryCode(event.target.value);
+  };
+  const [isValid, setIsValid] = useState(true);
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setinput((values) => ({ ...values, [name]: value }));
-
-
   };
   const handleSubmit = (event) => {
     event.preventDefault();
     if (input.username === "") {
-      setIsValid(false)
-
+      setIsValid(false);
     } else {
-      setIsValid(true)
+      setIsValid(true);
     }
     console.log(isValid);
     console.log(user);
-    user.username = input.username
-    user.title = input.title
-    user.language = input.language
-    user.ageOrGender = input.ageOrGender
-    user.currentSalary = input.currentSalary
-    user.expectedSalary = input.expectedSalary
-    user.description = input.description
-    user.phone = input.phone
-    user.country = input.country
-    user.city = input.city
-    user.address = input.address
+    user.username = input.username;
+    user.title = input.title;
+    user.gender = input.gender;
+    user.dateBirth = input.dateBirth;
+    user.description = input.description;
+    user.phone = input.phone;
+    user.country = input.country;
+    user.city = input.city;
+    user.address = input.address;
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="md:w-[472px] p-4 shadow-[0px_0px_10px_0_#0000001A] flex  md:py-[32px] md:px-[42px] flex-col gap-8 lg:shadow-none lg:w-[80%] lg:max-w-[1000px] lg:min-w-[714px] rounded-lg"
+      className="min-w-[313px] p-[24px_32px_24px_32px] shadow-[0px_0px_10px_0_#0000001A] flex md:min-w-[472px]  md:p-[24px_32px_24px_32px] flex-col gap-8 lg:min-w-[819px] rounded-lg"
     >
       <div>
         <header className="mb-[30px]">
-          <h1 className="font-rajdhani text-start heading-l-medium ">
-            Basic Information
+          <h1 className="font-rajdhani text-start heading-l-bold text-neutral-1000 ">
+            Profile
           </h1>
         </header>
-        <section
-          className="flex flex-col lg:grid lg:grid-cols-2 gap-5 mt-2"
-        >
+        <section className="flex flex-col lg:grid lg:grid-cols-2 gap-5 mt-2">
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800  text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000  text-l-bold">
               Nama
             </label>
             <input
               type="text"
               name="username"
               placeholder="Input Your Name"
-              className="py-2 px-4 text-neutral-500 focus:text-neutral-900 outline outline-1 outline-primaryBlue-main rounded-md lg:focus:outline-neutral-800   focus:outline-primaryBlue-main md:outline-neutral-500 lg:ring-neutral-800 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 text-neutral-500 focus:text-neutral-900 outline outline-1  rounded-md    focus:outline-primaryBlue-main border border-primaryNavy-border  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.username}
               onChange={handleChange}
             />
-            <p className={`text-danger-main ${isValid ? "hidden" : "block"}`}>Nama Tidak Boleh Kosong</p>
+            <p className={`text-danger-main ${isValid ? "hidden" : "block"}`}>
+              Nama Tidak Boleh Kosong
+            </p>
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              title
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
+              Title
             </label>
             <input
               type="text"
               name="title"
               placeholder="Input Your Title"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.title}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              language
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
+              Jenis Kelamin
             </label>
-            <input
+            <select
               type="text"
-              name="language"
-              placeholder="Input Your Language"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.language}
+              name="gender"
+              placeholder="Pilih Jenis Kelamin"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 bg-white border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
+              value={input.gender}
+              defaultValue="Pilih jenis Kelamin"
               onChange={handleChange}
-            />
+            >
+              <option value="Pilih Jenis Kelamin" selected hidden>
+                Pilih Jenis Kelamin
+              </option>
+              <option>Laki-Laki</option>
+              <option>Perempuan</option>
+            </select>
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Umur/Jenis Kelamin
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
+              Tanggal Lahir
             </label>
             <input
-              type="text"
-              name="genderOrAge"
-              placeholder="eg:12/men"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.ageOrGender || ""}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Gaji Sekarang (IDR)
-            </label>
-            <input
-              type="text"
-              name="currentSalary"
-              placeholder="Input your current salary"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.currentSalary.toLocaleString("id-ID")}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Gaji Yang Diharapkan(IDR)
-            </label>
-            <input
-              type="text"
-              name="expectedSalary"
-              placeholder="Input your expected salary"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main outline  md:outline-neutral-500 focus:outline-primaryBlue-main focus:ring-1  lg:focus:outline-neutral-700 focus:ring-primaryBlue-main"
-              value={input.expectedSalary.toLocaleString("id-ID")}
+              type="date"
+              name="dateBirth"
+              placeholder="Pilih Tanggal Lahir"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
+              value={input.dateBirth || ""}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col lg:col-span-2 gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              description
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
+              Tentang Saya
             </label>
             <textarea
               type="text"
               name="description"
-              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.description}
               onChange={handleChange}
             ></textarea>
@@ -157,25 +134,39 @@ export default function Form() {
       </div>
       <div>
         <header>
-          <h1 className="font-rajdhani text-start heading-l-medium">Contact</h1>
+          <h1 className="font-rajdhani text-start heading-l-bold text-neutral-1000">
+            Contact
+          </h1>
         </header>
         <section className="flex mt-2 lg:grid lg:grid-cols-2 flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              phone
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
+              No Telp
             </label>
+           <div className="flex w-full">
+           <select
+              className="py-2 px-4 bg-white outline-1 outline  rounded-l-md text-neutral-500 focus:text-neutral-900 border border-r-0 border-primaryNavy-border  focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main "
+              onChange={handleCountryCode}
+            >
+              {countryCodes.map((country) => (
+                <option key={country.code} value={country.code}>
+                  +{country.code}
+                </option>
+              ))}
+            </select>
             <input
               type="text"
               name="phone"
               placeholder="eg:+62 08xxxx"
               value={input.phone}
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-r-md border-l-0 text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline w-full focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
+           </div>
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo  self-start text-neutral-800 text-xl-regular">
-              Alamat email
+            <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
+              Email
             </label>
             <input
               type="text"
@@ -183,11 +174,11 @@ export default function Form() {
               value={input.email}
               placeholder="eg:example@gmail.com"
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo  self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
               Negara
             </label>
             <input
@@ -196,11 +187,11 @@ export default function Form() {
               value={input.country}
               placeholder="eg: indonesia"
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Kota
             </label>
             <input
@@ -209,24 +200,27 @@ export default function Form() {
               value={input.city}
               placeholder="eg: jakarta"
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex lg:col-span-2 flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Alamat
             </label>
-            <textarea
+            <input
               type="text"
               name="address"
               value={input.address}
               placeholder="eg: jl.abc kec.abc kab.abc"
               onChange={handleChange}
-              className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-            ></textarea>
+              className="py-2  resize-none px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
+            ></input>
           </div>
-          <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:place-self-end lg:w-[314px] lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
-            Save Settings
+          <button
+            onSubmit={handleSubmit}
+            className="bg-primaryBlue-main lg:place-self-end lg:w-[206px] active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover lg:col-span-2 text-white font-cairo text-l-regular p-[14px_16px_14px_16px] rounded-lg border"
+          >
+            Simpan
           </button>
         </section>
       </div>

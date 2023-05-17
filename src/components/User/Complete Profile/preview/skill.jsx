@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { PlusCircle } from "react-bootstrap-icons";
-import { useNavigate } from "react-router-dom";
 import SkillPopup from "../popup/skillPopup";
 
 export default function Skill() {
-    const navigate = useNavigate()
     const [isCardOpen,setIsCardOpen] = useState(false)
     const handleCardOpen = ()=>{
       setIsCardOpen(!isCardOpen)
