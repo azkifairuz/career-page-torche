@@ -9,7 +9,7 @@ import AdminNavbar from "components/organisms/AdminNavbar";
 
 export default function AdminDashboard() {
   return (
-    <div className="box-border flex-1 pb-[35px] pr-[100px] pl-[30px] bg-[#fcfdfd] font-cairo flex flex-col">
+    <div className="box-border flex-1 pb-[35px] pr-[30px] lg:pr-[100px] pl-[30px] bg-[#fcfdfd] font-cairo flex flex-col">
       <AdminNavbar />
       <h1 className="heading-l-bold">Welcome to Admin Career Page</h1>
       <section className="flex gap-4 mt-[55px]">

@@ -14,7 +14,7 @@ export default function Vacancy() {
   const [filterStatus, setFilterStatus] = useState("all");
   const maxData = 100;
   return (
-    <main className="flex flex-col flex-1 pb-[35px] pr-[100px] pl-[30px] text-black">
+    <main className="flex flex-col flex-1 pb-[35px] pr-[30px] lg:pr-[100px] pl-[30px] text-black">
       <AdminNavbar />
       <section className="flex justify-between items-center">
         <h1 className="heading-l-bold ">Kelola Lowongan</h1>
