@@ -2,17 +2,12 @@ import React, { useState } from "react"
 import { PencilFill } from "react-bootstrap-icons";
 import downloadIcon from "assets/icons/download.svg";
 import ToggleSwitch from "components/atoms/ToggleSwicth";
+import {countryCodes} from "data/countryCodes"
 export default function Setting(props) {
     const { userEmail = "Alexander.colombus@gmail.com", password = "alex123", contact = "8132 1234 52" } = props
     const passwordDisplay = Array(password.length).fill('●').join('')
     
-    const countryCodes = [
-        { code: '62', name: 'Indonesia' },
-        { code: '1', name: 'United States' },
-        { code: '44', name: 'United Kingdom' },
-        { code: '91', name: 'India' },
-        { code: '81', name: 'Japan' },
-    ];
+
 
     const [countryCode, setCountryCode] = useState('')
     const [phoneNumber, setPhoneNumber] = useState(`${contact}`)
@@ -94,7 +89,7 @@ export default function Setting(props) {
                 <section className="flex flex-col gap-4 md:flex-row md:justify-between items-center ">
                     <div className={`${isFocused && "border-primaryBlue-main"} shadow-[0px_0px_10px_0px_#0000001A] border-neutral-500 md:max-w-[344px] text-neutral-700 flex gap-[14px] border w-full rounded-lg `}>
                         <select
-                            className="bg-transparent py-2 pl-4  focus:outline-none "
+                            className="bg-transparent border-l-0 rounded-l-lg border-neutral-500 bg-white py-2 pl-4  focus:outline-none "
                             onChange={handleCountryCode}
                             onFocus={handleFocus}
                             onBlur={handleBlur}
