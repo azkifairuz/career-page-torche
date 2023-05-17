@@ -31,15 +31,15 @@ export default function VacancyCard(props) {
         </p>
       </td>
 
-      <td className={index === 0 && "pt-12"}>
+      <td className={` hidden md:table-cell ${index === 0 && "pt-12"}`}>
         <h1 className="text-m-regular text-center">{endDate}</h1>
       </td>
 
       <td
-        align="right"
-        className={`${index === 0 && "pt-12"} rounded-r-xl border-0 pr-[98px]`}
+        align="center"
+        className={`${index === 0 && "pt-12"} rounded-r-xl border-0 pr-8 `}
       >
-        <button className="text-blue-500 font-semibold text-sm cursor-pointer">
+        <button className="text-blue-500 font-semibold text-sm cursor-pointer  ">
           Lihat Detail
         </button>
       </td>

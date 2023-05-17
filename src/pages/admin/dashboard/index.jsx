@@ -33,7 +33,7 @@ export default function AdminDashboard() {
                 Lowongan
               </th>
               <th className=" border-0 font-semibold">Jumlah Lamaran</th>
-              <th className=" border-0 font-semibold">End Date</th>
+              <th className=" border-0 font-semibold hidden md:table-cell">End Date</th>
               <th className="rounded-r-[32px] border-0 ">{""}</th>
             </thead>
             <tbody>
