@@ -9,14 +9,16 @@ import AdminNavbar from "components/organisms/AdminNavbar";
 
 export default function AdminDashboard() {
   return (
-    <div className="box-border flex-1 pb-[35px] pr-[30px] lg:pr-[100px] pl-[30px] bg-[#fcfdfd] font-cairo flex flex-col">
+    <div className="box-border flex-1 pb-[35px] px-[18px] md:px-[32px] lg:px-[30px] lg:pr-[100px] bg-[#fcfdfd] font-cairo flex flex-col">
       <AdminNavbar />
       <h1 className="heading-l-bold">Welcome to Admin Career Page</h1>
-      <section className="flex gap-4 mt-[55px]">
-        <Card count="10" title="Lamaran Sedang Aktif" icon={lamaran1} />
-        <Card count="10" title="Lamaran Belum Diproses" icon={lamaran2} />
-        <Card count="10" title="Lamaran Sedang Diproses" icon={lamaran3} />
-      </section>
+      <div className="relative h-[126px] mt-[55px] ">
+        <section className="absolute  w-screen p-1 lg:w-auto lg:overflow-x-hidden flex gap-4 overflow-x-scroll ">
+          <Card count="10" title="Lamaran Sedang Aktif" icon={lamaran1} />
+          <Card count="10" title="Lamaran Belum Diproses" icon={lamaran2} />
+          <Card count="10" title="Lamaran Sedang Diproses" icon={lamaran3} />
+        </section>
+      </div>
       <section className="flex flex-col gap-[8px]">
         <h1 className="px-[12px] heading-m-medium mt-[31px]">
           Lowongan belum diproses terbanyak
