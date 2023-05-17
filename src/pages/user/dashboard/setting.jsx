@@ -82,7 +82,7 @@ export default function Setting(props) {
                     Contact
                 </label>
                 <section className="flex flex-col gap-4 md:flex-row md:justify-between items-center ">
-                    <div className="border-neutral-500 text-neutral-700 flex gap-[14px] border w-full rounded-lg focus:outline-none  focus:border-primaryBlue-main">
+                    <div className="border-neutral-500 md:max-w-[344px] text-neutral-700 flex gap-[14px] border w-full rounded-lg ">
                         <select
                             className="bg-transparent py-2 pl-4"
                             value={countryCode}
@@ -97,7 +97,7 @@ export default function Setting(props) {
                             }
                         </select>
                         <input
-                            className="py-2 pr-4 focus:outline-none  bg-transparent rounded-r-lg "
+                            className="py-2 pr-4 focus:outline-none border w-full   focus:border-primaryBlue-main rounded-r-lg "
                             id="editContact"
                             type="text"
                             value={phoneNumber}
