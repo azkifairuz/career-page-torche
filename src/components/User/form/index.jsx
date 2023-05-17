@@ -66,7 +66,7 @@ export default function Form() {
               type="text"
               name="username"
               placeholder="Input Your Name"
-              className="py-2 px-4 text-neutral-500 focus:text-neutral-900 outline outline-1  rounded-md lg:focus:outline-neutral-800   focus:outline-primaryBlue-main md:outline-neutral-500 lg:ring-neutral-800 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 text-neutral-500 focus:text-neutral-900 outline outline-1  rounded-md    focus:outline-primaryBlue-main border border-primaryNavy-border  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.username}
               onChange={handleChange}
             />
@@ -80,7 +80,7 @@ export default function Form() {
               type="text"
               name="title"
               placeholder="Input Your Title"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.title}
               onChange={handleChange}
             />
@@ -93,10 +93,11 @@ export default function Form() {
               type="text"
               name="gender"
               placeholder="Pilih Jenis Kelamin"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 bg-white md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 bg-white border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.gender}
+              defaultValue="Pilih jenis Kelamin"
               onChange={handleChange}>
-                <option value=""  selected hidden>Pilih Jenis Kelamin</option>
+                <option value="Pilih Jenis Kelamin"  selected hidden>Pilih Jenis Kelamin</option>
                 <option>Laki-Laki</option>
                 <option>Perempuan</option>
             </select>
@@ -106,22 +107,22 @@ export default function Form() {
               Tanggal Lahir
             </label>
             <input
-              type="text"
-              name="genderOrAge"
-              placeholder="eg:12/men"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.age || ""}
+              type="date"
+              name="dateBirth"
+              placeholder="Pilih Tanggal Lahir"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
+              value={input.dateBirth || ""}
               onChange={handleChange}
             />
           </div>
           <div className="flex flex-col lg:col-span-2 gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              Description
+              Tentang Saya
             </label>
             <textarea
               type="text"
               name="description"
-              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.description}
               onChange={handleChange}
             ></textarea>
@@ -135,7 +136,7 @@ export default function Form() {
         <section className="flex mt-2 lg:grid lg:grid-cols-2 flex-col gap-4">
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              Phone
+              No Telp
             </label>
             <input
               type="text"
@@ -143,12 +144,12 @@ export default function Form() {
               placeholder="eg:+62 08xxxx"
               value={input.phone}
               onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
-              Alamat email
+               Email
             </label>
             <input
               type="text"
@@ -156,7 +157,7 @@ export default function Form() {
               value={input.email}
               placeholder="eg:example@gmail.com"
               onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -169,7 +170,7 @@ export default function Form() {
               value={input.country}
               placeholder="eg: indonesia"
               onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -182,24 +183,24 @@ export default function Form() {
               value={input.city}
               placeholder="eg: jakarta"
               onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex lg:col-span-2 flex-col gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Alamat
             </label>
-            <textarea
+            <input
               type="text"
               name="address"
               value={input.address}
               placeholder="eg: jl.abc kec.abc kab.abc"
               onChange={handleChange}
-              className="py-2 h-[167px] resize-none px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-            ></textarea>
+              className="py-2  resize-none px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
+            ></input>
           </div>
-          <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:place-self-end lg:w-[314px] lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
-            Save Settings
+          <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:place-self-end lg:w-[206px] active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover lg:col-span-2 text-white font-cairo text-l-regular p-[14px_16px_14px_16px] rounded-lg border">
+            Simpan
           </button>
         </section>
       </div>
