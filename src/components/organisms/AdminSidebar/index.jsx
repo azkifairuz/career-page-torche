@@ -10,15 +10,26 @@ import WawancaraIcon from "assets/icons/WawancaraIcon.svg";
 import Hamburger from "assets/icons/hamburger.svg";
 
 export default function AdminSidebar(props) {
-  const [onCollapse, setOnCollapse] = useState(false);
+  const [onOpen, setOnOpen] = useState(false);
 
-  const handleCollapse = () => {
-    setOnCollapse(!onCollapse);
+  const handleOpen = () => {
+    setOnOpen(!onOpen);
+    console.log(onOpen);
   };
 
   return (
     <>
-      <aside className="hidden lg:flex box-border flex-col text-black border-r-2 sticky top-0 left-0 h-screen pt-[150px] pl-[100px] pr-[57px]">
+      <aside
+        className={` ${
+          onOpen ? "fixed flex" : "hidden"
+        } bg-neutral-100 lg:flex box-border flex-col text-black border-0 border-r-2 lg:sticky top-0 left-0 h-screen pt-[150px] px-[57px] lg:pl-[100px] z-10`}
+      >
+        <button
+          className="absolute top-[63px] lg:hidden"
+          onClick={handleOpen}
+        >
+          <img src={Hamburger} alt="Hamburger Button" />
+        </button>
         <div className="flex gap-[12px] p-[12px] items-center bg-neutral-200 rounded-[12px]">
           <img src={Logo} alt="Torche Logo" className="w-[44px]" />
           <section className="flex flex-col gap-[4px]">
@@ -33,8 +44,11 @@ export default function AdminSidebar(props) {
           <Item src={WawancaraIcon} title="Wawancara" href="wawancara" />
         </ul>
       </aside>
-      <button className="absolute left-9 top-[63px] lg:hidden">
-        <img src={Hamburger} alt=""/>
+      <button
+        className="absolute left-9 top-[63px] lg:hidden"
+        onClick={handleOpen}
+      >
+        <img src={Hamburger} alt="Hamburger Button" />
       </button>
     </>
   );
