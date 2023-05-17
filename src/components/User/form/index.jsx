@@ -47,7 +47,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="md:w-[472px] p-4 shadow-[0px_0px_10px_0_#0000001A] flex  md:py-[32px] md:px-[42px] flex-col gap-8 lg:shadow-none lg:w-[80%] lg:max-w-[1000px] lg:min-w-[714px] rounded-lg"
+      className="min-w-[313px] p-[24px_32px_24px_32px] shadow-[0px_0px_10px_0_#0000001A] flex md:min-w-[472px]  md:p-[24px_32px_24px_32px] flex-col gap-8 lg:min-w-[819px] rounded-lg"
     >
       <div>
         <header className="mb-[30px]">
