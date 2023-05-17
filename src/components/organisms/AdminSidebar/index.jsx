@@ -7,7 +7,7 @@ import DashboardIcon from "assets/icons/DashboradIcon.svg";
 import LowonganIcon from "assets/icons/LowonganIcon.svg";
 import PelamarIcon from "assets/icons/PelamarIcon.svg";
 import WawancaraIcon from "assets/icons/WawancaraIcon.svg";
-import { ThreeDotsVertical } from "react-bootstrap-icons";
+import Hamburger from "assets/icons/hamburger.svg";
 
 export default function AdminSidebar(props) {
   const [onCollapse, setOnCollapse] = useState(false);
@@ -15,9 +15,6 @@ export default function AdminSidebar(props) {
   const handleCollapse = () => {
     setOnCollapse(!onCollapse);
   };
-
-  if (onCollapse) {
-  }
 
   return (
     <>
@@ -36,8 +33,8 @@ export default function AdminSidebar(props) {
           <Item src={WawancaraIcon} title="Wawancara" href="wawancara" />
         </ul>
       </aside>
-      <button className="absolute left-9 lg:hidden">
-        <ThreeDotsVertical />
+      <button className="absolute left-9 top-[63px] lg:hidden">
+        <img src={Hamburger} alt=""/>
       </button>
     </>
   );
