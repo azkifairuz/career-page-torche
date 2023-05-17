@@ -51,8 +51,8 @@ export default function Form() {
     >
       <div>
         <header className="mb-[30px]">
-          <h1 className="font-rajdhani text-start heading-l-medium ">
-            Basic Information
+          <h1 className="font-rajdhani text-start heading-l-bold text-neutral-1000 ">
+            Profile
           </h1>
         </header>
         <section
@@ -113,7 +113,7 @@ export default function Form() {
           </div>
           <div className="flex flex-col lg:col-span-2 gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              description
+              Description
             </label>
             <textarea
               type="text"
@@ -127,12 +127,12 @@ export default function Form() {
       </div>
       <div>
         <header>
-          <h1 className="font-rajdhani text-start heading-l-medium">Contact</h1>
+          <h1 className="font-rajdhani text-start heading-l-bold text-neutral-1000">Contact</h1>
         </header>
         <section className="flex mt-2 lg:grid lg:grid-cols-2 flex-col gap-4">
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              phone
+              Phone
             </label>
             <input
               type="text"
