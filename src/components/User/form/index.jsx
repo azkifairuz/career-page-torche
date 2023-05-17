@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { user } from "data/user"
+import { user } from "data/user";
+import { countryCodes } from "data/countryCodes";
 export default function Form() {
-
   const [input, setinput] = useState({
     username: user.username,
     title: user.title,
@@ -12,36 +12,36 @@ export default function Form() {
     email: user.email,
     country: user.country,
     city: user.city,
-    address: user.address
-
+    address: user.address,
   });
-  const [isValid, setIsValid] = useState(true)
+  const [countryCode, setCountryCode] = useState("");
+  const handleCountryCode = (event) => {
+    setCountryCode(event.target.value);
+  };
+  const [isValid, setIsValid] = useState(true);
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setinput((values) => ({ ...values, [name]: value }));
-
-
   };
   const handleSubmit = (event) => {
     event.preventDefault();
     if (input.username === "") {
-      setIsValid(false)
-
+      setIsValid(false);
     } else {
-      setIsValid(true)
+      setIsValid(true);
     }
     console.log(isValid);
     console.log(user);
-    user.username = input.username
-    user.title = input.title
-    user.gender = input.gender
-    user.dateBirth = input.dateBirth
-    user.description = input.description
-    user.phone = input.phone
-    user.country = input.country
-    user.city = input.city
-    user.address = input.address
+    user.username = input.username;
+    user.title = input.title;
+    user.gender = input.gender;
+    user.dateBirth = input.dateBirth;
+    user.description = input.description;
+    user.phone = input.phone;
+    user.country = input.country;
+    user.city = input.city;
+    user.address = input.address;
   };
 
   return (
@@ -55,9 +55,7 @@ export default function Form() {
             Profile
           </h1>
         </header>
-        <section
-          className="flex flex-col lg:grid lg:grid-cols-2 gap-5 mt-2"
-        >
+        <section className="flex flex-col lg:grid lg:grid-cols-2 gap-5 mt-2">
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-1000  text-l-bold">
               Nama
@@ -70,7 +68,9 @@ export default function Form() {
               value={input.username}
               onChange={handleChange}
             />
-            <p className={`text-danger-main ${isValid ? "hidden" : "block"}`}>Nama Tidak Boleh Kosong</p>
+            <p className={`text-danger-main ${isValid ? "hidden" : "block"}`}>
+              Nama Tidak Boleh Kosong
+            </p>
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
@@ -96,10 +96,13 @@ export default function Form() {
               className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 bg-white border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.gender}
               defaultValue="Pilih jenis Kelamin"
-              onChange={handleChange}>
-                <option value="Pilih Jenis Kelamin"  selected hidden>Pilih Jenis Kelamin</option>
-                <option>Laki-Laki</option>
-                <option>Perempuan</option>
+              onChange={handleChange}
+            >
+              <option value="Pilih Jenis Kelamin" selected hidden>
+                Pilih Jenis Kelamin
+              </option>
+              <option>Laki-Laki</option>
+              <option>Perempuan</option>
             </select>
           </div>
           <div className="flex flex-col gap-1">
@@ -131,25 +134,39 @@ export default function Form() {
       </div>
       <div>
         <header>
-          <h1 className="font-rajdhani text-start heading-l-bold text-neutral-1000">Contact</h1>
+          <h1 className="font-rajdhani text-start heading-l-bold text-neutral-1000">
+            Contact
+          </h1>
         </header>
         <section className="flex mt-2 lg:grid lg:grid-cols-2 flex-col gap-4">
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               No Telp
             </label>
+           <div className="flex w-full">
+           <select
+              className="py-2 px-4 bg-white outline-1 outline  rounded-l-md text-neutral-500 focus:text-neutral-900 border border-r-0 border-primaryNavy-border  focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main "
+              onChange={handleCountryCode}
+            >
+              {countryCodes.map((country) => (
+                <option key={country.code} value={country.code}>
+                  +{country.code}
+                </option>
+              ))}
+            </select>
             <input
               type="text"
               name="phone"
               placeholder="eg:+62 08xxxx"
               value={input.phone}
               onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-r-md border-l-0 text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline w-full focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             />
+           </div>
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
-               Email
+              Email
             </label>
             <input
               type="text"
@@ -199,7 +216,10 @@ export default function Form() {
               className="py-2  resize-none px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
             ></input>
           </div>
-          <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:place-self-end lg:w-[206px] active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover lg:col-span-2 text-white font-cairo text-l-regular p-[14px_16px_14px_16px] rounded-lg border">
+          <button
+            onSubmit={handleSubmit}
+            className="bg-primaryBlue-main lg:place-self-end lg:w-[206px] active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover lg:col-span-2 text-white font-cairo text-l-regular p-[14px_16px_14px_16px] rounded-lg border"
+          >
             Simpan
           </button>
         </section>
