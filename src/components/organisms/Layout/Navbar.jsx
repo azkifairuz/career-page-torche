@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky z-50 top-0 right-0 left-0 box-border bg-primaryNavy-main ">
+      <nav className="sticky z-50 top-0 right-0 left-0 box-border bg-primaryNavy-main w-[100vw]">
         <div className=" font-rajdhani py-[1px] px-[16px] md:px-[32px] lg:px-[100px] font-medium  text-white flex items-center justify-between h-fit">
           <section className="flex gap-[24px]">
             <Link to="/" className="cursor-pointer">

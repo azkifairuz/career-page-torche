@@ -4,7 +4,7 @@ import * as Icon from "react-bootstrap-icons";
 
 export default function Footer() {
   return (
-    <footer className="text-white bg-neutral-1000 px-[20px] md:px-[50px] lg:px-[120px]">
+    <footer className="text-white bg-neutral-1000 px-[20px] md:px-[50px] lg:px-[120px] left-0 right-0">
       <section className="pt-[40px] pb-[16px] md:py-[40px] lg:py-[70px] flex flex-col lg:flex-row text-m-regular lg:justify-between gap-[16px] md:gap-[32px]">
         <div className="flex flex-col w-full lg:w-5/12 gap-[8px]">
           <img src={Logo} alt="Logo" className="h-[89px] w-[142px]"></img>
