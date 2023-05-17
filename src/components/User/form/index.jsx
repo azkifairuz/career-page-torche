@@ -66,7 +66,7 @@ export default function Form() {
               type="text"
               name="username"
               placeholder="Input Your Name"
-              className="py-2 px-4 text-neutral-500 focus:text-neutral-900 outline outline-1 outline-primaryBlue-main rounded-md lg:focus:outline-neutral-800   focus:outline-primaryBlue-main md:outline-neutral-500 lg:ring-neutral-800 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 text-neutral-500 focus:text-neutral-900 outline outline-1  rounded-md lg:focus:outline-neutral-800   focus:outline-primaryBlue-main md:outline-neutral-500 lg:ring-neutral-800 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.username}
               onChange={handleChange}
             />
@@ -80,7 +80,7 @@ export default function Form() {
               type="text"
               name="title"
               placeholder="Input Your Title"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.title}
               onChange={handleChange}
             />
@@ -93,7 +93,7 @@ export default function Form() {
               type="text"
               name="gender"
               placeholder="Input Your gender"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.gender}
               onChange={handleChange}
             />
@@ -106,7 +106,7 @@ export default function Form() {
               type="text"
               name="genderOrAge"
               placeholder="eg:12/men"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.age || ""}
               onChange={handleChange}
             />
@@ -118,7 +118,7 @@ export default function Form() {
             <textarea
               type="text"
               name="description"
-              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4 h-[167px] resize-none outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.description}
               onChange={handleChange}
             ></textarea>
@@ -140,7 +140,7 @@ export default function Form() {
               placeholder="eg:+62 08xxxx"
               value={input.phone}
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -153,7 +153,7 @@ export default function Form() {
               value={input.email}
               placeholder="eg:example@gmail.com"
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -166,7 +166,7 @@ export default function Form() {
               value={input.country}
               placeholder="eg: indonesia"
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -179,7 +179,7 @@ export default function Form() {
               value={input.city}
               placeholder="eg: jakarta"
               onChange={handleChange}
-              className="py-2 px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             />
           </div>
           <div className="flex lg:col-span-2 flex-col gap-1">
@@ -192,7 +192,7 @@ export default function Form() {
               value={input.address}
               placeholder="eg: jl.abc kec.abc kab.abc"
               onChange={handleChange}
-              className="py-2 h-[167px] resize-none px-4 outline-primaryBlue-main outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              className="py-2 h-[167px] resize-none px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
             ></textarea>
           </div>
           <button onSubmit={handleSubmit} className="bg-primaryBlue-main lg:place-self-end lg:w-[314px] lg:col-span-2 text-white font-cairo text-l-regular py-2 px-4 rounded-lg border">
