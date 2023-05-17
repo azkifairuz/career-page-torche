@@ -6,7 +6,7 @@ export default function Form() {
     username: user.username,
     title: user.title,
     gender: user.gender,
-    age: user.age,
+    dateBirth: user.dateBirth,
     description: user.description,
     phone: user.phone,
     email: user.email,
@@ -36,7 +36,7 @@ export default function Form() {
     user.username = input.username
     user.title = input.title
     user.gender = input.gender
-    user.age = input.age
+    user.dateBirth = input.dateBirth
     user.description = input.description
     user.phone = input.phone
     user.country = input.country
@@ -59,7 +59,7 @@ export default function Form() {
           className="flex flex-col lg:grid lg:grid-cols-2 gap-5 mt-2"
         >
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800  text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000  text-l-bold">
               Nama
             </label>
             <input
@@ -73,8 +73,8 @@ export default function Form() {
             <p className={`text-danger-main ${isValid ? "hidden" : "block"}`}>Nama Tidak Boleh Kosong</p>
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              title
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
+              Title
             </label>
             <input
               type="text"
@@ -86,7 +86,7 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Jenis Kelamin
             </label>
             <input
@@ -99,7 +99,7 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Tanggal Lahir
             </label>
             <input
@@ -111,34 +111,8 @@ export default function Form() {
               onChange={handleChange}
             />
           </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Gaji Sekarang (IDR)
-            </label>
-            <input
-              type="text"
-              name="currentSalary"
-              placeholder="Input your current salary"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.currentSalary.toLocaleString("id-ID")}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
-              Gaji Yang Diharapkan(IDR)
-            </label>
-            <input
-              type="text"
-              name="expectedSalary"
-              placeholder="Input your expected salary"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 outline-primaryBlue-main outline  md:outline-neutral-500 focus:outline-primaryBlue-main focus:ring-1  lg:focus:outline-neutral-700 focus:ring-primaryBlue-main"
-              value={input.expectedSalary.toLocaleString("id-ID")}
-              onChange={handleChange}
-            />
-          </div>
           <div className="flex flex-col lg:col-span-2 gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               description
             </label>
             <textarea
@@ -157,7 +131,7 @@ export default function Form() {
         </header>
         <section className="flex mt-2 lg:grid lg:grid-cols-2 flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               phone
             </label>
             <input
@@ -170,7 +144,7 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo  self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
               Alamat email
             </label>
             <input
@@ -183,7 +157,7 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo  self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
               Negara
             </label>
             <input
@@ -196,7 +170,7 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Kota
             </label>
             <input
@@ -209,7 +183,7 @@ export default function Form() {
             />
           </div>
           <div className="flex lg:col-span-2 flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-800 text-xl-regular">
+            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Alamat
             </label>
             <textarea
