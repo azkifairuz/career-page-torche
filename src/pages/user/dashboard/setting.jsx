@@ -92,11 +92,12 @@ export default function Setting(props) {
                     Contact
                 </label>
                 <section className="flex flex-col gap-4 md:flex-row md:justify-between items-center ">
-                    <div className="border-neutral-500 md:max-w-[344px] text-neutral-700 flex  border w-full rounded-lg ">
+                    <div className={`${isFocused && "border-primaryBlue-main"}  border-neutral-500 md:max-w-[344px] text-neutral-700 flex gap-[14px] border w-full rounded-lg `}>
                         <select
-                            className="bg-transparent py-2 pl-4  focus:outline-none border mr-[14px] border-r-0 focus:border-primaryBlue-main"
-                            value={countryCode}
+                            className="bg-transparent py-2 pl-4  focus:outline-none "
                             onChange={handleCountryCode}
+                            onFocus={handleFocus}
+                            onBlur={handleBlur}
                         >
                             {
                                 countryCodes.map((country) => (
@@ -107,7 +108,7 @@ export default function Setting(props) {
                             }
                         </select>
                         <input
-                            className="py-2 pr-4 bg-transparent focus:outline-none border w-full border-l-0 focus:border-primaryBlue-main rounded-r-lg "
+                            className="py-2 pr-4 bg-transparent focus:outline-none w-full rounded-r-lg "
                             id="editContact"
                             type="text"
                             value={phoneNumber}
