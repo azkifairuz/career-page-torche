@@ -89,14 +89,17 @@ export default function Form() {
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Jenis Kelamin
             </label>
-            <input
+            <select
               type="text"
               name="gender"
-              placeholder="Input Your gender"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
+              placeholder="Pilih Jenis Kelamin"
+              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 bg-white md:outline-neutral-500 outline focus:outline-primaryBlue-main  lg:focus:outline-neutral-700 focus:ring-1 focus:ring-primaryBlue-main"
               value={input.gender}
-              onChange={handleChange}
-            />
+              onChange={handleChange}>
+                <option value=""  selected hidden>Pilih Jenis Kelamin</option>
+                <option>Laki-Laki</option>
+                <option>Perempuan</option>
+            </select>
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
