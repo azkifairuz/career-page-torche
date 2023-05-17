@@ -136,11 +136,11 @@ export default function Navbar() {
           </div>
           <li
             onClick={handleProfilNav}
-            className={` md:flex md:relative  w-[200px] hidden items-center gap-[8px] cursor-pointer`}>
+            className={` md:flex md:relative w-[200px] hidden items-center gap-[8px] cursor-pointer`}>
               <img src={sample} alt="profie" className="w-[48px] h-[48px] rounded-full" />
               <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">John Doe</h1>
               <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-[180deg]"} transition ease-in-out w-[12.11px] h-7.13px rotate-0 `} />
-              <ul className={`${!isProfilNavOpen && "hidden"} transition  ease-in-out absolute w-[200px] rounded-lg bg-white left-0 top-16`}>
+              <ul className={`${!isProfilNavOpen && "hidden"} transition ease-in-out absolute w-[200px] rounded-lg bg-white right-0 top-16`}>
                 {profilNav.map((item, index) => {
                   return (
                     <Item
@@ -203,9 +203,7 @@ export default function Navbar() {
         <div className="bg-[#5885E9] rounded-full w-1/2 mx-auto mb-3">
           <div className="md:hidden flex justify-center">
             <div>
-              <span>
-                {notificationBadge}
-              </span>
+              Logout
             </div>
           </div>
         </div>

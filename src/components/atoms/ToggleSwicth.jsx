@@ -15,7 +15,7 @@ const ToggleSwitch = (props) => {
       />
       <label
         htmlFor="toggle"
-        className={`toggle-label  overflow-hidden h-[24px] w-[56px] px-[4px] py-2 flex items-center rounded-full bg-primaryBlue-border cursor-pointer ${
+        className={`toggle-label  overflow-hidden h-[24px] w-[56px] px-[4px] py-2 flex items-center rounded-full cursor-pointer ${
           isActive ? 'bg-primaryBlue-border' : 'bg-neutral-400'
         }`}
       >
