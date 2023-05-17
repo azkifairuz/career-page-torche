@@ -43,7 +43,7 @@ export default function Card(props) {
         <StatusSelect title="Status" data={["Aktif", "Tutup"]} status={status} />
       </td>
 
-      <td align="center" className={`${index === 0 && "pt-12"} pr-4`}>
+      <td align="center" className={`${index === 0 && "pt-12"} pr-4 hidden lg:flex`}>
         <div className="relative inline-block text-left">
           <button
             type="button"
