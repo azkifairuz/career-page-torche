@@ -39,7 +39,7 @@ export default function Applicants() {
   ];
 
   return (
-    <main className="flex-1 pb-[35px] pr-[100px] pl-[30px] flex flex-col">
+    <main className="flex-1 pb-[35px] pr-[30px] lg:pr-[100px] pl-[30px] flex flex-col">
       <AdminNavbar />
       <h1 className="heading-l-bold ">Kelola Lowongan</h1>
       <section className="flex gap-10 mt-4">
