@@ -24,7 +24,7 @@ export default function Pagination() {
   }
   return (
     <div className=" w-full flex items-center  justify-between">
-      <h1 className="hidden whitespace-nowrap text-neutral-1000 justify-self-start text-l-regular  left-0 lg:block">Showing {itemPerPage} of {pages.length * 5}</h1>
+      <h1 className="hidden whitespace-nowrap text-neutral-1000 justify-self-start text-l-regular  left-0 lg:block">Showing <span className="text-l-bold">{itemPerPage}</span> of <span className="text-l-bold">{pages.length * 5}</span> </h1>
       <section className="w-full h-fit bg-white justify-self-center  text-black flex justify-center items-center">
         <button
           onClick={btnPrev}
