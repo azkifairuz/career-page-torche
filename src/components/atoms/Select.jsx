@@ -19,12 +19,12 @@ export default function Select(props) {
 
   return (
     <div className="relative flex flex-col flex-1">
-      <div className=" border-primaryNavy-border border-[1px] py-3 px-4 rounded-lg flex gap-3 items-center w-full">
+      <div className={`border-primaryNavy-border border-[1px] py-3 px-4 rounded-lg flex gap-3 items-center ${width ? width: "w-full"}`}>
         <button
           onClick={handleClick}
           className="border-none flex-1 justify-between focus:outline-none flex gap-2 items-center"
         >
-          <p>{selected === "" ? "Pilih " + title : selected}</p>
+          <p className="text-neutral-1000 opacity-50">{selected ? selected: "Pilih " + title}</p>
           <ChevronDown className={`${isOpen && "rotate-180"} transition duration-300 ease-in-out`} />
         </button>
       </div>
