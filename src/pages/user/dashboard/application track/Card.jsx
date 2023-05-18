@@ -1,3 +1,4 @@
+import Label from "./Label";
 
 export default function Card(props) {
     const { posisi, salary, status, tanggal } = props;
@@ -21,9 +22,7 @@ export default function Card(props) {
               {salary}
             </h1>
             <div className="grid grid-cols-2 lg:flex w-fit gap-[5px] mt-4">
-              <div className="text-s-regular justify-self-start w-fit text-center py-2 px-3 capitalize text-primaryBlue-main rounded-lg bg-primaryBlue-surface border-black">
-                  {status}
-              </div>
+              <Label status={status}/>
             </div>
             <div className="flex flex-col mt-1  ">
               <h1 className="text-s-regular self-end lg:self-start text-neutral-700">Diikirim : {tanggal}</h1>
