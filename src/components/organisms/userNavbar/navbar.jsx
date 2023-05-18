@@ -41,7 +41,6 @@ export default function Navbar() {
   const handleNavbarOpen = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
-  console.log(isProfilNavOpen);
   const handleProfilNav = () => {
     setIsProfilNavOpen(!isProfilNavOpen)
   }

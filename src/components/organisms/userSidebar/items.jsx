@@ -1,4 +1,4 @@
-import { Link, useLocation} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 export default function Item(props) {
   const { icon, title, href,isActive, setIsActive,index } = props;
@@ -11,7 +11,6 @@ export default function Item(props) {
       onClick={
         ()=>{
           setIsActive(index)
-          console.log(index);
           
         }
       }

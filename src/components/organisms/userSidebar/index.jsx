@@ -3,13 +3,11 @@ import sample from "assets/index.png";
 import * as Icon from "react-bootstrap-icons";
 import Header from "./header";
 import Item from "./items";
-// import { useAuthState, useAuthDispatch, logout } from "context";
-// import { Link, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 export default function Sidebar(props) {
   const location = useLocation()
-  console.log(location.pathname);
+
   const resumeIcon = (
     <svg
       width="16"
