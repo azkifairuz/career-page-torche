@@ -17,13 +17,13 @@ export default function Pagination() {
     return
   }
   return (
-    <section className=" mt-[48px] w-fit h-fit bg-white  text-black flex justify-center items-center">
+    <section className="  w-fit h-fit bg-white  text-black flex justify-center items-center">
       <button
         onClick={btnPrev}
-        className="pr-[21px] border hover:text-white hover:bg-primaryBlue-hover active:bg-primaryNavy-pressed md:border-[#EBEBEB] pl-[17px] py-[10px] text-neutral-700 text-cairo text-xl-regular ">
+        className="p-[10px_21px_10px_17px] border hover:text-white hover:bg-primaryBlue-hover active:bg-primaryNavy-pressed md:border-[#EBEBEB] text-neutral-700 text-cairo text-xl-regular ">
         Prev
       </button>
-      <section className="paginationLarge md:block hidden">
+      <section className="paginationLarge h-full md:block hidden">
         {
           pages.map((page, index) => {
             return (
@@ -39,7 +39,7 @@ export default function Pagination() {
         }
       </section>
 
-      <select className="paginationMobile md:hidden bg-no-repeat bg-right bg-[url(assets/icons/chevron-down.svg)] appearance-none bg-white text-neutral-900 border text-xl-regular border-primaryBlue-border w-[64px] h-[48px] py-[10px] px-2">
+      <select className="paginationMobile md:hidden bg-no-repeat bg-right bg-[url(assets/icons/chevron-down.svg)] appearance-none bg-white text-neutral-900 border text-xl-regular border-primaryBlue-border w-[64px] h-[48px] p-[10px_8px_10px_8px]">
         {
           pages.map(((page, index) => {
             return (<option key={index}>{page}
@@ -47,12 +47,12 @@ export default function Pagination() {
           }))
         }
       </select>
-      <section className="md:hidden bg-white text-neutral-900 border text-xl-regular  pr-[21px] pl-[17px] py-[10px]">
+      <section className="md:hidden bg-white text-neutral-900 border text-xl-regular  p-[10px_21px_10px_17px]">
         /{pages.length}
       </section>
       <button
         onClick={btnNext}
-        className=" border hover:text-white hover:bg-primaryBlue-hover active:bg-primaryNavy-pressed border-[#EBEBEB] pr-[21px] pl-[17px] py-[10px]  text-neutral-700 text-cairo text-xl-regular ">
+        className="p-[10px_21px_10px_17px] border hover:text-white hover:bg-primaryBlue-hover active:bg-primaryNavy-pressed border-[#EBEBEB]  text-neutral-700 text-cairo text-xl-regular ">
         Next
       </button>
     </section>
