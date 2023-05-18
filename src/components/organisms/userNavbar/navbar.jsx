@@ -1,6 +1,6 @@
 import * as Icon from "react-bootstrap-icons";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import notificationBadge from "assets/icons/notification-badge.svg"
 import Item from "./items";
 import Logo from "assets/logos/Torche_Logo-01_White.webp";
@@ -9,7 +9,35 @@ import chevron from "assets/icons/chevron-white.svg";
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isProfilNavOpen, setIsProfilNavOpen] = useState(false)
-  const [isActive, setIsActive] = useState(-1);
+  const location = useLocation()
+  const [isActive, setIsActive] = useState();
+  
+  useEffect(() => {
+    const path = location.pathname;
+
+    switch (path) {
+      case '/user/dashboard/profil':
+        setIsActive(0);
+        break;
+      case '/user/completeprofile':
+        setIsActive(1);
+        break;
+      case '/user/dashboard/lamaran':
+        setIsActive(2);
+        break;
+      case '/user/dashboard/applicationtracking':
+        setIsActive(3);
+        break;
+      case '/user/dashboard/setting':
+        setIsActive(4);
+        break;
+      default:
+        setIsActive(-1);
+        break;
+    }
+  }, [location.pathname]);
+
+ 
   const handleNavbarOpen = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };

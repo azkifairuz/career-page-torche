@@ -5,9 +5,11 @@ import Header from "./header";
 import Item from "./items";
 // import { useAuthState, useAuthDispatch, logout } from "context";
 // import { Link, Navigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 export default function Sidebar(props) {
-
+  const location = useLocation()
+  console.log(location.pathname);
   const resumeIcon = (
     <svg
       width="16"
@@ -41,8 +43,33 @@ export default function Sidebar(props) {
       />
     </svg>
   );
+  const [isActive, setIsActive] = useState();
+  
+  useEffect(() => {
+    const path = location.pathname;
 
-  const [isActive, setIsActive] = useState(0);
+    switch (path) {
+      case '/user/dashboard/profil':
+        setIsActive(0);
+        break;
+      case '/user/completeprofile':
+        setIsActive(1);
+        break;
+      case '/user/dashboard/lamaran':
+        setIsActive(2);
+        break;
+      case '/user/dashboard/applicationtracking':
+        setIsActive(3);
+        break;
+      case '/user/dashboard/setting':
+        setIsActive(4);
+        break;
+      default:
+        setIsActive(-1);
+        break;
+    }
+  }, [location.pathname]);
+  
 
 
   const itemSidebar = [
