@@ -1,4 +1,7 @@
-export default function name(text,status) {
+export default function Label(props) {
+    const {status} = props
+    let backgroundColor = '';
+    let textColor = '';
     switch (status) {
         case 'Interview':
           backgroundColor = 'bg-secondary-tosca';
@@ -23,10 +26,10 @@ export default function name(text,status) {
 
       return(
         <span
-        className={`px-8 py-2 rounded-8  font-roboto text-[15px] leading-[22.5px] text-center ${backgroundColor} ${textColor}`}
+        className={`px-8 py-2 rounded-lg  font-roboto text-[15px] leading-[22.5px] text-center ${backgroundColor} ${textColor}`}
         style={{ backgroundColor }}
       >
-        {text}
+        {status}
       </span>
       )
 } 
