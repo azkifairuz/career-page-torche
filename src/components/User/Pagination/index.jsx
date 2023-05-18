@@ -3,18 +3,17 @@ import Item from "./item";
 export default function Pagination() {
   const pages = [1, 2, 3];
   const [currentPage, setCurrentPage] = useState(0);
+  const [isSelected,setIsSelected] = useState()
+
   const btnNext = () => {
-    if (currentPage + 1 < pages.length) {
-      setCurrentPage(currentPage + 1)
-    } else {
-      setCurrentPage(currentPage - currentPage)
-    }
+    const nextIndex = (currentPage + 1) % pages.length;
+    setIsSelected(pages[nextIndex]);
+    setCurrentPage(nextIndex)
   }
   const btnPrev = () => {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage - 1)
-    }
-    return
+    const prev = (currentPage -1 + pages.length) % pages.length;
+    setIsSelected(pages[prev]);
+    setCurrentPage(prev)
   }
   return (
     <section className="  w-fit h-fit bg-white  text-black flex justify-center items-center">
@@ -39,7 +38,7 @@ export default function Pagination() {
         }
       </section>
 
-      <select className="paginationMobile md:hidden bg-no-repeat bg-right bg-[url(assets/icons/chevron-down.svg)] appearance-none bg-white text-neutral-900 border text-xl-regular border-primaryBlue-border w-[64px] h-[48px] p-[10px_8px_10px_8px]">
+      <select id="SelectPage" value={isSelected}  onChange={(e) => setIsSelected(e.target.value)}  className="paginationMobile md:hidden bg-no-repeat bg-right bg-[url(assets/icons/chevron-down.svg)] appearance-none bg-white text-neutral-900 border text-xl-regular border-primaryBlue-border w-[64px] h-[48px] p-[10px_8px_10px_8px]">
         {
           pages.map(((page, index) => {
             return (<option key={index}>{page}
