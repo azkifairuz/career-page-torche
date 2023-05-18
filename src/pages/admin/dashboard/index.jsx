@@ -25,7 +25,7 @@ export default function AdminDashboard() {
         </h1>
         <div className="bg-white shadow rounded-xl p-[12px] w-full">
           <table className="w-full border-separate border-spacing-y-[4px]">
-            <thead className="bg-primaryBlue-main text-neutral-100 rounded-[32px] heading-s-bold">
+            <thead className="bg-primaryBlue-main text-neutral-100 rounded-[32px] text-m-bold md:heading-s-bold">
               <th
                 align="left"
                 className="p-[16px] pl-[37px] rounded-l-[32px] border-0 font-semibold"
