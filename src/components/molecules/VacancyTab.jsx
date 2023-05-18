@@ -14,7 +14,7 @@ export default function VacancyTab(props) {
   };
   return (
     <button
-      className={`flex items-center gap-2 pb-2 border-b-2 border-transparent ${
+      className={`flex items-center gap-2 pb-2 border-b-2 border-transparent shrink-0 ${
         active && "border-b-orange-500"
       }`}
       onClick={handleClick}
