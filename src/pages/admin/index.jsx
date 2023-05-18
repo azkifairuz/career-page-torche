@@ -9,7 +9,7 @@ import Applicants from "./applicants";
 function Admin(props) {
   const { user } = props;
   return (
-    <div className="flex">
+    <div className="flex w-[100vw] overflow-hidden">
       <Sidebar />
       <Outlet />
     </div>
