@@ -10,16 +10,16 @@ export default function Pagination() {
   
   const btnNext = () => {
     const nextIndex = (currentPage + 1) % pages.length;
-    const nextItem = (itemPerPage + 5) 
     setIsSelected(pages[nextIndex]);
     setCurrentPage(nextIndex)
+    const nextItem = (itemPerPage  + 5) 
     setItemPerpage(nextItem)
   }
   const btnPrev = () => {
-    const prev = (currentPage - 1 + pages.length) % pages.length;
-    const prevItem = (itemPerPage - 5)
-    setIsSelected(pages[prev]);
-    setCurrentPage(prev)
+    const prevIndex = (currentPage - 1 + pages.length) % pages.length;
+    setIsSelected(pages[prevIndex]);
+    setCurrentPage(prevIndex)
+    const prevItem = (itemPerPage -5 )
     setItemPerpage(prevItem)
   }
   return (
