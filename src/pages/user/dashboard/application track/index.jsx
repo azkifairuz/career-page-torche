@@ -9,7 +9,7 @@ function Tracking() {
      
         
          return (
-            <div className="flex flex-col gap-[24px]">
+            <div className="flex  min-w-[313px] md:min-w-[472px] flex-col gap-[24px]">
                 <div className="capitalize flex flex-col lg:shadow-none shadow-[0px_0px_10px_0px_#0000001A] min-w-[313px] md:min-w-[472px] gap-4  p-[8px_8px_16px_8px] md:p-[32px_42px_32px_42px] ">
                 <div className="flex justify-between items-center border-b pb-2 border-primaryBlue-border w-full">
                     <h1 className="heading-s-bold md:heading-l-bold">status lamaran</h1>
@@ -26,7 +26,7 @@ function Tracking() {
                 </div>
                 
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center  px-[8px] md:px-[42px] ">
             <Pagination/>
         </div>
            
