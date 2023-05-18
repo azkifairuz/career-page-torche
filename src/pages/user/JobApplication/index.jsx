@@ -5,7 +5,7 @@ import Pagination from "components/User/Pagination";
 function JobApplication() {
   return (
     <div className="flex flex-col justify-center gap-[24px]">
-      <div className="capitalize flex flex-col shadow-[0px_0px_10px_0px_#0000001A]  gap-4 md:gap-[32px]  p-[8px_8px_16px_8px] md:p-[32px_42px_32px_42px] ">
+      <div className="capitalize lg:shadow-none flex flex-col shadow-[0px_0px_10px_0px_#0000001A]  gap-4 md:gap-[32px]  p-[8px_8px_16px_8px] md:p-[32px_42px_32px_42px] ">
       <div className="flex justify-between border-b pb-2 border-primaryBlue-border w-full">
         <h1 className="heading-m-bold md:heading-l-bold">Lamaran</h1>
         <div>
