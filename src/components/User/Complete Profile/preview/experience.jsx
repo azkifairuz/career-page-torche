@@ -26,7 +26,7 @@ export default function Pengalaman() {
                 </div>
             </div>
             <div>
-                <div className="md:flex">
+                <div className="md:flex justify-between">
                     <div>
                     <h1 className="font-cairo text-neutral-1000 leading-7 text-[18px]">UI/UX Designer</h1>
                     <h2 className="font-cairo text-[14px] leading-6 text-neutral-700">Agustus 2022 - Agustus 2023(1 tahun)</h2>
