@@ -84,6 +84,7 @@ module.exports = {
       boxShadow:{
         card: "0 0px 10px rgb(0 0 0 / 0.2)",
       },
+      
     },
   },
   plugins: [

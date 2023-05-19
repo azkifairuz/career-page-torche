@@ -10,7 +10,7 @@ import Tentang from "./tentang";
 export default function Preview(props) {
     
     return(
-        <div className="flex flex-col gap-6 p-6 mx-auto justify-center items-center">
+        <div className="flex flex-col gap-6 p-6 w-full justify-center items-center">
             <Tentang />
             <Pengalaman />
             <Pendidikan/>

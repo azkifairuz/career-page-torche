@@ -24,12 +24,12 @@ export default function Portfolio(params) {
                 </div>
             </div>           
             <div className="flex flex-col gap-8">
-                <div>
-                    <h1 className="mb-2 text-l-bold font-cairo text-neutral-1000">Link Portfolio</h1>
+                <div className="md:flex gap-[32px]">
+                    <h1 className="mb-2 md:w-[200px] text-l-bold font-cairo text-neutral-1000">Link Portfolio</h1>
                     <p className="text-l-regular font-cairo text-primaryBlue-main">https:..wwww/gada.com</p>
                 </div>
-                <div>
-                    <h1 className="mb-2 text-l-bold font-cairo text-neutral-1000">Link Media Sosial</h1>
+                <div className="md:flex gap-[32px]">
+                    <h1 className="mb-2 md:w-[200px]  text-l-bold font-cairo text-neutral-1000">Link Media Sosial</h1>
                     <p className="text-l-regular font-cairo text-primaryBlue-main">https:..wwww/gada.com</p>
                 </div>
             </div>

@@ -24,13 +24,13 @@ export default function Skill() {
                     <p className="font-cairo text-s-regular">Tambah</p>
                 </div>
             </div>           
-                <ul className=" grid w-fit gap-x-3 grid-cols-2  text-primaryBlue-main font-cairo text-m-regular ">
-                    <li>Javascript</li>
-                    <li>Bootstrap</li>
-                    <li>CSS</li>
-                    <li>Web Designing</li>
-                    <li>HTML</li>
-                    <li>Photoshop</li>
+                <ul className=" grid w-fit gap-1 grid-cols-2 place-items-start md:flex text-[15px] leading-[22px] text-primaryBlue-main font-roboto text-m-regular ">
+                    <li className="bg-primaryBlue-surface p-[1px_10px_2.5px_10px] rounded text-center">Javascript</li>
+                    <li className="bg-primaryBlue-surface p-[1px_10px_2.5px_10px] rounded text-center">Bootstrap</li>
+                    <li className="bg-primaryBlue-surface p-[1px_10px_2.5px_10px] rounded text-center">CSS</li>
+                    <li className="bg-primaryBlue-surface p-[1px_10px_2.5px_10px] rounded text-center">Web Designing</li>
+                    <li className="bg-primaryBlue-surface p-[1px_10px_2.5px_10px] rounded text-center">HTML</li>
+                    <li className="bg-primaryBlue-surface p-[1px_10px_2.5px_10px] rounded text-center">Photoshop</li>
                 </ul>
         </div>
     )
