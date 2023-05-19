@@ -17,7 +17,7 @@ export default function CompleteProfil() {
         </div>
        
         
-        <div className="lg:w-[819px]">
+        <div className="">
           <Preview click={handleCardOpen} isCardOpen={isCardOpen} />
         </div>
       </div>
