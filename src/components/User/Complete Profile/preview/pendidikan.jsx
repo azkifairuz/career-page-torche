@@ -24,19 +24,20 @@ export default function Pendidikan(params) {
                 </div>
             </div>
             <div>
-                <div>
-                    <h1 className="font-cairo text-neutral-1000 leading-7 text-[18px]">Universitas Padjadjaran</h1>
+                <div className="md:flex">
+                   <div>
+                   <h1 className="font-cairo text-neutral-1000 leading-7 text-[18px]">Universitas Padjadjaran</h1>
                     <h2 className="font-cairo text-[14px] leading-6 text-neutral-1000">Sarjana Ilmu Komunikasi</h2>
                     <h2 className="font-cairo text-[14px] leading-6 text-neutral-700">Agustus 2022 - Agustus 2023(1 tahun)</h2>
-                   
-                    <div className="flex mt-2 gap-3">
-                        <div className="flex items-center text-primaryBlue-main gap-1">
+                   </div>
+                    <div onClick={handleCardOpen} className="flex mt-2 gap-3">
+                        <div className="flex items-center cursor-pointer text-primaryBlue-main gap-1">
                             {<Pencil size={12}/>}
                             <p className="font-cairo text-center text-s-regular">Edit</p>
                         </div>
                         <div className="flex gap-1 text-neutral-600 items-center">
                             {<Trash size={12}/>}
-                            <p className="font-cairo text-center text-s-regular">Hapus</p>
+                            <p className="font-cairo cursor-pointer text-center text-s-regular">Hapus</p>
                         </div>
                     </div>
                 </div>
