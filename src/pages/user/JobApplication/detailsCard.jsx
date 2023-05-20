@@ -5,7 +5,7 @@ export default function DetailsCard(props) {
         <div className="rounded-lg max-w-[537px] bg-white ">
             <div className="w-full flex justify-between border-b items-center border-b-neutral-400 py-4 px-8">
                 <h1 className="heading-s-bold">Torch Education</h1>
-                <X color="#727272" size={25} />
+                <X color="#727272" size={30} />
             </div>
             <div className="w-full flex gap-4 py-4 px-8">
                 <div className="w-[90px] text-l-regular text-neutral-1000">

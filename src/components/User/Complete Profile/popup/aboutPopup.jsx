@@ -2,11 +2,11 @@ import { X } from "react-bootstrap-icons";
 export default function AboutPopUp(props) {
     const {onclick} = props
     return (
-        <form className="rounded-lg z-50 w-[537px] bg-white">
+        <div className="rounded-lg z-50 max-w-[537px] bg-white">
             <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
                 <h1 className="heading-s-bold">Tentang Saya</h1>
                 <X
-                    size={25}
+                    size={30}
                     color="#727272"
                     className="cursor-pointer"
                     onClick={onclick} />
@@ -26,6 +26,6 @@ export default function AboutPopUp(props) {
             className="py-[9px] px-[16px] hover:bg-neutral-300 font-rajdhani border border-neutral-700 rounded-lg">Cancel</button>
             <button className="py-[9px] px-[24px] font-rajdhani bg-primaryBlue-main text-white active:bg-primaryBlue-pressed hover:bg-primaryBlue-hover rounded-lg">Save</button>
             </div>
-        </form>
+        </div>
     )
 }

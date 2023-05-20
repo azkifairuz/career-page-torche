@@ -17,11 +17,11 @@ export default function WorkPopup(props) {
     };
 
     return (
-        <form className="rounded-lg z-50 w-[537px]  bg-white">
+        <form className="rounded-lg z-50 box-border w-[350px] md:w-[537px] bg-white">
             <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 focus:outline-none focus:border-primaryBlue-main flex items-center justify-between">
                 <h1 className="heading-s-bold">Pengalaman Kerja</h1>
                 <X
-                    size={25}
+                    size={30}
                     color="#727272"
                     className="cursor-pointer"
                     onClick={onclick} />
