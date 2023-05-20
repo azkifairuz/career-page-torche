@@ -1,8 +1,8 @@
 import { X } from "react-bootstrap-icons";
 function detailsCard() {
     return (
-        <div className="rounded-lg min-w-[537px] border-b border-b-neutral-400">
-            <div className="w-full flex justify-between py-4 px-8">
+        <div className="rounded-lg min-w-[537px] ">
+            <div className="w-full flex justify-between border-b items-center border-b-neutral-400 py-4 px-8">
                 <h1 className="heading-s-bold">Torch Education</h1>
                 <X color="#727272" size={16.48} />
             </div>
@@ -39,6 +39,9 @@ function detailsCard() {
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div className="w-full flex items-center justify-end py-4 px-8 border-t border-t-neutral-400 ">
+                <button className="bg-primaryBlue-main py-2 px-6 text-center">Close</button>
             </div>
         </div>
     )
