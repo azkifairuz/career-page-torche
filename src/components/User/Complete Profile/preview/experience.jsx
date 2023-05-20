@@ -11,8 +11,8 @@ export default function Pengalaman() {
     }
     return (
         <div className=" w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
-            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"} h-screen fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
-                <div onClick={(event) => event.stopPropagation()} className="rounded-lg w-fit mt-52">
+            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"} h-screen fixed flex p-5 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
+                <div onClick={(event) => event.stopPropagation()} className="rounded-lg w-fit my-auto">
                     <WorkPopup onclick={handleCardOpen} />
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import Card from "./card";
 import { applications } from "data/application";
 import Pagination from "components/User/Pagination";
-
 function JobApplication() {
   return (
     <div className="flex flex-col justify-center gap-[24px]">
@@ -32,7 +31,6 @@ function JobApplication() {
           );
         })}
       </div>
-      <div></div>
     </div>
      <div className="w-full flex justify-center self-center">
      <Pagination />

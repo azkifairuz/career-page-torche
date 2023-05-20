@@ -14,11 +14,11 @@ export default function Penghargaan(params) {
         onClick={handleCardOpen}
         className={` ${
           !isCardOpen && "hidden"
-        }  h-screen fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}
+        }  h-screen fixed flex p-5 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}
       >
         <div
           onClick={(event) => event.stopPropagation()}
-          className="rounded-lg w-fit "
+          className="rounded-lg w-fit my-auto "
         >
           <AchivementPopup onclick={handleCardOpen} />
         </div>
