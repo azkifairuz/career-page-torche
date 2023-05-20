@@ -1,12 +1,13 @@
 import { X } from "react-bootstrap-icons";
-function detailsCard() {
+export default function DetailsCard(props) {
+    const {onclick} = props
     return (
-        <div className="rounded-lg min-w-[537px] ">
+        <div className="rounded-lg max-w-[537px] bg-white ">
             <div className="w-full flex justify-between border-b items-center border-b-neutral-400 py-4 px-8">
                 <h1 className="heading-s-bold">Torch Education</h1>
-                <X color="#727272" size={16.48} />
+                <X color="#727272" size={25} />
             </div>
-            <div className="w-full flex gap-4">
+            <div className="w-full flex gap-4 py-4 px-8">
                 <div className="w-[90px] text-l-regular text-neutral-1000">
                     <p className="flex justify-between">Job Title:</p>
                     <p className="flex justify-between">Experience:</p>
@@ -41,7 +42,7 @@ function detailsCard() {
                 </div>
             </div>
             <div className="w-full flex items-center justify-end py-4 px-8 border-t border-t-neutral-400 ">
-                <button className="bg-primaryBlue-main py-2 px-6 text-center">Close</button>
+                <button onClick={onclick} className="bg-primaryBlue-main rounded-lg font-rajdhani font-semibold text-[18px] leading-[26px] text-neutral-50 py-2 px-6 text-center">Close</button>
             </div>
         </div>
     )

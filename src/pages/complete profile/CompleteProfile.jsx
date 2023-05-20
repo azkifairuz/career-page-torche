@@ -3,11 +3,6 @@ import OptionBar from "components/User/Complete Profile/option bar";
 import Preview from "components/User/Complete Profile/preview";
 import { useState } from "react";
 export default function CompleteProfil() {
-  const [isCardOpen,setIsCardOpen] = useState(false)
-  const handleCardOpen = ()=>{
-    setIsCardOpen(!isCardOpen)
-    console.log(isCardOpen);
-  }
   return (
     <div className="flex flex-col mb-[72px]">
       {<HeaderSection />}
@@ -18,7 +13,7 @@ export default function CompleteProfil() {
        
         
         <div className="">
-          <Preview click={handleCardOpen} isCardOpen={isCardOpen} />
+          <Preview/>
         </div>
       </div>
     </div>
