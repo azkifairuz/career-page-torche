@@ -15,8 +15,8 @@ export default function Form() {
     address: user.address,
   });
   const [countryCode, setCountryCode] = useState("");
-  const handleCountryCode = (event) => {
-    setCountryCode(event.target.value);
+  const handleCountryCode = () => {
+    setCountryCode(countryCode)
   };
   const [isValid, setIsValid] = useState(true);
   const handleChange = (event) => {
@@ -47,7 +47,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="min-w-[313px] p-[24px_32px_24px_32px] shadow-[0px_0px_10px_0_#0000001A] flex md:min-w-[472px]  md:p-[24px_32px_24px_32px] flex-col gap-8 lg:min-w-[819px] rounded-lg"
+      className="min-w-[313px] p-[24px_32px_24px_32px] shadow-[0px_0px_10px_0_#0000001A] flex md:min-w-[472px]  md:p-[24px_32px_24px_32px] flex-col gap-8 transition-all duration-500 ease-in-out rounded-lg"
     >
       <div>
         <header className="mb-[30px]">

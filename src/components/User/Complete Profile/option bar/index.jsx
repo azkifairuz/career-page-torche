@@ -12,7 +12,7 @@ export default function OptionBar(params) {
         { id:9, href: "/resume", title: "Resume" },
       ];
     return(
-        <div className="flex md:flex-col lg:gap-0  md:w-[175px] lg:w-[397px] md:scrollbar-hide  w-full overflow-x-auto">
+        <div className="flex md:flex-col lg:gap-0  md:w-[175px] lg:max-w-[397px] md:scrollbar-hide  w-full overflow-x-auto">
             {
                 itemData.map((item)=>{
                     return <Item key={item.id} href={item.href} title={item.title}/>

@@ -25,7 +25,7 @@ export default function ProgressCard(props) {
     }
   }
   return (
-    <div className="shadow-card rounded-2xl z-50 md:py-2 md:mt-8 md:px-8 bg-white lg:w-[397px] p-9 text-start"> 
+    <div className="shadow-card rounded-2xl z-50 md:py-2 md:mt-8 md:px-8 bg-white lg:min-w-[50%] lg:max-w-[397px] p-9 text-start"> 
       <div className="flex gap-2 mb-3 text-black ">
         <h1 className="font-cairo text-l-regular">Profile</h1>
         <span className="font-cairo text-l-bold">{percent}%</span>

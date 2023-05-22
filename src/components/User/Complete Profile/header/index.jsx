@@ -36,7 +36,7 @@ export default function HeaderSection() {
       </div>
       </div>
     
-      <div>{<ProgressCard percent="50" />}</div>
+      <div className="lg:w-[397px]">{<ProgressCard percent="50" />}</div>
 
     </div>
   );
