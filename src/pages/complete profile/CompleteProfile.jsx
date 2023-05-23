@@ -6,7 +6,7 @@ export default function CompleteProfil() {
     <div className="flex flex-col mb-[72px]">
       {<HeaderSection />}
       <div className="md:flex w-full md:px-[32px]  lg:px-[100px] transition-all duration-500 ease-in-out   ">
-        <div className="mt-6 py-4 lg:w-[397px] ">
+        <div className=" mt-[120px] md:mt-6 py-4 lg:w-[397px] ">
           <OptionBar />
         </div>
        
