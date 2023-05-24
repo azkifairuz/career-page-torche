@@ -4,7 +4,7 @@ import AdminDashboard from "./dashboard";
 import Vacancy from "./vacancy";
 import Create from "./vacancy/create";
 import Applicants from "./applicants";
-
+import Edit from "./vacancy/edit";
 
 function Admin(props) {
   const { user } = props;
@@ -17,4 +17,4 @@ function Admin(props) {
 }
 
 export default Admin;
-export { AdminDashboard, Vacancy, Create, Applicants };
+export { AdminDashboard, Vacancy, Create, Applicants, Edit };

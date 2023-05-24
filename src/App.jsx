@@ -21,6 +21,7 @@ import Admin, {
   Applicants,
   Create,
   Vacancy,
+  Edit,
 } from "pages/admin";
 import CompleteProfil from "./pages/complete profile/CompleteProfile";
 import UserDashboard from "pages/user/dashboard";
@@ -35,7 +36,6 @@ import ChangePassword from "pages/forget-password/confirmed";
 import ScrollToTop from "utils/scrollToTop";
 
 function App() {
-
   const [user, setUser] = useState({
     id: "test-1",
     name: "test",
@@ -90,6 +90,7 @@ function App() {
             <Route path="vacancy" element={<Vacancy />} />
             <Route path="applicants" element={<Applicants />} />
             <Route path="vacancy/create" element={<Create />} />
+            <Route path="vacancy/edit/:id" element={<Edit />} />
           </Route>
           <Route
             path="user"
