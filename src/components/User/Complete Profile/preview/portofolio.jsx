@@ -9,8 +9,8 @@ export default function Portfolio(params) {
     }
     return(
         <div className=" w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
-            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"} h-screen  fixed flex p-52 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
-                <div onClick={(event) => event.stopPropagation()} className="rounded-lg w-fit mt-72">
+            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"} h-screen  fixed flex p-5 inset-0 overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
+                <div onClick={(event) => event.stopPropagation()} className="rounded-lg w-fit my-auto">
                     <PortfolioPopup onclick={handleCardOpen} />
                 </div>
             </div>
@@ -24,12 +24,12 @@ export default function Portfolio(params) {
                 </div>
             </div>           
             <div className="flex flex-col gap-8">
-                <div>
-                    <h1 className="mb-2 text-l-bold font-cairo text-neutral-1000">Link Portfolio</h1>
+                <div className="md:flex gap-[32px]">
+                    <h1 className="mb-2 md:w-[200px] text-l-bold font-cairo text-neutral-1000">Link Portfolio</h1>
                     <p className="text-l-regular font-cairo text-primaryBlue-main">https:..wwww/gada.com</p>
                 </div>
-                <div>
-                    <h1 className="mb-2 text-l-bold font-cairo text-neutral-1000">Link Media Sosial</h1>
+                <div className="md:flex gap-[32px]">
+                    <h1 className="mb-2 md:w-[200px]  text-l-bold font-cairo text-neutral-1000">Link Media Sosial</h1>
                     <p className="text-l-regular font-cairo text-primaryBlue-main">https:..wwww/gada.com</p>
                 </div>
             </div>

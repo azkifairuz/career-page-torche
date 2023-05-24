@@ -16,11 +16,11 @@ export default function ResumePopup(props) {
         return console.log("berhasil");
     }
     return(
-        <form className="rounded-lg z-50 w-[537px] bg-white">
+        <form className="rounded-lg z-50 w-[350px]md:w-[537px] bg-white">
         <section className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
             <h1 className="heading-s-bold">Resume</h1>
             <X
-                size={25}
+                size={30}
                 color="#727272"
                 className="cursor-pointer"
                 onClick={onclick} />

@@ -41,7 +41,6 @@ export default function Navbar() {
   const handleNavbarOpen = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
-  console.log(isProfilNavOpen);
   const handleProfilNav = () => {
     setIsProfilNavOpen(!isProfilNavOpen)
   }
@@ -157,7 +156,7 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-        <div className="flex   items-center gap-[16px] justify-end justify-self-end">
+        <div className="flex items-center gap-[16px] justify-end justify-self-end">
           <div className="relative w-[28px] mr-[16px]  md:flex hidden ">
             <span className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${notification.length > 0 ? "flex" : "hidden"} `}>{notification.length}</span>
             <img src={notificationBadge} alt="notification" className="w-[17.7px] h-[22.75px]"></img>
@@ -167,8 +166,8 @@ export default function Navbar() {
             className={` md:flex md:relative w-[200px] hidden items-center gap-[8px] cursor-pointer`}>
               <img src={sample} alt="profie" className="w-[48px] h-[48px] rounded-full" />
               <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">John Doe</h1>
-              <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-[180deg]"} transition ease-in-out w-[12.11px] h-7.13px rotate-0 `} />
-              <ul className={`${!isProfilNavOpen && "hidden"} transition ease-in-out absolute w-[200px] rounded-lg bg-white right-0 top-16`}>
+              <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-[180deg]"} transition-all duration-500 ease-in-out w-[12.11px] h-7.13px rotate-0 `} />
+              <ul className={`${!isProfilNavOpen && "hidden"} transition-all duration-500 ease-in-out  absolute w-[200px] rounded-lg bg-white right-0 top-16`}>
                 {profilNav.map((item, index) => {
                   return (
                     <Item

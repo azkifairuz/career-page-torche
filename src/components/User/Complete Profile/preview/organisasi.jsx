@@ -8,8 +8,8 @@ export default function Organisasi(props) {
     }
     return (
         <div className="w-full flex flex-col gap-4 shadow-card rounded-lg p-6">
-            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"}   fixed flex p-52 inset-0 h-screen overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
-                <div onClick={(event) => event.stopPropagation()} className="rounded-lg w-fit mt-52">
+            <div onClick={handleCardOpen} className={` ${!isCardOpen && "hidden"}   fixed flex p-5 inset-0 h-screen overflow-scroll justify-center items-center  z-50 bg-opacity-50 w-full   bg-black`}>
+                <div onClick={(event) => event.stopPropagation()} className="rounded-lg w-fit my-auto">
                     <OrganisasiPopup onclick={handleCardOpen} />
                 </div>
             </div>
@@ -23,12 +23,14 @@ export default function Organisasi(props) {
                 </div>
             </div>
             <div>
-                <div>
-                    <h1 className="font-cairo text-neutral-1000 leading-7 text-[18px] uppercase">UKM KAMPUS</h1>
-                    <h2 className="font-cairo text-[14px] leading-6 text-neutral-1000">Jurnalism</h2>
-                    <h2 className="font-cairo text-[14px] leading-6 text-neutral-700">Agustus 2022 - Agustus 2023(4 tahun)</h2>
+                <div className="md:flex justify-between">
+                    <div>
+                        <h1 className="font-cairo text-neutral-1000 leading-7 text-[18px] uppercase">UKM KAMPUS</h1>
+                        <h2 className="font-cairo text-[14px] leading-6 text-neutral-1000">Jurnalism</h2>
+                        <h2 className="font-cairo text-[14px] leading-6 text-neutral-700">Agustus 2022 - Agustus 2023(4 tahun)</h2>
 
-                    <div className="flex mt-2 gap-3">
+                    </div>
+                    <div className="flex mt-2 gap-3 self-start">
                         <div className="flex items-center text-primaryBlue-main gap-1 cursor-pointer">
                             {<Pencil size={12} />}
                             <p className="font-cairo text-center text-s-regular">Edit</p>

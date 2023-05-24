@@ -1,9 +1,10 @@
+import Label from "./Label";
 
 export default function Card(props) {
     const { posisi, salary, status, tanggal } = props;
 
     return (
-      <div className="p-4 md:min-w-[422px]  flex shadow-[0px_0px_10px_0px_#0000001A] bg-neutral-100 gap-3 flex-col justify-between md:flex-row  ">
+      <div className="p-4 md:min-w-[422px]   rounded-lg flex shadow-[0px_0px_10px_0px_#0000001A] bg-neutral-100 gap-3 flex-col justify-between md:flex-row  ">
           <div className="flex flex-col w-full ">
             <div className="flex justify-between ">
               <h1 className="uppercase font-bold font-rajdhani text-[24px] leading-7">
@@ -21,9 +22,7 @@ export default function Card(props) {
               {salary}
             </h1>
             <div className="grid grid-cols-2 lg:flex w-fit gap-[5px] mt-4">
-              <div className="text-s-regular justify-self-start w-fit text-center py-2 px-3 capitalize text-primaryBlue-main rounded-lg bg-primaryBlue-surface border-black">
-                  {status}
-              </div>
+              <Label status={status}/>
             </div>
             <div className="flex flex-col mt-1  ">
               <h1 className="text-s-regular self-end lg:self-start text-neutral-700">Diikirim : {tanggal}</h1>

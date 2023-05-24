@@ -59,11 +59,11 @@ export default function SkillPopup(props) {
   return (
     <div className="card">
       <div className="card-header">
-        <form className="rounded-lg z-50 w-[537px] bg-white" onSubmit={handleSubmit}>
+        <form className="rounded-lg z-50 w-[350px] md:w-[537px] bg-white" onSubmit={handleSubmit}>
           <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
             <h1 className="heading-s-bold">Skill</h1>
             <X
-              size={25}
+              size={30}
               color="#727272"
               className="cursor-pointer"
               onClick={onclick}

@@ -1,24 +1,18 @@
 import HeaderSection from "components/User/Complete Profile/header";
 import OptionBar from "components/User/Complete Profile/option bar";
 import Preview from "components/User/Complete Profile/preview";
-import { useState } from "react";
 export default function CompleteProfil() {
-  const [isCardOpen,setIsCardOpen] = useState(false)
-  const handleCardOpen = ()=>{
-    setIsCardOpen(!isCardOpen)
-    console.log(isCardOpen);
-  }
   return (
     <div className="flex flex-col mb-[72px]">
       {<HeaderSection />}
-      <div className="md:flex w-full  lg:px-[100px]">
-        <div className="mt-6 p-6">
+      <div className="md:flex w-full md:px-[32px]  lg:px-[100px] transition-all duration-500 ease-in-out   ">
+        <div className=" mt-[120px] md:mt-6 py-4 lg:w-[397px] ">
           <OptionBar />
         </div>
        
         
-        <div className="lg:w-[819px]">
-          <Preview click={handleCardOpen} isCardOpen={isCardOpen} />
+        <div className="">
+          <Preview/>
         </div>
       </div>
     </div>

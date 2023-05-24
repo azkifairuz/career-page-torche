@@ -8,7 +8,9 @@ function User() {
     return (
     <div>  
         <Navbar/>
+        <div className="mb-[100px]">
         <Outlet/>
+        </div>
         <Footer/>
     </div>
     );
