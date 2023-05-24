@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 import DataByStatus from "./DataByStatus";
 
@@ -6,14 +7,27 @@ import Pin from "assets/icons/pin.svg";
 import StatusSelect from "components/atoms/StatusSelect";
 
 export default function Card(props) {
-  const { name, address, type, index, applicantsCount, status } = props;
+  const {
+    name,
+    address,
+    type,
+    index,
+    applicantsCount,
+    status,
+    active,
+    setActiveIndex,
+  } = props;
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
-  };
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      if (e.target.id !== "edit") {
+        setActiveIndex(null);
+      }
+    });
+  }, [setActiveIndex]);
 
   return (
-    <tr className="border-spacing-0 ">
+    <tr className="border-spacing-0">
       <td
         className={`flex flex-col gap-3 pl-[27px] ${
           index === 0 ? "pt-12" : "pt-7"
@@ -26,8 +40,7 @@ export default function Card(props) {
         </span>
         <p className="text-s-regular opacity-50">{type}</p>
       </td>
-
-      <td className={index === 0 && "pt-12"}>
+      <td className={index === 0 && "pt-12 "}>
         <div className="flex gap-3 items-center justify-center">
           <DataByStatus
             count={applicantsCount.belumDiproses}
@@ -39,44 +52,49 @@ export default function Card(props) {
         </div>
       </td>
 
-      <td align="center" className={`${index === 0 && "pt-12"} rounded-r-xl border-0 px-6`}>
-        <StatusSelect title="Status" data={["Aktif", "Tutup"]} status={status} />
+      <td
+        align="center"
+        className={`${index === 0 && "pt-12"} rounded-r-xl border-0 px-6 py-4`}
+      >
+        <StatusSelect
+          title="Status"
+          data={["Aktif", "Tutup"]}
+          status={status}
+        />
       </td>
-
-      <td align="center" className={`${index === 0 && "pt-12"} pr-4 hidden lg:flex`}>
-        <div className="relative inline-block text-left">
+      <td
+        align="center"
+        className={`${index === 0 && "pt-6"} rounded-r-xl border-0 pr-8 `}
+      >
+        <div className="relative">
           <button
+            id="edit"
             type="button"
-            className="inline-flex justify-center text-l-regular text-primaryBlue-main hover:underline"
-            id="options-menu"
-            aria-haspopup="true"
-            aria-expanded="true"
+            className="w-full text-center text-l-regular text-primaryBlue-main hover:underline"
+            onClick={() => setActiveIndex(active ? null : index)}
           >
             Edit Lowongan
           </button>
 
-          <div className="origin-top-right hidden absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div
-              className="py-1"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="options-menu"
+          <div
+            className={` ${
+              active ? "block" : "hidden"
+            } absolute origin-top-right z-50 right-0 left-0 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+          >
+            <Link
+              to="edit"
+              className="block text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              role="menuitem"
             >
-              <Link
-                to="#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                role="menuitem"
-              >
-                Edit
-              </Link>
-              <Link
-                to="#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                role="menuitem"
-              >
-                Delete
-              </Link>
-            </div>
+              Edit
+            </Link>
+            <Link
+              to="#"
+              className="block text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              role="menuitem"
+            >
+              Delete
+            </Link>
           </div>
         </div>
       </td>

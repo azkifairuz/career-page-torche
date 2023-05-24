@@ -1,15 +1,15 @@
-import React from "react";
+import { useState } from "react";
 import Card from "./Card";
 import { vacancies } from "data/vacancy";
 
-import StatusSelect from "components/atoms/StatusSelect";
-
 export default function Table(props) {
   const { filterStatus } = props;
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const filteredVacancies = filterStatus !== "all"
-    ? vacancies.filter((item) => item.status.toLowerCase() === filterStatus)
-    : vacancies;
+  const filteredVacancies =
+    filterStatus !== "all"
+      ? vacancies.filter((item) => item.status.toLowerCase() === filterStatus)
+      : vacancies;
 
   return (
     <table className="w-full ">
@@ -24,9 +24,15 @@ export default function Table(props) {
         <th className=" border-0 font-semibold">Status</th>
         <th className="rounded-r-[32px] border-0 hidden lg:block">{""}</th>
       </thead>
-      <tbody>
+      <tbody className="w-full">
         {filteredVacancies.map((item, index) => (
-          <Card key={index} {...item} index={index} />
+          <Card
+            key={index}
+            {...item}
+            index={index}
+            active={activeIndex === index}
+            setActiveIndex={setActiveIndex}
+          />
         ))}
       </tbody>
     </table>
