@@ -8,6 +8,7 @@ import StatusSelect from "components/atoms/StatusSelect";
 
 export default function Card(props) {
   const {
+    id,
     name,
     address,
     type,
@@ -82,7 +83,7 @@ export default function Card(props) {
             } absolute origin-top-right z-50 right-0 left-0 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
           >
             <Link
-              to="edit"
+              to={`/admin/vacancy/${id}/edit`}
               className="block text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
