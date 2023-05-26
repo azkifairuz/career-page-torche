@@ -124,6 +124,24 @@ input:-webkit-autofill:active {
     @apply font-bold !important;
   }
 
+  .button-s-regular {
+    font-size: 14px;
+    line-height: 24px;
+    @apply font-bold !important;
+  }
+
+  .button-m-regular {
+    font-size: 16px;
+    line-height: 28px;
+    @apply font-bold !important;
+  }
+
+  .button-l-regular {
+    font-size: 19px;
+    line-height: 34px;
+    @apply font-bold !important;
+  }
+
   .text-xs-regular,
   .text-xs-bold,
   .text-s-regular,
@@ -133,7 +151,10 @@ input:-webkit-autofill:active {
   .text-l-regular,
   .text-l-bold,
   .text-xl-regular,
-  .text-xl-bold {
+  .text-xl-bold,
+  .button-s-regular,
+  .button-m-regular,
+  .button-l-regular {
     @apply font-cairo;
   }
 
