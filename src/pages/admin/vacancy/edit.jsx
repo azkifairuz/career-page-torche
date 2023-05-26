@@ -65,9 +65,8 @@ export default function Edit() {
         <EditInput
           title="Lokasi penempatan"
           desc="Buatlah nama pekerjaan sesuai dengan kata kunci yang akan digunakan."
-          fit={true}
         >
-          <div className="flex gap-10 shrink">
+          <div className="flex gap-10 ">
             <Select
               title="Provinsi"
               data={["Jawa Barat", "Jawa Tengah", "Jawa Timur"]}
