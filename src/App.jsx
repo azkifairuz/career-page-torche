@@ -90,7 +90,7 @@ function App() {
             <Route path="vacancy" element={<Vacancy />} />
             <Route path="applicants" element={<Applicants />} />
             <Route path="vacancy/create" element={<Create />} />
-            <Route path="vacancy/edit/:id" element={<Edit />} />
+            <Route path="vacancy/:id/edit" element={<Edit />} />
           </Route>
           <Route
             path="user"
