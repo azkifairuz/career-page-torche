@@ -22,7 +22,7 @@ export default function AdminSidebar(props) {
       <aside
         className={` ${
           onOpen ? "fixed flex" : "hidden"
-        } bg-neutral-100 lg:sticky lg:flex box-border flex-col text-black border-0 border-r-2 top-0 left-0 min-h-screen pt-[150px] px-[57px] lg:pl-[100px] z-10`}
+        } bg-neutral-100 lg:sticky lg:flex shrink-0 box-border flex-col text-black border-0 border-r-2 top-0 left-0 min-h-screen pt-[150px] px-[57px] lg:pl-[100px] z-10`}
       >
         <button
           className="absolute top-[63px] lg:hidden"
