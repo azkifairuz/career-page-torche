@@ -23,7 +23,7 @@ export default function AdminDashboard() {
         <h1 className="px-[12px] heading-m-medium mt-[31px]">
           Lowongan belum diproses terbanyak
         </h1>
-        <div className="bg-white shadow rounded-xl p-[12px] w-full">
+        <div className="bg-white drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-xl p-[12px] w-full">
           <table className="w-full border-separate border-spacing-y-[4px]">
             <thead className="bg-primaryBlue-main text-neutral-100 rounded-[32px] text-m-bold md:heading-s-bold">
               <th
