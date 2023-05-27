@@ -58,7 +58,7 @@ export default function Edit() {
           <Select
             title="Kebijakan bekerja"
             data={["WFO", "WFA", "Hybrid"]}
-            fit={true}
+            width="w-[276px]"
           />
         </EditInput>
 
@@ -69,7 +69,7 @@ export default function Edit() {
           <div className="flex gap-10 ">
             <Select
               title="Provinsi"
-              data={["Jawa Barat", "Jawa Tengah", "Jawa Timur"]}
+              data={["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Jawa Utara"]}
             />
             <Select title="Kota" data={["Bandung", "Semarang", "Surabaya"]} />
             <Select

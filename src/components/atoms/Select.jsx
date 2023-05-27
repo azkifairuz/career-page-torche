@@ -19,22 +19,29 @@ export default function Select(props) {
   };
 
   return (
-    <div className={`relative flex flex-col flex-1 ${fit && "w-fit"}`}>
+    <div
+      className={`box-border relative text-neutral-1000  rounded-[8px] flex flex-col flex-1 gap-3 w-fit max-h-[216px]  ${
+        isOpen &&
+        "z-50 -mx-2 -my-2 py-2 px-2 border-[1px] border-neutral-300 h-full  shadow-[2px_4px_10px_rgba(19,47,159,0.25)]"
+      } bg-white`}
+    >
       {isLabeled && (
-        <label className="text-neutral-1000 text-xs-regular -top-2 left-4 px-1 bg-white absolute">
+        <label className=" text-xs-regular -top-2 left-4 px-1 bg-white absolute">
           {title}
         </label>
       )}
       <div
-        className={`border-primaryNavy-border border-[1px] py-3 px-4 rounded-lg flex gap-3 items-center ${
-          width ? width : "w-full"
-        }`}
+        className={`w-full ${fit && "w-fit"} ${width} border-primaryNavy-border border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center`}
       >
         <button
           onClick={handleClick}
-          className="border-none justify-between focus:outline-none flex gap-2 items-center shrink flex-1"
+          className="border-none justify-between focus:outline-none flex gap-2 items-center flex-1"
         >
-          <p className="text-neutral-1000 button-s-regular opacity-50 text-left shrink-0 ">
+          <p
+            className={`button-s-regular ${
+              !selected && "opacity-50"
+            } text-left shrink-0 `}
+          >
             {selected ? selected : "Pilih " + title}
           </p>
           <img
@@ -49,12 +56,12 @@ export default function Select(props) {
       <ul
         className={`${
           !isOpen && "hidden"
-        } z-50 absolute left-0 top-12 p-2 min-w-full rounded-2 bg-white transition duration-300 ease-in-out border-[1px] border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)]`}
+        }  activate-scroll origin-bottom transition duration-300 ease-in-out overflow-scroll`}
       >
         {data.map((item, index) => (
           <li
             key={index}
-            className="px-[16px] py-2 text-s-regular cursor-pointer"
+            className="px-4 py-2 text-s-regular cursor-pointer"
             onClick={handleItemClick}
           >
             {item}
