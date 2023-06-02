@@ -78,6 +78,14 @@ export default function Edit() {
             />
           </div>
         </EditInput>
+
+
+        <EditInput
+          title="Hari kerja"
+          desc="Pilihlah hari kerja dibawah ini, sesuai ketentuan perusahaan Anda."
+        >
+          tes tes
+        </EditInput>
       </EditContainer>
     </div>
   );
