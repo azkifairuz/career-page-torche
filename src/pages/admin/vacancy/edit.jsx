@@ -135,10 +135,10 @@ export default function Edit() {
       <section className="flex justify-between mt-12">
         <button className="flex items-center py-2 pl-5 pr-4 gap-3 text-neutral-500 button-m-regular rounded-xl bg-neutral-300">
           <img src={NavigateBefore} alt="Navigate before" />
-          <p>Kembali</p>
+          <p className="w-[88px] text-left">Kembali</p>
         </button>
         <button className="flex items-center py-2 pl-4 pr-5 gap-3 text-neutral-100 button-m-regular rounded-xl bg-secondary-yellow drop-shadow-[0_0_12px_rgba(255,174,95,0.5)]">
-          <p>Selanjutnya</p>
+          <p className="w-[88px] text-left">Selanjutnya</p>
           <img src={NavigateNext} alt="Navigate next" />
         </button>
       </section>
