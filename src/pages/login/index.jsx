@@ -31,7 +31,7 @@ function Login() {
       <img
         src={LoginBG}
         alt="Login Background"
-        className="hidden md:block absolute left-0 top-0 "
+        className="hidden md:block absolute left-0 top-0 h-full"
       />
       <AuthContainer>
         <form
