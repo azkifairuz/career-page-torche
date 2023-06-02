@@ -34,18 +34,60 @@ export default function Ketentuan() {
           title="Umur"
           desc="Tentukan rentang (umur) pelamar pada lowongan ini."
         >
-          <div className="flex gap-10">
+          <section className="flex gap-10">
             <InputField
               placeholder="18"
-              isLabeled={true}
-              title="Pendidikan minimal"
-              data={["WFO", "WFA", "Hybrid"]}
+              labelText="Umur minimal (tahun)"
+              type="number"
+              width="w-[240px]"
             />
             <InputField
               placeholder="65"
-              label="sampai"
+              labelText="Umur maksimal (tahun)"
+              type="number"
+              width="w-[240px]"
             />
-          </div>
+          </section>
+          <section className="flex gap-3 items-center">
+            <input type="checkbox" className="w-5 h-5 rounded-md" />
+            <p className="text-xl-regular text-neutral-500 ">
+              Tidak ada batasan umur.
+            </p>
+          </section>
+        </EditInput>
+      </EditContainer>
+
+      <EditContainer title="Syarat Pelamar">
+        <EditInput
+          title="Kandidat yang dibutuhkan"
+          desc="Tentukan jumlah kandidat yang dibutuhkan untuk lowongan ini."
+        >
+          <InputField
+            placeholder="1"
+            labelText="Karyawan yang dibutuhkan"
+            type="number"
+            width="w-[240px]"
+          />
+        </EditInput>
+
+        <EditInput
+          title="Rentang gaji"
+          desc="Tentukan rentang gaji untuk menarik minat pelamar"
+        >
+          <section className="flex gap-10">
+            <InputField
+              placeholder="Isi gaji minimal"
+              labelText="Gaji minimal (Rp)"
+              type="number"
+              width="w-[240px]"
+            />
+            <InputField
+              placeholder="Isi gaji maksimal"
+              labelText="Gaji maksimal (Rp)"
+              type="number"
+              width="w-[240px]"
+            />
+          </section>
         </EditInput>
       </EditContainer>
     </section>
