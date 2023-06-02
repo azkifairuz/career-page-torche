@@ -33,7 +33,7 @@ export default function Select(props) {
         } ${width} border-primaryNavy-border border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center`}
       >
         {isLabeled && (
-          <label className=" text-xs-regular -top-2 left-4 px-1 bg-white absolute text-neutral-500">
+          <label className=" text-xs-regular -top-2 left-3 px-1 bg-white absolute text-neutral-500">
             {title}
           </label>
         )}
