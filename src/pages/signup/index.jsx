@@ -86,14 +86,14 @@ function Signup() {
       <AuthContainer>
         <form className="flex flex-col gap-[16px] w-full h-full" method="post">
           <InputField
-            label="Fullname"
+            title="Fullname"
             type="text"
             placeholder="Ahmad Sultani"
             value={name}
             onChange={handleNameChange}
           />
           <InputField
-            label="Email"
+            title="Email"
             type="text"
             placeholder="yourmail@mail.com"
             value={email}
@@ -101,7 +101,7 @@ function Signup() {
           />
           <div className="flex flex-col gap-[8px] items-start   ">
             <PasswordInput
-              label="Kata Sandi"
+              title="Kata Sandi"
               type="password"
               placeholder="••••••••"
               value={password}
@@ -137,7 +137,7 @@ function Signup() {
             </div>
           </div>
           <PasswordInput
-            label="Konfirmasi Kata Sandi"
+            title="Konfirmasi Kata Sandi"
             type="password"
             placeholder="••••••••"
             value={confirmPassword}

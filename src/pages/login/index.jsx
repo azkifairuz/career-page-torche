@@ -39,10 +39,10 @@ function Login() {
           action=""
           method="post"
         >
-          <InputField label="Email" type="text" placeholder="Your Email Here" />
+          <InputField title="Email" type="text" placeholder="Your Email Here" />
           <div className="flex flex-col gap-2 items-start">
             <InputField
-              label="Kata Sandi"
+              title="Kata Sandi"
               type="password"
               placeholder="••••••••"
             />

@@ -1,10 +1,10 @@
 import React from "react";
 
 export default function InputField(props) {
-  const { label, type, placeholder, value, onChange } = props;
+  const { title, type, placeholder, value, onChange } = props;
   return (
     <div className="flex flex-col gap-[8px] w-full font-cairo">
-      <label className="font-[#151515] font-bold">{label}</label>
+      <h1 className="font-[#151515] font-bold">{title}</h1>
       <input
         type={type}
         placeholder={placeholder}

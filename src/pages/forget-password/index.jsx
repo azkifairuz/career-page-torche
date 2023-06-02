@@ -28,7 +28,7 @@ export default function ForgetPassword() {
         </p>
         <div className="flex flex-col gap-6 w-full">
           <InputField
-            label="Email"
+            title="Email"
             type="email"
             placeholder="yourmail@gmail.com"
           />

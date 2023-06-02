@@ -3,7 +3,7 @@ import { Eye, EyeSlash } from "react-bootstrap-icons";
 
 export default function PasswordInput(props) {
   const [isVisible, setIsVisible] = useState(false);
-  const { label, type, placeholder, value, onChange } = props;
+  const { title, type, placeholder, value, onChange } = props;
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -12,7 +12,7 @@ export default function PasswordInput(props) {
 
   return (
     <div className="flex flex-col gap-[8px] w-full font-cairo">
-      <label className="font-[#151515] font-bold">{label}</label>
+      <h1 className="font-[#151515] font-bold">{title}</h1>
       <div className="flex w-full px-[16px] py-[10px] rounded-[8px] border-[1px] border-primaryNavy-border focus:outline-none focus:border-primaryNavy-focus ">
         <input
           type={isVisible ? "text" : type}

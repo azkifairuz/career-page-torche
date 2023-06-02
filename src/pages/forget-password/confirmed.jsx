@@ -71,7 +71,7 @@ export default function ChangePassword() {
         <div className="flex flex-col gap-6 w-full">
           <div className="flex flex-col gap-2 items-start   ">
             <InputField
-              label="Kata Sandi"
+              title="Kata Sandi"
               type="password"
               placeholder="••••••••"
               value={password}
@@ -107,7 +107,7 @@ export default function ChangePassword() {
             </div>
           </div>
           <InputField
-            label="Konfirmasi Kata Sandi"
+            title="Konfirmasi Kata Sandi"
             type="password"
             placeholder="••••••••"
             value={confirmPassword}
