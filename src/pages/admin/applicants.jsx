@@ -4,8 +4,10 @@ import { Search } from "react-bootstrap-icons";
 import Table from "components/organisms/TableApplicants";
 import ApplicantsTab from "components/molecules/ApplicantsTab";
 import Pagination from "components/molecules/Pagination";
-import Select from "components/atoms/Select";
 import SearchBar from "components/molecules/SearchBar";
+
+import sort from "assets/icons/sort.svg"
+import filter from "assets/icons/filter-bold.svg"
 
 import { applicants } from "data/applicants";
 import AdminNavbar from "components/organisms/AdminNavbar";
@@ -56,10 +58,13 @@ export default function Applicants() {
       <section className="flex gap-6 mt-6 w-full first:w-4/5 last:w-fit ">
         <SearchBar
           placeholder="Cari lowongan"
-          icon={<Search />}
+          icon={<Search color="#5885E9" />}
           width="w-4/5"
         />
-        <Select title="Kota" data={["Kota A", "Kota B"]} />
+        <div className="flex gap-[11px] items-center">
+          <img src={filter} alt="filter" />
+          <h1 className="text-xl-bold">Filter</h1>
+        </div>
       </section>
       <div className="bg-white drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-xl p-[12px] w-full mt-[54px]">
         <Table data={applicantsArr} />
