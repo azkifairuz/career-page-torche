@@ -43,6 +43,7 @@ export default function Edit() {
 
       <EditContainer>
         <EditInput
+          isLabeled={true}
           title="Nama pekerjaan"
           desc="Buatlah nama pekerjaan sesuai dengan kata kunci yang akan digunakan."
           fit={true}
@@ -56,6 +57,7 @@ export default function Edit() {
           fit={true}
         >
           <Select
+            isLabeled={true}
             title="Kebijakan bekerja"
             data={["WFO", "WFA", "Hybrid"]}
             width="w-[276px]"
@@ -68,23 +70,48 @@ export default function Edit() {
         >
           <div className="flex gap-10 ">
             <Select
+              isLabeled={true}
               title="Provinsi"
               data={["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Jawa Utara"]}
             />
-            <Select title="Kota" data={["Bandung", "Semarang", "Surabaya"]} />
             <Select
+              isLabeled={true}
+              title="Kota"
+              data={["Bandung", "Semarang", "Surabaya"]}
+            />
+            <Select
+              isLabeled={true}
               title="Kecamatan"
               data={["Bandung", "Semarang", "Surabaya"]}
             />
           </div>
         </EditInput>
 
-
         <EditInput
           title="Hari kerja"
           desc="Pilihlah hari kerja dibawah ini, sesuai ketentuan perusahaan Anda."
         >
           tes tes
+        </EditInput>
+
+        <EditInput title="Tipe Pekerjaan">
+          <div className="flex gap-10 ">
+            <Select
+              isLabeled={true}
+              title="Bidang pekerjaan"
+              data={["Jawa Barat", "Jawa Tengah", "Jawa Timur", "Jawa Utara"]}
+            />
+            <Select
+              isLabeled={true}
+              title="Level pekerjaan"
+              data={["Bandung", "Semarang", "Surabaya"]}
+            />
+            <Select
+              isLabeled={true}
+              title="Tipe pekerjaan"
+              data={["Bandung", "Semarang", "Surabaya"]}
+            />
+          </div>
         </EditInput>
       </EditContainer>
     </div>
