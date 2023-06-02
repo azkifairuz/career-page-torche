@@ -20,7 +20,9 @@ export default function Select(props) {
 
   return (
     <div
-      className={`box-border text-neutral-1000  rounded-[8px] flex flex-col flex-1 gap-3 w-fit max-h-[216px]  ${
+      className={`box-border text-neutral-1000  rounded-[8px] flex flex-col flex-1 gap-3 ${
+        (width || fit) && "w-fit"
+      } max-h-[216px]  ${
         isOpen &&
         "z-50 -mx-2 -my-2 py-2 px-2 border-[1px] border-neutral-300 h-full  shadow-[2px_4px_10px_rgba(19,47,159,0.25)]"
       } bg-white`}
