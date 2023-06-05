@@ -18,6 +18,38 @@ export default function Applicants() {
   const [filterStatus, setFilterStatus] = useState("all");
   const maxData = 100;
   const [hidenSort, setHidenSort] = useState("hidden");
+  const [sortOrder, setSortOrder] = useState("terbaru");
+
+  const monthToNumber = {
+    "Januari": 1,
+    "Februari": 2,
+    "Maret": 3,
+    "April": 4,
+    "Mei": 5,
+    "Juni": 6,
+    "Juli": 7,
+    "Agustus": 8,
+    "September": 9,
+    "Oktober": 10,
+    "November": 11,
+    "Desember": 12
+  };
+
+  // Sorting data berdasarkan bulan
+const sortedData = [...applicantsArr].sort((a, b) => {
+  const dateA = new Date(a.appliedAt);
+  const dateB = new Date(b.appliedAt);
+  if (sortOrder === "terbaru") {
+    return dateB - dateA; // Urutan terbaru
+  } else if (sortOrder === "terlama") {
+    return dateA - dateB; // Urutan terlama
+  }
+});
+
+  const handleSort = (order) => {
+    setSortOrder(order);
+  };
+  
   const handleCardSort = () => {
     setHidenSort(!hidenSort);
   };
@@ -60,14 +92,14 @@ export default function Applicants() {
         ))}
       </section>
       <section
-        onClick={handleCardSort}
+        onClick={(event) => event.stopPropagation()}
         className={`${
           hidenSort && "hidden"
         } h-screen fixed flex p-5 inset-0 overflow-scroll justify-center 
           items-center  z-50 bg-opacity-50 w-full 
         bg-black`}
       >
-        <PopUpSort onclick={handleCardSort} />
+        <PopUpSort onclick={handleCardSort} onSort={handleSort} />
       </section>
       <section className="flex gap-6 mt-6 w-full first:w-3/4 justify-between last:w-fit ">
         <SearchBar
@@ -90,7 +122,7 @@ export default function Applicants() {
         </div>
       </section>
       <div className="bg-white drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-xl p-[12px] w-full mt-[54px]">
-        <Table data={applicantsArr} />
+        <Table data={sortedData} />
       </div>
       <Pagination maxData={maxData} />
     </main>
