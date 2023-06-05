@@ -12,6 +12,7 @@ import filter from "assets/icons/filter-bold.svg";
 import { applicants } from "data/applicants";
 import AdminNavbar from "components/organisms/AdminNavbar";
 import PopUpSort from "components/molecules/PopUpSort";
+import PopUpFilter from "components/molecules/PopUpFilter";
 import { click } from "@testing-library/user-event/dist/click";
 
 export default function Applicants() {
@@ -19,6 +20,7 @@ export default function Applicants() {
   const [filterStatus, setFilterStatus] = useState("all");
   const maxData = 100;
   const [hidenSort, setHidenSort] = useState("hidden");
+  const [hidenFilter, setHidenFilter] = useState("hidden");
   const [sortOrder, setSortOrder] = useState("terbaru");
 
   // Sorting data berdasarkan bulan
@@ -35,15 +37,22 @@ const sortedData = [...applicantsArr].sort((a, b) => {
   const handleSort = (order) => {
     setSortOrder(order);
   };
+
   
-  const handleCardSort = () => {
+  const handlePopUpSort = () => {
     setHidenSort(!hidenSort);
+  };
+  
+  const handlePopUpFilter = () => {
+    setHidenFilter(!hidenFilter);
+    console.log(filter);
   };
 
   const handleOutsideClick = (event) => {
     if (event.target === event.currentTarget) {
       // Memastikan bahwa event.target adalah elemen section
-      handleCardSort();
+      setHidenFilter("hidden");
+      setHidenSort("hidden");
     }
   };
   const applicantStatus = [
@@ -93,10 +102,17 @@ const sortedData = [...applicantsArr].sort((a, b) => {
           items-center  z-50 bg-opacity-50 w-full 
         bg-black`}
       >
-        <PopUpSort onclick={handleCardSort} onSort={handleSort} />
+        <PopUpSort onclick={handlePopUpSort} onSort={handleSort} />
       </section>
-      <section>
-
+      <section
+        onClick={handleOutsideClick}
+        className={`${
+          hidenFilter && "hidden"
+        } h-screen fixed flex p-5 inset-0 overflow-scroll justify-center 
+          items-center py-[400px] z-50 bg-opacity-50 w-full 
+        bg-black`}
+      >
+        <PopUpFilter onclick={handlePopUpFilter}/>
       </section>
       {/* end hidden popup section */}
       <section className="flex gap-6 mt-6 w-full first:w-3/4 justify-between last:w-fit ">
@@ -106,12 +122,14 @@ const sortedData = [...applicantsArr].sort((a, b) => {
           width="w-[60%]"
         />
         <div className="flex gap-[50px] cursor-pointer">
-          <div className="flex gap-[11px] items-center">
+          <div 
+          onClick={handlePopUpFilter}
+          className="flex gap-[11px] items-center">
             <img src={filter} alt="filter" />
             <h1 className="text-xl-bold">Filter</h1>
           </div>
           <div
-            onClick={handleCardSort}
+            onClick={handlePopUpSort}
             className="flex gap-[11px] items-center cursor-pointer"
           >
             <img src={sort} alt="sort" />

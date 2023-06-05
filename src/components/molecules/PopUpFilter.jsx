@@ -2,22 +2,23 @@ import InputField from "components/atoms/InputField";
 import Select from "components/atoms/Select";
 import { X } from "react-bootstrap-icons";
 
-export default function name() {
+export default function name(props) {
+  const { onclick } = props;
   return (
     <>
-      <div className="w-[508px] pb-3 rounded-[40px] p-16 flex flex-col">
+      <div className="w-[508px] bg-white pb-5 rounded-[40px]  flex flex-col">
         {/* card header */}
-        <div className="flex justify-between py-5 items-center border-b border-neutral-300">
+        <div className="flex cursor-pointer justify-between w-full px-16 py-5 items-center border-b border-neutral-300">
           <h1 className="text-l-bold">Filter</h1>
           <X size={30} color="#323232" onClick={onclick} />
         </div>
         {/* end card header */}
 
         {/* body section */}
-        <section className="flex flex-col gap-3">
-          <section className="flex gap-[115px] w-full">
+        <section className="flex px-16 flex-col gap-3">
+          <section className="flex  justify-between  w-full border-b py-3 border-neutral-300">
             {/* sort by pendidikan minimal section */}
-            <section className="flex flex-col gap-3">
+            <section className="flex flex-col  whitespace-nowrap gap-3">
               <h1 className="text-l-bold">Pendidikan Minimal</h1>
               <ul className="uppercase flex flex-col gap-2">
                 <label className="flex gap-[8px] text-s-regular" htmlFor="d3">
@@ -65,7 +66,7 @@ export default function name() {
             {/* end sort by pendidikan minimal section */}
 
             {/* sort by jenis kelamin section */}
-            <section className="flex flex-col gap-3">
+            <section className="flex flex-col whitespace-nowrap  gap-3">
               <h1 className="text-l-bold">Jenis Kelamin</h1>
               <ul className="capitalize flex flex-col gap-2">
                 <label className="flex gap-[8px] text-s-regular" htmlFor="L">
@@ -85,7 +86,7 @@ export default function name() {
             {/* end sort by jenis kelamin section */}
           </section>
           {/* filter by age section */}
-          <section className="flex flex-col gap-3">
+          <section className="flex flex-col gap-3  border-b py-3 border-neutral-300">
             <h1 className="text-l-bold">Usia Pelamar</h1>
             <p className="text-xs-regular">
               Tentukan usia minimal & maksimal yang Anda butuhkan.
@@ -93,14 +94,12 @@ export default function name() {
             <div className="flex gap-16">
               <InputField
                 type="text"
-                value={""}
                 placeholder="Minimal Usia"
                 width="w-[160px]"
                 labelText=""
               />
               <InputField
                 type="text"
-                value={""}
                 placeholder="Minimal Masimal"
                 width="w-[160px]"
                 labelText=""
@@ -110,15 +109,15 @@ export default function name() {
           {/* end filter by age section */}
 
           {/* filter by location section */}
-          <section className="flex flex-col gap-3">
+          <section className="flex flex-col gap-3 w-full  border-b py-3 border-neutral-300">
             <h1 className="text-l-bold">Lokasi Pelamar</h1>
             <p className="text-xs-regular">
-            Tentukan lokasi pelamar yang Anda butuhkan.
+              Tentukan lokasi pelamar yang Anda butuhkan.
             </p>
             <Select
-                title={""}
-                data={["tangerang,jakarta,bandung"]}
-                width={"w-full"}
+              title="Lokasi Pelamar"
+              data={["tangerang", "jakarta", "bandung"]}
+              width={"w-[400px]"}
             />
           </section>
           {/* end filter by location section */}
