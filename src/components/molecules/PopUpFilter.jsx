@@ -9,7 +9,7 @@ export default function name() {
           <X size={30} color="#323232" onClick={onclick} />
         </div>
         <div className="flex gap-[115px] w-full">
-          <div>
+          <div className="flex flex-col gap-3">
             <h1 className="text-l-bold">Pendidikan Minimal</h1>
             <ul className="uppercase">
               <label className="flex gap-[8px] text-s-regular" htmlFor="d3">
@@ -42,7 +42,9 @@ export default function name() {
               </label>
             </ul>
           </div>
-          <div> <ul>
+          <div className="flex flex-col gap-3"> 
+          <h1 className="text-l-bold">Jenis Kelamin</h1>
+            <ul>
               <label className="flex gap-[8px] text-s-regular" htmlFor="L">
                 <input type="checkbox" id="L" />
                 Laki-Laki
@@ -55,7 +57,8 @@ export default function name() {
                 <input type="checkbox" id="All" />
                 Semua Jenis Kelamin
               </label>
-            </ul></div>
+            </ul>
+        </div>
         </div>
       </div>
     </>
