@@ -12,6 +12,7 @@ import filter from "assets/icons/filter-bold.svg";
 import { applicants } from "data/applicants";
 import AdminNavbar from "components/organisms/AdminNavbar";
 import PopUpSort from "components/molecules/PopUpSort";
+import { click } from "@testing-library/user-event/dist/click";
 
 export default function Applicants() {
   const [applicantsArr, setApplicantsArr] = useState(applicants[0].data);
@@ -37,6 +38,13 @@ const sortedData = [...applicantsArr].sort((a, b) => {
   
   const handleCardSort = () => {
     setHidenSort(!hidenSort);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (event.target === event.currentTarget) {
+      // Memastikan bahwa event.target adalah elemen section
+      handleCardSort();
+    }
   };
   const applicantStatus = [
     {
@@ -76,8 +84,9 @@ const sortedData = [...applicantsArr].sort((a, b) => {
           />
         ))}
       </section>
+      {/* hidden popup section */}
       <section
-        onClick={(event) => event.stopPropagation()}
+        onClick={handleOutsideClick}
         className={`${
           hidenSort && "hidden"
         } h-screen fixed flex p-5 inset-0 overflow-scroll justify-center 
@@ -86,6 +95,10 @@ const sortedData = [...applicantsArr].sort((a, b) => {
       >
         <PopUpSort onclick={handleCardSort} onSort={handleSort} />
       </section>
+      <section>
+
+      </section>
+      {/* end hidden popup section */}
       <section className="flex gap-6 mt-6 w-full first:w-3/4 justify-between last:w-fit ">
         <SearchBar
           placeholder="Cari lowongan"
