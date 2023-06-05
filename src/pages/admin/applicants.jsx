@@ -22,6 +22,7 @@ export default function Applicants() {
   const [hidenSort, setHidenSort] = useState("hidden");
   const [hidenFilter, setHidenFilter] = useState("hidden");
   const [sortOrder, setSortOrder] = useState("terbaru");
+  const [lastEduFilter,setLastEduFilter] = useState("all")
 
   // Sorting data berdasarkan bulan
 const sortedData = [...applicantsArr].sort((a, b) => {
@@ -32,7 +33,16 @@ const sortedData = [...applicantsArr].sort((a, b) => {
   } 
    return dateA - dateB; // Urutan terlama
   
+}).filter((item)=>{ 
+  if (lastEduFilter === "all") {
+    return item.lastEducation
+  }
+  return item.lastEducation === lastEduFilter
+
 });
+const handleFilter = (order) => {
+  setLastEduFilter("S1");
+};
 
   const handleSort = (order) => {
     setSortOrder(order);
@@ -45,7 +55,6 @@ const sortedData = [...applicantsArr].sort((a, b) => {
   
   const handlePopUpFilter = () => {
     setHidenFilter(!hidenFilter);
-    console.log(filter);
   };
 
   const handleOutsideClick = (event) => {
@@ -123,7 +132,7 @@ const sortedData = [...applicantsArr].sort((a, b) => {
         />
         <div className="flex gap-[50px] cursor-pointer">
           <div 
-          onClick={handlePopUpFilter}
+          onClick={handleFilter}
           className="flex gap-[11px] items-center">
             <img src={filter} alt="filter" />
             <h1 className="text-xl-bold">Filter</h1>
