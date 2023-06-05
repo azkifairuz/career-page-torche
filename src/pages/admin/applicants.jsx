@@ -20,30 +20,15 @@ export default function Applicants() {
   const [hidenSort, setHidenSort] = useState("hidden");
   const [sortOrder, setSortOrder] = useState("terbaru");
 
-  const monthToNumber = {
-    "Januari": 1,
-    "Februari": 2,
-    "Maret": 3,
-    "April": 4,
-    "Mei": 5,
-    "Juni": 6,
-    "Juli": 7,
-    "Agustus": 8,
-    "September": 9,
-    "Oktober": 10,
-    "November": 11,
-    "Desember": 12
-  };
-
   // Sorting data berdasarkan bulan
 const sortedData = [...applicantsArr].sort((a, b) => {
   const dateA = new Date(a.appliedAt);
   const dateB = new Date(b.appliedAt);
   if (sortOrder === "terbaru") {
     return dateB - dateA; // Urutan terbaru
-  } else if (sortOrder === "terlama") {
-    return dateA - dateB; // Urutan terlama
-  }
+  } 
+   return dateA - dateB; // Urutan terlama
+  
 });
 
   const handleSort = (order) => {
