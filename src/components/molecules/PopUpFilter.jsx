@@ -1,10 +1,11 @@
 import InputField from "components/atoms/InputField";
+import Select from "components/atoms/Select";
 import { X } from "react-bootstrap-icons";
 
 export default function name() {
   return (
     <>
-      <div className="w-[508px] rounded-[40px] p-16 flex flex-col">
+      <div className="w-[508px] pb-3 rounded-[40px] p-16 flex flex-col">
         {/* card header */}
         <div className="flex justify-between py-5 items-center border-b border-neutral-300">
           <h1 className="text-l-bold">Filter</h1>
@@ -90,23 +91,37 @@ export default function name() {
               Tentukan usia minimal & maksimal yang Anda butuhkan.
             </p>
             <div className="flex gap-16">
-              <InputField 
-              type="text" 
-              value={""}
-              placeholder="Minimal Usia"
-              width="160px"
-              labelText="" />
-            </div>
-            <div className="flex gap-16">
-              <InputField 
-              type="text" 
-              value={""}
-              placeholder="Minimal Masimal"
-              width="160px"
-              labelText="" />
+              <InputField
+                type="text"
+                value={""}
+                placeholder="Minimal Usia"
+                width="w-[160px]"
+                labelText=""
+              />
+              <InputField
+                type="text"
+                value={""}
+                placeholder="Minimal Masimal"
+                width="w-[160px]"
+                labelText=""
+              />
             </div>
           </section>
           {/* end filter by age section */}
+
+          {/* filter by location section */}
+          <section className="flex flex-col gap-3">
+            <h1 className="text-l-bold">Lokasi Pelamar</h1>
+            <p className="text-xs-regular">
+            Tentukan lokasi pelamar yang Anda butuhkan.
+            </p>
+            <Select
+                title={""}
+                data={["tangerang,jakarta,bandung"]}
+                width={"w-full"}
+            />
+          </section>
+          {/* end filter by location section */}
         </section>
         {/*end body section */}
       </div>
