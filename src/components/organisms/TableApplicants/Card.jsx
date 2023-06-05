@@ -2,7 +2,7 @@ import ProfileIcon from "assets/images/person.png";
 import Select from "components/atoms/Select";
 
 export default function Card(props) {
-  const { name, age, appliedAt, experience, major, status, index } = props;
+  const { name, age, appliedAt, experience, major, status, lastEducation, index } = props;
   const statuses = [
     "Belum diproses",
     "Diproses",
@@ -25,7 +25,7 @@ export default function Card(props) {
           <section>
             <h1 className="text-l-regular">{name}</h1>
             <p className="text-s-regular opacity-50">{age}</p>
-            <p className="text-s-regular opacity-50">{major}</p>
+            <p className="text-s-regular opacity-50">{`${lastEducation}-${major}`}</p>
           </section>
         </div>
       </td>
