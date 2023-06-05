@@ -6,8 +6,8 @@ import ApplicantsTab from "components/molecules/ApplicantsTab";
 import Pagination from "components/molecules/Pagination";
 import SearchBar from "components/molecules/SearchBar";
 
-import sort from "assets/icons/sort.svg"
-import filter from "assets/icons/filter-bold.svg"
+import sort from "assets/icons/sort.svg";
+import filter from "assets/icons/filter-bold.svg";
 
 import { applicants } from "data/applicants";
 import AdminNavbar from "components/organisms/AdminNavbar";
@@ -17,10 +17,10 @@ export default function Applicants() {
   const [applicantsArr, setApplicantsArr] = useState(applicants[0].data);
   const [filterStatus, setFilterStatus] = useState("all");
   const maxData = 100;
-  const [hidenSort,setHidenSort] = useState("hidden")
-  const handleCardSort = () =>{
-    setHidenSort(!hidenSort)
-  }
+  const [hidenSort, setHidenSort] = useState("hidden");
+  const handleCardSort = () => {
+    setHidenSort(!hidenSort);
+  };
   const applicantStatus = [
     {
       title: "Belum Diproses",
@@ -43,12 +43,12 @@ export default function Applicants() {
       count: 40,
     },
   ];
-  
+
   return (
     <main className="flex-1 pb-[35px] pr-[30px] lg:pr-[100px] pl-[30px] flex flex-col">
       <AdminNavbar />
       <h1 className="heading-l-bold ">Kelola Lowongan</h1>
-      <section  className="flex gap-10 mt-4">
+      <section className="flex gap-10 mt-4">
         {applicantStatus.map((item, index) => (
           <ApplicantsTab
             key={index}
@@ -59,8 +59,15 @@ export default function Applicants() {
           />
         ))}
       </section>
-      <section className={`${hidenSort && "hidden"} block`}>
-          <PopUpSort/>
+      <section
+        onClick={handleCardSort}
+        className={`${
+          hidenSort && "hidden"
+        } h-screen fixed flex p-5 inset-0 overflow-scroll justify-center 
+          items-center  z-50 bg-opacity-50 w-full 
+        bg-black`}
+      >
+        <PopUpSort onclick={handleCardSort} />
       </section>
       <section className="flex gap-6 mt-6 w-full first:w-3/4 justify-between last:w-fit ">
         <SearchBar
@@ -68,16 +75,19 @@ export default function Applicants() {
           icon={<Search color="#5885E9" />}
           width="w-[60%]"
         />
-      <div className="flex gap-[50px] cursor-pointer">
-        <div  className="flex gap-[11px] items-center">
+        <div className="flex gap-[50px] cursor-pointer">
+          <div className="flex gap-[11px] items-center">
             <img src={filter} alt="filter" />
             <h1 className="text-xl-bold">Filter</h1>
           </div>
-          <div onClick={handleCardSort} className="flex gap-[11px] items-center cursor-pointer">
+          <div
+            onClick={handleCardSort}
+            className="flex gap-[11px] items-center cursor-pointer"
+          >
             <img src={sort} alt="sort" />
             <h1 className="text-xl-bold">Urutkat Pelamar</h1>
           </div>
-      </div>
+        </div>
       </section>
       <div className="bg-white drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-xl p-[12px] w-full mt-[54px]">
         <Table data={applicantsArr} />
