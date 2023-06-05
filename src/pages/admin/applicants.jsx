@@ -12,14 +12,48 @@ import filter from "assets/icons/filter-bold.svg";
 import { applicants } from "data/applicants";
 import AdminNavbar from "components/organisms/AdminNavbar";
 import PopUpSort from "components/molecules/PopUpSort";
+import PopUpFilter from "components/molecules/PopUpFilter";
+import { click } from "@testing-library/user-event/dist/click";
 
 export default function Applicants() {
   const [applicantsArr, setApplicantsArr] = useState(applicants[0].data);
   const [filterStatus, setFilterStatus] = useState("all");
   const maxData = 100;
   const [hidenSort, setHidenSort] = useState("hidden");
-  const handleCardSort = () => {
+  const [hidenFilter, setHidenFilter] = useState("hidden");
+  const [sortOrder, setSortOrder] = useState("terbaru");
+
+  // Sorting data berdasarkan bulan
+const sortedData = [...applicantsArr].sort((a, b) => {
+  const dateA = new Date(a.appliedAt);
+  const dateB = new Date(b.appliedAt);
+  if (sortOrder === "terbaru") {
+    return dateB - dateA; // Urutan terbaru
+  } 
+   return dateA - dateB; // Urutan terlama
+  
+});
+
+  const handleSort = (order) => {
+    setSortOrder(order);
+  };
+
+  
+  const handlePopUpSort = () => {
     setHidenSort(!hidenSort);
+  };
+  
+  const handlePopUpFilter = () => {
+    setHidenFilter(!hidenFilter);
+    console.log(filter);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (event.target === event.currentTarget) {
+      // Memastikan bahwa event.target adalah elemen section
+      setHidenFilter("hidden");
+      setHidenSort("hidden");
+    }
   };
   const applicantStatus = [
     {
@@ -59,16 +93,28 @@ export default function Applicants() {
           />
         ))}
       </section>
+      {/* hidden popup section */}
       <section
-        onClick={handleCardSort}
+        onClick={handleOutsideClick}
         className={`${
           hidenSort && "hidden"
         } h-screen fixed flex p-5 inset-0 overflow-scroll justify-center 
           items-center  z-50 bg-opacity-50 w-full 
         bg-black`}
       >
-        <PopUpSort onclick={handleCardSort} />
+        <PopUpSort onclick={handlePopUpSort} onSort={handleSort} />
       </section>
+      <section
+        onClick={handleOutsideClick}
+        className={`${
+          hidenFilter && "hidden"
+        } h-screen fixed flex p-5 inset-0 overflow-scroll justify-center 
+          items-center py-[400px] z-50 bg-opacity-50 w-full 
+        bg-black`}
+      >
+        <PopUpFilter onclick={handlePopUpFilter}/>
+      </section>
+      {/* end hidden popup section */}
       <section className="flex gap-6 mt-6 w-full first:w-3/4 justify-between last:w-fit ">
         <SearchBar
           placeholder="Cari lowongan"
@@ -76,12 +122,14 @@ export default function Applicants() {
           width="w-[60%]"
         />
         <div className="flex gap-[50px] cursor-pointer">
-          <div className="flex gap-[11px] items-center">
+          <div 
+          onClick={handlePopUpFilter}
+          className="flex gap-[11px] items-center">
             <img src={filter} alt="filter" />
             <h1 className="text-xl-bold">Filter</h1>
           </div>
           <div
-            onClick={handleCardSort}
+            onClick={handlePopUpSort}
             className="flex gap-[11px] items-center cursor-pointer"
           >
             <img src={sort} alt="sort" />
@@ -90,7 +138,7 @@ export default function Applicants() {
         </div>
       </section>
       <div className="bg-white drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-xl p-[12px] w-full mt-[54px]">
-        <Table data={applicantsArr} />
+        <Table data={sortedData} />
       </div>
       <Pagination maxData={maxData} />
     </main>
