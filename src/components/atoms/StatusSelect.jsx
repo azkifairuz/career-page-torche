@@ -10,7 +10,7 @@ export default function StatusSelect(props) {
     "Aktif": "success-border",
     "Tutup": "danger-border",
   };
-
+  
   const textColors = {
     "All": "black",
     "Aktif": "success-hover",
@@ -33,11 +33,11 @@ export default function StatusSelect(props) {
   return (
     <div className="relative flex flex-col w-fit">
       <div
-        className={`border-${bgColors[active]} bg-${
-          bgColors[active] === "black" ? "white" : bgColors[active]
+        className={`w-[104px] border-${bgColors[active]} bg-${
+          active === "All" ? "white" : bgColors[active]
         } text-${
           textColors[active]
-        } border-[1px] py-2 px-4 rounded-xl flex gap-3 items-center w-fit`}
+        } border-[1px] hover:border-primaryBlue-hover py-2 pl-4 pr-5 rounded-xl flex gap-3 items-center w-fit`}
       >
         <button
           onClick={handleClick}
@@ -56,12 +56,12 @@ export default function StatusSelect(props) {
       <ul
         className={`${
           !isOpen && "hidden"
-        } z-50 absolute left-0 top-12 p-2 min-w-full rounded-2 bg-white transition duration-300 ease-in-out border-[1px] border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)]`}
+        } z-50 absolute left-0 top-12 overflow-hidden w-full rounded-lg bg-white transition duration-300 ease-in-out border-[1px] border-primaryNavy-border`}
       >
         {data.map((item, index) => (
           <li
             key={index}
-            className="px-[16px] py-2 text-s-regular cursor-pointer"
+            className="pl-4 pr-5 py-2 text-left text-s-regular cursor-pointer  hover:bg-primaryBlue-surface"
             onClick={handleItemClick}
           >
             {item}
