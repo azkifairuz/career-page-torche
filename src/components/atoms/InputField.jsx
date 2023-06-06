@@ -16,7 +16,7 @@ export default function InputField(props) {
         value={value}
         onChange={onChange}
         min={1}
-        className="w-full px-[16px] py-[10px] rounded-[8px] border-[1px] button-s-regular border-primaryNavy-border focus:outline-none focus:border-primaryNavy-focus "
+        className="w-full px-[16px] py-[10px] rounded-[8px] border-[1px] button-s-regular border-primaryNavy-border hover:border-primaryBlue-hover focus-visible:border-primaryBlue-main  focus:outline-none focus:border-primaryNavy-focus "
       />
     </div>
   );
