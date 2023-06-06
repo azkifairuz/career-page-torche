@@ -5,7 +5,7 @@ export default function SearchBar(props) {
       {icon}
       <input
         placeholder={placeholder}
-        className="border-none focus:outline-none w-full"
+        className="border-none focus:outline-none w-full text-neutral-1000"
       />
     </div>
   );
