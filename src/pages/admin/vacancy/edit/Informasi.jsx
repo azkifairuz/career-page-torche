@@ -1,7 +1,7 @@
 import EditContainer from "components/organisms/EditContainer";
 import EditInput from "components/molecules/EditInput";
 import InputField from "components/atoms/InputField";
-import Select from "components/atoms/Select";
+import Select from "components/atoms/SelectEditLowongan";
 
 export default function Informasi() {
   return (
