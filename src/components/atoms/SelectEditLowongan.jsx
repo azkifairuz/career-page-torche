@@ -3,7 +3,7 @@ import { useState } from "react";
 import ChevronDown from "assets/icons/chevron-down.svg";
 
 export default function Select(props) {
-  const { title, data, width, active, fit, isLabeled = false } = props;
+  const { title, data, width, active, fit } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(active);
 
@@ -20,15 +20,21 @@ export default function Select(props) {
 
   return (
     <div
-      className={`relative box-border text-neutral-1000 rounded-[8px] flex flex-col flex-1 gap-3 ${
+      className={`box-border text-neutral-1000  rounded-[8px] flex flex-col flex-1 gap-3 ${
         (width || fit) && "w-fit"
-      }   bg-white`}
+      } max-h-[216px]  ${
+        isOpen &&
+        "z-50 -mx-2 -my-2 py-2 px-2 border-[1px] border-neutral-300 h-full shadow-[2px_4px_10px_rgba(19,47,159,0.25)]"
+      } bg-white`}
     >
       <div
         className={`relative w-full ${fit && "w-fit"} ${width} ${
           isOpen ? "border-primaryBlue-main" : "border-primaryNavy-border"
         } hover:border-primaryBlue-hover  border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center`}
       >
+        <label className="text-xs-regular -top-2 left-3 px-1 bg-white absolute text-neutral-500">
+          {title}
+        </label>
         <button
           onClick={handleClick}
           className="border-none justify-between focus:outline-none flex gap-2 items-center flex-1"
@@ -52,13 +58,12 @@ export default function Select(props) {
       <ul
         className={`${
           !isOpen && "hidden"
-        } z-50 absolute left-0 top-14 overflow-hidden w-full rounded-lg bg-white transition duration-300 ease-in-out border-[1px] border-primaryNavy-border`}
+        }  activate-scroll origin-bottom transition duration-300 ease-in-out overflow-scroll`}
       >
         {data.map((item, index) => (
           <li
             key={index}
-            className="pl-4 pr-5 py-3 active:bg-primaryBlue-main active:text-neutral-100 text-left text-s-regular cursor-pointer  hover:bg-primaryBlue-surface"
-
+            className="px-4 py-2 text-s-regular cursor-pointer"
             onClick={handleItemClick}
           >
             {item}
