@@ -22,7 +22,7 @@ export default function Table(props) {
         </th>
         <th className=" border-0 font-semibold">Jumlah Lamaran per Status</th>
         <th className=" border-0 font-semibold">Status</th>
-        <th className="rounded-r-[32px] border-0 hidden lg:block">{""}</th>
+        <th className="rounded-r-[32px] hidden border-0 lg:table-cell">{""}</th>
       </thead>
       <tbody className="w-full">
         {filteredVacancies.map((item, index) => (
