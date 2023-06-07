@@ -20,17 +20,14 @@ export default function Select(props) {
 
   return (
     <div
-      className={`box-border text-neutral-1000  rounded-[8px] flex flex-col flex-1 gap-3 ${
-        (width || fit) && "w-fit"
-      } max-h-[216px]  ${
-        isOpen &&
-        "z-50 -mx-2 -my-2 py-2 px-2 border-[1px] border-neutral-300 h-full shadow-[2px_4px_10px_rgba(19,47,159,0.25)]"
-      } bg-white`}
+      className={` relative box-border text-neutral-1000  rounded-[8px] flex flex-col items-center flex-1 gap-3 w-fit max-h-[216px]   ${
+        isOpen && "-mx-2 px-2 "
+      } z-50 bg-white`}
     >
       <div
         className={`relative w-full ${fit && "w-fit"} ${width} ${
-          isOpen ? "border-primaryBlue-main" : "border-primaryNavy-border"
-        } hover:border-primaryBlue-hover  border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center`}
+          isOpen ? "border-primaryBlue-main z-50" : "border-primaryNavy-border"
+        }   hover:border-primaryBlue-hover  border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center`}
       >
         <label className="text-xs-regular -top-2 left-3 px-1 bg-white absolute text-neutral-500">
           {title}
@@ -56,14 +53,15 @@ export default function Select(props) {
         </button>
       </div>
       <ul
-        className={`${
-          !isOpen && "hidden"
-        }  activate-scroll origin-bottom transition duration-300 ease-in-out overflow-scroll`}
+        className={`-my-2 absolute w-full  max-h-[216px] h-fit rounded-lg flex flex-col border-[1px]   border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)] activate-scroll origin-bottom transition-all duration-1000 ease-in-out overflow-scroll ${
+          !isOpen && "border-none shadow-none bg-none border-0 max-h-0"
+        }`}
       >
+        <div className="h-16 shrink-0" />
         {data.map((item, index) => (
           <li
             key={index}
-            className="px-4 py-2 text-s-regular cursor-pointer"
+            className="z-50 px-6 py-2 bg-white text-s-regular cursor-pointer hover:bg-primaryBlue-surface active:text-neutral-100 active:bg-primaryBlue-main "
             onClick={handleItemClick}
           >
             {item}
