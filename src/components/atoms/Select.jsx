@@ -3,7 +3,7 @@ import { useState } from "react";
 import ChevronDown from "assets/icons/chevron-down.svg";
 
 export default function Select(props) {
-  const { title, data, width, active, fit, isLabeled = false } = props;
+  const { title, data, width, active, fit } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(active);
 
