@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 import EditContainer from "components/organisms/EditContainer";
 import EditInput from "components/molecules/EditInput";
 import InputField from "components/atoms/InputField";
 import Select from "components/atoms/SelectEditLowongan";
 
 export default function Ketentuan() {
+  const [isAgeDisabled, setIsAgeDisabled] = useState(false);
   return (
     <section className="flex flex-col gap-10 mt-[76px]">
       <EditContainer title="Syarat Pelamar">
@@ -40,16 +43,23 @@ export default function Ketentuan() {
               labelText="Umur minimal (tahun)"
               type="number"
               width="w-[240px]"
+              disabled={isAgeDisabled}
             />
             <InputField
               placeholder="65"
               labelText="Umur maksimal (tahun)"
               type="number"
               width="w-[240px]"
+              disabled={isAgeDisabled}
             />
           </section>
           <section className="flex gap-3 items-center">
-            <input type="checkbox" className="w-5 h-5 rounded-md" />
+            <input
+              type="checkbox"
+              className="w-5 h-5 rounded-md"
+              checked={isAgeDisabled}
+              onChange={() => setIsAgeDisabled(!isAgeDisabled)}
+            />
             <p className="text-xl-regular text-neutral-500 ">
               Tidak ada batasan umur.
             </p>
@@ -57,7 +67,7 @@ export default function Ketentuan() {
         </EditInput>
       </EditContainer>
 
-      <EditContainer title="Syarat Pelamar">
+      <EditContainer title="Informasi pelengkap">
         <EditInput
           title="Kandidat yang dibutuhkan"
           desc="Tentukan jumlah kandidat yang dibutuhkan untuk lowongan ini."
@@ -66,6 +76,18 @@ export default function Ketentuan() {
             placeholder="1"
             labelText="Karyawan yang dibutuhkan"
             type="number"
+            width="w-[240px]"
+          />
+        </EditInput>
+
+        <EditInput
+          title="Tanggal lowongan tutup"
+          desc="Tentukan tanggal lowongan ditutup. Jika tanggal tutup sudah lewat, maka pelamar tidak dapat menemukan lowongan ini "
+        >
+          <InputField
+            placeholder="DD/MM/YYYY"
+            labelText="Tanggal lowongan ditutup"
+            type="date"
             width="w-[240px]"
           />
         </EditInput>
@@ -88,6 +110,15 @@ export default function Ketentuan() {
               width="w-[240px]"
             />
           </section>
+        </EditInput>
+      </EditContainer>
+
+      <EditContainer>
+        <EditInput
+          title="Kontak rekruter"
+          desc="Silahkan pilih opsi kontak yang akan dihubungi langsung oleh pelamar"
+        >
+          tes tes
         </EditInput>
       </EditContainer>
     </section>
