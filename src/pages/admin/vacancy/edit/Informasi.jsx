@@ -20,6 +20,8 @@ export default function Informasi() {
   return (
     <section className="flex flex-col gap-10 mt-[76px]">
       <EditContainer title="Informasi Lowongan">
+        <div className="absolute -bottom-20">TES</div>
+
         <EditInput
           isLabeled={true}
           title="Nama pekerjaan"

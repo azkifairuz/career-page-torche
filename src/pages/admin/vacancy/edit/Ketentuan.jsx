@@ -118,7 +118,40 @@ export default function Ketentuan() {
           title="Kontak rekruter"
           desc="Silahkan pilih opsi kontak yang akan dihubungi langsung oleh pelamar"
         >
-          tes tes
+          <div className="flex flex-col gap-5">
+            <section className="flex py-[7px] text-neutral-1000 gap-5">
+              <div className="w-[120px] flex gap-2 items-center pl-[16px]">
+                <input type="radio" name="Whatsapp" className="w-4 h-4 border-primaryBlue-main" />
+                <p className="text-xl-regular">Whatsapp</p>
+              </div>
+              <div className="flex w-[360px] items-center">
+                <h1 className="w-[60px] text-m-bold rounded-l-lg border-[1px] border-primaryNavy-border py-[9px] pl-4 pr-3">
+                  +62
+                </h1>
+                <input
+                  type="text"
+                  className="flex w-full text-s-regular rounded-r-lg border-[1px] border-l-0 focus:outline-none border-primaryNavy-border py-[10px] items-center pl-3 pr-5"
+                  placeholder="Type something here"
+                />
+              </div>
+            </section>
+            <section className="flex py-[7px] text-neutral-1000 gap-5">
+              <div className="w-[120px] flex gap-2 items-center pl-[16px]">
+                <input type="radio" name="Whatsapp" className="w-4 h-4" />
+                <p className="text-xl-regular">Email</p>
+              </div>
+              <div className="flex w-[360px] items-center">
+                <h1 className="w-[60px] text-m-bold rounded-l-lg border-[1px] border-primaryNavy-border py-[9px] pl-4 pr-3">
+                  +62
+                </h1>
+                <input
+                  type="text"
+                  className="flex w-full text-s-regular rounded-r-lg border-[1px] border-l-0 focus:outline-none border-primaryNavy-border py-[10px] items-center pl-3 pr-5"
+                  placeholder="Type something here"
+                />
+              </div>
+            </section>
+          </div>
         </EditInput>
       </EditContainer>
     </section>

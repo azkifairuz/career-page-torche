@@ -21,7 +21,7 @@ export default function Select(props) {
   return (
     <div
       className={` relative box-border text-neutral-1000  rounded-[8px] flex flex-col items-center flex-1 gap-3 w-fit max-h-[216px]   ${
-        isOpen && "-mx-2 px-2 "
+        isOpen && "-mx-2 px-2 Z-50"
       } bg-white`}
     >
       <div

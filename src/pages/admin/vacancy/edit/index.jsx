@@ -32,7 +32,7 @@ export default function Edit() {
   };
 
   return (
-    <div className="flex w-full flex-col flex-1 pb-[63px] pr-[30px] lg:pr-[100px] pl-[30px] text-black">
+    <div className="flex w-full flex-col flex-1 pb-[63px] pr-[30px] lg:pr-[100px] pl-[30px] text-black ">
       <AdminNavbar />
       <h1 className="heading-l-bold">Edit Lowongan</h1>
       <section className="mt-[61px] button-m-regular flex gap-1 items-center">
