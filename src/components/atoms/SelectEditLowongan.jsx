@@ -22,19 +22,19 @@ export default function Select(props) {
     <div
       className={` relative box-border text-neutral-1000  rounded-[8px] flex flex-col items-center flex-1 gap-3 w-fit max-h-[216px]   ${
         isOpen && "-mx-2 px-2 "
-      } z-50 bg-white`}
+      } bg-white`}
     >
       <div
         className={`relative w-full ${fit && "w-fit"} ${width} ${
-          isOpen ? "border-primaryBlue-main z-50" : "border-primaryNavy-border"
-        }   hover:border-primaryBlue-hover  border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center`}
+          isOpen ? "border-primaryBlue-main z-50" : "border-primaryNavy-border "
+        }  hover:border-primaryBlue-hover bg-white border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center transition-all duration-1000 ease-in-out`}
       >
         <label className="text-xs-regular -top-2 left-3 px-1 bg-white absolute text-neutral-500">
           {title}
         </label>
         <button
           onClick={handleClick}
-          className="border-none justify-between focus:outline-none flex gap-2 items-center flex-1"
+          className="border-none  justify-between focus:outline-none flex gap-2 items-center flex-1"
         >
           <p
             className={`button-s-regular ${
@@ -53,15 +53,15 @@ export default function Select(props) {
         </button>
       </div>
       <ul
-        className={`-my-2 absolute w-full  max-h-[216px] h-fit rounded-lg flex flex-col border-[1px]   border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)] activate-scroll origin-bottom transition-all duration-1000 ease-in-out overflow-scroll ${
-          !isOpen && "border-none shadow-none bg-none border-0 max-h-0"
+        className={`z-30 -my-2 absolute w-full max-h-[216px] rounded-lg flex flex-col border-[1px] border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)] activate-scroll origin-bottom transition-all duration-1000 ease-in-out overflow-scroll ${
+          !isOpen && "border-none shadow-none bg-none border-0 max-h-0.5"
         }`}
       >
         <div className="h-16 shrink-0" />
         {data.map((item, index) => (
           <li
             key={index}
-            className="z-50 px-6 py-2 bg-white text-s-regular cursor-pointer hover:bg-primaryBlue-surface active:text-neutral-100 active:bg-primaryBlue-main "
+            className="px-6 py-2 bg-white text-s-regular cursor-pointer hover:bg-primaryBlue-surface active:text-neutral-100 active:bg-primaryBlue-main "
             onClick={handleItemClick}
           >
             {item}
