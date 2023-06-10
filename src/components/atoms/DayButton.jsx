@@ -1,12 +1,11 @@
 import React from "react";
 
 export default function DayButton(props) {
-  const { day, key, onClick, active } = props;
+  const { day, onClick, active } = props;
 
   return (
     <button
       onClick={onClick}
-      key={key}
       className={`py-[9px] pl-4 pr-5 rounded-lg border-[1px] hover:border-primaryBlue-main ${
         active
           ? "bg-primaryBlue-surface border-primaryBlue-main"
