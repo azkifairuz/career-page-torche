@@ -5,7 +5,7 @@ export default function EditInput(props) {
     <section className={`flex flex-col gap-3 ${fit ? "w-fit": "w-full"}`}>
       <article className="flex flex-col gap-1">
         <h1 className="heading-s-bold">{title}</h1>
-        <p>{desc}</p>
+        <p className="text-xl-regular text-neutral-500">{desc}</p>
       </article>
       {children}
     </section>
