@@ -9,7 +9,7 @@ import Edit from "./vacancy/edit";
 function Admin(props) {
   const { user } = props;
   return (
-    <div className="flex w-[100vw] ">
+    <div className="relative  flex w-[100vw] ">
       <Sidebar />
       <Outlet />
     </div>
