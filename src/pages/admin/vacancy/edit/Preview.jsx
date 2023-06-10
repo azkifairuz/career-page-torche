@@ -4,7 +4,7 @@ export default function Preview(props) {
     <div
       className={`${
         active ? "flex" : "hidden"
-      } absolute flex py-20 justify-center w-screen h-full bg-black bg-opacity-30 z-50`}
+      } absolute flex py-20 left-0 justify-center w-screen min-h-screen h-full bg-black bg-opacity-30 z-50`}
     >
       <section className="flex flex-col w-[1000px] z-50 bg-white p-[60px] rounded-xl">
         <div className="flex justify-between">
