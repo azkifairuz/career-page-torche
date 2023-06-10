@@ -20,14 +20,14 @@ export default function Select(props) {
 
   return (
     <div
-      className={` relative box-border text-neutral-1000  rounded-[8px] flex flex-col items-center flex-1 gap-3 w-fit max-h-[216px]   ${
-        isOpen && "-mx-2 px-2 Z-50"
+      className={`relative box-border text-neutral-1000  rounded-[8px] flex flex-col items-center flex-1 gap-3 ${width}   ${
+        isOpen && "-mx-2 px-2"
       } bg-white`}
     >
       <div
-        className={`relative w-full ${fit && "w-fit"} ${width} ${
+        className={`relative w-full ${fit && "w-fit"}  ${
           isOpen ? "border-primaryBlue-main z-50" : "border-primaryNavy-border "
-        }  hover:border-primaryBlue-hover bg-white border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center transition-all duration-1000 ease-in-out`}
+        }  hover:border-primaryBlue-hover bg-white border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center transition-all duration-500 ease-in-out`}
       >
         <label className="text-xs-regular -top-2 left-3 px-1 bg-white absolute text-neutral-500">
           {title}
@@ -53,8 +53,8 @@ export default function Select(props) {
         </button>
       </div>
       <ul
-        className={`z-30 -my-2 absolute w-full max-h-[216px] rounded-lg flex flex-col border-[1px] border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)] activate-scroll origin-bottom transition-all duration-1000 ease-in-out overflow-scroll ${
-          !isOpen && "border-none shadow-none bg-none max-h-[0%] "
+        className={`z-30 -my-2 absolute w-full max-h-[216px] rounded-lg flex flex-col border-[1px] border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)] activate-scroll origin-bottom transition-all duration-500 ease-in-out overflow-scroll ${
+          !isOpen && "border-none shadow-none bg-none border-0 max-h-[0px] "
         }`}
       >
         <div className="h-16 shrink-0" />
