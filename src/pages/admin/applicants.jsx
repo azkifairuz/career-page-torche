@@ -132,7 +132,7 @@ const handleFilter = (order) => {
         />
         <div className="flex gap-[50px] cursor-pointer">
           <div 
-          onClick={handleFilter}
+          onClick={handlePopUpFilter}
           className="flex gap-[11px] items-center">
             <img src={filter} alt="filter" />
             <h1 className="text-xl-bold">Filter</h1>
