@@ -24,6 +24,11 @@ input:-webkit-autofill:active {
 }
 
 @layer components {
+  .squared-list {
+    @apply flex gap-1 before:content-['■'] before:text-[12px];
+  }
+
+
   .text-xs-regular {
     font-size: 10px;
     line-height: 18px;
