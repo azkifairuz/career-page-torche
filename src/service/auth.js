@@ -8,9 +8,25 @@ export const login = async (data) => {
 
   const jsonData = JSON.stringify(data);
 
-  return callAPI({
+  const res =  callAPI({
     url,
     method: "POST",
     data: jsonData,
   });
+
+  return res;
+}
+
+export const signup = async (data) => {
+  const url = `${ROOT_URL}/${API_VERSION}/users/signup`;
+
+  const jsonData = JSON.stringify(data);
+
+  const res = await callAPI({
+    url,
+    method: "POST",
+    data: jsonData,
+  });
+
+  return res;
 }
