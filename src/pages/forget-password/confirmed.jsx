@@ -7,7 +7,7 @@ import AuthButton from "components/atoms/AuthButton";
 
 import {
   minCharacterRegex,
-  fullRegex,
+  passwordRegex,
   numberRegex,
   upperCaseRegex,
 } from "utils/regex";
@@ -37,7 +37,7 @@ export default function ChangePassword() {
     regexColorChange(upperCaseRegex, currentPassword, setUpperCheckColor);
     regexColorChange(numberRegex, currentPassword, setNumberCheckColor);
 
-    if (fullRegex.test(password)) {
+    if (passwordRegex.test(password)) {
       setIsPassValid(true);
     } else {
       setIsPassValid(false);
