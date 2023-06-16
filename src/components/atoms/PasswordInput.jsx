@@ -21,7 +21,7 @@ export default function PasswordInput(props) {
           onChange={onChange}
           className="focus:outline-none w-full active:bg-none autofill:bg-none"
         />
-        <button onClick={handleClick}>
+        <button onClick={handleClick} type="button">
           {isVisible ? <EyeSlash size={20} /> : <Eye size={20} />}
         </button>
       </div>
