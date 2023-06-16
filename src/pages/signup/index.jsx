@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CheckCircleFill } from "react-bootstrap-icons";
 
+import { signup } from "service/auth";
+
 import {
   minCharacterRegex,
-  fullRegex,
+  passwordRegex,
   numberRegex,
   upperCaseRegex,
+  symbolRegex,
 } from "utils/regex";
 
 import { regexColorChange } from "utils/regexColorChange";
@@ -29,6 +32,7 @@ function Signup() {
   const [minCheckColor, setMinCheckColor] = useState("#D9D9D9");
   const [upperCheckColor, setUpperCheckColor] = useState("#D9D9D9");
   const [numberCheckColor, setNumberCheckColor] = useState("#D9D9D9");
+  const [symbolCheckColor, setSymbolCheckColor] = useState("#D9D9D9");
 
   const [isPassValid, setIsPassValid] = useState(false);
 
@@ -51,8 +55,9 @@ function Signup() {
     regexColorChange(minCharacterRegex, currentPassword, setMinCheckColor);
     regexColorChange(upperCaseRegex, currentPassword, setUpperCheckColor);
     regexColorChange(numberRegex, currentPassword, setNumberCheckColor);
+    regexColorChange(symbolRegex, currentPassword, setSymbolCheckColor);
 
-    if (fullRegex.test(password)) {
+    if (passwordRegex.test(password)) {
       setIsPassValid(true);
     } else {
       setIsPassValid(false);
@@ -66,14 +71,36 @@ function Signup() {
     setConfirmPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (password !== confirmPassword) {
       alert("Password tidak sama");
-    } else {
-      alert("Selamat datang");
-      navigate("/signup/verify");
+      return;
     }
+
+    if (!isPassValid) {
+      alert("Password tidak valid");
+      return;
+    }
+
+    const res = await signup({
+      fullName: name,
+      email,
+      password,
+      passwordRepeat: confirmPassword,
+    });
+
+    console.log(res);
+
+    const message = res.messages ? res.messages : res.message;
+    alert(message)
+
+    if (res.success === false) {
+      return;
+    }
+
+    // navigate("/signup/verify");
   };
 
   return (
@@ -84,7 +111,7 @@ function Signup() {
         className="absolute -z-10 top-0 left-0 h-full w-full"
       />
       <AuthContainer>
-        <form className="flex flex-col gap-[16px] w-full h-full" method="post">
+        <form className="flex flex-col gap-[16px] w-full h-full" method="post" onSubmit={handleSubmit}>
           <InputField
             title="Fullname"
             type="text"
@@ -135,6 +162,14 @@ function Signup() {
               />
               <p className="text-neutral-1000 text-">Menggunakan angka</p>
             </div>
+            <div className="flex gap-[8px] items-center">
+              <CheckCircleFill
+                size={20}
+                id="symbol-check"
+                color={symbolCheckColor}
+              />
+              <p className="text-neutral-1000 text-">Menggunakan simbol</p>
+            </div>
           </div>
           <PasswordInput
             title="Konfirmasi Kata Sandi"
@@ -147,6 +182,7 @@ function Signup() {
             onClick={handleSubmit}
             name="signup-button"
             title="Daftar Sekarang"
+            type="submit"
           />
         </form>
         <p className="text-neutral-1000 text-[14px]">
