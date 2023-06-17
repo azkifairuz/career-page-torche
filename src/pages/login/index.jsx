@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import InputField from "components/atoms/InputField";
+import { login } from "service/auth";
+import Cookies from "js-cookie";
 
+import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
 import AuthButton from "components/atoms/AuthButton";
 import GoogleButton from "components/atoms/GoogleButton";
@@ -10,21 +12,35 @@ import GoogleButton from "components/atoms/GoogleButton";
 import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
 import LoginBG from "assets/images/LoginBG.webp";
 
-function Login() {
+export default function Login() {
   const navigate = useNavigate();
-  const [users, setUsers] = useState("");
 
-  const handler = (e) => {
-    setUsers(e.target.value);
-  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  function isAdmin() {
-    if (users === "admin") {
-      return navigate("/admin");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email || !password) {
+      alert("Please fill all the fields");
+      return;
     }
 
-    return navigate("/user");
-  }
+    const res = await login({
+      email,
+      password,
+    });
+
+    console.log(res);
+
+    const msg = res.messages ? res.messages : res.message;
+    alert(msg);
+
+    if (res.success === false) {
+      return;
+    }
+
+    navigate("/users");
+  };
 
   return (
     <main className="relative flex p-0 md:px-[100px] md:py-[129px] justify-center lg:justify-end items-center bg-primaryNavy-main min-h-screen">
@@ -39,11 +55,19 @@ function Login() {
           action=""
           method="post"
         >
-          <InputField title="Email" type="text" placeholder="Your Email Here" />
+          <InputField
+            title="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            placeholder="Your Email Here"
+          />
           <div className="flex flex-col gap-2 items-start">
             <InputField
               title="Kata Sandi"
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
             />
             <Link
@@ -53,10 +77,14 @@ function Login() {
               Forgot Password?
             </Link>
           </div>
-          <AuthButton onClick={isAdmin} name="login-button" title="Masuk" />
+          <AuthButton
+            onClick={handleSubmit}
+            name="login-button"
+            title="Masuk"
+          />
         </form>
         <p className="text-neutral-1000 text-[14px]">atau masuk dengan </p>
-        <GoogleButton onClick={isAdmin} />
+        <GoogleButton />
         <p className="text-neutral-1000 text-[14px]">
           tidak punya akun?{" "}
           <Link to="/signup" className="font-bold text-primaryBlue-main">
@@ -72,4 +100,3 @@ function Login() {
     </main>
   );
 }
-export default Login;
