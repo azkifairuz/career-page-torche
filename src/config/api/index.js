@@ -1,19 +1,14 @@
 import axios from "axios";
-import cookies from "js-cookie";
 
 export default async function callAPI(config) {
-  const { url, method, data, mustAuthenticated } = config;
+  const { url, method, data, withCredentials } = config;
   let headers = { "Content-Type": "application/json" };
-
-  if (mustAuthenticated) {
-    const jwtToken = cookies.get("token");
-    headers["Authorization"] = `Bearer ${jwtToken}`;
-  }
 
   const response = await axios({
     url,
     method,
     data,
+    withCredentials,
     headers,
   }).catch((err) => {
     return err.response;
@@ -27,6 +22,8 @@ export default async function callAPI(config) {
     };
     return res;
   }
+
+  console.log(response)
 
   return response.data;
 }
