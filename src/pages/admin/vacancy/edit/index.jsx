@@ -1,9 +1,6 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import AdminNavbar from "components/organisms/AdminNavbar";
-
-import { vacancies } from "data/vacancy";
 
 import Chevron from "assets/icons/chevron-down.svg";
 import Ingfo from "assets/icons/Ingfo.svg";
@@ -14,12 +11,8 @@ import Ketentuan from "./Ketentuan";
 import Preview from "./Preview";
 
 export default function Edit() {
-  const { id } = useParams();
-
   const [step, setStep] = useState(1);
   const [onConfirm, setOnConfirm] = useState(false);
-
-  const vacancy = vacancies.find((loker) => loker.id === id);
 
   const handlePrev = () => {
     setStep(Math.max(step - 1, 1));
