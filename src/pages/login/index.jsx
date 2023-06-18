@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { login } from "service/auth";
-import Cookies from "js-cookie";
 
 import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";

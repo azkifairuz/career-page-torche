@@ -1,5 +1,7 @@
-import { X } from "react-bootstrap-icons";
-import { FileEarmarkPlus } from "react-bootstrap-icons";
+import PropTypes from "prop-types";
+
+import { X, FileEarmarkPlus } from "react-bootstrap-icons";
+
 export default function ResumePopup(props) {
   const { onclick } = props;
   const MaxFileSize = 5 * 1024 * 1024;
@@ -44,9 +46,9 @@ export default function ResumePopup(props) {
           ></input>
         </div>
         <p className="text-m-regular w-full text-neutral-800">
-          We prefer resumes to be in PDF format and no larger than 5MB. Don't
-          worry, we won't share your info with anyone except the companies
-          you're applying to.
+          We prefer resumes to be in PDF format and no larger than 5MB.
+          Don&apos;t worry, we won&apos;t share your info with anyone except the
+          companies you&apos;re applying to.
         </p>
       </section>
       <section className="w-full border-t border-neutral-400 py-[16px] px-[32px] gap-[16px] flex justify-end items-center">
@@ -64,3 +66,7 @@ export default function ResumePopup(props) {
     </form>
   );
 }
+
+ResumePopup.propTypes = {
+  onclick: PropTypes.func.isRequired,
+};

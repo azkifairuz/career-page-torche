@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Item(props) {
   const { isActive, setIsActive, index, page } = props;
   const activeItem = "bg-[#4D74CC] text-white";
@@ -20,3 +22,10 @@ export default function Item(props) {
     </button>
   );
 }
+
+Item.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  setIsActive: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  page: PropTypes.number.isRequired,
+};

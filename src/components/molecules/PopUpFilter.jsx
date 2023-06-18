@@ -3,14 +3,14 @@ import Select from "components/atoms/Select";
 import { X } from "react-bootstrap-icons";
 
 export default function name(props) {
-  const { onclick } = props;
+  const { onClick } = props;
   return (
     <>
       <div className="w-[508px] bg-white pb-5 rounded-[40px]  flex flex-col">
         {/* card header */}
         <div className="flex cursor-pointer justify-between w-full px-16 py-5 items-center border-b border-neutral-300">
           <h1 className="text-l-bold">Filter</h1>
-          <X size={30} color="#323232" onClick={onclick} />
+          <X size={30} color="#323232" onClick={onClick} />
         </div>
         {/* end card header */}
 

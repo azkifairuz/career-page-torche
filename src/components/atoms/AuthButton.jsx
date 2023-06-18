@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function AuthButton(props) {
   const { onClick, name, type = "button", title } = props;
   return (
@@ -11,3 +13,10 @@ export default function AuthButton(props) {
     </button>
   );
 }
+
+AuthButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  title: PropTypes.string.isRequired,
+};

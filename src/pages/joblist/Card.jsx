@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import TimerIcon from "assets/icons/timer.svg";
 
@@ -37,3 +38,12 @@ export default function Card(props) {
     </Link>
   );
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  place: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};

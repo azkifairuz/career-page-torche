@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function CategoryCard(props) {
   const { icon, Category, jumlah } = props;
   return (
@@ -12,3 +14,9 @@ export default function CategoryCard(props) {
     </div>
   );
 }
+
+CategoryCard.propTypes = {
+  icon: PropTypes.element.isRequired,
+  Category: PropTypes.string.isRequired,
+  jumlah: PropTypes.number.isRequired,
+};

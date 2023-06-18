@@ -1,10 +1,8 @@
 import "./App.css";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useState } from "react";
 
 import Layout from "./components/organisms/Layout";
-import ProtectedRoute from "./components/ProtectedRoute";
 import {
   Landing,
   Custom404,

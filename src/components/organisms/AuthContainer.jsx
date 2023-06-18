@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import logoBlack from "assets/logos/Torche_Logo_Black.png";
 
 export default function AuthContainer(props) {
@@ -13,3 +15,7 @@ export default function AuthContainer(props) {
     </div>
   );
 }
+
+AuthContainer.propTypes = {
+  children: PropTypes.element.isRequired,
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export default function InputField(props) {
   const {
@@ -37,3 +37,14 @@ export default function InputField(props) {
     </div>
   );
 }
+
+InputField.propTypes = {
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  labelText: PropTypes.string,
+  width: PropTypes.string,
+  disabled: PropTypes.bool,
+};

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function PillButton(props) {
   const { isActive, name, onClick } = props;
   return (
@@ -11,3 +13,9 @@ export default function PillButton(props) {
     </button>
   );
 }
+
+PillButton.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};

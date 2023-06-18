@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Pin from "assets/icons/pin.svg";
 
 export default function VacancyCard(props) {
@@ -48,3 +50,14 @@ export default function VacancyCard(props) {
     </tr>
   );
 }
+
+VacancyCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+  applicantsCount: PropTypes.shape({
+    total: PropTypes.number.isRequired,
+  }).isRequired,
+};

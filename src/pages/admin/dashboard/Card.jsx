@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Card(props) {
   const { count, title, icon } = props;
   return (
@@ -10,3 +12,9 @@ export default function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  count: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export default function DayButton(props) {
   const { day, onClick, active } = props;
@@ -18,3 +18,9 @@ export default function DayButton(props) {
     </button>
   );
 }
+
+DayButton.propTypes = {
+  day: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  active: PropTypes.bool.isRequired,
+};

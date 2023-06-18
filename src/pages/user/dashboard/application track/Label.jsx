@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Label(props) {
   const { status } = props;
   let backgroundColor = "";
@@ -33,3 +35,7 @@ export default function Label(props) {
     </span>
   );
 }
+
+Label.propTypes = {
+  status: PropTypes.string.isRequired,
+};

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Item(props) {
   const { title, desc } = props;
 
@@ -8,3 +10,8 @@ export default function Item(props) {
     </div>
   );
 }
+
+Item.propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+};

@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+
 import { X } from "react-bootstrap-icons";
 import { Check } from "react-bootstrap-icons";
 import Toga from "assets/icons/toga.svg";
-import { useNavigate } from "react-router-dom";
 
 export default function Preview(props) {
   const { active, setActive } = props;
@@ -111,8 +113,12 @@ export default function Preview(props) {
                 <br />
                 <h2>Job Description:</h2>
                 <div className="[&>*]:squared-list">
-                  <p>Conducting research in UX design for TORCHE's Apps</p>
-                  <p>Developing UX design for TORCHE's Apps and softwares</p>
+                  <p>
+                    Conducting research in UX design for TORCHE`&apos;`s Apps
+                  </p>
+                  <p>
+                    Developing UX design for TORCHE`&apos;`s Apps and softwares
+                  </p>
                 </div>
               </div>
             </section>
@@ -142,3 +148,8 @@ export default function Preview(props) {
     </div>
   );
 }
+
+Preview.propTypes = {
+  active: PropTypes.bool.isRequired,
+  setActive: PropTypes.func.isRequired,
+};

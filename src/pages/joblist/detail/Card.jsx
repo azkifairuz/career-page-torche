@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import bg from "assets/images/jobapplication/bg.png";
 
 export default function Card(props) {
@@ -12,3 +14,7 @@ export default function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+};

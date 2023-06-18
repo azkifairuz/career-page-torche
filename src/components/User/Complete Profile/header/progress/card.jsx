@@ -1,6 +1,10 @@
-import Item from "./item";
 import { useState } from "react";
+import PropTypes from "prop-types";
+
+import Item from "./item";
+
 import ArrowDown from "assets/icons/chevron-down.svg";
+
 export default function ProgressCard(props) {
   const { percent } = props;
   const itemData = [
@@ -78,3 +82,7 @@ export default function ProgressCard(props) {
     </div>
   );
 }
+
+ProgressCard.propTypes = {
+  percent: PropTypes.number.isRequired,
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export default function EditContainer(props) {
   const { children, title = "" } = props;
@@ -9,3 +9,8 @@ export default function EditContainer(props) {
     </section>
   );
 }
+
+EditContainer.propTypes = {
+  children: PropTypes.element.isRequired,
+  title: PropTypes.string,
+};

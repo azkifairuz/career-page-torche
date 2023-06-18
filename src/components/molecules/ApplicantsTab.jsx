@@ -39,3 +39,9 @@ export default function ApplicantsTab(props) {
     </button>
   );
 }
+
+ApplicantsTab.propTypes = {
+  title: PropTypes.string.isRequired,
+  count: PropTypes.number,
+  setFilterStatus: PropTypes.func.isRequired,
+};

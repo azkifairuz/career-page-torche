@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Google from "assets/icons/Google.svg";
 
 export default function GoogleButton(props) {
@@ -13,3 +15,7 @@ export default function GoogleButton(props) {
     </button>
   );
 }
+
+GoogleButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function DataByStatus(props) {
   const { count, status } = props;
   return (
@@ -7,3 +9,8 @@ export default function DataByStatus(props) {
     </span>
   );
 }
+
+DataByStatus.propTypes = {
+  count: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+};

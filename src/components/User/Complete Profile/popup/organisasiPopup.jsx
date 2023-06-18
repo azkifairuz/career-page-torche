@@ -1,5 +1,8 @@
+import { useState } from "react";
+import PropTypes from "prop-types";
+
 import { months } from "data/month";
-import React, { useState } from "react";
+
 import { X } from "react-bootstrap-icons";
 export default function OrganisasiPopup(props) {
   const { onclick } = props;
@@ -142,3 +145,7 @@ export default function OrganisasiPopup(props) {
     </form>
   );
 }
+
+OrganisasiPopup.propTypes = {
+  onclick: PropTypes.func,
+};

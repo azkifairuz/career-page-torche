@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
+
 import { X } from "react-bootstrap-icons";
 
 export default function PortfolioPopup(props) {
@@ -105,3 +106,7 @@ export default function PortfolioPopup(props) {
     </form>
   );
 }
+
+PortfolioPopup.propTypes = {
+  onclick: PropTypes.func.isRequired,
+};

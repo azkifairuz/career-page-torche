@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
+
 import { X } from "react-bootstrap-icons";
 
 export default function AchivementPopup(props) {
@@ -80,3 +82,7 @@ export default function AchivementPopup(props) {
     </form>
   );
 }
+
+AchivementPopup.propTypes = {
+  onclick: PropTypes.func.isRequired,
+};

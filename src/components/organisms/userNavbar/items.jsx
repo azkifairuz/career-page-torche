@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Item(props) {
   const { icon, title, href, isActive, setIsActive, index } = props;
@@ -20,3 +21,12 @@ export default function Item(props) {
     </Link>
   );
 }
+
+Item.propTypes = {
+  icon: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  setIsActive: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+};

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Card from "./Card";
 
 export default function Table(props) {
@@ -23,3 +25,7 @@ export default function Table(props) {
     </table>
   );
 }
+
+Table.propTypes = {
+  data: PropTypes.array.isRequired,
+};

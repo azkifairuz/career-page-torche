@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import CategoryIcon from "assets/icons/category.svg";
 import Chevron from "assets/icons/chevron-down.svg";
@@ -59,3 +60,7 @@ export default function Filter(props) {
     </div>
   );
 }
+
+Filter.propTypes = {
+  type: PropTypes.string,
+};

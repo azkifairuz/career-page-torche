@@ -1,7 +1,7 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export default function VacancyTab(props) {
-  const { title, filter, count = null, active, setFilterStatus } = props;
+  const { title, filter, count, active, setFilterStatus } = props;
   const bgColor =
     filter === "all"
       ? "bg-primaryBlue-border"
@@ -35,3 +35,11 @@ export default function VacancyTab(props) {
     </button>
   );
 }
+
+VacancyTab.propTypes = {
+  title: PropTypes.string.isRequired,
+  count: PropTypes.number,
+  filter: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  setFilterStatus: PropTypes.func.isRequired,
+};

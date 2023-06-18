@@ -1,4 +1,5 @@
-import React from "react";
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 
 export default function Item(props) {
@@ -13,3 +14,9 @@ export default function Item(props) {
     </Link>
   );
 }
+
+Item.propTypes = {
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+};

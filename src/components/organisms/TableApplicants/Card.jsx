@@ -1,5 +1,8 @@
-import ProfileIcon from "assets/images/person.png";
+import PropTypes from "prop-types";
+
 import Select from "components/atoms/Select";
+
+import ProfileIcon from "assets/images/person.png";
 
 export default function Card(props) {
   const {
@@ -53,3 +56,14 @@ export default function Card(props) {
     </tr>
   );
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  appliedAt: PropTypes.string.isRequired,
+  experience: PropTypes.string.isRequired,
+  major: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  lastEducation: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+};

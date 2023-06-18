@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function SearchBar(props) {
   const { placeholder, icon, width } = props;
   return (
@@ -12,3 +14,9 @@ export default function SearchBar(props) {
     </div>
   );
 }
+
+SearchBar.propTypes = {
+  placeholder: PropTypes.string.isRequired,
+  icon: PropTypes.node.isRequired,
+  width: PropTypes.string,
+};

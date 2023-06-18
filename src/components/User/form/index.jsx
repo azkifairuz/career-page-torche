@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import { user } from "data/user";
 import { countryCodes } from "data/countryCodes";
+
 export default function Form() {
   const [input, setinput] = useState({
     username: user.username,

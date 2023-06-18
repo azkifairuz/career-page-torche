@@ -1,6 +1,9 @@
 import { useState } from "react";
-import Card from "./Card";
+import PropTypes from "prop-types";
+
 import { vacancies } from "data/vacancy";
+
+import Card from "./Card";
 
 export default function Table(props) {
   const { filterStatus } = props;
@@ -38,3 +41,7 @@ export default function Table(props) {
     </table>
   );
 }
+
+Table.propTypes = {
+  filterStatus: PropTypes.string.isRequired,
+};

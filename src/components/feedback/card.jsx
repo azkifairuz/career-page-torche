@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Card(props) {
   const { profil, name, kampus, feed } = props;
   return (
@@ -9,7 +11,14 @@ export default function Card(props) {
           <p className="text-s-regular text-neutral-900">{kampus}</p>
         </div>
       </div>
-      <div className="text-m-regular text-neutral-900">"{feed}"</div>
+      <div className="text-m-regular text-neutral-900">&quot;{feed}&quot;</div>
     </div>
   );
 }
+
+Card.propTypes = {
+  profil: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  kampus: PropTypes.string.isRequired,
+  feed: PropTypes.string.isRequired,
+};

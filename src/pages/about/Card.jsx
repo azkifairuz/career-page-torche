@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Card(props) {
   const { title, description, icon } = props;
   return (
@@ -10,3 +12,9 @@ export default function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired,
+};

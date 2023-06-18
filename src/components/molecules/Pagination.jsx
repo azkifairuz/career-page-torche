@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import PropTypes from "prop-types";
+
 import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 
 export default function Pagination(props) {
@@ -53,3 +56,7 @@ export default function Pagination(props) {
     </section>
   );
 }
+
+Pagination.propTypes = {
+  maxData: PropTypes.number.isRequired,
+};

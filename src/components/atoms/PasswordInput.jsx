@@ -1,4 +1,6 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 import { Eye, EyeSlash } from "react-bootstrap-icons";
 
 export default function PasswordInput(props) {
@@ -28,3 +30,11 @@ export default function PasswordInput(props) {
     </div>
   );
 }
+
+PasswordInput.propTypes = {
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import ArrowDown from "assets/icons/arrow-circle-down.svg";
 
 export default function Panel(props) {
@@ -35,3 +37,11 @@ export default function Panel(props) {
     </div>
   );
 }
+
+Panel.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  setActiveIndex: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  index: PropTypes.number.isRequired,
+};

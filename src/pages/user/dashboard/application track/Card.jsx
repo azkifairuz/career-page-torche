@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Label from "./Label";
 
 export default function Card(props) {
@@ -38,3 +40,9 @@ export default function Card(props) {
     </div>
   );
 }
+Card.propTypes = {
+  posisi: PropTypes.string,
+  salary: PropTypes.string,
+  status: PropTypes.string,
+  tanggal: PropTypes.string,
+};

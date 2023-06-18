@@ -1,4 +1,6 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 import { ChevronDown } from "react-bootstrap-icons";
 
 export default function StatusSelect(props) {
@@ -73,3 +75,9 @@ export default function StatusSelect(props) {
     </div>
   );
 }
+
+StatusSelect.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.array,
+  status: PropTypes.string,
+};

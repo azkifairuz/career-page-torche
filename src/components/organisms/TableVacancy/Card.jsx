@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 import DataByStatus from "./DataByStatus";
 
@@ -102,3 +103,20 @@ export default function Card(props) {
     </tr>
   );
 }
+
+Card.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+  applicantsCount: PropTypes.shape({
+    belumDiproses: PropTypes.number.isRequired,
+    diproses: PropTypes.number.isRequired,
+    diterima: PropTypes.number.isRequired,
+    ditolak: PropTypes.number.isRequired,
+  }).isRequired,
+  status: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  setActiveIndex: PropTypes.func.isRequired,
+};

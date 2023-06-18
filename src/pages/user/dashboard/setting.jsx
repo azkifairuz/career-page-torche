@@ -1,8 +1,12 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
+import { countryCodes } from "data/countryCodes";
+import ToggleSwitch from "components/atoms/ToggleSwicth";
+
 import { PencilFill } from "react-bootstrap-icons";
 import downloadIcon from "assets/icons/download.svg";
-import ToggleSwitch from "components/atoms/ToggleSwicth";
-import { countryCodes } from "data/countryCodes";
+
 export default function Setting(props) {
   const {
     userEmail = "Alexander.colombus@gmail.com",
@@ -130,7 +134,7 @@ export default function Setting(props) {
 
       <section className="p-[16px] shadow-[0px_0px_10px_0px_#0000001A] rounded-lg flex flex-col gap-[5px] md:gap-[24px] w-full">
         <h1 className=" text-neutral-900 font-cairo text-[18px] leading-[24px] mb-[19px] md:mb-[16px]">
-          We'll send you email for updated on job-related news with our
+          We`&apos;`ll send you email for updated on job-related news with our
           notifications.
         </h1>
 
@@ -160,3 +164,9 @@ export default function Setting(props) {
     </div>
   );
 }
+
+Setting.propTypes = {
+  userEmail: PropTypes.string,
+  password: PropTypes.string,
+  contact: PropTypes.string,
+};

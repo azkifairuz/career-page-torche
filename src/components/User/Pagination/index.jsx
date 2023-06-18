@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Item from "./item";
-import { useEffect } from "react";
+
 export default function Pagination() {
   const pages = [1, 2, 3];
 

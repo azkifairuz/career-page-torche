@@ -1,6 +1,6 @@
-import React from "react";
+import PropTypes from "prop-types";
 
-const ToggleSwitch = (props) => {
+export default function ToggleSwitch(props) {
   const { isActive, onclick } = props;
 
   return (
@@ -27,6 +27,9 @@ const ToggleSwitch = (props) => {
       </label>
     </div>
   );
-};
+}
 
-export default ToggleSwitch;
+ToggleSwitch.propTypes = {
+  isActive: PropTypes.bool,
+  onclick: PropTypes.func,
+};

@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import { X } from "react-bootstrap-icons";
+
 export default function AboutPopUp(props) {
   const { onclick } = props;
   return (
@@ -37,3 +40,7 @@ export default function AboutPopUp(props) {
     </div>
   );
 }
+
+AboutPopUp.propTypes = {
+  onclick: PropTypes.func.isRequired,
+};

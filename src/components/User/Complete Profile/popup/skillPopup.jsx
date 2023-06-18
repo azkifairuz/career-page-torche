@@ -1,4 +1,6 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 import { X } from "react-bootstrap-icons";
 
 const skills = [
@@ -129,3 +131,7 @@ export default function SkillPopup(props) {
     </div>
   );
 }
+
+SkillPopup.propTypes = {
+  onclick: PropTypes.func.isRequired,
+};

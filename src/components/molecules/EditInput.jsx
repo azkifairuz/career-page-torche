@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function EditInput(props) {
   const { title, desc, children, fit = false } = props;
 
@@ -11,3 +13,10 @@ export default function EditInput(props) {
     </section>
   );
 }
+
+EditInput.propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  fit: PropTypes.bool,
+};

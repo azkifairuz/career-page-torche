@@ -1,8 +1,11 @@
 import { useState } from "react";
+
+import PropTypes from "prop-types";
+
 import { X } from "react-bootstrap-icons";
 
 export default function PopUpSort(props) {
-  const { onclick, onSort } = props;
+  const { onClick, onSort } = props;
   const [selectedSort, setSelectedSort] = useState("terbaru");
   const handleCheckboxClick = (sortOption) => {
     if (selectedSort === sortOption) {
@@ -17,7 +20,7 @@ export default function PopUpSort(props) {
     <>
       <div className="w-[300px] border bg-white flex-col h-[160px] rounded-[40px] flex">
         <div className="self-end flex top-[20px] right-[30px] relative  content-start cursor-pointer">
-          <X size={30} color="#323232" onClick={onclick} />
+          <X size={30} color="#323232" onClick={onClick} />
         </div>
         <div className="flex ml-[40px] flex-col mt-[11px] gap-[20px]">
           <h1 className="text-l-bold">Urutkan</h1>
@@ -48,3 +51,8 @@ export default function PopUpSort(props) {
     </>
   );
 }
+
+PopUpSort.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  onSort: PropTypes.func.isRequired,
+};

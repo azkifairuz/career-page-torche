@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import PropTypes from "prop-types";
+
 export default function Card(props) {
   const { title, src, step, desc } = props;
   const [isOpen, setIsOpen] = useState(false);
@@ -26,3 +28,10 @@ export default function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  step: PropTypes.number.isRequired,
+  desc: PropTypes.string.isRequired,
+};

@@ -1,13 +1,13 @@
-import Sidebar from "components/organisms/AdminSidebar";
 import { Outlet } from "react-router-dom";
+
+import Sidebar from "components/organisms/AdminSidebar";
 import AdminDashboard from "./dashboard";
 import Vacancy from "./vacancy";
 import Create from "./vacancy/create";
 import Applicants from "./applicants";
 import Edit from "./vacancy/edit";
 
-function Admin(props) {
-  const { user } = props;
+export default function Admin() {
   return (
     <div className="relative  flex w-[100vw] ">
       <Sidebar />
@@ -16,5 +16,4 @@ function Admin(props) {
   );
 }
 
-export default Admin;
 export { AdminDashboard, Vacancy, Create, Applicants, Edit };

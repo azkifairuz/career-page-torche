@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import ChevronDown from "assets/icons/chevron-down.svg";
 
@@ -67,3 +68,11 @@ export default function Select(props) {
     </div>
   );
 }
+
+Select.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.array,
+  width: PropTypes.string,
+  active: PropTypes.string,
+  fit: PropTypes.bool,
+};

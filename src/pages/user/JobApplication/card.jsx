@@ -1,5 +1,9 @@
 import { useState } from "react";
+
+import PropTypes from "prop-types";
+
 import DetailsCard from "./detailsCard";
+
 export default function Card(props) {
   const { posisi, salary, place, tanggal, category } = props;
   const categories = [];
@@ -73,3 +77,11 @@ export default function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  posisi: PropTypes.string.isRequired,
+  salary: PropTypes.string.isRequired,
+  place: PropTypes.string.isRequired,
+  tanggal: PropTypes.string.isRequired,
+  category: PropTypes.array.isRequired,
+};

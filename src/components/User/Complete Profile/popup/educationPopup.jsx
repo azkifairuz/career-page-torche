@@ -1,6 +1,10 @@
+import { useState } from "react";
+import PropTypes from "prop-types";
+
 import { months } from "data/month";
-import React, { useState } from "react";
+
 import { X } from "react-bootstrap-icons";
+
 export default function EducationPopup(props) {
   const { onclick } = props;
   const currentYear = new Date().getFullYear();
@@ -167,3 +171,7 @@ export default function EducationPopup(props) {
     </form>
   );
 }
+
+EducationPopup.propTypes = {
+  onclick: PropTypes.func,
+};

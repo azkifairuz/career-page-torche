@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import { X } from "react-bootstrap-icons";
+
 export default function DetailsCard(props) {
   const { onclick } = props;
   return (
@@ -53,3 +56,7 @@ export default function DetailsCard(props) {
     </div>
   );
 }
+
+DetailsCard.propTypes = {
+  onclick: PropTypes.func,
+};
