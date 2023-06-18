@@ -259,9 +259,22 @@ export default function Navbar() {
             </Link>
           );
         })}
+        {profilNav.slice(0, 5).map((data, index) => {
+          return (
+            <Link
+              onClick={handleNavbarOpen}
+              key={index}
+              className="relative cursor-pointer active:bg-primaryBlue-pressed py-3 px-4 hover:bg-primaryBlue-main md:mx-3 md:my-0 my-3 transition duration-200 font-light"
+              to={data.href}
+            >
+              {data.title}
+            </Link>
+          );
+        })}
+
         <div className="bg-[#5885E9] px-5 py-2 rounded-full w-1/2 mx-auto mb-3">
           <div className="md:hidden flex justify-center">
-            <div>Logout</div>
+            <button>Logout</button>
           </div>
         </div>
       </ul>
