@@ -38,7 +38,7 @@ export default function AdminLogin() {
       return;
     }
 
-    navigate("/users");
+    navigate("/TorcheJaya");
   };
 
   return (
