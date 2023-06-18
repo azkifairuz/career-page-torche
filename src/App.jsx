@@ -56,8 +56,7 @@ function App() {
         </Route>
         <Route path={"/joblist/:id"} element={<JobDetail />} />
         <Route path="TorcheJaya" element={<Admin />}>
-          <Route index element={<Navigate to="dashboard" />} />
-          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route index element={<AdminDashboard to="dashboard" />} />
           <Route path="vacancy" element={<Vacancy />} />
           <Route path="applicants" element={<Applicants />} />
           <Route path="vacancy/create" element={<Create />} />

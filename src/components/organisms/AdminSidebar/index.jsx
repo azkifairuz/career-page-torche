@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Item from "./Item";
+import Button from "./Button";
 
 import Logo from "assets/icons/TorcheDarkBg.svg";
 import DashboardIcon from "assets/icons/DashboradIcon.svg";
@@ -35,10 +35,10 @@ export default function AdminSidebar(props) {
           </section>
         </div>
         <ul className="flex flex-col gap-2 mt-14">
-          <Item src={DashboardIcon} title="Dashboard" href="dashboard" />
-          <Item src={LowonganIcon} title="Lowongan" href="vacancy" />
-          <Item src={PelamarIcon} title="Pelamar" href="applicants" />
-          <Item src={WawancaraIcon} title="Wawancara" href="wawancara" />
+          <Button src={DashboardIcon} title="Dashboard" href="" />
+          <Button src={LowonganIcon} title="Lowongan" href="vacancy" />
+          <Button src={PelamarIcon} title="Pelamar" href="applicants" />
+          <Button src={WawancaraIcon} title="Wawancara" href="wawancara" />
         </ul>
       </aside>
       <button
