@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { PencilFill } from "react-bootstrap-icons";
 import downloadIcon from "assets/icons/download.svg";
 import ToggleSwitch from "components/atoms/ToggleSwicth";
