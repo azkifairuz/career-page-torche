@@ -55,16 +55,6 @@ export const applicants = vacancies.map((item) => {
         appliedAt: "2022-07-01",
         status: "Diproses",
       },
-      {
-        name: "John Doe5",
-        age: 20,
-        city: "Kota Makassar",
-        experience: "2 Bulan",
-        lastEducation: "SMA/SMK",
-        major: "Teknik Informatika",
-        appliedAt: "2021-08-11",
-        status: "Diproses",
-      },
     ],
   };
 });
