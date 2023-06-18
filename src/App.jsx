@@ -32,6 +32,7 @@ import ForgetPassword from "pages/forget-password";
 import ChangePassword from "pages/forget-password/confirmed";
 import ScrollToTop from "utils/scrollToTop";
 import AdminLogin from "pages/login/admin";
+import Logout from "pages/logout";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="TorcheJaya/login" element={<AdminLogin />} />
+        <Route path="TorcheJaya/login" element={<AdminLogin />} />
+        <Route path="logout" element={<Logout />} />
+
         <Route path="login" element={<Login />} />
         <Route path="signup">
           <Route index element={<Signup />} />
