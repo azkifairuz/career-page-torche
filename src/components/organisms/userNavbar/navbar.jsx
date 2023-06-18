@@ -108,6 +108,11 @@ export default function Navbar() {
       href: "dashboard/setting",
       icon: <Icon.Gear size={20} />,
     },
+    {
+      title: "Logout",
+      href: "/logout",
+      icon: <Icon.BoxArrowLeft size={20} />,
+    },
   ];
   const notification = [1, 2, 3, 4];
 
@@ -254,7 +259,7 @@ export default function Navbar() {
             </Link>
           );
         })}
-        <div className="bg-[#5885E9] rounded-full w-1/2 mx-auto mb-3">
+        <div className="bg-[#5885E9] px-5 py-2 rounded-full w-1/2 mx-auto mb-3">
           <div className="md:hidden flex justify-center">
             <div>Logout</div>
           </div>
