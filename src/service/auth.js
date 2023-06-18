@@ -62,3 +62,19 @@ export const logout = async (data) => {
 
   return res;
 };
+
+export const logoutAdmin = async (data) => {
+  const url = `${ROOT_URL}/${API_VERSION}/users/logout`;
+
+  const jsonData = JSON.stringify(data);
+
+  console.log(jsonData);
+
+  const res = await callAPI({
+    url,
+    method: "POST",
+    data: jsonData,
+  });
+
+  return res;
+};
