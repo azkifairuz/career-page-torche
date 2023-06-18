@@ -5,7 +5,6 @@ export default function Item(props) {
   const { icon, title, href, itemKey, index, isActive, setIsActive } = props;
   const handleClick = () => {
     setIsActive(index);
-    console.log(isActive);
   };
   return (
     <Link
