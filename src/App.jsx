@@ -38,6 +38,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="login" element={<Login />} />
+        <Route path="TorcheJaya" element={<Admin />}></Route>
         <Route path="signup">
           <Route index element={<Signup />} />
           <Route path="verify" element={<Verify />} />
