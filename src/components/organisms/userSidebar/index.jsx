@@ -43,12 +43,7 @@ export default function Sidebar(props) {
   );
   const [isActive, setIsActive] = useState();
 
-  ``` ini logic buat sidebar isActivenya, 
-biar pas di refresh g balik lagi, 
-tapi ini berantakan banget , 
-klo ada best practice-nya buat bikin active sidebar 
-biar pas di refresh g balik lagi ubah ya```;
-
+  // logic buat cek navbar isActive
   useEffect(() => {
     const path = location.pathname;
 

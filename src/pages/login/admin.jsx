@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { login } from "service/auth";
+import { adminLogin } from "service/auth";
 
 import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
@@ -11,7 +11,7 @@ import GoogleButton from "components/atoms/GoogleButton";
 import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
 import LoginBG from "assets/images/LoginBG.webp";
 
-export default function Login() {
+export default function AdminLogin() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -24,12 +24,12 @@ export default function Login() {
       return;
     }
 
-    const res = await login({
+    const res = await adminLogin({
       email,
       password,
     });
 
-    console.log(res);
+    // console.log(res);
 
     const msg = res.messages ? res.messages : res.message;
     alert(msg);
@@ -38,7 +38,7 @@ export default function Login() {
       return;
     }
 
-    navigate("/user");
+    navigate("/TorcheJaya");
   };
 
   return (
@@ -54,6 +54,7 @@ export default function Login() {
           action=""
           method="post"
         >
+          <h1 className="text-center heading-m-bold">Login Sebagai Admin</h1>
           <InputField
             title="Email"
             value={email}

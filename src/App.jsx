@@ -31,12 +31,18 @@ import Setting from "pages/user/dashboard/setting";
 import ForgetPassword from "pages/forget-password";
 import ChangePassword from "pages/forget-password/confirmed";
 import ScrollToTop from "utils/scrollToTop";
+import AdminLogin from "pages/login/admin";
+import Logout from "pages/logout";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        <Route path="TorcheJaya/login" element={<AdminLogin />} />
+        <Route path="TorcheJaya/login" element={<AdminLogin />} />
+        <Route path="logout" element={<Logout />} />
+
         <Route path="login" element={<Login />} />
         <Route path="signup">
           <Route index element={<Signup />} />
@@ -56,6 +62,7 @@ function App() {
         </Route>
         <Route path={"/joblist/:id"} element={<JobDetail />} />
         <Route path="TorcheJaya" element={<Admin />}>
+          <Route path="login" element={<AdminLogin />} />
           <Route index element={<AdminDashboard to="dashboard" />} />
           <Route path="vacancy" element={<Vacancy />} />
           <Route path="applicants" element={<Applicants />} />

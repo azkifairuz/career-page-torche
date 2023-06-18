@@ -40,9 +40,6 @@ export default function Applicants() {
       }
       return item.lastEducation === lastEduFilter;
     });
-  const handleFilter = (order) => {
-    setLastEduFilter("S1");
-  };
 
   const handleSort = (order) => {
     setSortOrder(order);
@@ -54,6 +51,11 @@ export default function Applicants() {
 
   const handlePopUpFilter = () => {
     setHidenFilter(!hidenFilter);
+  };
+  //filter pura pura
+  const handleFilter = (order) => {
+    handlePopUpFilter();
+    setLastEduFilter("S1");
   };
 
   const handleOutsideClick = (event) => {
@@ -110,7 +112,7 @@ export default function Applicants() {
           items-center  z-50 bg-opacity-50 w-full 
         bg-black`}
       >
-        <PopUpSort onclick={handlePopUpSort} onSort={handleSort} />
+        <PopUpSort onClick={handlePopUpSort} onSort={handleSort} />
       </section>
       <section
         onClick={handleOutsideClick}
@@ -120,7 +122,7 @@ export default function Applicants() {
           items-center py-[400px] z-50 bg-opacity-50 w-full 
         bg-black`}
       >
-        <PopUpFilter onclick={handlePopUpFilter} />
+        <PopUpFilter onClick={handlePopUpFilter} />
       </section>
       {/* end hidden popup section */}
       <section className="flex gap-6 mt-6 w-full first:w-3/4 justify-between last:w-fit ">
