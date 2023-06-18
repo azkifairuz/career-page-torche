@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { login } from "service/auth";
+import { adminLogin } from "service/auth";
 
 import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
@@ -24,12 +24,12 @@ export default function AdminLogin() {
       return;
     }
 
-    const res = await login({
+    const res = await adminLogin({
       email,
       password,
     });
 
-    console.log(res);
+    // console.log(res);
 
     const msg = res.messages ? res.messages : res.message;
     alert(msg);

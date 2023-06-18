@@ -16,6 +16,7 @@ export const adminLogin = async (data) => {
 
   return res;
 };
+
 export const login = async (data) => {
   const url = `${ROOT_URL}/${API_VERSION}/users/login`;
 
@@ -32,6 +33,22 @@ export const login = async (data) => {
 
 export const signup = async (data) => {
   const url = `${ROOT_URL}/${API_VERSION}/users/register`;
+
+  const jsonData = JSON.stringify(data);
+
+  console.log(jsonData);
+
+  const res = await callAPI({
+    url,
+    method: "POST",
+    data: jsonData,
+  });
+
+  return res;
+};
+
+export const logout = async (data) => {
+  const url = `${ROOT_URL}/${API_VERSION}/users/logout`;
 
   const jsonData = JSON.stringify(data);
 
