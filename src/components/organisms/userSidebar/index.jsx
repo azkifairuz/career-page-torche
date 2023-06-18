@@ -6,7 +6,7 @@ import Item from "./items";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 export default function Sidebar(props) {
-  const location = useLocation()
+  const location = useLocation();
 
   const resumeIcon = (
     <svg
@@ -42,30 +42,30 @@ export default function Sidebar(props) {
     </svg>
   );
   const [isActive, setIsActive] = useState();
-  
-``` ini logic buat sidebar isActivenya, 
+
+  ``` ini logic buat sidebar isActivenya, 
 biar pas di refresh g balik lagi, 
 tapi ini berantakan banget , 
 klo ada best practice-nya buat bikin active sidebar 
-biar pas di refresh g balik lagi ubah ya```
+biar pas di refresh g balik lagi ubah ya```;
 
   useEffect(() => {
     const path = location.pathname;
 
     switch (path) {
-      case '/user/dashboard/profil':
+      case "/user/dashboard/profil":
         setIsActive(0);
         break;
-      case '/user/completeprofile':
+      case "/user/completeprofile":
         setIsActive(1);
         break;
-      case '/user/dashboard/lamaran':
+      case "/user/dashboard/lamaran":
         setIsActive(2);
         break;
-      case '/user/dashboard/applicationtracking':
+      case "/user/dashboard/applicationtracking":
         setIsActive(3);
         break;
-      case '/user/dashboard/setting':
+      case "/user/dashboard/setting":
         setIsActive(4);
         break;
       default:
@@ -73,8 +73,6 @@ biar pas di refresh g balik lagi ubah ya```
         break;
     }
   }, [location.pathname]);
-  
-
 
   const itemSidebar = [
     {
@@ -116,18 +114,18 @@ biar pas di refresh g balik lagi ubah ya```
       </header>
       <main className="flex flex-col mt-5 justify-between w-full h-full">
         <ul className="flex flex-col justify-center gap-2  ">
-          {itemSidebar.map((item,index)=>{
-            return(
+          {itemSidebar.map((item, index) => {
+            return (
               <Item
-              key={index}
-              title={item.title}
-              icon = {item.icon}
-              href = {item.href}
-              isActive = {isActive === index}
-              index = {index}
-              setIsActive = {setIsActive}
+                key={index}
+                title={item.title}
+                icon={item.icon}
+                href={item.href}
+                isActive={isActive === index}
+                index={index}
+                setIsActive={setIsActive}
               />
-            )
+            );
           })}
         </ul>
       </main>

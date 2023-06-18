@@ -24,10 +24,7 @@ export default function AdminSidebar(props) {
           onOpen ? "fixed flex overflow-y-scroll h-screen" : "hidden"
         } bg-neutral-100 lg:sticky lg:flex box-border flex-col text-black border-0 border-r-2 top-0 lg:h-auto left-0 py-[150px] px-[57px] lg:pl-[100px] z-10`}
       >
-        <button
-          className="absolute top-[63px] lg:hidden"
-          onClick={handleOpen}
-        >
+        <button className="absolute top-[63px] lg:hidden" onClick={handleOpen}>
           <img src={Hamburger} alt="Hamburger Button" />
         </button>
         <div className="flex gap-[12px] p-[12px] items-center bg-neutral-200 rounded-[12px]">

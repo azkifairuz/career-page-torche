@@ -58,7 +58,6 @@ export default function Select(props) {
           <li
             key={index}
             className="pl-4 pr-5 py-3 active:bg-primaryBlue-main active:text-neutral-100 text-left text-s-regular cursor-pointer  hover:bg-primaryBlue-surface"
-
             onClick={handleItemClick}
           >
             {item}

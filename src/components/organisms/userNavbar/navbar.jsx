@@ -1,34 +1,34 @@
 import * as Icon from "react-bootstrap-icons";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import notificationBadge from "assets/icons/notification-badge.svg"
+import notificationBadge from "assets/icons/notification-badge.svg";
 import Item from "./items";
 import Logo from "assets/logos/Torche_Logo-01_White.webp";
 import sample from "assets/index.png";
 import chevron from "assets/icons/chevron-white.svg";
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [isProfilNavOpen, setIsProfilNavOpen] = useState(false)
-  const location = useLocation()
+  const [isProfilNavOpen, setIsProfilNavOpen] = useState(false);
+  const location = useLocation();
   const [isActive, setIsActive] = useState();
-  
+
   useEffect(() => {
     const path = location.pathname;
 
     switch (path) {
-      case '/user/dashboard/profil':
+      case "/user/dashboard/profil":
         setIsActive(0);
         break;
-      case '/user/completeprofile':
+      case "/user/completeprofile":
         setIsActive(1);
         break;
-      case '/user/dashboard/lamaran':
+      case "/user/dashboard/lamaran":
         setIsActive(2);
         break;
-      case '/user/dashboard/applicationtracking':
+      case "/user/dashboard/applicationtracking":
         setIsActive(3);
         break;
-      case '/user/dashboard/setting':
+      case "/user/dashboard/setting":
         setIsActive(4);
         break;
       default:
@@ -37,13 +37,12 @@ export default function Navbar() {
     }
   }, [location.pathname]);
 
- 
   const handleNavbarOpen = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
   const handleProfilNav = () => {
-    setIsProfilNavOpen(!isProfilNavOpen)
-  }
+    setIsProfilNavOpen(!isProfilNavOpen);
+  };
   const resumeIcon = (
     <svg
       width="16"
@@ -110,8 +109,7 @@ export default function Navbar() {
       icon: <Icon.Gear size={20} />,
     },
   ];
-  const notification = [1, 2, 3, 4]
-
+  const notification = [1, 2, 3, 4];
 
   return (
     <>
@@ -158,43 +156,71 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-[16px] justify-end justify-self-end">
           <div className="relative w-[28px] mr-[16px]  md:flex hidden ">
-            <span className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${notification.length > 0 ? "flex" : "hidden"} `}>{notification.length}</span>
-            <img src={notificationBadge} alt="notification" className="w-[17.7px] h-[22.75px]"></img>
+            <span
+              className={`absolute right-0 -top-1  bg-danger-main w-[12px] h-[12px] flex justify-center items-center font-cairo text-[9.6px] p-[6.4px] text-center leading-[17.6px] rounded-full ${
+                notification.length > 0 ? "flex" : "hidden"
+              } `}
+            >
+              {notification.length}
+            </span>
+            <img
+              src={notificationBadge}
+              alt="notification"
+              className="w-[17.7px] h-[22.75px]"
+            ></img>
           </div>
           <li
             onClick={handleProfilNav}
-            className={` md:flex md:relative w-[200px] hidden items-center gap-[8px] cursor-pointer`}>
-              <img src={sample} alt="profie" className="w-[48px] h-[48px] rounded-full" />
-              <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">John Doe</h1>
-              <img src={chevron} alt="chevron" className={` ${isProfilNavOpen && "rotate-[180deg]"} transition-all duration-500 ease-in-out w-[12.11px] h-7.13px rotate-0 `} />
-              <ul className={`${!isProfilNavOpen && "hidden"} transition-all duration-500 ease-in-out  absolute w-[200px] rounded-lg bg-white right-0 top-16`}>
-                {profilNav.map((item, index) => {
-                  return (
-                    <Item
-                      key={index}
-                      title={item.title}
-                      icon={item.icon}
-                      href={item.href}
-                      isActive={isActive === index}
-                      index={index}
-                      setIsActive={setIsActive}
-                    />
-                  )
-                })}
+            className={` md:flex md:relative w-[200px] hidden items-center gap-[8px] cursor-pointer`}
+          >
+            <img
+              src={sample}
+              alt="profie"
+              className="w-[48px] h-[48px] rounded-full"
+            />
+            <h1 className="font-cairo text-[16px] leading-[28px] font-[700] flex-shrink-0  text-center">
+              John Doe
+            </h1>
+            <img
+              src={chevron}
+              alt="chevron"
+              className={` ${
+                isProfilNavOpen && "rotate-[180deg]"
+              } transition-all duration-500 ease-in-out w-[12.11px] h-7.13px rotate-0 `}
+            />
+            <ul
+              className={`${
+                !isProfilNavOpen && "hidden"
+              } transition-all duration-500 ease-in-out  absolute w-[200px] rounded-lg bg-white right-0 top-16`}
+            >
+              {profilNav.map((item, index) => {
+                return (
+                  <Item
+                    key={index}
+                    title={item.title}
+                    icon={item.icon}
+                    href={item.href}
+                    isActive={isActive === index}
+                    index={index}
+                    setIsActive={setIsActive}
+                  />
+                );
+              })}
             </ul>
           </li>
         </div>
-
       </nav>
       <div
-        className={`${isNavbarOpen ? "block" : "hidden"
-          } backdrop md:hidden absolute z-40 left-0 top-0 right-0 min-h-screen`}
+        className={`${
+          isNavbarOpen ? "block" : "hidden"
+        } backdrop md:hidden absolute z-40 left-0 top-0 right-0 min-h-screen`}
         style={{ background: "rgba(23, 35, 46, 0.9)" }}
       ></div>
       <button
         onClick={handleNavbarOpen}
-        className={`${isNavbarOpen ? "block" : "hidden"
-          } md:hidden absolute right-5 top-5 z-50 text-white`}
+        className={`${
+          isNavbarOpen ? "block" : "hidden"
+        } md:hidden absolute right-5 top-5 z-50 text-white`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -212,8 +238,9 @@ export default function Navbar() {
         </svg>
       </button>
       <ul
-        className={`${isNavbarOpen ? "block" : "hidden"
-          } md:hidden absolute w-full text-white bg-primaryNavy-main flex flex-col mt-0 bg-red p-3 z-50 min-h-[calc(100%-70px)]`}
+        className={`${
+          isNavbarOpen ? "block" : "hidden"
+        } md:hidden absolute w-full text-white bg-primaryNavy-main flex flex-col mt-0 bg-red p-3 z-50 min-h-[calc(100%-70px)]`}
       >
         {navbarData.map((data, index) => {
           return (
@@ -229,9 +256,7 @@ export default function Navbar() {
         })}
         <div className="bg-[#5885E9] rounded-full w-1/2 mx-auto mb-3">
           <div className="md:hidden flex justify-center">
-            <div>
-              Logout
-            </div>
+            <div>Logout</div>
           </div>
         </div>
       </ul>

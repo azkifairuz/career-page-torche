@@ -2,7 +2,12 @@ import React from "react";
 
 export default function VacancyTab(props) {
   const { title, filter, count = null, active, setFilterStatus } = props;
-  const bgColor = filter === "all" ? "bg-primaryBlue-border" : filter === "aktif" ? "bg-success-border" : "bg-danger-border";
+  const bgColor =
+    filter === "all"
+      ? "bg-primaryBlue-border"
+      : filter === "aktif"
+      ? "bg-success-border"
+      : "bg-danger-border";
   const handleClick = () => {
     if (title === "Semua lowongan") {
       setFilterStatus("all");
@@ -24,7 +29,7 @@ export default function VacancyTab(props) {
         <p
           className={`font-inter text-4 text-black font-semibold rounded-xl p-[10px] text-center ${bgColor}`}
         >
-          {count} 
+          {count}
         </p>
       )}
     </button>

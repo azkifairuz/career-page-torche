@@ -17,13 +17,13 @@ export default async function callAPI(config) {
   if (!response.data) {
     const res = {
       error: true,
-      message: 'error',
+      message: "error",
       data: null,
     };
     return res;
   }
 
-  console.log(response)
+  console.log(response);
 
   return response.data;
 }

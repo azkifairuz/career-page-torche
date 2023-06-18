@@ -13,7 +13,9 @@ export default function InputField(props) {
   } = props;
   return (
     <div
-      className={`relative flex flex-col gap-[8px] ${width ? width: "w-full"} font-cairo`}
+      className={`relative flex flex-col gap-[8px] ${
+        width ? width : "w-full"
+      } font-cairo`}
     >
       <h1 className="font-[#151515] font-bold">{title}</h1>
       <label

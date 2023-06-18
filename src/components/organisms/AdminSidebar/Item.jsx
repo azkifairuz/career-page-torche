@@ -8,7 +8,7 @@ export default function Item(props) {
       to={href}
       className="flex gap-[20px] items-center px-4 py-3 hover:bg-neutral-300 rounded-lg"
     >
-      <img src={src} alt={title} className="w-[22px]"/>
+      <img src={src} alt={title} className="w-[22px]" />
       <p className="heading-s-medium">{title}</p>
     </Link>
   );

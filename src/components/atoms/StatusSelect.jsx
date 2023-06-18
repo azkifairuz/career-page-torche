@@ -6,16 +6,16 @@ export default function StatusSelect(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const bgColors = {
-    "All": "black",
-    "Aktif": "success-border",
-    "Tutup": "danger-border",
+    All: "black",
+    Aktif: "success-border",
+    Tutup: "danger-border",
   };
-  
+
   const textColors = {
-    "All": "black",
-    "Aktif": "success-hover",
-    "Tutup": "danger-hover",
-  }
+    All: "black",
+    Aktif: "success-hover",
+    Tutup: "danger-hover",
+  };
 
   const [active, setActive] = useState(status);
 
@@ -43,7 +43,9 @@ export default function StatusSelect(props) {
           onClick={handleClick}
           className="border-none flex-1 justify-between focus:outline-none flex gap-2 items-center"
         >
-          <p className="text-l-bold">{active === "" ? "Pilih " + title : active}</p>
+          <p className="text-l-bold">
+            {active === "" ? "Pilih " + title : active}
+          </p>
           <ChevronDown
             className={`${
               isOpen && "rotate-180"

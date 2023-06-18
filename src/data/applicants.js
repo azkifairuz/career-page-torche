@@ -65,7 +65,6 @@ export const applicants = vacancies.map((item) => {
         appliedAt: "2021-08-11",
         status: "Diproses",
       },
-     
     ],
   };
 });

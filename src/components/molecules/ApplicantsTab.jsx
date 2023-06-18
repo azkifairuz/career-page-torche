@@ -1,13 +1,13 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export default function ApplicantsTab(props) {
   const { title, count = null, setFilterStatus } = props;
   const background = {
     "Belum Diproses": "bg-primaryBlue-border",
-    "Diproses": "bg-warning-border",
-    "Diterima": "bg-success-border",
-    "Ditolak": "bg-danger-border",
-    "Disimpan": "bg-neutral-300",
+    Diproses: "bg-warning-border",
+    Diterima: "bg-success-border",
+    Ditolak: "bg-danger-border",
+    Disimpan: "bg-neutral-300",
   };
 
   const handleClick = () => {

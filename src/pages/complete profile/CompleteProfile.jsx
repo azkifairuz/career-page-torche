@@ -9,10 +9,9 @@ export default function CompleteProfil() {
         <div className=" mt-[120px] md:mt-6 py-4 lg:w-[397px] ">
           <OptionBar />
         </div>
-       
-        
+
         <div className="">
-          <Preview/>
+          <Preview />
         </div>
       </div>
     </div>

@@ -20,9 +20,9 @@ export default function Joblist() {
       <main className="flex flex-col gap-8 md:gap-6 px-4 md:px-8 lg:px-[100px]">
         <Search />
         <ul className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-[24px] m-auto">
-          {vacancies.map((vacancy,index) => (
+          {vacancies.map((vacancy, index) => (
             <Card
-              key={vacancy.id+"-"+index}
+              key={vacancy.id + "-" + index}
               name={vacancy.name}
               type={vacancy.type}
               category={vacancy.category}

@@ -28,7 +28,6 @@ export default function SkillPopup(props) {
   const { onclick } = props;
   const [selectedSkills, setSelectedSkills] = useState([]);
 
-
   function handleCheckboxChange(e) {
     const skill = e.target.value;
     if (e.target.checked) {
@@ -41,14 +40,14 @@ export default function SkillPopup(props) {
   }
 
   function handleDelete(select) {
-    console.log(select)
-     setSelectedSkills((prevSkill)=>
-      prevSkill.filter((skill)=>skill !== select)
-     )
+    console.log(select);
+    setSelectedSkills((prevSkill) =>
+      prevSkill.filter((skill) => skill !== select)
+    );
   }
 
   function isChecked(skill) {
-    return selectedSkills.includes(skill)
+    return selectedSkills.includes(skill);
   }
 
   function handleSubmit(e) {
@@ -59,7 +58,10 @@ export default function SkillPopup(props) {
   return (
     <div className="card">
       <div className="card-header">
-        <form className="rounded-lg z-50 w-[350px] md:w-[537px] bg-white" onSubmit={handleSubmit}>
+        <form
+          className="rounded-lg z-50 w-[350px] md:w-[537px] bg-white"
+          onSubmit={handleSubmit}
+        >
           <div className="p-[16px_32px_16px_32px] border-b border-neutral-400 flex items-center justify-between">
             <h1 className="heading-s-bold">Skill</h1>
             <X
@@ -97,7 +99,14 @@ export default function SkillPopup(props) {
               ) : (
                 <ul className="grid grid-cols-2 gap-4">
                   {selectedSkills.map((skill) => (
-                    <li onClick={()=>handleDelete(skill)} className="p-[8px_16px_8px_16px] w-fit text-white text-l-regular bg-primaryBlue-main rounded-lg flex gap-[8px] justify-between items-start" key={skill}>{skill}<X  size={30}/></li>
+                    <li
+                      onClick={() => handleDelete(skill)}
+                      className="p-[8px_16px_8px_16px] w-fit text-white text-l-regular bg-primaryBlue-main rounded-lg flex gap-[8px] justify-between items-start"
+                      key={skill}
+                    >
+                      {skill}
+                      <X size={30} />
+                    </li>
                   ))}
                 </ul>
               )}
@@ -116,7 +125,6 @@ export default function SkillPopup(props) {
             </button>
           </div>
         </form>
-     
       </div>
     </div>
   );

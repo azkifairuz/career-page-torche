@@ -16,7 +16,7 @@ export default function Form() {
   });
   const [countryCode, setCountryCode] = useState("");
   const handleCountryCode = () => {
-    setCountryCode(countryCode)
+    setCountryCode(countryCode);
   };
   const [isValid, setIsValid] = useState(true);
   const handleChange = (event) => {
@@ -143,26 +143,26 @@ export default function Form() {
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               No Telp
             </label>
-           <div className="flex w-full">
-           <select
-              className="py-2 px-4 bg-white outline-1 outline  rounded-l-md text-neutral-500 focus:text-neutral-900 border border-r-0 border-primaryNavy-border  focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main "
-              onChange={handleCountryCode}
-            >
-              {countryCodes.map((country) => (
-                <option key={country.code} value={country.code}>
-                  +{country.code}
-                </option>
-              ))}
-            </select>
-            <input
-              type="text"
-              name="phone"
-              placeholder="eg:+62 08xxxx"
-              value={input.phone}
-              onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-r-md border-l-0 text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline w-full focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-            />
-           </div>
+            <div className="flex w-full">
+              <select
+                className="py-2 px-4 bg-white outline-1 outline  rounded-l-md text-neutral-500 focus:text-neutral-900 border border-r-0 border-primaryNavy-border  focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main "
+                onChange={handleCountryCode}
+              >
+                {countryCodes.map((country) => (
+                  <option key={country.code} value={country.code}>
+                    +{country.code}
+                  </option>
+                ))}
+              </select>
+              <input
+                type="text"
+                name="phone"
+                placeholder="eg:+62 08xxxx"
+                value={input.phone}
+                onChange={handleChange}
+                className="py-2 px-4  outline-1 rounded-r-md border-l-0 text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline w-full focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-1">
             <label className="font-cairo  self-start text-neutral-1000 text-l-bold">

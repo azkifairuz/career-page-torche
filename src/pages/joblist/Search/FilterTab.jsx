@@ -13,7 +13,7 @@ export default function FilterTab(props) {
       />
       {data.map((item, index) => (
         <PillButton
-          key={item+index}
+          key={item + index}
           isActive={active === item}
           name={item}
           onClick={() => setActive(item)}

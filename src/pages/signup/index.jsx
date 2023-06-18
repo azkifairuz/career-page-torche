@@ -22,8 +22,6 @@ import Background from "assets/images/RegisterBG.webp";
 import PasswordInput from "components/atoms/PasswordInput";
 
 function Signup() {
-  const navigate = useNavigate();
-
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
@@ -94,7 +92,7 @@ function Signup() {
     console.log(res);
 
     const message = res.messages ? res.messages : res.message;
-    alert(message)
+    alert(message);
 
     if (res.success === false) {
       return;
@@ -111,7 +109,11 @@ function Signup() {
         className="absolute -z-10 top-0 left-0 h-full w-full"
       />
       <AuthContainer>
-        <form className="flex flex-col gap-[16px] w-full h-full" method="post" onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col gap-[16px] w-full h-full"
+          method="post"
+          onSubmit={handleSubmit}
+        >
           <InputField
             title="Fullname"
             type="text"

@@ -35,12 +35,6 @@ import ChangePassword from "pages/forget-password/confirmed";
 import ScrollToTop from "utils/scrollToTop";
 
 function App() {
-  const [user, setUser] = useState({
-    id: "test-1",
-    name: "test",
-    roles: ["admin", "user"],
-  });
-
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -63,17 +57,7 @@ function App() {
           <Route path="debug" element={<CompleteProfil />} />
         </Route>
         <Route path={"/joblist/:id"} element={<JobDetail />} />
-        <Route
-          path="admin"
-          element={
-            <ProtectedRoute
-              redirectPath="/home"
-              isAllowed={!!user && user.roles.includes("admin")}
-            >
-              <Admin />
-            </ProtectedRoute>
-          }
-        >
+        <Route path="TorcheJaya" element={<Admin />}>
           <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="vacancy" element={<Vacancy />} />
@@ -81,17 +65,7 @@ function App() {
           <Route path="vacancy/create" element={<Create />} />
           <Route path="vacancy/:id/edit" element={<Edit />} />
         </Route>
-        <Route
-          path="user"
-          element={
-            <ProtectedRoute
-              redirectPath="/login"
-              isAllowed={!!user && user.roles.includes("user")}
-            >
-              <User />
-            </ProtectedRoute>
-          }
-        >
+        <Route path="user" element={<User />}>
           <Route index element={<Navigate to="home" />} />
           <Route path="home" element={<Landing />} />
           <Route path="dashboard" element={<UserDashboard />}>

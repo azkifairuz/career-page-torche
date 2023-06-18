@@ -22,37 +22,36 @@ export default function Applicants() {
   const [hidenSort, setHidenSort] = useState("hidden");
   const [hidenFilter, setHidenFilter] = useState("hidden");
   const [sortOrder, setSortOrder] = useState("terbaru");
-  const [lastEduFilter,setLastEduFilter] = useState("all")
+  const [lastEduFilter, setLastEduFilter] = useState("all");
 
   // Sorting data berdasarkan bulan
-const sortedData = [...applicantsArr].sort((a, b) => {
-  const dateA = new Date(a.appliedAt);
-  const dateB = new Date(b.appliedAt);
-  if (sortOrder === "terbaru") {
-    return dateB - dateA; // Urutan terbaru
-  } 
-   return dateA - dateB; // Urutan terlama
-  
-}).filter((item)=>{ 
-  if (lastEduFilter === "all") {
-    return item.lastEducation
-  }
-  return item.lastEducation === lastEduFilter
-
-});
-const handleFilter = (order) => {
-  setLastEduFilter("S1");
-};
+  const sortedData = [...applicantsArr]
+    .sort((a, b) => {
+      const dateA = new Date(a.appliedAt);
+      const dateB = new Date(b.appliedAt);
+      if (sortOrder === "terbaru") {
+        return dateB - dateA; // Urutan terbaru
+      }
+      return dateA - dateB; // Urutan terlama
+    })
+    .filter((item) => {
+      if (lastEduFilter === "all") {
+        return item.lastEducation;
+      }
+      return item.lastEducation === lastEduFilter;
+    });
+  const handleFilter = (order) => {
+    setLastEduFilter("S1");
+  };
 
   const handleSort = (order) => {
     setSortOrder(order);
   };
 
-  
   const handlePopUpSort = () => {
     setHidenSort(!hidenSort);
   };
-  
+
   const handlePopUpFilter = () => {
     setHidenFilter(!hidenFilter);
   };
@@ -121,7 +120,7 @@ const handleFilter = (order) => {
           items-center py-[400px] z-50 bg-opacity-50 w-full 
         bg-black`}
       >
-        <PopUpFilter onclick={handlePopUpFilter}/>
+        <PopUpFilter onclick={handlePopUpFilter} />
       </section>
       {/* end hidden popup section */}
       <section className="flex gap-6 mt-6 w-full first:w-3/4 justify-between last:w-fit ">
@@ -131,9 +130,7 @@ const handleFilter = (order) => {
           width="w-[60%]"
         />
         <div className="flex gap-[50px] cursor-pointer">
-          <div 
-          onClick={handleFilter}
-          className="flex gap-[11px] items-center">
+          <div onClick={handleFilter} className="flex gap-[11px] items-center">
             <img src={filter} alt="filter" />
             <h1 className="text-xl-bold">Filter</h1>
           </div>

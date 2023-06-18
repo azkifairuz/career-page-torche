@@ -25,7 +25,9 @@ export default function VacancyCard(props) {
       </td>
 
       <td className={index === 0 && "pt-12"}>
-        <h1 className="text-m-regular md:text-l-regular text-center">{total}</h1>
+        <h1 className="text-m-regular md:text-l-regular text-center">
+          {total}
+        </h1>
         <p className="text-s-regular text-black text-opacity-50 text-center mt-[8px]">
           Pelamar
         </p>

@@ -6,12 +6,12 @@ import AuthButton from "components/atoms/AuthButton";
 import { useNavigate } from "react-router-dom";
 
 export default function Verify() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/login");
-  }
+  };
 
   return (
     <main className="relative flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
@@ -31,7 +31,7 @@ export default function Verify() {
             type="text"
             placeholder="••••••••"
           />
-          <AuthButton title="Verifikasi" type="submit" onClick={handleSubmit}/>
+          <AuthButton title="Verifikasi" type="submit" onClick={handleSubmit} />
         </div>
       </AuthContainer>
     </main>
