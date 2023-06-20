@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 import Benefit from "components/benefit";
 import Category from "components/category";
+import Feedback from "components/feedback";
+
 import Empati from "assets/icons/love.svg";
 import Kesopanan from "assets/icons/kesopanan.svg";
 import Kepo from "assets/icons/rasa-ingin-tahu.svg";
 import girl from "assets/images/girl.png";
-import Feedback from "components/feedback";
-import { useNavigate } from "react-router-dom";
-function Landing(props) {
+
+function Landing() {
   const navigate = useNavigate();
   return (
     <div className="flex w-screen flex-col overflow-hidden pb-16 h-fit gap-20">
