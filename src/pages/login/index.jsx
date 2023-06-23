@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
-import { login } from "service/auth";
+import { loginUser } from "features/auth/authAction";
 
 import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
@@ -12,6 +13,8 @@ import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
 import LoginBG from "assets/images/LoginBG.webp";
 
 export default function Login() {
+  const dispatch = useDispatch();
+  const { loading, error, userInfo } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -24,21 +27,8 @@ export default function Login() {
       return;
     }
 
-    const res = await login({
-      email,
-      password,
-    });
-
-    console.log(res);
-
-    const msg = res.messages ? res.messages : res.message;
-    alert(msg);
-
-    if (res.success === false) {
-      return;
-    }
-
-    navigate("/user");
+    dispatch(loginUser({ email, password }));
+    // navigate("/user");
   };
 
   return (
