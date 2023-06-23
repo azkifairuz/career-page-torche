@@ -17,5 +17,5 @@ export default function GoogleButton(props) {
 }
 
 GoogleButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
