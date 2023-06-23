@@ -17,5 +17,5 @@ export default function AuthContainer(props) {
 }
 
 AuthContainer.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node,
 };
