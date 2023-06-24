@@ -10,12 +10,11 @@ import {
   passwordRegex,
   numberRegex,
   upperCaseRegex,
+  symbolRegex,
 } from "utils/regex";
-import { regexColorChange } from "utils/regexColorChange";
-
-import { CheckCircleFill } from "react-bootstrap-icons";
 
 import Background from "assets/images/RegisterBG.webp";
+import PassValidationLabel from "components/atoms/PassValidationLabel";
 
 export default function ChangePassword() {
   const navigate = useNavigate();
@@ -24,24 +23,31 @@ export default function ChangePassword() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isPassValid, setIsPassValid] = useState(false);
 
-  const [minCheckColor, setMinCheckColor] = useState("#D9D9D9");
-  const [upperCheckColor, setUpperCheckColor] = useState("#D9D9D9");
-  const [numberCheckColor, setNumberCheckColor] = useState("#D9D9D9");
+  const [validationColors, setValidationColors] = useState({
+    minCheck: "#D9D9D9",
+    upperCheck: "#D9D9D9",
+    numberCheck: "#D9D9D9",
+    symbolCheck: "#D9D9D9",
+  });
 
   const handlePassswordChange = (e) => {
     const currentPassword = e.target.value;
-
     setPassword(currentPassword);
 
-    regexColorChange(minCharacterRegex, currentPassword, setMinCheckColor);
-    regexColorChange(upperCaseRegex, currentPassword, setUpperCheckColor);
-    regexColorChange(numberRegex, currentPassword, setNumberCheckColor);
+    const regexMap = [
+      { regex: minCharacterRegex, stateKey: "minCheck" },
+      { regex: upperCaseRegex, stateKey: "upperCheck" },
+      { regex: numberRegex, stateKey: "numberCheck" },
+      { regex: symbolRegex, stateKey: "symbolCheck" },
+    ];
 
-    if (passwordRegex.test(password)) {
-      setIsPassValid(true);
-    } else {
-      setIsPassValid(false);
-    }
+    const updatedColors = regexMap.reduce((colors, { regex, stateKey }) => {
+      const color = regex.test(currentPassword) ? "green" : "#D9D9D9";
+      return { ...colors, [stateKey]: color };
+    }, {});
+
+    setValidationColors(updatedColors);
+    setIsPassValid(passwordRegex.test(currentPassword));
 
     console.log(password);
     console.log(isPassValid);
@@ -77,34 +83,22 @@ export default function ChangePassword() {
               value={password}
               onChange={handlePassswordChange}
             />
-            <div className="flex gap-[8px] items-center">
-              <CheckCircleFill
-                size={20}
-                id="number-check"
-                color={minCheckColor}
-              />
-              <p className="text-neutral-1000 text-">
-                Password min. 8 karakter
-              </p>
-            </div>
-            <div className="flex gap-[8px] items-center">
-              <CheckCircleFill
-                size={20}
-                id="number-check"
-                color={upperCheckColor}
-              />
-              <p className="text-neutral-1000 text-">
-                Menggunakan huruf kapital
-              </p>
-            </div>
-            <div className="flex gap-[8px] items-center">
-              <CheckCircleFill
-                size={20}
-                id="number-check"
-                color={numberCheckColor}
-              />
-              <p className="text-neutral-1000 text-">Menggunakan angka</p>
-            </div>
+            <PassValidationLabel
+              color={validationColors.minCheck}
+              label="Password min. 8 karakter"
+            />
+            <PassValidationLabel
+              color={validationColors.upperCheck}
+              label="Menggunakan huruf kapital"
+            />
+            <PassValidationLabel
+              color={validationColors.numberCheck}
+              label="Menggunakan angka"
+            />
+            <PassValidationLabel
+              color={validationColors.symbolCheck}
+              label="Menggunakan simbol"
+            />
           </div>
           <InputField
             title="Konfirmasi Kata Sandi"
