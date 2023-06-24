@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { CheckCircleFill } from "react-bootstrap-icons";
 
-import { signup } from "service/auth";
+import { signupUser } from "features/auth/authAction";
 
 import {
   minCharacterRegex,
@@ -12,54 +12,50 @@ import {
   symbolRegex,
 } from "utils/regex";
 
-import { regexColorChange } from "utils/regexColorChange";
-
 import InputField from "components/atoms/InputField";
 import AuthContainer from "components/organisms/AuthContainer";
 import AuthButton from "components/atoms/AuthButton";
+import PassValidationLabel from "components/atoms/PassValidationLabel";
 
 import Background from "assets/images/RegisterBG.webp";
 import PasswordInput from "components/atoms/PasswordInput";
 
 function Signup() {
+  const dispatch = useDispatch();
+  const { loading, error } = useSelector((state) => state.auth);
+
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const [minCheckColor, setMinCheckColor] = useState("#D9D9D9");
-  const [upperCheckColor, setUpperCheckColor] = useState("#D9D9D9");
-  const [numberCheckColor, setNumberCheckColor] = useState("#D9D9D9");
-  const [symbolCheckColor, setSymbolCheckColor] = useState("#D9D9D9");
+  const [validationColors, setValidationColors] = useState({
+    minCheck: "#D9D9D9",
+    upperCheck: "#D9D9D9",
+    numberCheck: "#D9D9D9",
+    symbolCheck: "#D9D9D9",
+  });
 
   const [isPassValid, setIsPassValid] = useState(false);
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-    if (name === "") {
-      alert("Nama tidak boleh kosong");
-    }
-  };
-
   const handlePassswordChange = (e) => {
     const currentPassword = e.target.value;
-
     setPassword(currentPassword);
 
-    regexColorChange(minCharacterRegex, currentPassword, setMinCheckColor);
-    regexColorChange(upperCaseRegex, currentPassword, setUpperCheckColor);
-    regexColorChange(numberRegex, currentPassword, setNumberCheckColor);
-    regexColorChange(symbolRegex, currentPassword, setSymbolCheckColor);
+    const regexMap = [
+      { regex: minCharacterRegex, stateKey: "minCheck" },
+      { regex: upperCaseRegex, stateKey: "upperCheck" },
+      { regex: numberRegex, stateKey: "numberCheck" },
+      { regex: symbolRegex, stateKey: "symbolCheck" },
+    ];
 
-    if (passwordRegex.test(password)) {
-      setIsPassValid(true);
-    } else {
-      setIsPassValid(false);
-    }
+    const updatedColors = regexMap.reduce((colors, { regex, stateKey }) => {
+      const color = regex.test(currentPassword) ? "green" : "#D9D9D9";
+      return { ...colors, [stateKey]: color };
+    }, {});
+
+    setValidationColors(updatedColors);
+    setIsPassValid(passwordRegex.test(currentPassword));
 
     console.log(password);
     console.log(isPassValid);
@@ -82,24 +78,24 @@ function Signup() {
       return;
     }
 
-    const res = await signup({
-      fullName: name,
-      email,
-      password,
-      passwordRepeat: confirmPassword,
-    });
+    dispatch(
+      signupUser({
+        fullName: name,
+        email,
+        password,
+        passwordRepeat: confirmPassword,
+      })
+    );
 
-    console.log(res);
-
-    const message = res.messages ? res.messages : res.message;
-    alert(message);
-
-    if (res.success === false) {
-      return;
-    }
+    console.log(loading);
 
     // navigate("/signup/verify");
   };
+
+  useEffect(() => {
+    console.log("loading", loading);
+    console.log("Error", error);
+  }, [loading, error]);
 
   return (
     <main className="relative flex p-0 md:px-[100px] md:py-[62px] justify-center lg:justify-end items-center min-h-screen">
@@ -119,14 +115,14 @@ function Signup() {
             type="text"
             placeholder="Ahmad Sultani"
             value={name}
-            onChange={handleNameChange}
+            onChange={(e) => setName(e.target.value)}
           />
           <InputField
             title="Email"
             type="text"
             placeholder="yourmail@mail.com"
             value={email}
-            onChange={handleEmailChange}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <div className="flex flex-col gap-[8px] items-start   ">
             <PasswordInput
@@ -136,42 +132,22 @@ function Signup() {
               value={password}
               onChange={handlePassswordChange}
             />
-            <div className="flex gap-[8px] items-center">
-              <CheckCircleFill
-                size={20}
-                id="number-check"
-                color={minCheckColor}
-              />
-              <p className="text-neutral-1000 text-">
-                Password min. 8 karakter
-              </p>
-            </div>
-            <div className="flex gap-[8px] items-center">
-              <CheckCircleFill
-                size={20}
-                id="number-check"
-                color={upperCheckColor}
-              />
-              <p className="text-neutral-1000 text-">
-                Menggunakan huruf kapital
-              </p>
-            </div>
-            <div className="flex gap-[8px] items-center">
-              <CheckCircleFill
-                size={20}
-                id="number-check"
-                color={numberCheckColor}
-              />
-              <p className="text-neutral-1000 text-">Menggunakan angka</p>
-            </div>
-            <div className="flex gap-[8px] items-center">
-              <CheckCircleFill
-                size={20}
-                id="symbol-check"
-                color={symbolCheckColor}
-              />
-              <p className="text-neutral-1000 text-">Menggunakan simbol</p>
-            </div>
+            <PassValidationLabel
+              color={validationColors.minCheck}
+              label="Password min. 8 karakter"
+            />
+            <PassValidationLabel
+              color={validationColors.upperCheck}
+              label="Menggunakan huruf kapital"
+            />
+            <PassValidationLabel
+              color={validationColors.numberCheck}
+              label="Menggunakan angka"
+            />
+            <PassValidationLabel
+              color={validationColors.symbolCheck}
+              label="Menggunakan simbol"
+            />
           </div>
           <PasswordInput
             title="Konfirmasi Kata Sandi"
@@ -183,7 +159,8 @@ function Signup() {
           <AuthButton
             onClick={handleSubmit}
             name="signup-button"
-            title="Daftar Sekarang"
+            title={loading ? "Loading..." : "Daftar Sekarang"}
+            disabled={loading}
             type="submit"
           />
         </form>
