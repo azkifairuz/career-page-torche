@@ -1,11 +1,11 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-import Item from "./item";
+import Item from "../atoms/UserProgressCardItem";
 
 import ArrowDown from "assets/icons/chevron-down.svg";
 
-export default function ProgressCard(props) {
+export default function UserProgressCard(props) {
   const { percent } = props;
   const itemData = [
     { id: 1, href: "/tentang", title: "Tentang" },
@@ -83,6 +83,6 @@ export default function ProgressCard(props) {
   );
 }
 
-ProgressCard.propTypes = {
+UserProgressCard.propTypes = {
   percent: PropTypes.number.isRequired,
 };

@@ -1,7 +1,7 @@
 import sample from "assets/index.png";
 import Header from "components/organisms/userSidebar/header";
 import Item from "./item";
-import ProgressCard from "./progress/card";
+import ProgressCard from "../../../molecules/UserProgressCard";
 export default function HeaderSection() {
   const information = [
     { id: 1, Title: "Phone", Desc: "+62 1234 5721 63" },

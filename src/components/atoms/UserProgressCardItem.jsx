@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export default function Item(props) {
+export default function UserProgressCardItem(props) {
   const { icon, title, href } = props;
   return (
     <Link
@@ -16,7 +16,7 @@ export default function Item(props) {
   );
 }
 
-Item.propTypes = {
+UserProgressCardItem.propTypes = {
   icon: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
