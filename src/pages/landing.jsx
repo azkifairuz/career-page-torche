@@ -6,7 +6,7 @@ import Kepo from "assets/icons/rasa-ingin-tahu.svg";
 import girl from "assets/images/girl.png";
 import Feedback from "components/feedback";
 import { useNavigate } from "react-router-dom";
-import CategoryCard from "components/category/CategoryCard";
+import CategoryCard from "components/molecules/CategoryCard";
 function Landing(props) {
   const navigate = useNavigate();
   return (
