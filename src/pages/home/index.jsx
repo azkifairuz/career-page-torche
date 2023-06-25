@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import Benefit from "components/benefit";
+import Benefit from "components/molecules/Benefit";
 import Category from "components/category";
 import Feedback from "components/feedback";
 
