@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import ArrowDown from "assets/icons/arrow-circle-down.svg";
 
-export default function Panel(props) {
+export default function AccordionPanel(props) {
   const { title, content, setActiveIndex, isActive, index } = props;
 
   const handleClick = () => {
@@ -38,7 +38,7 @@ export default function Panel(props) {
   );
 }
 
-Panel.propTypes = {
+AccordionPanel.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   setActiveIndex: PropTypes.func.isRequired,

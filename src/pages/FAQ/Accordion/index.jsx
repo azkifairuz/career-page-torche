@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Panel from "./Panel";
+import Panel from "../../../components/molecules/AccordionPanel";
 
 export default function Accordion(props) {
   const [activeIndex, setActiveIndex] = useState(null);
