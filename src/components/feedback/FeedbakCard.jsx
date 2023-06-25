@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function Card(props) {
+export default function FeedbackCard(props) {
   const { profil, name, kampus, feed } = props;
   return (
     <div className="w-[285px] md:w-[380px] shadow-card flex-shrink-0 rounded-lg p-4 flex flex-col gap-4">
@@ -16,7 +16,7 @@ export default function Card(props) {
   );
 }
 
-Card.propTypes = {
+FeedbackCard.propTypes = {
   profil: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   kampus: PropTypes.string.isRequired,

@@ -4,9 +4,10 @@ import Empati from "assets/icons/love.svg";
 import Kesopanan from "assets/icons/kesopanan.svg";
 import Kepo from "assets/icons/rasa-ingin-tahu.svg";
 import girl from "assets/images/girl.png";
-import Feedback from "components/feedback";
+import { feedback } from "data/feedback";
 import { useNavigate } from "react-router-dom";
 import CategoryCard from "components/molecules/CategoryCard";
+import FeedbackCard from "components/feedback/FeedbakCard";
 function Landing(props) {
   const navigate = useNavigate();
   return (
@@ -101,7 +102,17 @@ function Landing(props) {
       <section className="px-4  md:mx-auto">
         <h1 className="heading-m-bold md:text-center">Apa Kata mereka</h1>
         <div className="flex px-1 w-full py-5 gap-6 overflow-x-auto">
-          <Feedback />
+          {feedback.map((feed) => {
+            return (
+              <FeedbackCard
+                key={feed.id}
+                profil={feed.profil}
+                name={feed.name}
+                kampus={feed.kampus}
+                feed={feed.feedback}
+              />
+            );
+          })}
         </div>
       </section>
     </div>

@@ -1,5 +1,5 @@
 import { feedback } from "data/feedback";
-import Card from "./card";
+import Card from "./FeedbakCard";
 export default function Feedback(params) {
   return feedback.map((feed) => {
     return (

@@ -8,6 +8,8 @@ import Kepo from "assets/icons/rasa-ingin-tahu.svg";
 import girl from "assets/images/girl.png";
 import { categories } from "data/category";
 import CategoryCard from "components/molecules/CategoryCard";
+import { feedback } from "data/feedback";
+import FeedbackCard from "components/feedback/FeedbakCard";
 
 function Landing() {
   const navigate = useNavigate();
@@ -103,7 +105,17 @@ function Landing() {
       <section className="px-4  md:mx-auto">
         <h1 className="heading-m-bold md:text-center">Apa Kata mereka</h1>
         <div className="flex px-1 w-full py-5 gap-6 overflow-x-auto">
-          <Feedback />
+          {feedback.map((feed) => {
+            return (
+              <FeedbackCard
+                key={feed.id}
+                profil={feed.profil}
+                name={feed.name}
+                kampus={feed.kampus}
+                feed={feed.feedback}
+              />
+            );
+          })}
         </div>
       </section>
     </div>
