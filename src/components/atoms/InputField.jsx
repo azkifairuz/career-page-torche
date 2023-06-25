@@ -14,10 +14,10 @@ export default function InputField(props) {
   return (
     <div
       className={`relative flex flex-col gap-[8px] ${
-        width ? width : "w-full"
+        width ? width : "flex-1"
       } font-cairo`}
     >
-      <h1 className="font-[#151515] font-bold">{title}</h1>
+      <h1 className="text-l-bold text-neutral-1000">{title}</h1>
       <label
         className={`text-xs-regular top-0 left-3 px-1 bg-gradient-to-t ${
           disabled ? "from-neutral-200" : "from-white"

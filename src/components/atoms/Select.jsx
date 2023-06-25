@@ -28,15 +28,15 @@ export default function Select(props) {
       <div
         className={`relative w-full ${fit && "w-fit"} ${width} ${
           isOpen ? "border-primaryBlue-main" : "border-primaryNavy-border"
-        } hover:border-primaryBlue-hover  border-[1px] py-3 pl-4 pr-5 rounded-lg flex items-center`}
+        } hover:border-primaryBlue-hover  border-[1px] py-[10px] pl-4 pr-5 rounded-lg flex items-center`}
       >
         <button
           onClick={handleClick}
           className="border-none justify-between focus:outline-none flex gap-2 items-center flex-1"
         >
           <p
-            className={`button-s-regular ${
-              !selected && "opacity-50"
+            className={`text-s-regular  ${
+              !selected && "opacity-50 button-s-regular"
             } text-left shrink-0 `}
           >
             {selected ? selected : "Pilih " + title}
