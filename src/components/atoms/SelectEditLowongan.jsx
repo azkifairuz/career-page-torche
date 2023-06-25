@@ -55,8 +55,7 @@ export default function SelectEditLowongan(props) {
       </div>
       <ul
         className={`z-30 -my-2 absolute w-full max-h-[216px] rounded-lg flex flex-col border-[1px] border-neutral-300 shadow-[2px_4px_10px_rgba(19,47,159,0.25)] activate-scroll origin-bottom transition-all duration-500 ease-in-out overflow-scroll ${
-          !isOpen &&
-          "border-none shadow-none bg-none border-0 max-h-0 max-h-[0%]"
+          !isOpen && "border-none shadow-none bg-none border-0 h-0"
         }`}
       >
         <div className="h-16 shrink-0" />
