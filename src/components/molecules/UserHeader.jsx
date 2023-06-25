@@ -1,6 +1,6 @@
 import sample from "assets/index.png";
 import Header from "components/organisms/userSidebar/header";
-import Item from "../atoms/UserHeaderItem";
+import Item from "atoms/UserHeaderItem";
 import ProgressCard from "molecules/UserProgressCard";
 export default function UserHeader() {
   const information = [
