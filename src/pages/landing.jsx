@@ -7,7 +7,7 @@ import girl from "assets/images/girl.png";
 import { feedback } from "data/feedback";
 import { useNavigate } from "react-router-dom";
 import CategoryCard from "components/molecules/CategoryCard";
-import FeedbackCard from "components/feedback/FeedbakCard";
+import FeedbackCard from "components/molecules/FeedbakCard";
 function Landing(props) {
   const navigate = useNavigate();
   return (

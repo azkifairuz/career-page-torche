@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
 import Benefit from "components/molecules/Benefit";
-import Feedback from "components/feedback";
 import Empati from "assets/icons/love.svg";
 import Kesopanan from "assets/icons/kesopanan.svg";
 import Kepo from "assets/icons/rasa-ingin-tahu.svg";
@@ -9,7 +7,7 @@ import girl from "assets/images/girl.png";
 import { categories } from "data/category";
 import CategoryCard from "components/molecules/CategoryCard";
 import { feedback } from "data/feedback";
-import FeedbackCard from "components/feedback/FeedbakCard";
+import FeedbackCard from "components/molecules/FeedbakCard";
 
 function Landing() {
   const navigate = useNavigate();
