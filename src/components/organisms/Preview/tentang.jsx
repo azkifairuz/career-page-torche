@@ -1,11 +1,10 @@
 import { PencilFill } from "react-bootstrap-icons";
-import AboutPopUp from "components/User/Complete Profile/popup/aboutPopup";
+import AboutPopUp from "components/molecules/aboutPopup";
 import { useState } from "react";
 export default function Tentang() {
   const [isCardOpen, setIsCardOpen] = useState(false);
   const handleCardOpen = () => {
     setIsCardOpen(!isCardOpen);
-    console.log(isCardOpen);
   };
   return (
     <div className=" w-full flex flex-col gap-4 shadow-card rounded-lg p-6">

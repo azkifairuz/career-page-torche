@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 export default function Item(props) {
   const { isActive, setIsActive, index, page } = props;
   const activeItem = "bg-[#4D74CC] text-white";
-  console.log();
   const handleClick = () => {
     if (!isActive) {
       setIsActive(index);

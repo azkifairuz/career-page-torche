@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PlusCircle } from "react-bootstrap-icons";
-import SkillPopup from "../popup/skillPopup";
+import SkillPopup from "../../molecules/skillPopup";
 
 export default function Skill() {
   const [isCardOpen, setIsCardOpen] = useState(false);

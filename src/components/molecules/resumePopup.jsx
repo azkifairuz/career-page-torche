@@ -15,7 +15,6 @@ export default function ResumePopup(props) {
     if (selectedFile.size > MaxFileSize) {
       return alert("ukuran file lebih dri 5mb");
     }
-    return console.log("berhasil");
   };
   return (
     <form className="rounded-lg z-50 w-[350px]md:w-[537px] bg-white">

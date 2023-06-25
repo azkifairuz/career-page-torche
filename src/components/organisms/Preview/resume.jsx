@@ -1,6 +1,6 @@
 import { PlusCircle } from "react-bootstrap-icons";
 import { useState } from "react";
-import ResumePopup from "../popup/resumePopup";
+import ResumePopup from "../../molecules/resumePopup";
 export default function Resume(props) {
   const [isCardOpen, setIsCardOpen] = useState(false);
   const handleCardOpen = () => {

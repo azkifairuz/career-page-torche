@@ -2,7 +2,7 @@ import Card from "./Card";
 
 import { applications } from "data/application";
 
-import Pagination from "components/User/Pagination";
+import Pagination from "components/organisms/UserPagination";
 
 function Tracking() {
   return (

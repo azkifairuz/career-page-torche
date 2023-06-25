@@ -1,6 +1,6 @@
 import { PlusCircle } from "react-bootstrap-icons";
 import { useState } from "react";
-import PortfolioPopup from "../popup/portfolioPopup";
+import PortfolioPopup from "../../molecules/portfolioPopup";
 export default function Portfolio(params) {
   const [isCardOpen, setIsCardOpen] = useState(false);
   const handleCardOpen = () => {
