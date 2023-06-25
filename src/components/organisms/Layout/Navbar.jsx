@@ -93,8 +93,8 @@ export default function Navbar() {
 
       <ul
         className={`${
-          isNavbarOpen ? "block" : "hidden"
-        } md:hidden w-full fixed text-l-regular text-neutral-100 bg-primaryNavy-main top-[74px] flex flex-col z-50 font-rajdhani font-semibold`}
+          isNavbarOpen ? "flex" : "hidden"
+        } md:hidden w-full fixed text-l-regular text-neutral-100 bg-primaryNavy-main top-[74px] flex-col z-50 font-rajdhani font-semibold`}
       >
         {navbarData.map((data, index) => {
           return (
