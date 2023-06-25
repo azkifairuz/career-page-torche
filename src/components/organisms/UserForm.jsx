@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import { user } from "data/user";
 import { countryCodes } from "data/countryCodes";
+import InputField from "components/atoms/InputField";
+import Select from "components/atoms/Select";
 
 export default function Form() {
   const [input, setinput] = useState({
@@ -57,14 +59,11 @@ export default function Form() {
         </header>
         <section className="flex flex-col lg:grid lg:grid-cols-2 gap-5 mt-2">
           <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-1000  text-l-bold">
-              Nama
-            </label>
-            <input
+            <InputField
               type="text"
               name="username"
+              title="Nama"
               placeholder="Input Your Name"
-              className="py-2 px-4 text-neutral-500 focus:text-neutral-900 outline outline-1  rounded-md    focus:outline-primaryBlue-main border border-primaryNavy-border  focus:ring-1 focus:ring-primaryBlue-main"
               value={input.username}
               onChange={handleChange}
             />
@@ -72,52 +71,32 @@ export default function Form() {
               Nama Tidak Boleh Kosong
             </p>
           </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              Title
-            </label>
-            <input
-              type="text"
-              name="title"
-              placeholder="Input Your Title"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.title}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
+          <InputField
+            type="text"
+            name="title"
+            title="Title"
+            placeholder="Input Your Title"
+            value={input.title}
+            onChange={handleChange}
+          />
+          <div className="flex flex-col gap-2">
+            <label className="self-start text-neutral-1000 text-l-bold">
               Jenis Kelamin
             </label>
-            <select
-              type="text"
-              name="gender"
-              placeholder="Pilih Jenis Kelamin"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900 bg-white border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.gender}
-              defaultValue="Pilih jenis Kelamin"
-              onChange={handleChange}
-            >
-              <option value="Pilih Jenis Kelamin" selected hidden>
-                Pilih Jenis Kelamin
-              </option>
-              <option>Laki-Laki</option>
-              <option>Perempuan</option>
-            </select>
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              Tanggal Lahir
-            </label>
-            <input
-              type="date"
-              name="dateBirth"
-              placeholder="Pilih Tanggal Lahir"
-              className="py-2 px-4 outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-              value={input.dateBirth || ""}
-              onChange={handleChange}
+            <Select
+              title="Jenis Kelamin"
+              active={input.gender}
+              data={["Laki-laki", "Perempuan"]}
             />
           </div>
+          <InputField
+            type="date"
+            name="dateBirth"
+            title="Tanggal Lahir"
+            placeholder="Pilih Tanggal Lahir"
+            value={input.dateBirth || ""}
+            onChange={handleChange}
+          />
           <div className="flex flex-col lg:col-span-2 gap-1">
             <label className="font-cairo self-start text-neutral-1000 text-l-bold">
               Tentang Saya
@@ -164,57 +143,39 @@ export default function Form() {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
-              Email
-            </label>
-            <input
-              type="text"
-              name="email"
-              value={input.email}
-              placeholder="eg:example@gmail.com"
-              onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900  border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo  self-start text-neutral-1000 text-l-bold">
-              Negara
-            </label>
-            <input
-              type="text"
-              name="country"
-              value={input.country}
-              placeholder="eg: indonesia"
-              onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              Kota
-            </label>
-            <input
-              type="text"
-              name="city"
-              value={input.city}
-              placeholder="eg: jakarta"
-              onChange={handleChange}
-              className="py-2 px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-            />
-          </div>
-          <div className="flex lg:col-span-2 flex-col gap-1">
-            <label className="font-cairo self-start text-neutral-1000 text-l-bold">
-              Alamat
-            </label>
-            <input
+          <InputField
+            type="text"
+            name="email"
+            title="Email"
+            placeholder="eg:example@gmail.com"
+            onChange={handleChange}
+            value={input.email}
+          />
+          <InputField
+            type="text"
+            name="website"
+            title="Website"
+            placeholder="eg:example.com"
+            onChange={handleChange}
+            value={input.website}
+          />
+          <InputField
+            type="text"
+            name="city"
+            title="Kota"
+            placeholder="eg: jakarta"
+            onChange={handleChange}
+            value={input.city}
+          />
+          <div className="flex lg:col-span-2 flex-col">
+            <InputField
               type="text"
               name="address"
-              value={input.address}
+              title="Alamat"
               placeholder="eg: jl.abc kec.abc kab.abc"
               onChange={handleChange}
-              className="py-2  resize-none px-4  outline-1 rounded-md text-neutral-500 focus:text-neutral-900 border border-primaryNavy-border outline focus:outline-primaryBlue-main  focus:ring-1 focus:ring-primaryBlue-main"
-            ></input>
+              value={input.address}
+            />
           </div>
           <button
             onSubmit={handleSubmit}
