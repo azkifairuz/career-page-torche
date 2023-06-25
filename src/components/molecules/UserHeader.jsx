@@ -1,7 +1,7 @@
 import sample from "assets/index.png";
 import Header from "components/organisms/userSidebar/header";
-import Item from "atoms/UserHeaderItem";
-import ProgressCard from "molecules/UserProgressCard";
+import Item from "components/atoms/UserHeaderItem";
+import ProgressCard from "components/molecules/UserProgressCard";
 export default function UserHeader() {
   const information = [
     { id: 1, Title: "Phone", Desc: "+62 1234 5721 63" },
