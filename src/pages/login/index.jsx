@@ -11,10 +11,13 @@ import GoogleButton from "components/atoms/GoogleButton";
 
 import logoWhite from "assets/logos/Torche_Logo-01_White.webp";
 import LoginBG from "assets/images/LoginBG.webp";
+import PasswordInput from "components/atoms/PasswordInput";
 
 export default function Login() {
   const dispatch = useDispatch();
-  const { loading, error, userInfo } = useSelector((state) => state.auth);
+  const { loading, error, userInfo, success } = useSelector(
+    (state) => state.auth
+  );
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -52,9 +55,8 @@ export default function Login() {
             placeholder="Your Email Here"
           />
           <div className="flex flex-col gap-2 items-start">
-            <InputField
+            <PasswordInput
               title="Kata Sandi"
-              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
@@ -69,7 +71,8 @@ export default function Login() {
           <AuthButton
             onClick={handleSubmit}
             name="login-button"
-            title="Masuk"
+            isDisabled={loading}
+            title={loading ? "Loading..." : "Masuk"}
           />
         </form>
         <p className="text-neutral-1000 text-[14px]">atau masuk dengan </p>
