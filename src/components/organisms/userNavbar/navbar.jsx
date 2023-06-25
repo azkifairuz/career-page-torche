@@ -215,6 +215,7 @@ export default function Navbar() {
           </li>
         </div>
       </nav>
+      {/* mobile navbar component */}
       <div
         className={`${
           isNavbarOpen ? "block" : "hidden"
@@ -259,6 +260,7 @@ export default function Navbar() {
             </Link>
           );
         })}
+        {/* looping navbar item without last item */}
         {profilNav.slice(0, 5).map((data, index) => {
           return (
             <Link
