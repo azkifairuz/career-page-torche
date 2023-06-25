@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Item from "./item";
+import Item from "../atoms/OptionBarNavItem";
 
-export default function OptionBar() {
+export default function OptionBarNavigation() {
   const [isActive, setActive] = useState(1);
   const itemData = [
     { id: 1, title: "Tentang" },

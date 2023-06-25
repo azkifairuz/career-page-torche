@@ -1,6 +1,6 @@
 import Card from "./card";
 import { applications } from "data/application";
-import Pagination from "components/User/Pagination";
+import Pagination from "components/organisms/UserPagination";
 function JobApplication() {
   return (
     <div className="flex flex-col justify-center gap-[24px]">

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export default function Item(props) {
+export default function OptionBarNavItem(props) {
   const { icon, title, href, itemKey, index, isActive, setIsActive } = props;
   const handleClick = () => {
     setIsActive(index);
@@ -23,7 +23,7 @@ export default function Item(props) {
   );
 }
 
-Item.propTypes = {
+OptionBarNavItem.propTypes = {
   icon: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,

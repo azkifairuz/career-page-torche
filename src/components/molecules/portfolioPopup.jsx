@@ -4,7 +4,7 @@ import { X } from "react-bootstrap-icons";
 
 export default function PortfolioPopup(props) {
   const { onclick } = props;
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   return (
     <form className="rounded-lg z-50 w-[350px] md:w-[537px] bg-white">

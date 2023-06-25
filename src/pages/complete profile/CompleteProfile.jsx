@@ -1,6 +1,6 @@
 import HeaderSection from "components/organisms/UserHeader";
-import OptionBar from "components/User/Complete Profile/option bar";
-import Preview from "components/User/Complete Profile/preview";
+import OptionBar from "components/molecules/OptionBarNavigation";
+import Preview from "components/organisms/Preview";
 export default function CompleteProfil() {
   return (
     <div className="flex flex-col mb-[72px]">

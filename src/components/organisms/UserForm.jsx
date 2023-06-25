@@ -33,8 +33,6 @@ export default function Form() {
     } else {
       setIsValid(true);
     }
-    console.log(isValid);
-    console.log(user);
     user.username = input.username;
     user.title = input.title;
     user.gender = input.gender;

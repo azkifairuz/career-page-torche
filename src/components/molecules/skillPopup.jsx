@@ -42,7 +42,6 @@ export default function SkillPopup(props) {
   }
 
   function handleDelete(select) {
-    console.log(select);
     setSelectedSkills((prevSkill) =>
       prevSkill.filter((skill) => skill !== select)
     );
@@ -54,7 +53,6 @@ export default function SkillPopup(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Selected skills:", selectedSkills);
   }
 
   return (

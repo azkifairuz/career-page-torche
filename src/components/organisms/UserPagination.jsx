@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Item from "./item";
+import Item from "../molecules/UserPagnationItem";
 
 export default function Pagination() {
   const pages = [1, 2, 3];
