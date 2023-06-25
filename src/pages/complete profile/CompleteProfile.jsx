@@ -1,4 +1,4 @@
-import HeaderSection from "components/User/Complete Profile/header";
+import HeaderSection from "components/molecules/UserHeader";
 import OptionBar from "components/User/Complete Profile/option bar";
 import Preview from "components/User/Complete Profile/preview";
 export default function CompleteProfil() {

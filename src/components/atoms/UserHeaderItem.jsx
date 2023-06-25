@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function Item(props) {
+export default function UserHeaderItem(props) {
   const { title, desc } = props;
 
   return (
@@ -11,7 +11,7 @@ export default function Item(props) {
   );
 }
 
-Item.propTypes = {
+UserHeaderItem.propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
 };

@@ -1,8 +1,8 @@
 import sample from "assets/index.png";
 import Header from "components/organisms/userSidebar/header";
-import Item from "./item";
-import ProgressCard from "../../../molecules/UserProgressCard";
-export default function HeaderSection() {
+import Item from "../atoms/UserHeaderItem";
+import ProgressCard from "molecules/UserProgressCard";
+export default function UserHeader() {
   const information = [
     { id: 1, Title: "Phone", Desc: "+62 1234 5721 63" },
     { id: 2, Title: "Email", Desc: "loremipsum@gmail.com" },
