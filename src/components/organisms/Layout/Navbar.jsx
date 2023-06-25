@@ -39,46 +39,41 @@ export default function Navbar() {
               })}
             </ul>
           </section>
-          <button
-            onClick={handleNavbarOpen}
-            className={`${isNavbarOpen && "hidden"} md:hidden hamburger`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
+
+          <button onClick={handleNavbarOpen} className="md:hidden">
+            {isNavbarOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            )}
           </button>
-          <button
-            onClick={handleNavbarOpen}
-            className={`${
-              isNavbarOpen ? "block" : "hidden"
-            } md:hidden text-white`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
+
           <section className="hidden md:flex gap-[4px] justify-center">
             <Link
               to="/signup"
@@ -95,6 +90,7 @@ export default function Navbar() {
           </section>
         </div>
       </nav>
+
       <ul
         className={`${
           isNavbarOpen ? "block" : "hidden"
@@ -112,18 +108,20 @@ export default function Navbar() {
             </Link>
           );
         })}
-        <li
+        <Link
+          to={"/signup"}
           className="relative p-[12px] text-primaryNavy-main  px-[16px] bg-primaryBlue-surface transition duration-200"
           onClick={handleNavbarOpen}
         >
-          <Link to="/signup">Register</Link>
-        </li>
-        <li
+          Register
+        </Link>
+        <Link
+          to="/login"
           className="relative p-[12px] px-[16px] transition duration-200 hover:bg-primaryBlue-hover active:bg-primaryBlue-pressed"
           onClick={handleNavbarOpen}
         >
-          <Link to="/login">Login</Link>
-        </li>
+          Login
+        </Link>
       </ul>
     </>
   );
