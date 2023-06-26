@@ -26,6 +26,7 @@ export const login = async (data) => {
     url,
     method: "POST",
     data: jsonData,
+    withCredentials: true,
   });
 
   return res;

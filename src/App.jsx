@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "./components/organisms/Layout";
 import {
-  Landing,
+  Home,
   Custom404,
   Login,
   Joblist,
@@ -54,7 +54,7 @@ function App() {
           <Route path="confirmed" element={<ChangePassword />} />
         </Route>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Landing />} />
+          <Route index element={<Home />} />
           <Route path="joblist" element={<Joblist />} />
           <Route path="about" element={<About />} />
           <Route path="FAQ" element={<FAQ />} />
@@ -71,7 +71,7 @@ function App() {
         </Route>
         <Route path="user" element={<User />}>
           <Route index element={<Navigate to="home" />} />
-          <Route path="home" element={<Landing />} />
+          <Route path="home" element={<Home />} />
           <Route path="dashboard" element={<UserDashboard />}>
             <Route index element={<Navigate to="profil" />} />
             <Route path="profil" element={<Profil />}></Route>
